@@ -1,0 +1,22 @@
+# Obsidian system configuration — local to machine
+.obsidian/
+
+# Obsidian vault mirror — duplicate of main structure
+vault/
+
+# Obsidian system files — not part of project
+Bienvenido.md
+AGENTS.md
+
+# System and IDE
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS temporary files
+.AppleDouble
+.LSOverride
