@@ -18,9 +18,9 @@ Habilita el inicio formal de todos los lineamientos. Autoriza presupuesto y recu
 **Semana:** S5–S6
 
 Habilitado por:
-- [[../L3-gobernanza-ti/catastro-aplicaciones/README|Catastro Level A]] (WS-2: tareas 2.05–2.10, 82hh)
-- [[../L3-gobernanza-ti/diagnostico-normativo/README|Diagnóstico normativo]] (WS-3: tareas 3.01–3.04)
-- [[../L1-portafolio-ti/README|Portafolio priorizado]] (WS-4: tareas 4.01–4.02)
+- [[../L3-gobernanza-ti/catastro-aplicaciones/L3-catastro-aplicaciones|Catastro Level A]] (WS-2: tareas 2.05–2.10, 82hh)
+- [[../L3-gobernanza-ti/diagnostico-normativo/L3-diagnostico-normativo|Diagnóstico normativo]] (WS-3: tareas 3.01–3.04)
+- [[../L1-portafolio-ti/L1-portafolio-ti|Portafolio priorizado]] (WS-4: tareas 4.01–4.02)
 
 **Decisión:** Aprobación para avanzar a catastro Level B+C y validar hallazgos normativos.
 **Escalamiento a:** GG + Sponsor
@@ -32,9 +32,9 @@ Habilitado por:
 **Semana:** S9–S10
 
 Habilitado por:
-- [[../L3-gobernanza-ti/catastro-aplicaciones/README|Catastro Level B+C]] (WS-2: tareas 2.11–2.14)
-- [[../L3-gobernanza-ti/politicas-procedimientos/README|5 Políticas TI firmadas]] (WS-3: tareas 3.05–3.11)
-- [[../L1-portafolio-ti/README|Proyectos normativos en ejecución]] (WS-4: codecision PM+JTI)
+- [[../L3-gobernanza-ti/catastro-aplicaciones/L3-catastro-aplicaciones|Catastro Level B+C]] (WS-2: tareas 2.11–2.14)
+- [[../L3-gobernanza-ti/politicas-procedimientos/L3-politicas-procedimientos|5 Políticas TI firmadas]] (WS-3: tareas 3.05–3.11)
+- [[../L1-portafolio-ti/L1-portafolio-ti|Proyectos normativos en ejecución]] (WS-4: codecision PM+JTI)
 
 **Decisión:** Aprobación para cerrar hallazgos Deloitte que dependían de políticas. Autoriza entrada en Fase 3 de L3.
 **Escalamiento a:** GG + Sponsor + Auditores
@@ -46,7 +46,7 @@ Habilitado por:
 **Semana:** S23
 
 Habilitado por:
-- [[../L3-gobernanza-ti/cierre-evidencia/README|Cierre formal de hallazgos Deloitte]] (WS-3/WS-4: tareas 4.09–4.11)
+- [[../L3-gobernanza-ti/cierre-evidencia/L3-cierre-evidencia|Cierre formal de hallazgos Deloitte]] (WS-3/WS-4: tareas 4.09–4.11)
 - Validación de cumplimiento Ley 19.628 y Ley 21.663 (ver [[marco-normativo|Marco normativo]])
 - Programa Ciberseguridad NIST CSF activo
 
@@ -60,9 +60,9 @@ Habilitado por:
 **Semana:** S36–S38
 
 Habilitado por:
-- [[../L3-gobernanza-ti/cierre-evidencia/README|Cierre y evidencia auditada]] (WS-4: tareas 4.12–4.13)
+- [[../L3-gobernanza-ti/cierre-evidencia/L3-cierre-evidencia|Cierre y evidencia auditada]] (WS-4: tareas 4.12–4.13)
 - Transición a Fase 2 completada (dashboard, KPIs operacionales)
-- [[../L4-infraestructura-ti/README|L4 en construcción]] con hitos validados
+- [[../L4-infraestructura-ti/L4-infraestructura-ti|L4 en construcción]] con hitos validados
 
 **Decisión:** Cierre formal del plan 2026. Aprobación de roadmap 2027 para continuidad L4 y expansión gobernanza.
 **Escalamiento a:** GG + Comité directivo
