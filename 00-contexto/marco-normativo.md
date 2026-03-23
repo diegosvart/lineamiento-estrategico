@@ -28,9 +28,9 @@ Todas las tareas, entregables y decisiones del plan operan bajo dos marcos legal
 
 ### Aplicación en el plan
 
-El diagnóstico normativo ([[../L3-gobernanza-ti/diagnostico-normativo/README|L3 — Diagnóstico normativo]]) identifica brechas Ley 19.628 por subsidiaria.
+El diagnóstico normativo ([[../L3-gobernanza-ti/diagnostico-normativo/L3-diagnostico-normativo|L3 — Diagnóstico normativo]]) identifica brechas Ley 19.628 por subsidiaria.
 
-Las políticas TI ([[../L3-gobernanza-ti/politicas-procedimientos/README|L3 — Políticas y procedimientos]]) incluyen:
+Las políticas TI ([[../L3-gobernanza-ti/politicas-procedimientos/L3-politicas-procedimientos|L3 — Políticas y procedimientos]]) incluyen:
 - Política de Protección de Datos Personales (tarea 3.08)
 - Procedimiento de consentimiento informado
 - Inventario de datos personales por aplicativo y subsidiaria
@@ -76,7 +76,7 @@ Esto **extiende la obligación a todo el grupo** porque:
 
 ### Aplicación en el plan
 
-El diagnóstico normativo ([[../L3-gobernanza-ti/diagnostico-normativo/README|L3 — Diagnóstico normativo]]) identifica brechas NIST CSF por subsidiaria.
+El diagnóstico normativo ([[../L3-gobernanza-ti/diagnostico-normativo/L3-diagnostico-normativo|L3 — Diagnóstico normativo]]) identifica brechas NIST CSF por subsidiaria.
 
 Las políticas TI incluyen:
 - Política de Seguridad de la Información (tarea 3.07)
@@ -111,17 +111,17 @@ Todos los hallazgos se cierran mediante:
 
 | Marco | Entidad responsable | Obligación clave | Abordaje en plan |
 |---|---|---|---|
-| **Ley 19.628** | 11 subsidiarias + PM | DPD + inventario datos personales | [[../L3-gobernanza-ti/politicas-procedimientos/README|L3 — Tarea 3.08]] |
-| **Ley 21.663 / OIV** | Holding + Bio Energía | Programa ciberseguridad NIST CSF | [[../L3-gobernanza-ti/politicas-procedimientos/README|L3 — Tareas 3.07, 3.09, 3.12]] |
-| **Deloitte 2026** | Área TI | 9 hallazgos → evidencia auditada | [[../L3-gobernanza-ti/cierre-evidencia/README|L3 — Cierre y evidencia]] |
+| **Ley 19.628** | 11 subsidiarias + PM | DPD + inventario datos personales | [[../L3-gobernanza-ti/politicas-procedimientos/L3-politicas-procedimientos|L3 — Tarea 3.08]] |
+| **Ley 21.663 / OIV** | Holding + Bio Energía | Programa ciberseguridad NIST CSF | [[../L3-gobernanza-ti/politicas-procedimientos/L3-politicas-procedimientos|L3 — Tareas 3.07, 3.09, 3.12]] |
+| **Deloitte 2026** | Área TI | 9 hallazgos → evidencia auditada | [[../L3-gobernanza-ti/cierre-evidencia/L3-cierre-evidencia|L3 — Cierre y evidencia]] |
 
 ---
 
 ## Documentos relacionados
 
-- [[../L3-gobernanza-ti/README|L3 — Plan de Gobernanza TI]] — dónde se cubre este marco
-- [[../L3-gobernanza-ti/diagnostico-normativo/README|Diagnóstico normativo]] — análisis de brechas por ley
-- [[../L3-gobernanza-ti/politicas-procedimientos/README|Políticas y procedimientos]] — documentos que dan cobertura
+- [[../L3-gobernanza-ti/L3-gobernanza-ti|L3 — Plan de Gobernanza TI]] — dónde se cubre este marco
+- [[../L3-gobernanza-ti/diagnostico-normativo/L3-diagnostico-normativo|Diagnóstico normativo]] — análisis de brechas por ley
+- [[../L3-gobernanza-ti/politicas-procedimientos/L3-politicas-procedimientos|Políticas y procedimientos]] — documentos que dan cobertura
 - [[gateways|Gateways]] — G2, G3, G4 incluyen validaciones normativas
 
 ---
