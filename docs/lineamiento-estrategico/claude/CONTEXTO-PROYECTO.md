@@ -23,20 +23,20 @@ en ejecucion (total 8 hh/dia habiles).
 
 ---
 
-## 2. Organizacion y contexto
+## 2. Organización y contexto
 
 **Grupo EBI:** Holding con 11 subsidiarias. Opera en Chile con vinculo corporativo internacional
 (Canada / Costa Rica).
 
-**Estado del area TI:** En construccion activa. Hace pocos meses no existia como unidad formal.
-Hoy tiene cinco roles definidos y un portfolio en ejecucion.
+**Estado del área TI:** En construcción activa. Hace pocos meses no existía como unidad formal.
+Hoy tiene cinco roles definidos y un portfolio en ejecución.
 
-**Objetivo estrategico 2026:** Transversalidad entre las 11 companias — homogenizacion de datos,
+**Objetivo estratégico 2026:** Transversalidad entre las 11 compañías — homogenización de datos,
 interoperabilidad de sistemas, reportes consolidados confiables.
 
 ---
 
-## 3. Equipo del area TI — Estructura y dominios de responsabilidad
+## 3. Equipo del área TI — Estructura y dominios de responsabilidad
 
 ### Modelo estructural oficial
 
