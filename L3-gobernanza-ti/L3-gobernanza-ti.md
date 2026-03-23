@@ -18,11 +18,11 @@ Framework documental y normativo que da cobertura legal y operativa al area TI. 
 
 | Categoria | Carpeta | Estado |
 |---|---|---|
-| Infraestructura digital del area | [[infraestructura-digital/README]] | Pendiente |
-| Catastro de aplicaciones | [[catastro-aplicaciones/README]] | Pendiente |
-| Diagnostico normativo | [[diagnostico-normativo/README]] | Pendiente |
-| Politicas y procedimientos | [[politicas-procedimientos/README]] | Pendiente |
-| Cierre y evidencia | [[cierre-evidencia/README]] | Pendiente |
+| Infraestructura digital del area | [[infraestructura-digital/L3-infraestructura-digital]] | Pendiente |
+| Catastro de aplicaciones | [[catastro-aplicaciones/L3-catastro-aplicaciones]] | Pendiente |
+| Diagnostico normativo | [[diagnostico-normativo/L3-diagnostico-normativo]] | Pendiente |
+| Politicas y procedimientos | [[politicas-procedimientos/L3-politicas-procedimientos]] | Pendiente |
+| Cierre y evidencia | [[cierre-evidencia/L3-cierre-evidencia]] | Pendiente |
 
 ---
 

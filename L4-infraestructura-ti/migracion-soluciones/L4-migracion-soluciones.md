@@ -9,7 +9,7 @@ aliases:
 **Horizonte:** S20–S38 (migraciones progresivas)
 **Esfuerzo estimado:** ~200 hh (por dimensionar según catastro)
 **Responsable:** PM (planificación), ARI (ejecución)
-**Precondición:** [[../../L3-gobernanza-ti/catastro-aplicaciones/README|Catastro Level C]] + [[../diseno-arquitectura/README|Arquitectura]]
+**Precondición:** [[../../L3-gobernanza-ti/catastro-aplicaciones/L3-catastro-aplicaciones|Catastro Level C]] + [[../diseno-arquitectura/L4-diseno-arquitectura|Arquitectura]]
 
 ---
 
@@ -54,8 +54,8 @@ Incluye: análisis dependencias, plan rollback, testing, cutover, validación.
 
 ## Dependencias
 
-- **Input:** [[../../L3-gobernanza-ti/catastro-aplicaciones/README|Catastro Level C]]
-- **Input:** [[../diseno-arquitectura/README|Diseño arquitectura]]
-- **Input:** [[../artefactos-sync/README|Sincronización operativa]]
+- **Input:** [[../../L3-gobernanza-ti/catastro-aplicaciones/L3-catastro-aplicaciones|Catastro Level C]]
+- **Input:** [[../diseno-arquitectura/L4-diseno-arquitectura|Diseño arquitectura]]
+- **Input:** [[../artefactos-sync/L4-artefactos-sync|Sincronización operativa]]
 
 *Última actualización: 23 marzo 2026*

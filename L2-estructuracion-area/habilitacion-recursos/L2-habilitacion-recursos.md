@@ -15,7 +15,7 @@ aliases:
 Identificación de brechas de capacidad técnica basada en autonomía recién adquirida del área.
 Define qué roles falta reclutar y en qué plazos.
 
-**Precondición:** [[../reduccion-dependencia/README|Reducción de dependencia]] completada (necesita autonomía para identificar gaps)
+**Precondición:** [[../reduccion-dependencia/L2-reduccion-dependencia|Reducción de dependencia]] completada (necesita autonomía para identificar gaps)
 **Horas estimadas:** TBD (depende de análisis de portafolio)
 **Ejecución:** Paralela con S3–S5, iterativa
 
@@ -37,6 +37,6 @@ Define qué roles falta reclutar y en qué plazos.
 
 ## Dependencias y links
 
-- **Precondición:** [[../reduccion-dependencia/README|Reducción de dependencia]] (debe completarse S2–S3)
-- **Habilita:** [[../../L3-gobernanza-ti/README|L3]] (equipo con capacidad adecuada)
-- **Habilita:** [[../../L4-infraestructura-ti/README|L4]] (requiere recursos técnicos especializados)
+- **Precondición:** [[../reduccion-dependencia/L2-reduccion-dependencia|Reducción de dependencia]] (debe completarse S2–S3)
+- **Habilita:** [[../../L3-gobernanza-ti/L3-gobernanza-ti|L3]] (equipo con capacidad adecuada)
+- **Habilita:** [[../../L4-infraestructura-ti/L4-infraestructura-ti|L4]] (requiere recursos técnicos especializados)

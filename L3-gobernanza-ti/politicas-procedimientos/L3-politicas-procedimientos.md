@@ -9,7 +9,7 @@ aliases:
 **Horizonte:** S5–S9 (redacción y aprobación)
 **Esfuerzo estimado:** 56 hh
 **Responsable:** PM + ARI + SPT
-**Precondición:** [[../diagnostico-normativo/README|Diagnóstico normativo]] completo
+**Precondición:** [[../diagnostico-normativo/L3-diagnostico-normativo|Diagnóstico normativo]] completo
 
 ---
 
@@ -141,8 +141,8 @@ Sin políticas aprobadas, los hallazgos Deloitte no cierran y Sponsor no autoriz
 
 ## Dependencias
 
-- **Input:** [[../diagnostico-normativo/README|Diagnóstico normativo]] (qué brechas remediar)
-- **Habilita:** [[../cierre-evidencia/README|Cierre y evidencia]] (políticas son evidencia)
+- **Input:** [[../diagnostico-normativo/L3-diagnostico-normativo|Diagnóstico normativo]] (qué brechas remediar)
+- **Habilita:** [[../cierre-evidencia/L3-cierre-evidencia|Cierre y evidencia]] (políticas son evidencia)
 - **Gateway:** [[../../00-contexto/gateways|G3]] (5 políticas firmadas son prerequisito)
 - **Marcos:** [[../../00-contexto/marco-normativo|Marco normativo]] (cumplen Ley 19.628, Ley 21.663, Deloitte)
 

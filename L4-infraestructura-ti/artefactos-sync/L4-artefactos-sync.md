@@ -9,7 +9,7 @@ aliases:
 **Horizonte:** S10–S25 (diseño, construcción, validación)
 **Esfuerzo estimado:** ~150 hh
 **Responsable:** PM (diseño), ARI (construcción)
-**Precondición:** [[../homogenizacion-maestros/README|Maestros homogenizados]]
+**Precondición:** [[../homogenizacion-maestros/L4-homogenizacion-maestros|Maestros homogenizados]]
 
 ---
 
@@ -48,8 +48,8 @@ Define qué datos se sincronizan, con qué frecuencia, y qué hacer si hay fallo
 
 ## Dependencias
 
-- **Input:** [[../homogenizacion-maestros/README|Maestros homogenizados]]
-- **Habilita:** [[../migracion-soluciones/README|Migraciones de soluciones]]
-- **Habilita:** [[../nuevas-aplicaciones/README|Nuevas aplicaciones transversales]]
+- **Input:** [[../homogenizacion-maestros/L4-homogenizacion-maestros|Maestros homogenizados]]
+- **Habilita:** [[../migracion-soluciones/L4-migracion-soluciones|Migraciones de soluciones]]
+- **Habilita:** [[../nuevas-aplicaciones/L4-nuevas-aplicaciones|Nuevas aplicaciones transversales]]
 
 *Última actualización: 23 marzo 2026*

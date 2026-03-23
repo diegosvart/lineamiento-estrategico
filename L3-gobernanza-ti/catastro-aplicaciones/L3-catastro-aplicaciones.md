@@ -9,7 +9,7 @@ aliases:
 **Horizonte:** S2–S9 (Fases 1, 2 y 3)
 **Esfuerzo estimado:** 60 hh
 **Responsable:** PM
-**Precondición:** [[../infraestructura-digital/README|Infraestructura digital]] operativa
+**Precondición:** [[../infraestructura-digital/L3-infraestructura-digital|Infraestructura digital]] operativa
 
 ---
 
@@ -58,7 +58,7 @@ Valida qué sistemas operan, dónde, quién los usa, qué datos contienen y qué
 - Nombre, sigla, descripción funcional
 - Dueño de negocio, dueño técnico, responsable operación
 - Plataforma, versión, año de instalación
-- Datos personales ¿SÍ/NO? → links a [[../politicas-procedimientos/README|L3 políticas]]
+- Datos personales ¿SÍ/NO? → links a [[../politicas-procedimientos/L3-politicas-procedimientos|L3 políticas]]
 - Criticidad (Alta/Media/Baja), RTO/RPO
 - Integraciones con otros sistemas (lista)
 - Regulaciones aplicables (19.628, 21.663, otras)
@@ -83,8 +83,8 @@ Valida qué sistemas operan, dónde, quién los usa, qué datos contienen y qué
 
 ## Dependencias y enablers
 
-- **Habilita:** [[../diagnostico-normativo/README|Diagnóstico normativo]] (necesita catastro A para identificar brechas)
-- **Habilita:** [[../../L4-infraestructura-ti/README|L4 — Infraestructura TI]] (Level C es input para arquitectura y migraciones)
+- **Habilita:** [[../diagnostico-normativo/L3-diagnostico-normativo|Diagnóstico normativo]] (necesita catastro A para identificar brechas)
+- **Habilita:** [[../../L4-infraestructura-ti/L4-infraestructura-ti|L4 — Infraestructura TI]] (Level C es input para arquitectura y migraciones)
 - **Gateway:** [[../../00-contexto/gateways|G2]] (catastro Level A es prerequisito)
 - **Gateway:** [[../../00-contexto/gateways|G3]] (catastro B+C es prerequisito)
 - **Regulaciones:** [[../../00-contexto/marco-normativo|Marco normativo]] — Ley 19.628 requiere inventario de datos personales por aplicativo

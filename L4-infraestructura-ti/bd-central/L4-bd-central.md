@@ -9,7 +9,7 @@ aliases:
 **Horizonte:** S5–S9 (diseño), S10–S26 (implementación)
 **Esfuerzo estimado:** ~120 hh (diseño + implementación)
 **Responsable:** PM (diseño), ARI (implementación)
-**Precondición:** [[../diseno-arquitectura/README|Diseño de arquitectura]]
+**Precondición:** [[../diseno-arquitectura/L4-diseno-arquitectura|Diseño de arquitectura]]
 
 ---
 
@@ -43,8 +43,8 @@ residen en ERP Manager (11 instancias SQL independientes). Es el corazón de L4.
 
 ## Dependencias
 
-- **Input:** [[../diseno-arquitectura/README|Diseño arquitectura]]
-- **Habilita:** [[../homogenizacion-maestros/README|Homogenización de maestros]]
-- **Habilita:** [[../artefactos-sync/README|Artefactos de sincronización]]
+- **Input:** [[../diseno-arquitectura/L4-diseno-arquitectura|Diseño arquitectura]]
+- **Habilita:** [[../homogenizacion-maestros/L4-homogenizacion-maestros|Homogenización de maestros]]
+- **Habilita:** [[../artefactos-sync/L4-artefactos-sync|Artefactos de sincronización]]
 
 *Última actualización: 23 marzo 2026*

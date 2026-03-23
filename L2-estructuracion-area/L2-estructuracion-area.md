@@ -17,9 +17,9 @@ Formalizacion de la estructura del area TI, definicion de roles con responsabili
 
 | Categoria | Carpeta | Estado |
 |---|---|---|
-| Formalizacion organizacional | [[formalizacion-organizacional/README]] | Pendiente |
-| Reduccion de dependencia externa | [[reduccion-dependencia/README]] | Pendiente |
-| Habilitacion de recursos | [[habilitacion-recursos/README]] | Pendiente |
+| Formalizacion organizacional | [[formalizacion-organizacional/L2-formalizacion-organizacional]] | Pendiente |
+| Reduccion de dependencia externa | [[reduccion-dependencia/L2-reduccion-dependencia]] | Pendiente |
+| Habilitacion de recursos | [[habilitacion-recursos/L2-habilitacion-recursos]] | Pendiente |
 
 ---
 

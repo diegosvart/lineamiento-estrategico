@@ -9,7 +9,7 @@ aliases:
 **Horizonte:** S8–S12 (validación, cierre formal)
 **Esfuerzo estimado:** 27 hh
 **Responsable:** PM + ARI + JTI
-**Precondición:** [[../politicas-procedimientos/README|Políticas y procedimientos]] aprobadas
+**Precondición:** [[../politicas-procedimientos/L3-politicas-procedimientos|Políticas y procedimientos]] aprobadas
 
 ---
 
@@ -126,10 +126,10 @@ Sin cierre formal auditado, el Sponsor no autoriza avance a L4 completo.
 
 ## Dependencias y transición
 
-- **Input:** Todas las categorías L3 completadas ([[../infraestructura-digital/README|infraestructura-digital]], [[../catastro-aplicaciones/README|catastro]], [[../diagnostico-normativo/README|diagnóstico]], [[../politicas-procedimientos/README|políticas]])
-- **Habilita:** [[../../L4-infraestructura-ti/README|L4]] en construcción a full (ya no hay prerequisitos normativos bloqueando)
+- **Input:** Todas las categorías L3 completadas ([[../infraestructura-digital/L3-infraestructura-digital|infraestructura-digital]], [[../catastro-aplicaciones/L3-catastro-aplicaciones|catastro]], [[../diagnostico-normativo/L3-diagnostico-normativo|diagnóstico]], [[../politicas-procedimientos/L3-politicas-procedimientos|políticas]])
+- **Habilita:** [[../../L4-infraestructura-ti/L4-infraestructura-ti|L4]] en construcción a full (ya no hay prerequisitos normativos bloqueando)
 - **Gateway:** [[../../00-contexto/gateways|G4]] (septiembre — normativa validada) + [[../../00-contexto/gateways|G5]] (diciembre — cierre final)
-- **Relacionado:** [[../../../L1-portafolio-ti/README|L1 — Portafolio]] (4.09, 4.11, 4.13 son tareas de L1 que generan evidencia para L3)
+- **Relacionado:** [[../../../L1-portafolio-ti/L1-portafolio-ti|L1 — Portafolio]] (4.09, 4.11, 4.13 son tareas de L1 que generan evidencia para L3)
 
 ---
 

@@ -9,7 +9,7 @@ aliases:
 **Horizonte:** S5–S38 (iniciativas en paralelo con migraciones)
 **Esfuerzo estimado:** ~180 hh (por dimensionar según roadmap 2026)
 **Responsable:** PM (arquitectura), equipos especializados (desarrollo)
-**Precondición:** [[../diseno-arquitectura/README|Estándares de arquitectura]] aprobados
+**Precondición:** [[../diseno-arquitectura/L4-diseno-arquitectura|Estándares de arquitectura]] aprobados
 
 ---
 
@@ -57,8 +57,8 @@ Todas las nuevas aplicaciones deben cumplir:
 
 ## Dependencias
 
-- **Input:** [[../diseno-arquitectura/README|Estándares arquitectura]]
-- **Input:** [[../bd-central/README|BD central]] operativa
-- **Related:** [[../../L1-portafolio-ti/README|L1 Portafolio]] — PowerBI Automatizado es proyecto estratégico
+- **Input:** [[../diseno-arquitectura/L4-diseno-arquitectura|Estándares arquitectura]]
+- **Input:** [[../bd-central/L4-bd-central|BD central]] operativa
+- **Related:** [[../../L1-portafolio-ti/L1-portafolio-ti|L1 Portafolio]] — PowerBI Automatizado es proyecto estratégico
 
 *Última actualización: 23 marzo 2026*

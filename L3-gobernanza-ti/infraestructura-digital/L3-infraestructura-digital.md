@@ -19,7 +19,7 @@ donde ocurren decisiones (Teams), se planifica ejecución (Planner) y se almacen
 (SharePoint). Sin esta infraestructura, L1, L3 y L4 no pueden operar.
 
 **Precondición:** Ninguna — paralela con L2
-**Habilita:** [[../catastro-aplicaciones/README|Catastro de aplicaciones]]
+**Habilita:** [[../catastro-aplicaciones/L3-catastro-aplicaciones|Catastro de aplicaciones]]
 **Related:** [[../../00-contexto/CONTEXTO-PROYECTO|Ecosistema tecnológico en CONTEXTO-PROYECTO]]
 
 ---

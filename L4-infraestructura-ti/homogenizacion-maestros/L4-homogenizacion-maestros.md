@@ -9,7 +9,7 @@ aliases:
 **Horizonte:** S9–S20 (mapeo, validación, implementación)
 **Esfuerzo estimado:** ~100 hh
 **Responsable:** PM (diseño), ARI (implementación)
-**Precondición:** [[../bd-central/README|BD central]] operativa
+**Precondición:** [[../bd-central/L4-bd-central|BD central]] operativa
 
 ---
 
@@ -46,8 +46,8 @@ Sin maestros homogenizados, los reportes consolidados son incorrectos.
 
 ## Dependencias
 
-- **Input:** [[../bd-central/README|BD central]] completa
-- **Habilita:** [[../artefactos-sync/README|Sincronización]]
-- **Habilita:** [[../../L1-portafolio-ti/README|Reportes L1 consolidados]]
+- **Input:** [[../bd-central/L4-bd-central|BD central]] completa
+- **Habilita:** [[../artefactos-sync/L4-artefactos-sync|Sincronización]]
+- **Habilita:** [[../../L1-portafolio-ti/L1-portafolio-ti|Reportes L1 consolidados]]
 
 *Última actualización: 23 marzo 2026*

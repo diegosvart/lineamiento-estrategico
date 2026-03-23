@@ -33,6 +33,6 @@ líneas de reporte y el nuevo rol de Data Governance Manager que lidera L3 y L4.
 
 ## Dependencias y links
 
-- Habilita: [[../reduccion-dependencia/README|Reducción de dependencia]] (formalizacion como prerequisito para transferencia)
-- Habilita: [[../../L3-gobernanza-ti/README|L3 — Plan de Gobernanza TI]] (necesita estructura formal para ejecutar L3)
+- Habilita: [[../reduccion-dependencia/L2-reduccion-dependencia|Reducción de dependencia]] (formalizacion como prerequisito para transferencia)
+- Habilita: [[../../L3-gobernanza-ti/L3-gobernanza-ti|L3 — Plan de Gobernanza TI]] (necesita estructura formal para ejecutar L3)
 - Relacionado: [[../../00-contexto/CONTEXTO-PROYECTO|Estructura organizacional en CONTEXTO-PROYECTO v1.1]]

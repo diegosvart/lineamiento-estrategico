@@ -9,7 +9,7 @@ aliases:
 **Horizonte:** S5–S8 (diseño), S9–S38 (implementación)
 **Esfuerzo estimado:** ~80 hh (diseño), por dimensionar (construcción)
 **Responsable:** PM (diseño), ARI (implementación)
-**Precondición:** [[../../L3-gobernanza-ti/catastro-aplicaciones/README|Catastro Level C]]
+**Precondición:** [[../../L3-gobernanza-ti/catastro-aplicaciones/L3-catastro-aplicaciones|Catastro Level C]]
 
 ---
 
@@ -32,7 +32,7 @@ seguridad y escalabilidad. Es el plano maestro que informa BD central, migracion
 
 ## Dependencias
 
-- **Input:** [[../../L3-gobernanza-ti/catastro-aplicaciones/README|Catastro Level C]]
-- **Habilita:** [[../bd-central/README|BD central]], [[../migracion-soluciones/README|Migraciones]]
+- **Input:** [[../../L3-gobernanza-ti/catastro-aplicaciones/L3-catastro-aplicaciones|Catastro Level C]]
+- **Habilita:** [[../bd-central/L4-bd-central|BD central]], [[../migracion-soluciones/L4-migracion-soluciones|Migraciones]]
 
 *Última actualización: 23 marzo 2026 — Estructura iniciada*

@@ -9,7 +9,7 @@ aliases:
 **Horizonte:** S4–S8 (paralelo con catastro Level B+C)
 **Esfuerzo estimado:** 14 hh
 **Responsable:** PM + JTI
-**Precondición:** [[../catastro-aplicaciones/README|Catastro Level A]] completado
+**Precondición:** [[../catastro-aplicaciones/L3-catastro-aplicaciones|Catastro Level A]] completado
 
 ---
 
@@ -41,10 +41,10 @@ Identificatodo aquello que **NO está cubierto** y qué acciones son necesarias 
 
 | Área | Brecha esperada | Remediación |
 |---|---|---|
-| **Consentimiento** | No hay registro formal de consentimientos datos personales | → [[../politicas-procedimientos/README|Política 19.628 + procedimiento consentimiento]] |
+| **Consentimiento** | No hay registro formal de consentimientos datos personales | → [[../politicas-procedimientos/L3-politicas-procedimientos|Política 19.628 + procedimiento consentimiento]] |
 | **DPD** | No designado Delegado Protección Datos | → Proyecto portafolio: nombrar + capacitar DPD |
-| **Inventario** | No hay inventario de dónde se guardan datos personales | → Dato en [[../catastro-aplicaciones/README|Catastro]] (campo Level A) |
-| **Derecho acceso** | No hay procedimiento para responder solicitudes acceso | → [[../politicas-procedimientos/README|Procedimiento ABM usuarios]] |
+| **Inventario** | No hay inventario de dónde se guardan datos personales | → Dato en [[../catastro-aplicaciones/L3-catastro-aplicaciones|Catastro]] (campo Level A) |
+| **Derecho acceso** | No hay procedimiento para responder solicitudes acceso | → [[../politicas-procedimientos/L3-politicas-procedimientos|Procedimiento ABM usuarios]] |
 | **Seguridad** | No hay encriptación end-to-end en tramos críticos | → Proyecto portafolio: habilitar encriptación |
 
 ---
@@ -53,10 +53,10 @@ Identificatodo aquello que **NO está cubierto** y qué acciones son necesarias 
 
 | Función NIST | Brecha esperada | Remediación |
 |---|---|---|
-| **Identificar** | Inventario activos críticos incompleto | → [[../catastro-aplicaciones/README|Catastro Level C]] |
-| **Proteger** | No hay MFA en sistemas críticos | → [[../politicas-procedimientos/README|Tarea 3.12: MFA]] |
+| **Identificar** | Inventario activos críticos incompleto | → [[../catastro-aplicaciones/L3-catastro-aplicaciones|Catastro Level C]] |
+| **Proteger** | No hay MFA en sistemas críticos | → [[../politicas-procedimientos/L3-politicas-procedimientos|Tarea 3.12: MFA]] |
 | **Detectar** | No hay monitoreo centralizado (SIEM/SOC) | → Proyecto portafolio: SOC/SIEM |
-| **Responder** | No hay procedimiento formal respuesta incidentes | → [[../politicas-procedimientos/README|Procedure respuesta incidentes]] |
+| **Responder** | No hay procedimiento formal respuesta incidentes | → [[../politicas-procedimientos/L3-politicas-procedimientos|Procedure respuesta incidentes]] |
 | **Recuperar** | DRP genérico, sin validación | → Proyecto portafolio: validar DRP |
 
 ---
@@ -84,7 +84,7 @@ Todos se cierran mediante:
 
 ## Dependencias
 
-- **Habilita:** [[../politicas-procedimientos/README|Políticas y procedimientos]] (diagnóstico informa qué políticas redactar)
+- **Habilita:** [[../politicas-procedimientos/L3-politicas-procedimientos|Políticas y procedimientos]] (diagnóstico informa qué políticas redactar)
 - **Gateway:** [[../../00-contexto/gateways|G2]] (diagnóstico completo es prerequisito)
 - **Marco regulatorio:** [[../../00-contexto/marco-normativo|Marco normativo]] (ver detalle de obligaciones)
 

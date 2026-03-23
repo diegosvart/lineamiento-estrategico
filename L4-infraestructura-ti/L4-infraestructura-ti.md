@@ -16,12 +16,12 @@ Nueva infraestructura base del area TI: BD centralizada, homogenizacion de maest
 
 | Categoria | Carpeta | Estado |
 |---|---|---|
-| Diseno de arquitectura | [[diseno-arquitectura/README]] | Pendiente |
-| BD central | [[bd-central/README]] | Pendiente |
-| Homogenizacion de maestros | [[homogenizacion-maestros/README]] | Pendiente |
-| Artefactos de sincronizacion | [[artefactos-sync/README]] | Pendiente |
-| Migracion de soluciones | [[migracion-soluciones/README]] | Pendiente |
-| Nuevas aplicaciones | [[nuevas-aplicaciones/README]] | Pendiente |
+| Diseno de arquitectura | [[diseno-arquitectura/L4-diseno-arquitectura]] | Pendiente |
+| BD central | [[bd-central/L4-bd-central]] | Pendiente |
+| Homogenizacion de maestros | [[homogenizacion-maestros/L4-homogenizacion-maestros]] | Pendiente |
+| Artefactos de sincronizacion | [[artefactos-sync/L4-artefactos-sync]] | Pendiente |
+| Migracion de soluciones | [[migracion-soluciones/L4-migracion-soluciones]] | Pendiente |
+| Nuevas aplicaciones | [[nuevas-aplicaciones/L4-nuevas-aplicaciones]] | Pendiente |
 
 ---
 

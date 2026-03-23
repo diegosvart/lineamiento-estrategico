@@ -16,7 +16,7 @@ Transferencia estructurada del conocimiento técnico e histórico que reside en 
 hacia el área TI. El objetivo es que JTI y ARI logren autonomía técnica para operar sin dependencia
 de consultor externo.
 
-**Precondición:** [[../formalizacion-organizacional/README|Formalización organizacional]] completada
+**Precondición:** [[../formalizacion-organizacional/L2-formalizacion-organizacional|Formalización organizacional]] completada
 **Horas estimadas:** 18.5 hh
 **Riesgo alto:** Resistencia pasiva del CE a transferencia
 
@@ -45,6 +45,6 @@ de consultor externo.
 
 ## Dependencias y links
 
-- **Habilita:** [[../habilitacion-recursos/README|Habilitación de recursos]] (autonomía técnica permite definir brechas de capacidad)
-- **Habilita:** [[../../L3-gobernanza-ti/README|L3]] (necesita JTI autónomo para codecision en L3)
+- **Habilita:** [[../habilitacion-recursos/L2-habilitacion-recursos|Habilitación de recursos]] (autonomía técnica permite definir brechas de capacidad)
+- **Habilita:** [[../../L3-gobernanza-ti/L3-gobernanza-ti|L3]] (necesita JTI autónomo para codecision en L3)
 - **Gateway:** Entrada a [[../../00-contexto/gateways|G2]] (autonomía técnica es precondición)
