@@ -1,0 +1,38 @@
+---
+aliases:
+  - L4-diseno-arquitectura
+  - Diseño de Arquitectura
+---
+# Diseño de Arquitectura
+
+**Lineamiento:** [[../L4-infraestructura-ti|L4 - Nueva Infraestructura TI]]
+**Horizonte:** S5–S8 (diseño), S9–S38 (implementación)
+**Esfuerzo estimado:** ~80 hh (diseño), por dimensionar (construcción)
+**Responsable:** PM (diseño), ARI (implementación)
+**Precondición:** [[../../L3-gobernanza-ti/catastro-aplicaciones/README|Catastro Level C]]
+
+---
+
+## Descripción
+
+Diseño de arquitectura técnica unificada para el holding. Define plataforma, estándares, integraciones,
+seguridad y escalabilidad. Es el plano maestro que informa BD central, migraciones y nuevas aplicaciones.
+
+---
+
+## Entregables esperados
+
+- ✓ Documento arquitectura de referencia (40 páginas)
+- ✓ Diagramas C4 (contexto, contenedores, componentes)
+- ✓ Matriz decisiones técnicas (trade-offs, alternativas)
+- ✓ Estándares técnicos por tipo (web, APIs, BD, integraciones)
+- ✓ Roadmap técnico 2026–2027
+
+---
+
+## Dependencias
+
+- **Input:** [[../../L3-gobernanza-ti/catastro-aplicaciones/README|Catastro Level C]]
+- **Habilita:** [[../bd-central/README|BD central]], [[../migracion-soluciones/README|Migraciones]]
+
+*Última actualización: 23 marzo 2026 — Estructura iniciada*
