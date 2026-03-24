@@ -9,7 +9,7 @@ tags:
 ---
 # Habilitacion de Recursos
 
-**Lineamiento:** [[../L2-estructuracion-area|L2 - Estructuracion del Area TI]]  
+**Lineamiento:** [[L2-estructuracion-area-ti|L2 - Estructuracion del Area TI]]  
 **Semanas:** S3–S5
 
 tags:

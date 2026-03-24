@@ -25,8 +25,7 @@ Formalizacion de la estructura del area TI, definicion de roles con responsabili
 
 ## Roles involucrados
 
-| Rol | Participacion |
-|---|---|
-| PM | Redaccion, documentacion, plan transferencia |
-| JTI | Validaciones, codecision, sesiones tecnicas |
-| CE (Alexi) | Fuente de conocimiento — entrevistado, no ejecutor |
+| Rol        | Participacion                                      |
+| ---------- | -------------------------------------------------- |
+| PM         | Redaccion, documentacion, plan transferencia       |
+| JTI        | Validaciones, codecision, sesiones tecnicas        |

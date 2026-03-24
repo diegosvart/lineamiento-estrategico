@@ -9,7 +9,7 @@ tags:
 ---
 # Reduccion de Dependencia Externa
 
-**Lineamiento:** [[../L2-estructuracion-area|L2 - Estructuracion del Area TI]]  
+**Lineamiento:** [[L2-estructuracion-area-ti|L2 - Estructuracion del Area TI]]  
 **Semanas:** S2–S3
 
 tags:
