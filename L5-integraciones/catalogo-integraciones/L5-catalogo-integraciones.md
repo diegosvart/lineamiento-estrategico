@@ -2,6 +2,8 @@
 aliases:
   - L5-catalogo-integraciones
   - Catálogo de Integraciones
+tags:
+  - en-definicion
 ---
 
 # Catálogo de Integraciones
@@ -12,12 +14,16 @@ aliases:
 **Responsable:** PM (diseño), ARI (infraestructura), Equipo externo (validación ERP)
 **Precondición:** [[../../L4-infraestructura-ti/diseno-arquitectura/L4-diseno-arquitectura|Diseño de Arquitectura L4]]
 
+tags:
+  - en-definicion
 ---
 
 ## Descripción
 
 Inventario exhaustivo de todas las integraciones tecnológicas existentes entre los 11 sistemas ERP del holding, incluyendo: flujos ERP ↔ ERP (sincronización de maestros), flujos ERP → BD central (replicación de datos), flujos ERP → PowerBI (extracción analítica), e integraciones con sistemas externos (banca, aduanas, logística). Para cada integración se documenta: sistemas origen/destino, protocolo actual, frecuencia, latencia, propietario técnico, últimas validaciones.
 
+tags:
+  - en-definicion
 ---
 
 ## Entregables
@@ -27,6 +33,8 @@ Inventario exhaustivo de todas las integraciones tecnológicas existentes entre 
 - ✓ Identificación de integraciones faltantes para transversalidad
 - ✓ Propuesta de consolidación (ERP Manager vs. BD central como hub)
 
+tags:
+  - en-definicion
 ---
 
 ## Dependencias

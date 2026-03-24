@@ -1,7 +1,11 @@
+tags:
+  - pendiente
 ---
 aliases:
   - L4-homogenizacion-maestros
   - Homogenización de Maestros
+tags:
+  - pendiente
 ---
 # Homogenización de Maestros de Datos
 
@@ -11,6 +15,8 @@ aliases:
 **Responsable:** PM (diseño), ARI (implementación)
 **Precondición:** [[../bd-central/L4-bd-central|BD central]] operativa
 
+tags:
+  - pendiente
 ---
 
 ## Descripción
@@ -20,6 +26,8 @@ de conceptos clave (clientes, productos, cuentas, centros de costo) entre 11 emp
 
 Sin maestros homogenizados, los reportes consolidados son incorrectos.
 
+tags:
+  - pendiente
 ---
 
 ## Maestros a homogenizar
@@ -33,6 +41,8 @@ Sin maestros homogenizados, los reportes consolidados son incorrectos.
 | Activos Fijos | Media | ~5k registros | Alta |
 | Proyectos | Baja | ~1k registros | Media |
 
+tags:
+  - pendiente
 ---
 
 ## Entregables
@@ -42,6 +52,8 @@ Sin maestros homogenizados, los reportes consolidados son incorrectos.
 - ✓ Tablas maestras en BD central
 - ✓ Procedimiento de sincronización desde fuentes
 
+tags:
+  - pendiente
 ---
 
 ## Dependencias

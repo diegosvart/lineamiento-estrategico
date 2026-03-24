@@ -2,6 +2,8 @@
 aliases:
   - L5-nuevas-integraciones
   - Nuevas Integraciones
+tags:
+  - en-definicion
 ---
 
 # Nuevas Integraciones Transversales
@@ -12,12 +14,16 @@ aliases:
 **Responsable:** PM (arquitectura), Equipo externo (implementación), ARI (integración infraestructura)
 **Precondición:** [[../definicion-estandares/L5-definicion-estandares|Estándares definidos]] + [[../../L4-infraestructura-ti/diseno-arquitectura/L4-diseno-arquitectura|Arquitectura L4]]
 
+tags:
+  - en-definicion
 ---
 
 ## Descripción
 
 Diseño e implementación de nuevas integraciones transversales del holding que habilitan la consolidación de datos, reportes unificados y gobernanza de maestros. Incluye: BD central ↔ ERP Manager (flujos bidireccionales de maestros), ERP → PowerBI (extracción automática para reportes consolidados), APIs nuevas para aplicaciones transversales (control de gastos, presupuestos, análisis), y sincronización de datos de compliance (19.628, 21.663). Ejecutadas bajo L1 portafolio como proyectos específicos, pero coordinadas arquitectónicamente aquí.
 
+tags:
+  - en-definicion
 ---
 
 ## Nuevas integraciones prioritarias
@@ -30,6 +36,8 @@ Diseño e implementación de nuevas integraciones transversales del holding que 
 | Control gastos | ERPs + BD | Nueva app (SaaS) | REST API | Media | S20–S26 |
 | Presupuestos | ERPs + BD | Nueva app | REST API | Media | S22–S28 |
 
+tags:
+  - en-definicion
 ---
 
 ## Fases de implementación
@@ -39,6 +47,8 @@ Diseño e implementación de nuevas integraciones transversales del holding que 
 3. **Fase 3 (S20–S28):** Nuevas aplicaciones transversales (funcionalidad estratégica)
 4. **Fase 4 (S28–S36):** Consolidación y optimización (tuning, deprecación integraciones heredadas)
 
+tags:
+  - en-definicion
 ---
 
 ## Dependencias

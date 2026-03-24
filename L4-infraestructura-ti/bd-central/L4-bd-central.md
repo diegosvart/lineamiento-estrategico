@@ -1,7 +1,11 @@
+tags:
+  - pendiente
 ---
 aliases:
   - L4-bd-central
   - BD Central
+tags:
+  - pendiente
 ---
 # BD Central — Esquema Unificado
 
@@ -11,6 +15,8 @@ aliases:
 **Responsable:** PM (diseño), ARI (implementación)
 **Precondición:** [[../diseno-arquitectura/L4-diseno-arquitectura|Diseño de arquitectura]]
 
+tags:
+  - pendiente
 ---
 
 ## Descripción
@@ -18,6 +24,8 @@ aliases:
 Base de datos centralizada y unificada para el holding. Consolida datos de 11 subsidiarias que hoy
 residen en ERP Manager (11 instancias SQL independientes). Es el corazón de L4.
 
+tags:
+  - pendiente
 ---
 
 ## Áreas de diseño
@@ -29,6 +37,8 @@ residen en ERP Manager (11 instancias SQL independientes). Es el corazón de L4.
 - Performance (índices, materialización, caché)
 - Backup y recuperación
 
+tags:
+  - pendiente
 ---
 
 ## Entregables
@@ -39,6 +49,8 @@ residen en ERP Manager (11 instancias SQL independientes). Es el corazón de L4.
 - ✓ Procedimientos almacenados para transformación
 - ✓ Plan de migración datos (rollback, validación)
 
+tags:
+  - pendiente
 ---
 
 ## Dependencias

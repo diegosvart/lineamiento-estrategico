@@ -1,13 +1,19 @@
+tags:
+  - pendiente
 ---
 aliases:
   - L2-reduccion-dependencia
   - Reducción de Dependencia
+tags:
+  - pendiente
 ---
 # Reduccion de Dependencia Externa
 
 **Lineamiento:** [[../L2-estructuracion-area|L2 - Estructuracion del Area TI]]  
 **Semanas:** S2–S3
 
+tags:
+  - pendiente
 ---
 
 ## Descripción

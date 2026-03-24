@@ -1,7 +1,11 @@
+tags:
+  - pendiente
 ---
 aliases:
   - L3-catastro-aplicaciones
   - Catastro de Aplicaciones
+tags:
+  - pendiente
 ---
 # Catastro de Aplicaciones
 
@@ -11,6 +15,8 @@ aliases:
 **Responsable:** PM
 **Precondición:** [[../infraestructura-digital/L3-infraestructura-digital|Infraestructura digital]] operativa
 
+tags:
+  - pendiente
 ---
 
 ## Descripción
@@ -23,6 +29,8 @@ Valida qué sistemas operan, dónde, quién los usa, qué datos contienen y qué
 - **Level B:** Investigación autónoma TI → llena campos adicionales (S4–S5, 10 hh)
 - **Level C:** Mapeo técnico ERP Manager → 11 instancias SQL, conectores, flujos (S5–S7, 35 hh)
 
+tags:
+  - pendiente
 ---
 
 ## Tareas (WS-2: 2.05–2.15)
@@ -50,6 +58,8 @@ Valida qué sistemas operan, dónde, quién los usa, qué datos contienen y qué
 
 **Total fase 2:** 45 hh (a ejecutar S4–S7)
 
+tags:
+  - pendiente
 ---
 
 ## Entregables por nivel
@@ -79,6 +89,8 @@ Valida qué sistemas operan, dónde, quién los usa, qué datos contienen y qué
 - Procedimiento de backup/recuperación
 - Incidentes históricos y resoluciones
 
+tags:
+  - pendiente
 ---
 
 ## Dependencias y enablers
@@ -89,6 +101,8 @@ Valida qué sistemas operan, dónde, quién los usa, qué datos contienen y qué
 - **Gateway:** [[../../00-contexto/gateways|G3]] (catastro B+C es prerequisito)
 - **Regulaciones:** [[../../00-contexto/marco-normativo|Marco normativo]] — Ley 19.628 requiere inventario de datos personales por aplicativo
 
+tags:
+  - pendiente
 ---
 
 ## Notas de ejecución
@@ -98,6 +112,8 @@ Valida qué sistemas operan, dónde, quién los usa, qué datos contienen y qué
 - ARI (Infraestructura) realiza Level C sin participación de dueños — investigación autónoma en sistemas
 - Dashboard se actualiza mensualmente conforme avanza L1 (portafolio) para visibilidad ejecutiva
 
+tags:
+  - pendiente
 ---
 
 *Última actualización: 23 marzo 2026*

@@ -1,7 +1,11 @@
+tags:
+  - pendiente
 ---
 aliases:
   - L3-diagnostico-normativo
   - Diagnóstico Normativo
+tags:
+  - pendiente
 ---
 # Diagnóstico Normativo
 
@@ -11,6 +15,8 @@ aliases:
 **Responsable:** PM + JTI
 **Precondición:** [[../catastro-aplicaciones/L3-catastro-aplicaciones|Catastro Level A]] completado
 
+tags:
+  - pendiente
 ---
 
 ## Descripción
@@ -22,6 +28,8 @@ Análisis de brechas entre el estado actual del área TI y los requisitos de tre
 
 Identificatodo aquello que **NO está cubierto** y qué acciones son necesarias para remediar.
 
+tags:
+  - pendiente
 ---
 
 ## Tareas (WS-3: 3.01–3.04)
@@ -35,6 +43,8 @@ Identificatodo aquello que **NO está cubierto** y qué acciones son necesarias 
 
 **Total:** 14 hh
 
+tags:
+  - pendiente
 ---
 
 ## Matriz de brechas Ley 19.628
@@ -47,6 +57,8 @@ Identificatodo aquello que **NO está cubierto** y qué acciones son necesarias 
 | **Derecho acceso** | No hay procedimiento para responder solicitudes acceso | → [[../politicas-procedimientos/L3-politicas-procedimientos|Procedimiento ABM usuarios]] |
 | **Seguridad** | No hay encriptación end-to-end en tramos críticos | → Proyecto portafolio: habilitar encriptación |
 
+tags:
+  - pendiente
 ---
 
 ## Matriz de brechas Ley 21.663 / OIV — NIST CSF
@@ -59,6 +71,8 @@ Identificatodo aquello que **NO está cubierto** y qué acciones son necesarias 
 | **Responder** | No hay procedimiento formal respuesta incidentes | → [[../politicas-procedimientos/L3-politicas-procedimientos|Procedure respuesta incidentes]] |
 | **Recuperar** | DRP genérico, sin validación | → Proyecto portafolio: validar DRP |
 
+tags:
+  - pendiente
 ---
 
 ## Hallazgos Deloitte 2026
@@ -71,6 +85,8 @@ Todos se cierran mediante:
 2. Validación auditada (WS-4: tarea 4.11)
 3. Aprobación Sponsor + auditores (Gateway G4)
 
+tags:
+  - pendiente
 ---
 
 ## Entregables
@@ -80,6 +96,8 @@ Todos se cierran mediante:
 - ✓ Matriz de hallazgos Deloitte (por riesgo)
 - ✓ Reporte consolidado con mapeo de remediaciones a tareas de L3/L4/L1
 
+tags:
+  - pendiente
 ---
 
 ## Dependencias
@@ -88,6 +106,8 @@ Todos se cierran mediante:
 - **Gateway:** [[../../00-contexto/gateways|G2]] (diagnóstico completo es prerequisito)
 - **Marco regulatorio:** [[../../00-contexto/marco-normativo|Marco normativo]] (ver detalle de obligaciones)
 
+tags:
+  - pendiente
 ---
 
 *Última actualización: 23 marzo 2026*

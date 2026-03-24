@@ -1,7 +1,11 @@
+tags:
+  - pendiente
 ---
 aliases:
   - L3-cierre-evidencia
   - Cierre y Evidencia
+tags:
+  - pendiente
 ---
 # Cierre y Evidencia
 
@@ -11,6 +15,8 @@ aliases:
 **Responsable:** PM + ARI + JTI
 **Precondición:** [[../politicas-procedimientos/L3-politicas-procedimientos|Políticas y procedimientos]] aprobadas
 
+tags:
+  - pendiente
 ---
 
 ## Descripción
@@ -21,6 +27,8 @@ fue remediado, que hallazgos normativos fueron cerrados, y que el área TI alcan
 
 Sin cierre formal auditado, el Sponsor no autoriza avance a L4 completo.
 
+tags:
+  - pendiente
 ---
 
 ## Tareas
@@ -31,6 +39,8 @@ Sin cierre formal auditado, el Sponsor no autoriza avance a L4 completo.
 |---|---|---|---|---|
 | 3.19 | Documentar diagramas de infraestructura y red (visión general, topología, redundancias) | ARI | 5 | Pendiente |
 
+tags:
+  - pendiente
 ---
 
 ### Cierre formal de hallazgos (WS-4: 4.09, 4.11, 4.13)
@@ -43,6 +53,8 @@ Sin cierre formal auditado, el Sponsor no autoriza avance a L4 completo.
 
 **Total:** 27 hh
 
+tags:
+  - pendiente
 ---
 
 ## Tarea 3.19 — Documentación de Infraestructura (5 hh)
@@ -56,6 +68,8 @@ Sin cierre formal auditado, el Sponsor no autoriza avance a L4 completo.
 
 **Herramienta:** Visio, draw.io, o Excalidraw (ver [[../../Excalidraw/|Excalidraw vault]])
 
+tags:
+  - pendiente
 ---
 
 ## Tarea 4.09 — Gateway de Desvio D-30 (6 hh)
@@ -69,6 +83,8 @@ Sin cierre formal auditado, el Sponsor no autoriza avance a L4 completo.
 
 **Acción:** Si vence en D-30, activar gateway de escalamiento a GG + Sponsor para ajuste de timeline o recursos
 
+tags:
+  - pendiente
 ---
 
 ## Tarea 4.11 — Cierre Formal de Hallazgos (9 hh)
@@ -91,6 +107,8 @@ Sin cierre formal auditado, el Sponsor no autoriza avance a L4 completo.
 - Firmado por PM, JTI, Sponsor, responsable de remediación
 - Enviado a auditores para validación formal
 
+tags:
+  - pendiente
 ---
 
 ## Tarea 4.13 — Reporte Ejecutivo Final → G5 (7 hh)
@@ -111,6 +129,8 @@ Sin cierre formal auditado, el Sponsor no autoriza avance a L4 completo.
 
 **Gateway:** [[../../00-contexto/gateways|G5]] — Cierre Plan Gobernanza TI 2026 + Roadmap 2027
 
+tags:
+  - pendiente
 ---
 
 ## Entregables del cierre
@@ -122,6 +142,8 @@ Sin cierre formal auditado, el Sponsor no autoriza avance a L4 completo.
 - ✓ Reporte ejecutivo de cierre
 - ✓ Roadmap 2027 aprobado
 
+tags:
+  - pendiente
 ---
 
 ## Dependencias y transición
@@ -131,6 +153,8 @@ Sin cierre formal auditado, el Sponsor no autoriza avance a L4 completo.
 - **Gateway:** [[../../00-contexto/gateways|G4]] (septiembre — normativa validada) + [[../../00-contexto/gateways|G5]] (diciembre — cierre final)
 - **Relacionado:** [[../../../L1-portafolio-ti/L1-portafolio-ti|L1 — Portafolio]] (4.09, 4.11, 4.13 son tareas de L1 que generan evidencia para L3)
 
+tags:
+  - pendiente
 ---
 
 *Última actualización: 23 marzo 2026*

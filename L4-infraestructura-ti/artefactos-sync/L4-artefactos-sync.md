@@ -1,7 +1,11 @@
+tags:
+  - pendiente
 ---
 aliases:
   - L4-artefactos-sync
   - Artefactos de Sincronización
+tags:
+  - pendiente
 ---
 # Artefactos de Sincronización
 
@@ -11,6 +15,8 @@ aliases:
 **Responsable:** PM (diseño), ARI (construcción)
 **Precondición:** [[../homogenizacion-maestros/L4-homogenizacion-maestros|Maestros homogenizados]]
 
+tags:
+  - pendiente
 ---
 
 ## Descripción
@@ -22,6 +28,8 @@ Conectores e integraciones de datos entre:
 
 Define qué datos se sincronizan, con qué frecuencia, y qué hacer si hay fallos.
 
+tags:
+  - pendiente
 ---
 
 ## Tipos de artefactos
@@ -34,6 +42,8 @@ Define qué datos se sincronizan, con qué frecuencia, y qué hacer si hay fallo
 | **Reportería** | BD central → reportes / BI | Diaria/Semanal | ~1M filas |
 | **Alertas** | Monitoreo de inconsistencias | Real-time | —–  |
 
+tags:
+  - pendiente
 ---
 
 ## Entregables
@@ -44,6 +54,8 @@ Define qué datos se sincronizan, con qué frecuencia, y qué hacer si hay fallo
 - ✓ Procedimiento de validación (checksums, auditoría)
 - ✓ Dashboard de monitoreo
 
+tags:
+  - pendiente
 ---
 
 ## Dependencias

@@ -1,7 +1,11 @@
+tags:
+  - pendiente
 ---
 aliases:
   - L4-migracion-soluciones
   - Migración de Soluciones
+tags:
+  - pendiente
 ---
 # Migración de Soluciones
 
@@ -11,6 +15,8 @@ aliases:
 **Responsable:** PM (planificación), ARI (ejecución)
 **Precondición:** [[../../L3-gobernanza-ti/catastro-aplicaciones/L3-catastro-aplicaciones|Catastro Level C]] + [[../diseno-arquitectura/L4-diseno-arquitectura|Arquitectura]]
 
+tags:
+  - pendiente
 ---
 
 ## Descripción
@@ -18,6 +24,8 @@ aliases:
 Traslado de soluciones existentes (desde ERP Manager y sistemas terceros) a la nueva plataforma.
 Incluye: análisis dependencias, plan rollback, testing, cutover, validación.
 
+tags:
+  - pendiente
 ---
 
 ## Soluciones en scope (del catastro)
@@ -31,6 +39,8 @@ Incluye: análisis dependencias, plan rollback, testing, cutover, validación.
 | SIA / Abastecimiento | Nativo | Media | Media |
 | Sitrack (Flota) | Nativo | Baja | Baja |
 
+tags:
+  - pendiente
 ---
 
 ## Fases de migración
@@ -41,6 +51,8 @@ Incluye: análisis dependencias, plan rollback, testing, cutover, validación.
 4. **Cutover** (S26–S35): migraciones en vivo, monitoreo, soporte
 5. **Validación** (S36–S38): auditoría, cierre, lecciones aprendidas
 
+tags:
+  - pendiente
 ---
 
 ## Entregables
@@ -50,6 +62,8 @@ Incluye: análisis dependencias, plan rollback, testing, cutover, validación.
 - ✓ Plan de cutover (horarios, comunicación, escalamiento)
 - ✓ Reporte post-migración (validaciones, incidentes, causas raíz)
 
+tags:
+  - pendiente
 ---
 
 ## Dependencias
