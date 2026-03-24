@@ -72,6 +72,19 @@ G1 (Aprobado GG)
 
 ---
 
+## L5 — Integraciones TI
+
+**Catálogo, estándares y procedimientos de integraciones · Pendiente**
+
+Framework de integración tecnológica entre los 11 ERPs, la base de datos centralizada, PowerBI y sistemas externos. Define: catálogo de integraciones existentes (inventario de flujos), estándares de protocolo (REST API, ETL, webhooks), procedimientos operativos (monitoreo, mantenimiento, troubleshooting), y hoja de ruta de nuevas integraciones transversales. Dependiente de L4 infraestructura operativa.
+
+**Estado:** Pendiente (diseño) · **Semanas:** S10–S36 (paralelo tardío con L4)
+**Responsable:** PM (arquitectura), ARI (operación)
+**Input:** L4 Arquitectura + BD central
+**Output:** Catálogo, estándares, procedimientos operativos, integraciones en producción
+
+---
+
 **Horizonte total:** 30 Marzo – 11 Diciembre 2026 (38 semanas)
 **Decisor:** Gerencia General · **Sponsor:** Comité Directivo
 **PM:** Diego Morales · **JTI:** Gustavo Contreras

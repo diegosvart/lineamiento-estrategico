@@ -149,7 +149,7 @@ See [[L3-gobernanza-ti/catastro-aplicaciones/README|the applications catalog gui
 ```
 
 **To add project details:**
-Add to the appropriate lineamiento's README.md or subsection. Always link from the main [00-indice.md](00-indice.md).
+Add to the appropriate lineamiento's README.md or subsection. Always link from the main [00-indice.md](00-INDICE.md).
 
 **To track decisions or changes:**
 Use the CONTEXTO-PROYECTO.md "Próximas iteraciones" section to log what's pending or in progress.

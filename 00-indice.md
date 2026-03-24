@@ -20,6 +20,7 @@
 - **[[L2-estructuracion-area/L2-estructuracion-area\|L2 - Estructuracion del Area TI]]** — Formalizacion organizacional y reduccion de dependencia externa · Activo
 - **[[L3-gobernanza-ti/L3-gobernanza-ti\|L3 - Plan de Gobernanza TI]]** — Catastro, normativa, politicas y cierre · Activo
 - **[[L4-infraestructura-ti/L4-infraestructura-ti\|L4 - Nueva Infraestructura TI]]** — Arquitectura, BD central, migraciones · Activo
+- **[[L5-integraciones/L5-integraciones\|L5 - Integraciones TI]]** — Catalogo, estandares y procedimientos de integraciones tecnologicas · Pendiente
 
 ---
 
