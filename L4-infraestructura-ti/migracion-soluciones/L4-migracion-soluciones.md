@@ -5,7 +5,7 @@ aliases:
   - L4-migracion-soluciones
   - Migración de Soluciones
 tags:
-  - pendiente
+  - en-definicion
 ---
 # Migración de Soluciones
 
@@ -25,7 +25,7 @@ Traslado de soluciones existentes (desde ERP Manager y sistemas terceros) a la n
 Incluye: análisis dependencias, plan rollback, testing, cutover, validación.
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Soluciones en scope (del catastro)
@@ -52,7 +52,7 @@ tags:
 5. **Validación** (S36–S38): auditoría, cierre, lecciones aprendidas
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Entregables

@@ -5,7 +5,7 @@ aliases:
   - L4-homogenizacion-maestros
   - Homogenización de Maestros
 tags:
-  - pendiente
+  - en-definicion
 ---
 # Homogenización de Maestros de Datos
 
@@ -27,7 +27,7 @@ de conceptos clave (clientes, productos, cuentas, centros de costo) entre 11 emp
 Sin maestros homogenizados, los reportes consolidados son incorrectos.
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Maestros a homogenizar
@@ -53,7 +53,7 @@ tags:
 - ✓ Procedimiento de sincronización desde fuentes
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Dependencias

@@ -3,7 +3,7 @@ aliases:
   - L2-formalizacion-organizacional
   - Formalización Organizacional
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 # Formalizacion Organizacional

@@ -5,7 +5,7 @@ aliases:
   - L4-bd-central
   - BD Central
 tags:
-  - pendiente
+  - en-definicion
 ---
 # BD Central — Esquema Unificado
 
@@ -25,7 +25,7 @@ Base de datos centralizada y unificada para el holding. Consolida datos de 11 su
 residen en ERP Manager (11 instancias SQL independientes). Es el corazón de L4.
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Áreas de diseño
@@ -50,7 +50,7 @@ tags:
 - ✓ Plan de migración datos (rollback, validación)
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Dependencias

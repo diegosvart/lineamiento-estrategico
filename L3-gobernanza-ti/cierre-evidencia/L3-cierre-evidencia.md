@@ -1,12 +1,11 @@
-tags:
-  - pendiente
 ---
 aliases:
   - L3-cierre-evidencia
   - Cierre y Evidencia
 tags:
-  - pendiente
+  - en-definicion
 ---
+
 # Cierre y Evidencia
 
 **Lineamiento:** [[../L3-gobernanza-ti|L3 - Plan de Gobernanza TI]]
@@ -14,10 +13,6 @@ tags:
 **Esfuerzo estimado:** 27 hh
 **Responsable:** PM + ARI + JTI
 **Precondición:** [[../politicas-procedimientos/L3-politicas-procedimientos|Políticas y procedimientos]] aprobadas
-
-tags:
-  - pendiente
----
 
 ## Descripción
 
@@ -27,10 +22,6 @@ fue remediado, que hallazgos normativos fueron cerrados, y que el área TI alcan
 
 Sin cierre formal auditado, el Sponsor no autoriza avance a L4 completo.
 
-tags:
-  - pendiente
----
-
 ## Tareas
 
 ### Documentación técnica (WS-3: 3.19)
@@ -38,10 +29,6 @@ tags:
 | ID | Tarea | Responsable | hh | Estado |
 |---|---|---|---|---|
 | 3.19 | Documentar diagramas de infraestructura y red (visión general, topología, redundancias) | ARI | 5 | Pendiente |
-
-tags:
-  - pendiente
----
 
 ### Cierre formal de hallazgos (WS-4: 4.09, 4.11, 4.13)
 
@@ -52,10 +39,6 @@ tags:
 | 4.13 | Reporte ejecutivo final de cierre Plan Gobernanza TI 2026 → G5 | PM + JTI | 7 | Pendiente | [[../../00-contexto/gateways|G5]] |
 
 **Total:** 27 hh
-
-tags:
-  - pendiente
----
 
 ## Tarea 3.19 — Documentación de Infraestructura (5 hh)
 
@@ -68,10 +51,6 @@ tags:
 
 **Herramienta:** Visio, draw.io, o Excalidraw (ver [[../../Excalidraw/|Excalidraw vault]])
 
-tags:
-  - pendiente
----
-
 ## Tarea 4.09 — Gateway de Desvio D-30 (6 hh)
 
 **Propósito:** Si un proyecto está a menos de 30 días de incumplir, activar alerta ejecutiva
@@ -82,10 +61,6 @@ tags:
 - Deloitte 2026 — 9 hallazgos con remediación (Deficiencia Significativa A = máxima urgencia)
 
 **Acción:** Si vence en D-30, activar gateway de escalamiento a GG + Sponsor para ajuste de timeline o recursos
-
-tags:
-  - pendiente
----
 
 ## Tarea 4.11 — Cierre Formal de Hallazgos (9 hh)
 
@@ -107,10 +82,6 @@ tags:
 - Firmado por PM, JTI, Sponsor, responsable de remediación
 - Enviado a auditores para validación formal
 
-tags:
-  - pendiente
----
-
 ## Tarea 4.13 — Reporte Ejecutivo Final → G5 (7 hh)
 
 **Contenido:**
@@ -129,10 +100,6 @@ tags:
 
 **Gateway:** [[../../00-contexto/gateways|G5]] — Cierre Plan Gobernanza TI 2026 + Roadmap 2027
 
-tags:
-  - pendiente
----
-
 ## Entregables del cierre
 
 - ✓ Documentos de infraestructura técnica
@@ -141,10 +108,6 @@ tags:
 - ✓ Validación auditores externos
 - ✓ Reporte ejecutivo de cierre
 - ✓ Roadmap 2027 aprobado
-
-tags:
-  - pendiente
----
 
 ## Dependencias y transición
 

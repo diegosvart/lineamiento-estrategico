@@ -5,7 +5,7 @@ aliases:
   - L3-catastro-aplicaciones
   - Catastro de Aplicaciones
 tags:
-  - pendiente
+  - en-definicion
 ---
 # Catastro de Aplicaciones
 
@@ -30,7 +30,7 @@ Valida qué sistemas operan, dónde, quién los usa, qué datos contienen y qué
 - **Level C:** Mapeo técnico ERP Manager → 11 instancias SQL, conectores, flujos (S5–S7, 35 hh)
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Tareas (WS-2: 2.05–2.15)
@@ -90,7 +90,7 @@ tags:
 - Incidentes históricos y resoluciones
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Dependencias y enablers
@@ -113,7 +113,7 @@ tags:
 - Dashboard se actualiza mensualmente conforme avanza L1 (portafolio) para visibilidad ejecutiva
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 *Última actualización: 23 marzo 2026*

@@ -5,7 +5,7 @@ aliases:
   - L4-diseno-arquitectura
   - Diseño de Arquitectura
 tags:
-  - pendiente
+  - en-definicion
 ---
 # Diseño de Arquitectura
 
@@ -25,7 +25,7 @@ Diseño de arquitectura técnica unificada para el holding. Define plataforma, e
 seguridad y escalabilidad. Es el plano maestro que informa BD central, migraciones y nuevas aplicaciones.
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Entregables esperados

@@ -5,7 +5,7 @@ aliases:
   - L2-habilitacion-recursos
   - Habilitación de Recursos
 tags:
-  - pendiente
+  - en-definicion
 ---
 # Habilitacion de Recursos
 

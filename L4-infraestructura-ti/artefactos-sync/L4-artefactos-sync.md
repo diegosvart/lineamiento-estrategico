@@ -5,7 +5,7 @@ aliases:
   - L4-artefactos-sync
   - Artefactos de Sincronización
 tags:
-  - pendiente
+  - en-definicion
 ---
 # Artefactos de Sincronización
 
@@ -29,7 +29,7 @@ Conectores e integraciones de datos entre:
 Define qué datos se sincronizan, con qué frecuencia, y qué hacer si hay fallos.
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Tipos de artefactos
@@ -55,7 +55,7 @@ tags:
 - ✓ Dashboard de monitoreo
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Dependencias

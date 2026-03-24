@@ -5,7 +5,7 @@ aliases:
   - L3-infraestructura-digital
   - Infraestructura Digital
 tags:
-  - pendiente
+  - en-definicion
 ---
 # Infraestructura Digital del Área TI
 
@@ -29,7 +29,7 @@ donde ocurren decisiones (Teams), se planifica ejecución (Planner) y se almacen
 **Related:** [[../../00-contexto/CONTEXTO-PROYECTO|Ecosistema tecnológico en CONTEXTO-PROYECTO]]
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Tareas (WS-2: 2.01–2.04)
@@ -63,7 +63,7 @@ tags:
 ```
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Entregables
@@ -85,7 +85,7 @@ tags:
 - Revisión trimestral para agregar nuevas librerías o campos conforme se generan nuevos tipos de artefactos
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 *Última actualización: 23 marzo 2026*

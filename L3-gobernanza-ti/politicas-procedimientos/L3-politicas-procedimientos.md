@@ -5,7 +5,7 @@ aliases:
   - L3-politicas-procedimientos
   - Políticas y Procedimientos
 tags:
-  - pendiente
+  - en-definicion
 ---
 # Políticas y Procedimientos
 
@@ -27,7 +27,7 @@ requisitos de [[../../00-contexto/marco-normativo|marco normativo]] en documento
 Sin políticas aprobadas, los hallazgos Deloitte no cierran y Sponsor no autoriza avance a L4.
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Las 5 Políticas TI
@@ -61,7 +61,7 @@ tags:
 **Total procedimientos:** 36 hh
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Tareas detalladas (WS-3: 3.05–3.18)
@@ -141,7 +141,7 @@ tags:
 - Canales: Teams, correo, reuniones periódicas
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Entregables
@@ -165,7 +165,7 @@ tags:
 - **Marcos:** [[../../00-contexto/marco-normativo|Marco normativo]] (cumplen Ley 19.628, Ley 21.663, Deloitte)
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 *Última actualización: 23 marzo 2026*

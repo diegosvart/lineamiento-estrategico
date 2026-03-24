@@ -5,7 +5,7 @@ aliases:
   - L3-diagnostico-normativo
   - Diagnóstico Normativo
 tags:
-  - pendiente
+  - en-definicion
 ---
 # Diagnóstico Normativo
 
@@ -29,7 +29,7 @@ Análisis de brechas entre el estado actual del área TI y los requisitos de tre
 Identificatodo aquello que **NO está cubierto** y qué acciones son necesarias para remediar.
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Tareas (WS-3: 3.01–3.04)
@@ -58,7 +58,7 @@ tags:
 | **Seguridad** | No hay encriptación end-to-end en tramos críticos | → Proyecto portafolio: habilitar encriptación |
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Matriz de brechas Ley 21.663 / OIV — NIST CSF
@@ -86,7 +86,7 @@ Todos se cierran mediante:
 3. Aprobación Sponsor + auditores (Gateway G4)
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Entregables
@@ -107,7 +107,7 @@ tags:
 - **Marco regulatorio:** [[../../00-contexto/marco-normativo|Marco normativo]] (ver detalle de obligaciones)
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 *Última actualización: 23 marzo 2026*

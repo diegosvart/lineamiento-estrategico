@@ -5,7 +5,7 @@ aliases:
   - L4-nuevas-aplicaciones
   - Nuevas Aplicaciones Transversales
 tags:
-  - pendiente
+  - en-definicion
 ---
 # Nuevas Aplicaciones Transversales
 
@@ -25,7 +25,7 @@ Construcción de nuevas aplicaciones que explotan la nueva infraestructura centr
 Todas las nuevas aplicaciones son **transversales** desde v1 — no silo-por-empresa.
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Aplicaciones en roadmap 2026
@@ -54,7 +54,7 @@ Todas las nuevas aplicaciones deben cumplir:
 - Documentación: API, usuario, técnica
 
 tags:
-  - pendiente
+  - en-definicion
 ---
 
 ## Entregables

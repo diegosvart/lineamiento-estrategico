@@ -5,7 +5,7 @@ aliases:
   - L2-reduccion-dependencia
   - Reducción de Dependencia
 tags:
-  - pendiente
+  - en-definicion
 ---
 # Reduccion de Dependencia Externa
 
