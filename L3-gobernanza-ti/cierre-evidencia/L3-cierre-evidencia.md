@@ -49,7 +49,7 @@ Sin cierre formal auditado, el Sponsor no autoriza avance a L4 completo.
 - Puntos de fallo críticos
 - Backup y recuperación (dónde se resguardan datos)
 
-**Herramienta:** Visio, draw.io, o Excalidraw (ver [[../../Excalidraw/|Excalidraw vault]])
+**Herramienta:** Visio, draw.io, o Excalidraw (carpeta `/Excalidraw` en el vault)
 
 ## Tarea 4.09 — Gateway de Desvio D-30 (6 hh)
 

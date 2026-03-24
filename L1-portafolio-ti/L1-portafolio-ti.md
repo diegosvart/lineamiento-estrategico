@@ -50,7 +50,7 @@ con los demás lineamientos desde el día 1, sin dependencia de ellos. Coordina:
 | 4.10 | Mapear dependencias entre hallazgos Deloitte y políticas L3                           | PM          | 2                      | Pendiente |           |
 | 4.11 | Ejecutar cierre formal de proyectos normativos con evidencia auditada (× 3)           | PM + JTI    | 3 × 3 = 9              | Pendiente |           |
 | 4.12 | Incorporar proyectos estratégicos al seguimiento semanal                              | PM          | 1                      | Pendiente |           |
-| 4.13 | Reporte ejecutivo final de cierre Plan Gobernanza 2026 → [[../../00-contexto/gateways | G5]]        | PM + JTI               | 8         | Pendiente |
+| 4.13 | Reporte ejecutivo final de cierre Plan Gobernanza 2026 → [[../../00-contexto/gateways|G5]] | PM + JTI | 8 | Pendiente |
 
 **Total gobierno portafolio:** 54 hh
 
@@ -70,20 +70,20 @@ con los demás lineamientos desde el día 1, sin dependencia de ellos. Coordina:
 
 | Proyecto | Descripción | Lead | Sponsor | Precondición |
 |---|---|---|---|---|
-| **Catastro de Aplicaciones** | Level A→B→C (11 subsidiarias, 78 campos) | PM | JTI | [[../../L3-gobernanza-ti/catastro-aplicaciones/README|L3]] |
-| **Mapeo ERP Manager** | 11 instancias SQL — configuración, usuarios, integraciones | ARI | JTI | [[../../L3-gobernanza-ti/catastro-aplicaciones/README|L3]] |
+| **Catastro de Aplicaciones** | Level A→B→C (11 subsidiarias, 78 campos) | PM | JTI | [[../../L3-gobernanza-ti/catastro-aplicaciones/L3-catastro-aplicaciones|L3]] |
+| **Mapeo ERP Manager** | 11 instancias SQL — configuración, usuarios, integraciones | ARI | JTI | [[../../L3-gobernanza-ti/catastro-aplicaciones/L3-catastro-aplicaciones|L3]] |
 | **Seguro Ciberseguridad** | Cobertura formal con madurez mínima validada | PM | GG | Ley 21.663 completo |
 
 ### Proyectos Estratégicos de la Matriz (6)
 
 | Proyecto | Descripción | Lead | Estado | L4 Input |
 |---|---|---|---|---|
-| **PowerBI Automatización** | Reportes consolidados por holding + subsidiarias | PM | Backlog | [[../../L4-infraestructura-ti/nuevas-aplicaciones/README|L4]] |
-| **Gestión Documental** | Repositorio centralizado para 11 empresas | PM | Backlog | [[../../L4-infraestructura-ti/nuevas-aplicaciones/README|L4]] |
-| **Activo Fijo / Contabilidad** | Integración contable a BD central | PM | Backlog | [[../../L4-infraestructura-ti/bd-central/README|L4]] |
-| **SIA / Abastecimiento** | Sistema de información de abastecimiento transversal | PM | Backlog | [[../../L4-infraestructura-ti/nuevas-aplicaciones/README|L4]] |
-| **Sitrack (Flota)** | Gestión de flota + combustible + mantenimiento | PM | Backlog | [[../../L4-infraestructura-ti/nuevas-aplicaciones/README|L4]] |
-| **Migración SQL Server 2012** | Urgente: sin soporte desde 2023, máximo riesgo técnico | ARI | S1–S3 | [[../../L4-infraestructura-ti/migracion-soluciones/README|L4]] |
+| **PowerBI Automatización** | Reportes consolidados por holding + subsidiarias | PM | Backlog | [[../../L4-infraestructura-ti/nuevas-aplicaciones/L4-nuevas-aplicaciones|L4]] |
+| **Gestión Documental** | Repositorio centralizado para 11 empresas | PM | Backlog | [[../../L4-infraestructura-ti/nuevas-aplicaciones/L4-nuevas-aplicaciones|L4]] |
+| **Activo Fijo / Contabilidad** | Integración contable a BD central | PM | Backlog | [[../../L4-infraestructura-ti/bd-central/L4-bd-central|L4]] |
+| **SIA / Abastecimiento** | Sistema de información de abastecimiento transversal | PM | Backlog | [[../../L4-infraestructura-ti/nuevas-aplicaciones/L4-nuevas-aplicaciones|L4]] |
+| **Sitrack (Flota)** | Gestión de flota + combustible + mantenimiento | PM | Backlog | [[../../L4-infraestructura-ti/nuevas-aplicaciones/L4-nuevas-aplicaciones|L4]] |
+| **Migración SQL Server 2012** | Urgente: sin soporte desde 2023, máximo riesgo técnico | ARI | S1–S3 | [[../../L4-infraestructura-ti/migracion-soluciones/L4-migracion-soluciones|L4]] |
 
 ---
 
@@ -112,7 +112,7 @@ Todos los gateways se coordina desde L1:
 - **Bucle semanal:** 2 hh fijas — no fluctúan
 - **Reporte RAG:** Rojo = riesgo crítico, Ámbar = retraso ≥ 1 semana, Verde = on track
 - **Gateway D-30:** Si proyecto vence en 30 días y está en riesgo, escala a GG para decisión de ajuste
-- **Documentación:** Todas las fichas, actas y reportes se guardan en [[../../L3-gobernanza-ti/infraestructura-digital/README|SharePoint L1]] para auditoría
+- **Documentación:** Todas las fichas, actas y reportes se guardan en [[../../L3-gobernanza-ti/infraestructura-digital/L3-infraestructura-digital|SharePoint L1]] para auditoría
 
 ---
 
