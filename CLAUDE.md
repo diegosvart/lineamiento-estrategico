@@ -280,6 +280,32 @@ Add to the appropriate lineamiento's README.md or subsection. Always link from t
 **To track decisions or changes:**
 Use the CONTEXTO-PROYECTO.md "Próximas iteraciones" section to log what's pending or in progress.
 
+## Git Branching Convention
+
+### Estructura de branches
+
+```
+master       ← Estable (releases de hitos/gateways aprobados por Diego)
+  └── desarrollo  ← Integración (default para PRs de Claude)
+        └── feature/[nombre]  ← Features individuales
+```
+
+### Reglas críticas
+
+- **Siempre crear features desde `desarrollo`**, nunca desde `master`
+- **PRs siempre apuntan a `desarrollo`**, nunca directamente a `master`
+- **Solo Diego hace releases** (PR `desarrollo` → `master`) al completar un gateway
+- **Convención de nombres:** `feature/[descripcion-kebab-case]`
+
+### Flujo de trabajo de Claude
+
+1. `git checkout desarrollo && git pull origin desarrollo`
+2. `git checkout -b feature/[nombre]`
+3. [implementar cambios]
+4. `git commit -m "tipo: descripción"`
+5. `git push origin feature/[nombre]`
+6. Informar URL PR: `https://github.com/diegosvart/lineamiento-estrategico/compare/desarrollo...feature/[nombre]`
+
 ---
 
-**Last updated:** 23 March 2026 — Initial version aligned with CONTEXTO-PROYECTO.md v1.0
+**Last updated:** 25 March 2026 — Git branching convention added; Obsidian Best Practices section aligned with CONTEXTO-PROYECTO.md v1.0
