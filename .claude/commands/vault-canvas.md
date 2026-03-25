@@ -1,6 +1,10 @@
-# Skill: /vault-canvas
+---
+name: vault-canvas
+description: Crear y gestionar Obsidian Canvas files — mapas visuales interactivos que conectan notas, URLs y contenido
+type: prompt
+---
 
-## Descripción
+# /vault-canvas — Gestión de Canvas
 
 Crea y gestiona **Obsidian Canvas** files (`.canvas`) — mapas visuales e interactivos que conectan notas, enlaces externos, y contenido embebido. Basado en especificación JSON Canvas 1.0.
 

@@ -1,6 +1,10 @@
-# Skill: /vault-cli-operations
+---
+name: vault-cli-operations
+description: Automatizar operaciones del vault via CLI — crear, leer, buscar, exportar, sincronizar propiedades
+type: prompt
+---
 
-## Descripción
+# /vault-cli-operations — Automatización CLI
 
 Interactúa con Obsidian y el vault mediante operaciones CLI cuando Obsidian está abierto. Permite crear, leer, buscar, y gestionar notas automáticamente desde línea de comandos. Basado en Obsidian CLI plugin/API.
 

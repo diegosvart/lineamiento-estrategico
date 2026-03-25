@@ -1,6 +1,10 @@
-# Skill: /vault-markdown-syntax
+---
+name: vault-markdown-syntax
+description: Mejorar sintaxis Obsidian Flavored Markdown en archivos existentes — wikilinks, embeds, callouts, propiedades
+type: prompt
+---
 
-## Descripción
+# /vault-markdown-syntax — Optimización Markdown
 
 Mejora la sintaxis Markdown de Obsidian en archivos existentes: wikilinks avanzados, embeds, callouts, propiedades frontmatter, enlaces internos, y elementos especiales. Basado en Obsidian Flavored Markdown (OFM).
 

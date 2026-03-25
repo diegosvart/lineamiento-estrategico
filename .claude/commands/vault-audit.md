@@ -1,6 +1,10 @@
-# Skill: /vault-audit
+---
+name: vault-audit
+description: Diagnóstico completo del vault Obsidian para detectar problemas de integridad estructural
+type: prompt
+---
 
-## Descripción
+# /vault-audit — Auditoría del Vault
 
 Ejecuta un diagnóstico completo del vault Obsidian para detectar problemas de integridad estructural.
 
