@@ -5,6 +5,8 @@ tags:
   - pendiente
 ---
 
+**Plan:** [[00-INDICE|Índice del Plan 2026]]
+
 # L4 — Nueva Infraestructura TI
 
 **Horizonte:** Paralelo con L3 desde S5 — cierre Dic 2026  

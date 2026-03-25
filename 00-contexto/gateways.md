@@ -5,6 +5,8 @@ tags:
   - activo
 ---
 
+**Plan:** [[../00-INDICE|Índice del Plan 2026]]
+
 # Gateways — Puntos de control formal del plan
 
 Los gateways son decisiones conscientes que validan el avance del plan entre fases. Sin aprobación de gateway, ninguna fase avanza.

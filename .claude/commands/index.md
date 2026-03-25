@@ -6,7 +6,7 @@ type: index
 
 # Claude Code Skills para Obsidian Vault
 
-**Total: 13 skills** disponibles para automatizar gestión del Plan Gobernanza TI 2026
+**Total: 14 skills** disponibles para automatizar gestión del Plan Gobernanza TI 2026
 
 ---
 
@@ -55,6 +55,11 @@ type: index
 - **Archivo:** `vault-canvas.md`
 - **Propósito:** Crear y gestionar Obsidian Canvas files — mapas visuales interactivos
 - **Cuándo usar:** Roadmaps, procesos, arquitectura, visualizaciones de gobernanza
+
+### 8.5. `/vault-canvas-layout` ✨ NUEVO
+- **Archivo:** `vault-canvas-layout.md`
+- **Propósito:** Generar Obsidian Canvas con layout radial automático — posiciona 00-INDICE como nodo raíz central
+- **Cuándo usar:** Después de agregar lineamientos, refrescar vista aérea del vault, documentación ejecutiva
 
 ---
 

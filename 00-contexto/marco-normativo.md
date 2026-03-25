@@ -5,6 +5,8 @@ tags:
   - activo
 ---
 
+**Plan:** [[../00-INDICE|Índice del Plan 2026]]
+
 # Marco Normativo Transversal
 
 Todas las tareas, entregables y decisiones del plan operan bajo dos marcos legales vinculantes que crean obligaciones directas para el Holding y sus 11 subsidiarias.

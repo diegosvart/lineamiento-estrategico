@@ -1,0 +1,135 @@
+{
+  "nodes": [
+    {
+      "id": "indice",
+      "type": "file",
+      "file": "00-INDICE.md",
+      "x": -250,
+      "y": -175,
+      "width": 500,
+      "height": 350
+    },
+    {
+      "id": "l1",
+      "type": "file",
+      "file": "L1-portafolio-ti/L1-portafolio-ti.md",
+      "x": 450,
+      "y": -400,
+      "width": 380,
+      "height": 220
+    },
+    {
+      "id": "l2",
+      "type": "file",
+      "file": "L2-estructuracion-area/L2-estructuracion-area-ti.md",
+      "x": 450,
+      "y": -150,
+      "width": 380,
+      "height": 220
+    },
+    {
+      "id": "l3",
+      "type": "file",
+      "file": "L3-gobernanza-ti/L3-gobernanza-ti.md",
+      "x": 450,
+      "y": 100,
+      "width": 380,
+      "height": 220
+    },
+    {
+      "id": "l4",
+      "type": "file",
+      "file": "L4-infraestructura-ti/L4-infraestructura-ti.md",
+      "x": 450,
+      "y": 350,
+      "width": 380,
+      "height": 220
+    },
+    {
+      "id": "l5",
+      "type": "file",
+      "file": "L5-integraciones/L5-integraciones.md",
+      "x": 450,
+      "y": 600,
+      "width": 380,
+      "height": 220
+    },
+    {
+      "id": "ctx",
+      "type": "file",
+      "file": "00-contexto/contexto-estrategico.md",
+      "x": -900,
+      "y": -250,
+      "width": 350,
+      "height": 200
+    },
+    {
+      "id": "gw",
+      "type": "file",
+      "file": "00-contexto/gateways.md",
+      "x": -900,
+      "y": 0,
+      "width": 350,
+      "height": 200
+    },
+    {
+      "id": "mn",
+      "type": "file",
+      "file": "00-contexto/marco-normativo.md",
+      "x": -900,
+      "y": 250,
+      "width": 350,
+      "height": 200
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "indice",
+      "toNode": "l1",
+      "toSide": "left"
+    },
+    {
+      "id": "e2",
+      "fromNode": "indice",
+      "toNode": "l2",
+      "toSide": "left"
+    },
+    {
+      "id": "e3",
+      "fromNode": "indice",
+      "toNode": "l3",
+      "toSide": "left"
+    },
+    {
+      "id": "e4",
+      "fromNode": "indice",
+      "toNode": "l4",
+      "toSide": "left"
+    },
+    {
+      "id": "e5",
+      "fromNode": "indice",
+      "toNode": "l5",
+      "toSide": "left"
+    },
+    {
+      "id": "e6",
+      "fromNode": "indice",
+      "toNode": "ctx",
+      "toSide": "right"
+    },
+    {
+      "id": "e7",
+      "fromNode": "indice",
+      "toNode": "gw",
+      "toSide": "right"
+    },
+    {
+      "id": "e8",
+      "fromNode": "indice",
+      "toNode": "mn",
+      "toSide": "right"
+    }
+  ]
+}
