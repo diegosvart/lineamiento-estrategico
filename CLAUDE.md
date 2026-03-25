@@ -68,8 +68,8 @@ This document contains:
 ### Internal Links
 Use Obsidian's wikilink syntax for all internal references:
 ```markdown
-[[L1-portafolio-ti/README|L1 - Portafolio TI]]
-[[L3-gobernanza-ti/catastro-aplicaciones/README|Catastro de Aplicaciones]]
+[[L1-portafolio-ti/L1-portafolio-ti|L1 — Portafolio TI]]
+[[L3-gobernanza-ti/catastro-aplicaciones/L3-catastro-aplicaciones|Catastro de Aplicaciones]]
 ```
 
 **Do not break existing links** when editing files. Obsidian's linking system is how the vault is navigated.
@@ -271,7 +271,7 @@ When receiving updates from claude.ai sessions:
 **To reference a section:**
 Use Obsidian links with clear text labels. Example:
 ```markdown
-See [[L3-gobernanza-ti/catastro-aplicaciones/README|the applications catalog guide]]
+See [[L3-gobernanza-ti/catastro-aplicaciones/L3-catastro-aplicaciones|the applications catalog guide]]
 ```
 
 **To add project details:**

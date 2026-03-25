@@ -1,17 +1,14 @@
 ---
 aliases:
-  - L2-formalizacion-organizacional
   - Formalización Organizacional
 tags:
-  - en-definicion
+  - activo
 ---
 
 # Formalizacion Organizacional
 
-**Lineamiento:** [[L2-estructuracion-area-ti|L2 - Estructuracion del Area TI]]  
+**Lineamiento:** [[L2-estructuracion-area-ti|L2 - Estructuracion del Area TI]]
 **Semanas:** S1–S2
-
----
 
 ## Descripción
 

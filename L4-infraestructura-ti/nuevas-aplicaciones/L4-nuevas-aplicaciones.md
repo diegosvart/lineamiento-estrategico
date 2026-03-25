@@ -1,12 +1,6 @@
-tags:
-  - pendiente
 ---
 aliases:
-  - L4-nuevas-aplicaciones
   - Nuevas Aplicaciones Transversales
-tags:
-  - en-definicion
----
 # Nuevas Aplicaciones Transversales
 
 **Lineamiento:** [[../L4-infraestructura-ti|L4 - Nueva Infraestructura TI]]
@@ -15,18 +9,12 @@ tags:
 **Responsable:** PM (arquitectura), equipos especializados (desarrollo)
 **Precondición:** [[../diseno-arquitectura/L4-diseno-arquitectura|Estándares de arquitectura]] aprobados
 
-tags:
-  - pendiente
----
 
 ## Descripción
 
 Construcción de nuevas aplicaciones que explotan la nueva infraestructura centralizada.
 Todas las nuevas aplicaciones son **transversales** desde v1 — no silo-por-empresa.
 
-tags:
-  - en-definicion
----
 
 ## Aplicaciones en roadmap 2026
 
@@ -39,9 +27,6 @@ tags:
 | **Sitrack Mejorado** | Gestión flota con analytics | Logística | Media |
 | **Portal RH** | Autoservicio de empleados | 11 empresas | Media |
 
-tags:
-  - pendiente
----
 
 ## Estándares transversales
 
@@ -53,9 +38,6 @@ Todas las nuevas aplicaciones deben cumplir:
 - Disponibilidad: 99.5% uptime
 - Documentación: API, usuario, técnica
 
-tags:
-  - en-definicion
----
 
 ## Entregables
 
@@ -65,9 +47,6 @@ tags:
 - ✓ Documentación de usuario
 - ✓ Plan de rollout (training, soporte, feedback)
 
-tags:
-  - pendiente
----
 
 ## Dependencias
 

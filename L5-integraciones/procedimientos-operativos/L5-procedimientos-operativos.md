@@ -2,9 +2,6 @@
 aliases:
   - L5-procedimientos-operativos
   - Procedimientos Operativos
-tags:
-  - en-definicion
----
 
 # Procedimientos Operativos de Integraciones
 
@@ -14,17 +11,11 @@ tags:
 **Responsable:** ARI (operación), SPT (soporte), PM (escalamiento)
 **Precondición:** [[../definicion-estandares/L5-definicion-estandares|Definición de Estándares]] + primeras integraciones en prueba
 
-tags:
-  - en-definicion
----
 
 ## Descripción
 
 Procedimientos formales para monitoreo, mantenimiento y remediación de integraciones en producción. Incluye: alertas automáticas por latencia y fallos de conexión, validación de esquema en tiempo real, health checks periódicos, playbooks de troubleshooting por tipo de error, escalamiento a vendor o equipo externo, plan de mantenimiento preventivo y patching de conectores, auditoría de logs de integración para compliance normativo (19.628, 21.663).
 
-tags:
-  - en-definicion
----
 
 ## Operaciones cubiertas
 
@@ -36,9 +27,6 @@ tags:
 - **Auditoría:** Logs de quién accedió qué, cuándo, con qué credencial (requisito 19.628)
 - **Disaster recovery:** RTO/RPO por tipo de integración, procedures de recovery manual
 
-tags:
-  - en-definicion
----
 
 ## Dependencias
 

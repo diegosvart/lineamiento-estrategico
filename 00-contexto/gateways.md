@@ -1,3 +1,10 @@
+---
+aliases:
+  - Gateways del Plan
+tags:
+  - activo
+---
+
 # Gateways — Puntos de control formal del plan
 
 Los gateways son decisiones conscientes que validan el avance del plan entre fases. Sin aprobación de gateway, ninguna fase avanza.

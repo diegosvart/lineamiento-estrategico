@@ -261,7 +261,7 @@ Hay 2 formas de hacer links en Obsidian:
 #### Forma 3: Link a subcarpeta/archivo
 
 ```markdown
-[[L3-gobernanza-ti/catastro-aplicaciones/README]]
+[[L3-gobernanza-ti/catastro-aplicaciones/L3-catastro-aplicaciones|Catastro de Aplicaciones]]
 ```
 
 - Busca dentro de la carpeta L3-gobernanza-ti

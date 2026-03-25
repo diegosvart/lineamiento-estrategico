@@ -1,12 +1,6 @@
-tags:
-  - pendiente
 ---
 aliases:
-  - L3-politicas-procedimientos
-  - Políticas y Procedimientos
-tags:
-  - en-definicion
----
+  - Políticas y Procedimientos TI
 # Políticas y Procedimientos
 
 **Lineamiento:** [[../L3-gobernanza-ti|L3 - Plan de Gobernanza TI]]
@@ -15,9 +9,6 @@ tags:
 **Responsable:** PM + ARI + SPT
 **Precondición:** [[../diagnostico-normativo/L3-diagnostico-normativo|Diagnóstico normativo]] completo
 
-tags:
-  - pendiente
----
 
 ## Descripción
 
@@ -26,9 +17,6 @@ requisitos de [[../../00-contexto/marco-normativo|marco normativo]] en documento
 
 Sin políticas aprobadas, los hallazgos Deloitte no cierran y Sponsor no autoriza avance a L4.
 
-tags:
-  - en-definicion
----
 
 ## Las 5 Políticas TI
 
@@ -42,9 +30,6 @@ tags:
 
 **Total redacción:** 23 hh | **Validación cruzada:** 3 hh (tarea 3.10) | **Aprobación:** 1 hh (tarea 3.11)
 
-tags:
-  - pendiente
----
 
 ## Procedimientos Operativos
 
@@ -60,9 +45,6 @@ tags:
 
 **Total procedimientos:** 36 hh
 
-tags:
-  - en-definicion
----
 
 ## Tareas detalladas (WS-3: 3.05–3.18)
 
@@ -103,9 +85,6 @@ tags:
 - Generan acta de aprobación y publicación oficial
 - **Gateway:** Habilitador de [[../../00-contexto/gateways|G3]]
 
-tags:
-  - pendiente
----
 
 ### Procedimientos (Tareas 3.12–3.18)
 
@@ -140,9 +119,6 @@ tags:
 - Define: cómo comunica el área TI cambios, incidentes, nuevas políticas
 - Canales: Teams, correo, reuniones periódicas
 
-tags:
-  - en-definicion
----
 
 ## Entregables
 
@@ -153,9 +129,6 @@ tags:
 - ✓ Canal soporte TI con SLA definido
 - ✓ DRP validado y socializado
 
-tags:
-  - pendiente
----
 
 ## Dependencias
 
@@ -164,8 +137,5 @@ tags:
 - **Gateway:** [[../../00-contexto/gateways|G3]] (5 políticas firmadas son prerequisito)
 - **Marcos:** [[../../00-contexto/marco-normativo|Marco normativo]] (cumplen Ley 19.628, Ley 21.663, Deloitte)
 
-tags:
-  - en-definicion
----
 
 *Última actualización: 23 marzo 2026*

@@ -1,10 +1,6 @@
 ---
 aliases:
-  - L5-definicion-estandares
-  - Definición de Estándares
-tags:
-  - en-definicion
----
+  - Definición de Estándares de Integración
 
 # Definición de Estándares de Integración
 
@@ -14,17 +10,11 @@ tags:
 **Responsable:** PM (diseño), ARI (infraestructura), Vendor (soporte técnico)
 **Precondición:** [[../catalogo-integraciones/L5-catalogo-integraciones|Catálogo de Integraciones]] completado
 
-tags:
-  - en-definicion
----
 
 ## Descripción
 
 Definición formal de estándares de integración a nivel de protocolo, contrato de datos y operación. Incluye: especificación de APIs REST (versioning, autenticación OAuth2, rate limiting), procedimientos ETL batch (scheduling, reintentos, transformaciones), webhooks para eventos en tiempo real, esquemas JSON/XML validados, SLAs de latencia y consistencia, convenciones de nomenclatura de endpoints, y procedimiento de deprecación de integraciones antiguas. Estos estándares vinculan a todos los proyectos de integración (L1 portafolio).
 
-tags:
-  - en-definicion
----
 
 ## Estándares a definir
 
@@ -38,9 +28,6 @@ tags:
   - Webhooks: reintentos exponenciales, TTL 24 horas
 - **Monitoreo:** Alertas por latencia, fallos HTTP 5xx, validación de esquema
 
-tags:
-  - en-definicion
----
 
 ## Dependencias
 

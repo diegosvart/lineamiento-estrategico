@@ -1,12 +1,6 @@
-tags:
-  - pendiente
 ---
 aliases:
-  - L4-diseno-arquitectura
-  - Diseño de Arquitectura
-tags:
-  - en-definicion
----
+  - Diseño de Arquitectura TI
 # Diseño de Arquitectura
 
 **Lineamiento:** [[../L4-infraestructura-ti|L4 - Nueva Infraestructura TI]]
@@ -15,18 +9,12 @@ tags:
 **Responsable:** PM (diseño), ARI (implementación)
 **Precondición:** [[../../L3-gobernanza-ti/catastro-aplicaciones/L3-catastro-aplicaciones|Catastro Level C]]
 
-tags:
-  - pendiente
----
 
 ## Descripción
 
 Diseño de arquitectura técnica unificada para el holding. Define plataforma, estándares, integraciones,
 seguridad y escalabilidad. Es el plano maestro que informa BD central, migraciones y nuevas aplicaciones.
 
-tags:
-  - en-definicion
----
 
 ## Entregables esperados
 
@@ -36,9 +24,6 @@ tags:
 - ✓ Estándares técnicos por tipo (web, APIs, BD, integraciones)
 - ✓ Roadmap técnico 2026–2027
 
-tags:
-  - pendiente
----
 
 ## Dependencias
 

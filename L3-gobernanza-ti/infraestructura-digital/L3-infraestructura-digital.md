@@ -1,12 +1,6 @@
-tags:
-  - pendiente
 ---
 aliases:
-  - L3-infraestructura-digital
-  - Infraestructura Digital
-tags:
-  - en-definicion
----
+  - Infraestructura Digital del Área TI
 # Infraestructura Digital del Área TI
 
 **Lineamiento:** [[../L3-gobernanza-ti|L3 - Plan de Gobernanza TI]]
@@ -14,9 +8,6 @@ tags:
 **Esfuerzo estimado:** 6.5 hh
 **Responsable:** PM
 
-tags:
-  - pendiente
----
 
 ## Descripción
 
@@ -28,9 +19,6 @@ donde ocurren decisiones (Teams), se planifica ejecución (Planner) y se almacen
 **Habilita:** [[../catastro-aplicaciones/L3-catastro-aplicaciones|Catastro de aplicaciones]]
 **Related:** [[../../00-contexto/CONTEXTO-PROYECTO|Ecosistema tecnológico en CONTEXTO-PROYECTO]]
 
-tags:
-  - en-definicion
----
 
 ## Tareas (WS-2: 2.01–2.04)
 
@@ -46,9 +34,6 @@ tags:
 - Configurar plantilla de proyecto en Planner usando Graph API + Python — automatización de creación de entornos por proyecto
 - Estimado: 3 hh (S2, cuando se conocen patrones de proyecto)
 
-tags:
-  - pendiente
----
 
 ## Flujo de uso
 
@@ -62,9 +47,6 @@ tags:
 [Nuevos proyectos] → Crea teams + planner + sharepoint automáticamente
 ```
 
-tags:
-  - en-definicion
----
 
 ## Entregables
 
@@ -73,9 +55,6 @@ tags:
 - ✓ Estructura SharePoint con librerías: Documentos, Políticas, Catastro, Artefactos, Reportes
 - [ ] Plantilla automatizada Graph API (S2, iteración siguiente)
 
-tags:
-  - pendiente
----
 
 ## Notas operacionales
 
@@ -84,8 +63,5 @@ tags:
 - JTI valida estructura antes de comenzar a usarla (no necesita aprobación formal, solo feedback)
 - Revisión trimestral para agregar nuevas librerías o campos conforme se generan nuevos tipos de artefactos
 
-tags:
-  - en-definicion
----
 
 *Última actualización: 23 marzo 2026*

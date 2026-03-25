@@ -1,3 +1,10 @@
+---
+aliases:
+  - L4 — Nueva Infraestructura TI
+tags:
+  - pendiente
+---
+
 # L4 — Nueva Infraestructura TI
 
 **Horizonte:** Paralelo con L3 desde S5 — cierre Dic 2026  

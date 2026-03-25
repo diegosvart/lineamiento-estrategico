@@ -1,3 +1,10 @@
+---
+aliases:
+  - L5 — Integraciones TI
+tags:
+  - pendiente
+---
+
 # L5 — Integraciones TI
 
 **Horizonte:** S10+ (paralelo tardío con L4)

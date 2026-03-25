@@ -1,3 +1,10 @@
+---
+aliases:
+  - L2 — Estructuración del Área TI
+tags:
+  - activo
+---
+
 # L2 — Estructuracion del Area TI
 
 **Horizonte:** S1–S3 — 30 Mar al 17 Abr 2026  

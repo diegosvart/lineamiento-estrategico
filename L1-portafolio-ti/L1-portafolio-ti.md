@@ -1,3 +1,10 @@
+---
+aliases:
+  - L1 — Portafolio TI
+tags:
+  - activo
+---
+
 # L1 — Portafolio TI en Ejecución
 
 **Horizonte:** Permanente — Mar a Dic 2026

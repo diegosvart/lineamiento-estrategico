@@ -1,3 +1,10 @@
+---
+aliases:
+  - Índice del Plan 2026
+tags:
+  - activo
+---
+
 # Plan de Transformacion del Area TI — Grupo EBI 2026
 
 **Responsable:** Diego Morales — Project Manager  
@@ -16,11 +23,11 @@
 
 ## Lineamientos
 
-- **[[L1-portafolio-ti/L1-portafolio-ti\|L1 - Portafolio TI]]** — Proyectos en ejecucion bajo responsabilidad del PM · Activo
-- **[[L2-estructuracion-area-ti\|L2 - Estructuracion del Area TI]]** — Formalizacion organizacional y reduccion de dependencia externa · Activo
-- **[[L3-gobernanza-ti/L3-gobernanza-ti\|L3 - Plan de Gobernanza TI]]** — Catastro, normativa, politicas y cierre · Activo
-- **[[L4-infraestructura-ti/L4-infraestructura-ti\|L4 - Nueva Infraestructura TI]]** — Arquitectura, BD central, migraciones · Activo
-- **[[L5-integraciones/L5-integraciones\|L5 - Integraciones TI]]** — Catalogo, estandares y procedimientos de integraciones tecnologicas · Pendiente
+- **[[L1-portafolio-ti/L1-portafolio-ti|L1 — Portafolio TI]]** — Proyectos en ejecucion bajo responsabilidad del PM · Activo
+- **[[L2-estructuracion-area/L2-estructuracion-area-ti|L2 — Estructuracion del Area TI]]** — Formalizacion organizacional y reduccion de dependencia externa · Activo
+- **[[L3-gobernanza-ti/L3-gobernanza-ti|L3 — Plan de Gobernanza TI]]** — Catastro, normativa, politicas y cierre · Activo
+- **[[L4-infraestructura-ti/L4-infraestructura-ti|L4 — Nueva Infraestructura TI]]** — Arquitectura, BD central, migraciones · Pendiente
+- **[[L5-integraciones/L5-integraciones|L5 — Integraciones TI]]** — Catalogo, estandares y procedimientos de integraciones tecnologicas · Pendiente
 
 ---
 

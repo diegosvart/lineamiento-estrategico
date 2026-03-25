@@ -1,20 +1,14 @@
-tags:
-  - pendiente
 ---
 aliases:
-  - L2-habilitacion-recursos
   - Habilitación de Recursos
-tags:
-  - en-definicion
----
-# Habilitacion de Recursos
-
-**Lineamiento:** [[L2-estructuracion-area-ti|L2 - Estructuracion del Area TI]]  
-**Semanas:** S3–S5
-
 tags:
   - pendiente
 ---
+
+# Habilitacion de Recursos
+
+**Lineamiento:** [[L2-estructuracion-area-ti|L2 - Estructuracion del Area TI]]
+**Semanas:** S3–S5
 
 ## Descripción
 

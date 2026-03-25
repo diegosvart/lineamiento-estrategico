@@ -1,12 +1,6 @@
-tags:
-  - pendiente
 ---
 aliases:
-  - L4-bd-central
-  - BD Central
-tags:
-  - en-definicion
----
+  - BD Central — Esquema Unificado
 # BD Central — Esquema Unificado
 
 **Lineamiento:** [[../L4-infraestructura-ti|L4 - Nueva Infraestructura TI]]
@@ -15,18 +9,12 @@ tags:
 **Responsable:** PM (diseño), ARI (implementación)
 **Precondición:** [[../diseno-arquitectura/L4-diseno-arquitectura|Diseño de arquitectura]]
 
-tags:
-  - pendiente
----
 
 ## Descripción
 
 Base de datos centralizada y unificada para el holding. Consolida datos de 11 subsidiarias que hoy
 residen en ERP Manager (11 instancias SQL independientes). Es el corazón de L4.
 
-tags:
-  - en-definicion
----
 
 ## Áreas de diseño
 
@@ -37,9 +25,6 @@ tags:
 - Performance (índices, materialización, caché)
 - Backup y recuperación
 
-tags:
-  - pendiente
----
 
 ## Entregables
 
@@ -49,9 +34,6 @@ tags:
 - ✓ Procedimientos almacenados para transformación
 - ✓ Plan de migración datos (rollback, validación)
 
-tags:
-  - en-definicion
----
 
 ## Dependencias
 

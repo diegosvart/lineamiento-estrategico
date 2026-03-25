@@ -1,12 +1,6 @@
-tags:
-  - pendiente
 ---
 aliases:
-  - L3-diagnostico-normativo
   - Diagnóstico Normativo
-tags:
-  - en-definicion
----
 # Diagnóstico Normativo
 
 **Lineamiento:** [[../L3-gobernanza-ti|L3 - Plan de Gobernanza TI]]
@@ -15,9 +9,6 @@ tags:
 **Responsable:** PM + JTI
 **Precondición:** [[../catastro-aplicaciones/L3-catastro-aplicaciones|Catastro Level A]] completado
 
-tags:
-  - pendiente
----
 
 ## Descripción
 
@@ -28,9 +19,6 @@ Análisis de brechas entre el estado actual del área TI y los requisitos de tre
 
 Identificatodo aquello que **NO está cubierto** y qué acciones son necesarias para remediar.
 
-tags:
-  - en-definicion
----
 
 ## Tareas (WS-3: 3.01–3.04)
 
@@ -43,9 +31,6 @@ tags:
 
 **Total:** 14 hh
 
-tags:
-  - pendiente
----
 
 ## Matriz de brechas Ley 19.628
 
@@ -57,9 +42,6 @@ tags:
 | **Derecho acceso** | No hay procedimiento para responder solicitudes acceso | → [[../politicas-procedimientos/L3-politicas-procedimientos|Procedimiento ABM usuarios]] |
 | **Seguridad** | No hay encriptación end-to-end en tramos críticos | → Proyecto portafolio: habilitar encriptación |
 
-tags:
-  - en-definicion
----
 
 ## Matriz de brechas Ley 21.663 / OIV — NIST CSF
 
@@ -71,9 +53,6 @@ tags:
 | **Responder** | No hay procedimiento formal respuesta incidentes | → [[../politicas-procedimientos/L3-politicas-procedimientos|Procedure respuesta incidentes]] |
 | **Recuperar** | DRP genérico, sin validación | → Proyecto portafolio: validar DRP |
 
-tags:
-  - pendiente
----
 
 ## Hallazgos Deloitte 2026
 
@@ -85,9 +64,6 @@ Todos se cierran mediante:
 2. Validación auditada (WS-4: tarea 4.11)
 3. Aprobación Sponsor + auditores (Gateway G4)
 
-tags:
-  - en-definicion
----
 
 ## Entregables
 
@@ -96,9 +72,6 @@ tags:
 - ✓ Matriz de hallazgos Deloitte (por riesgo)
 - ✓ Reporte consolidado con mapeo de remediaciones a tareas de L3/L4/L1
 
-tags:
-  - pendiente
----
 
 ## Dependencias
 
@@ -106,8 +79,5 @@ tags:
 - **Gateway:** [[../../00-contexto/gateways|G2]] (diagnóstico completo es prerequisito)
 - **Marco regulatorio:** [[../../00-contexto/marco-normativo|Marco normativo]] (ver detalle de obligaciones)
 
-tags:
-  - en-definicion
----
 
 *Última actualización: 23 marzo 2026*
