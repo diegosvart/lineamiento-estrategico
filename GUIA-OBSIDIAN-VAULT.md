@@ -550,6 +550,153 @@ Ambos funcionan, es solo estilo.
 
 ---
 
+## PARTE 11: Complementos y Skills Avanzados
+
+### Claude Code Skills — Automatización inteligente
+
+**¿Qué son?** Comandos especializados que Claude Code ejecuta dentro de tu vault para mantenerlo saludable, validar links, crear notas con estructura correcta, y más.
+
+**Disponibles ahora:** 10 skills organizados en 3 tiers
+
+#### Tier 1: Auditoría y Gestión Base (Comenzar aquí)
+
+```
+/vault-audit
+  ├─ Detecta links rotos (apuntan a archivos que no existen)
+  ├─ Detecta links a carpetas (crean nodos fantasma en grafo)
+  ├─ Valida YAML frontmatter (tags duplicados, sintaxis)
+  ├─ Reporta archivos sin tag de estado
+  └─ Verifica que config files están en filtros
+
+Cuándo: Después de cambios masivos, antes de commits
+
+/vault-new-note
+  ├─ Crea nueva nota con YAML correcto automáticamente
+  ├─ Genera nombre de archivo limpio (sin tildes, hyphens)
+  ├─ Actualiza índices y links automáticamente
+  └─ Agrega a filtros si es archivo de configuración
+
+Ejemplo: /vault-new-note --nombre "Política de Seguridad" --estado "en-definicion"
+
+/vault-status
+  ├─ Ver estado actual de todos los lineamientos (view)
+  ├─ Cambiar estado de un archivo (update)
+  ├─ Ver estado de una carpeta completa (folder)
+  ├─ Validar que todos los archivos tienen estado válido (validate)
+  └─ Generar resumen visual del progreso del plan
+
+Ejemplo: /vault-status view (muestra qué está completado, en progreso, pendiente)
+```
+
+#### Tier 2: Operaciones Especializadas
+
+```
+/vault-excalidraw
+  ├─ Incrustar diagramas Excalidraw en notas
+  ├─ Validar que diagramas existen
+  ├─ Renombrar diagramas y actualizar todas las referencias
+  └─ Listar diagramas huérfanos (no vinculados)
+
+/vault-link-update
+  ├─ Actualizar links en masa (útil cuando renombras archivo)
+  ├─ Corregir links rotos automáticamente
+  ├─ Cambiar alias de links sin cambiar destino
+  └─ Listar todos los archivos que referencian un archivo
+
+/vault-template
+  ├─ Crear nuevos lineamientos con estructura completa
+  ├─ Crear subcategorías dentro de lineamientos
+  ├─ Crear documentos de política/procedimiento
+  ├─ Crear documentos de decisión/acta
+  └─ Personalizar plantillas
+
+/vault-graph-validate
+  ├─ Validar que todos los nodos tienen color (Juggl plugin)
+  ├─ Detectar nodos aislados o débilmente conectados
+  ├─ Verificar que filtros en app.json son correctos
+  ├─ Validar sintaxis de graph.css (selectores CSS para colores)
+  └─ Generar reporte de salud del grafo
+```
+
+#### Tier 3: Integración con Plugins Externos
+
+Estos skills requieren instalar plugins adicionales (opcionales pero poderosos):
+
+```
+/vault-dataview-setup (requiere plugin: Dataview)
+  ├─ Crear dashboards dinámicos que se actualizan automáticamente
+  ├─ Generar tabla de proyectos con metadatos (responsable, estado, horas)
+  ├─ Crear vista filtrada por estado/responsable
+  ├─ Generar métricas consolidadas del plan
+  └─ Validar que todas las queries Dataview son válidas
+
+Ejemplo output: Tabla que muestra automáticamente todos los archivos "activos"
+
+/vault-templater-setup (requiere plugin: Templater)
+  ├─ Crear plantillas parametrizadas con variables dinámicas
+  ├─ Auto-generar fecha/hora al crear nota
+  ├─ Auto-generar ID secuencial para tareas
+  ├─ Plantillas con lógica condicional
+  └─ Aplicar plantilla al crear archivo nuevo
+
+Ejemplo: Crear nota que auto-llena "<% tp.date.now() %>" con la fecha actual
+
+/vault-tasks-setup (requiere plugin: Tasks)
+  ├─ Convertir tablas markdown a tareas trackables
+  ├─ Crear vista de tareas vencidas
+  ├─ Filtrar tareas por responsable/estado/vencimiento
+  ├─ Generar resumen de progreso de tareas
+  └─ Crear filtros personalizados
+
+Ejemplo: Mostrar todas las tareas que vence en los próximos 7 días
+```
+
+### Plugins Recomendados (Opcionales)
+
+| Plugin | ID | Para qué | Complejidad |
+|--------|-----|----------|------------|
+| **Juggl** | `juggl` | Grafo interactivo con colores por estado | ⭐ (ya instalado) |
+| **Excalidraw** | `obsidian-excalidraw-plugin` | Diagramas visuales | ⭐ (ya instalado) |
+| **Git** | `obsidian-git` | Versionamiento + backup automático | ⭐ (ya instalado) |
+| **Dataview** | `dataview` | Consultas dinámicas (dashboards) | ⭐⭐ |
+| **Templater** | `templater-obsidian` | Plantillas con variables | ⭐⭐ |
+| **Tasks** | `obsidian-tasks-plugin` | Tareas con due dates | ⭐⭐ |
+
+**Instalación:**
+1. Obsidian → Settings → Community Plugins
+2. Search plugin name
+3. Install + Enable
+4. Reload Obsidian
+
+### Cuándo usar cada Skill
+
+**Primera vez explorando el vault:**
+- `/vault-status view` — Ver estado actual
+- Lee GUIA-OBSIDIAN-VAULT.md (este archivo)
+- Lee CONTEXTO-PROYECTO.md
+
+**Agregando contenido nuevo:**
+- `/vault-new-note` — Crear archivo con estructura correcta
+- `/vault-template create` — Usar plantilla si es lineamiento completo
+
+**Después de cambios:**
+- `/vault-audit` — Verificar integridad
+- `/vault-graph-validate` — Verificar grafo (colores, nodos)
+
+**Mantenimiento regular:**
+- `/vault-audit` — Semanal (o después de cambios)
+- `/vault-status view` — Quincenal (seguimiento de progreso)
+- `/vault-graph-validate` — Mensual (salud del grafo)
+
+**Operaciones especiales:**
+- `/vault-link-update` — Cuando renombras archivo importante
+- `/vault-excalidraw list` — Cuando agregues diagrama nuevo
+- `/vault-dataview-setup --create-dashboard` — Para dashboard ejecutivo
+
+---
+
 **Próximo paso:** Abre Obsidian, apunta a tu vault, haz clic en `00-indice.md` y comienza a navegar.
 
-*Guía creada: 23 marzo 2026*
+Una vez familiarizado, prueba `/vault-status view` para ver el estado del plan.
+
+*Guía actualizada: 25 marzo 2026 — Adición de skills y plugins*

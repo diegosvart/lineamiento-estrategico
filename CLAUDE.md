@@ -79,6 +79,132 @@ Use Obsidian's wikilink syntax for all internal references:
 - Example: `diseno-arquitectura` (not `diseño-arquitectura`)
 - All content: Spanish language
 
+## Obsidian Best Practices
+
+### Wikilink Rules (Critical)
+
+1. **Format**: `[[ruta/archivo|display-text]]` — NEVER link to folders
+   - ✅ Correct: `[[L3-gobernanza-ti/politicas-procedimientos/L3-politicas|Políticas]]`
+   - ❌ Wrong: `[[L3-gobernanza-ti/politicas-procedimientos/|folder link]]`
+   - ❌ Wrong: `[[L3-gobernanza-ti/politicas-procedimientos/README]]` (file no longer exists)
+
+2. **Spaces in links**: Remove spaces around pipes
+   - ✅ `[[archivo|alias]]`
+   - ❌ `[[archivo | alias]]`
+
+3. **Validate before linking**: Always verify target file exists
+   - Use `/vault-audit` to detect broken links automatically
+   - Use `/vault-link-update` to fix links in bulk
+
+### YAML Frontmatter Rules
+
+Every `.md` file should have this structure:
+
+```yaml
+---
+aliases:
+  - Display Name in Spanish (with tildes OK here)
+tags:
+  - [exactly-one-status-tag]
+---
+```
+
+**Valid status tags** (choose ONE):
+- `completado` — Phase complete, audited closure ✅
+- `activo` — Currently executing 🔵
+- `en-definicion` — Design/planning in progress 🟠
+- `pendiente` — Not started, queued ⚫
+- `backlog` — Lower priority, not scheduled 🟣
+
+**Rules**:
+- Every file except config files MUST have one status tag
+- DO NOT use multiple status tags on same file
+- Config files (CLAUDE.md, MEMORY.md) in `userIgnoreFilters` can skip tags
+
+### Configuration File Filtering
+
+Files that should NOT appear in the graph must be in `.obsidian/app.json` → `userIgnoreFilters`:
+
+Current filters (example):
+```json
+"userIgnoreFilters": [
+  "docs/",
+  "Excalidraw/",
+  "CLAUDE.md",
+  "MEMORY.md",
+  "00-contexto/definicion-estados.md",
+  "00-contexto/JUGGL-SETUP.md"
+]
+```
+
+**Important**: Use full relative paths from vault root, not just filenames.
+- ✅ `"00-contexto/mi-config.md"`
+- ❌ `"mi-config.md"` (won't match nested files)
+
+### Graph Visualization (Juggl Plugin)
+
+The vault uses **Juggl** plugin (not native Obsidian graph) for colored node visualization:
+
+1. **Colors are automatic**: Based on YAML `tags` field
+2. **Five state colors**:
+   - `#completado` → Green (#4caf50)
+   - `#activo` → Blue (#2196f3)
+   - `#en-definicion` → Orange (#ff9800)
+   - `#pendiente` → Gray (#9e9e9e)
+   - `#backlog` → Purple (#9c27b0)
+
+3. **To see colors**:
+   - Open Obsidian graph view (Ctrl+G)
+   - Use "Juggl" view button (if available) instead of native graph
+   - Colors appear automatically when you reload Obsidian
+
+4. **Troubleshooting**:
+   - Colors not showing? → Reload Obsidian (Ctrl+Shift+R)
+   - Reload didn't work? → Check that tag is spelled exactly right
+   - Still broken? → Run `/vault-graph-validate` to diagnose
+
+### Active Plugins
+
+| Plugin | ID | Purpose | Usage |
+|--------|-----|---------|-------|
+| **Juggl** | `juggl` | Interactive graph with colored nodes by status | Automatic (open graph view) |
+| **Excalidraw** | `obsidian-excalidraw-plugin` | Draw diagrams | Double-click `.excalidraw` files |
+| **Git** | `obsidian-git` | Version control + auto-backup | Automatic (don't modify settings) |
+
+### Recommended Plugins (Optional)
+
+These plugins add powerful capabilities if installed:
+
+| Plugin | ID | When to install | What it does |
+|--------|-----|-----------------|--------------|
+| **Dataview** | `dataview` | Need dynamic dashboards | Query notes like a database: `LIST FROM L1 WHERE tags contains "activo"` |
+| **Templater** | `templater-obsidian` | Need variable-expansion templates | Create notes with `<% tp.date.now() %>` → auto-fills date |
+| **Tasks** | `obsidian-tasks-plugin` | Need due dates & filtering for tasks | Convert markdown tasks to trackable items with `⏰ 2026-04-15` |
+
+**Setup**: Use `/vault-dataview-setup`, `/vault-templater-setup`, `/vault-tasks-setup` respectively.
+
+## Claude Code Skills for Vault Management
+
+Ten specialized skills available to optimize vault operations:
+
+### Tier 1: Core Skills (Recommended)
+- `/vault-audit` — Diagnose vault health (broken links, phantom nodes, config issues)
+- `/vault-new-note` — Create note with correct YAML, links, and index updates
+- `/vault-status` — View/update progress status of lineamientos
+
+### Tier 2: Specialized Operations
+- `/vault-excalidraw` — Link and manage Excalidraw diagrams
+- `/vault-link-update` — Bulk update wikilinks when files rename/move
+- `/vault-template` — Create notes from structure templates
+- `/vault-graph-validate` — Validate Juggl graph health and node colors
+
+### Tier 3: Plugin Integration
+- `/vault-dataview-setup` — Configure dynamic queries (requires Dataview plugin)
+- `/vault-templater-setup` — Create parametrized templates (requires Templater plugin)
+- `/vault-tasks-setup` — Convert markdown tasks to trackable items (requires Tasks plugin)
+
+**First time?** Start with `/vault-audit` and `/vault-status` to understand vault state.
+
 ## Key Principles for This Plan
 
 These principles were established in planning and should guide all content decisions:
