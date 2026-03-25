@@ -5,6 +5,8 @@ tags:
   - activo
 ---
 
+**Plan:** [[00-INDICE|Índice del Plan 2026]]
+
 # L3 — Plan de Gobernanza TI
 
 **Horizonte:** S4–S9 (Fases 1+2) · S10–S12 (Fase 3)  

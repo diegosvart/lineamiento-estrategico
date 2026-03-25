@@ -5,6 +5,8 @@ tags:
   - activo
 ---
 
+**Plan:** [[../00-INDICE|Índice del Plan 2026]]
+
 # Contexto Estrategico
 
 **Fuente:** Presentacion Plan Gobernanza TI — Gerencia General, Marzo 2026

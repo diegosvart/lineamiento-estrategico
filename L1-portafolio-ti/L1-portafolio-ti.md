@@ -5,6 +5,8 @@ tags:
   - activo
 ---
 
+**Plan:** [[00-INDICE|Índice del Plan 2026]]
+
 # L1 — Portafolio TI en Ejecución
 
 **Horizonte:** Permanente — Mar a Dic 2026

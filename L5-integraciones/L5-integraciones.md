@@ -5,6 +5,8 @@ tags:
   - pendiente
 ---
 
+**Plan:** [[00-INDICE|Índice del Plan 2026]]
+
 # L5 — Integraciones TI
 
 **Horizonte:** S10+ (paralelo tardío con L4)
