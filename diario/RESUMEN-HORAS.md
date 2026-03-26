@@ -37,20 +37,33 @@ LIMIT 30
 
 ---
 
-## C) Horas por Tipo de Tarea
+## C) Horas por Actividad
 
 ```dataview
 TABLE sum(rows.entradas.horas) AS "Total Horas"
 FROM "diario"
 WHERE entradas
 FLATTEN entradas
-GROUP BY entradas.tipo AS "Tipo de Tarea"
+GROUP BY entradas.actividad AS "Actividad"
 SORT sum(rows.entradas.horas) DESC
 ```
 
 ---
 
-## D) Horas por Semana
+## D) Horas por Rol
+
+```dataview
+TABLE sum(rows.entradas.horas) AS "Total Horas"
+FROM "diario"
+WHERE entradas
+FLATTEN entradas
+GROUP BY entradas.rol AS "Rol"
+SORT sum(rows.entradas.horas) DESC
+```
+
+---
+
+## E) Horas por Semana
 
 ```dataview
 TABLE sum(rows.horas-total) AS "Horas Semana", length(rows) AS "Días trabajados"
