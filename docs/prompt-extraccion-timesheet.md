@@ -46,23 +46,20 @@ Agrupa interacciones relacionadas en un solo bloque si forman una unidad de trab
 
 Para cada bloque, determina en orden:
 
-**1. Proyecto / Iniciativa** — usar exactamente uno de:
+**1. Proyecto** — usar exactamente uno de los 6 proyectos activos:
 - Plan Gobernanza TI
-- Catastro de Aplicaciones
-- Auditoría Deloitte
-- Levantamiento Instancias Manager
-- Mapeo de Procesos Holding
-- Gestión de Datos (Data Governance)
-- Automatización Entorno Digital
-- Programa Ciberseguridad
 - Cash Flow
 - Sitrack
 - Activo Fijo
 - Gestión de Documentos
 - Seguros & Siniestros
-- Administración General TI
 
-Si no hay proyecto claro → clasificar como "Administración General TI".
+Regla de clasificación:
+- Si el trabajo está relacionado con Cash Flow, Sitrack, Activo Fijo, Gestión de Documentos
+  o Seguros & Siniestros → usar ese proyecto.
+- Si no corresponde claramente a ninguno de los anteriores → clasificar como **Plan Gobernanza TI**.
+  Esto incluye: gobernanza TI, infraestructura, automatización, integraciones, catastro de aplicaciones,
+  auditorías, ciberseguridad, Microsoft 365, gestión del área TI y cualquier trabajo transversal al holding.
 
 **2. Rol** — usar exactamente uno de:
 - Project Manager
