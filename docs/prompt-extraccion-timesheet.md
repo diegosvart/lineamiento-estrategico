@@ -85,9 +85,17 @@ Ejemplo: "Diseño del flujo de aprobación de cambios para gateway G2"
 
 ### FORMATO DE SALIDA
 
-Produce primero el bloque YAML listo para pegar en la nota diaria:
+Produce primero el frontmatter YAML completo de la nota diaria, listo para pegar
+(incluyendo fecha y número de semana ISO — la semana ISO se calcula desde la fecha):
 
 ```yaml
+---
+aliases:
+  - Diario DD-MM-YYYY
+tags:
+  - diario
+fecha: YYYY-MM-DD
+semana: [número de semana ISO de la fecha]
 entradas:
   - proyecto: [valor]
     rol: [valor]
@@ -98,6 +106,7 @@ entradas:
     estado: [Completado / En curso]
   - proyecto: ...
 horas-total: [suma de todas las horas]
+---
 ```
 
 Luego, una tabla resumen para revisión rápida:
