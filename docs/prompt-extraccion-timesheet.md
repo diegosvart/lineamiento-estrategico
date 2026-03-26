@@ -30,7 +30,8 @@ Antes de cualquier extracción, busca señales de fecha en el contenido:
 
 Si encuentras una fecha → úsala como `fecha` en el YAML de salida.
 Si NO encuentras fecha → usa exactamente el valor que declaré en "Fecha de la sesión" arriba.
-Si no declaré fecha y no hay señales → indica claramente: ⚠️ FECHA NO DETECTADA — completar manualmente.
+Si no declaré fecha y no hay señales → usa el primer día del mes en curso (YYYY-MM-01)
+y agrega una nota al inicio del YAML: `# ⚠️ Fecha no detectada — asignada al 01 del mes. Reorganizar manualmente.`
 
 ---
 
