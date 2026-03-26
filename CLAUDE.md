@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Guidance for Claude Code working with the strategic IT transformation vault for Grupo EBI's IT department (Plan de Transformación del Área TI 2026).
+Guidance for Claude Code working with the **Cosemar PM Workspace** — a multi-project vault for Diego Morales (PM consultor). 6 active projects. Primary project: Plan de Transformación del Área TI 2026 (Grupo EBI).
 
 ---
 
@@ -24,6 +24,22 @@ Claude Code operates in this vault as a **PM Senior with Senior Fullstack Engine
 ---
 
 ## 2. Project Overview
+
+**Workspace:** Cosemar PM Workspace — Diego Morales, PM Consultor
+**Scope:** 6 active projects across different clients/areas
+
+### Active Projects
+
+| Project | Client/Area | Status |
+|---------|------------|--------|
+| Plan Gobernanza TI | Grupo EBI | 🔵 Activo (primary) |
+| Cash Flow | — | ⚫ Pendiente |
+| Sitrack | — | ⚫ Pendiente |
+| Activo Fijo | — | ⚫ Pendiente |
+| Gestión de Documentos | — | ⚫ Pendiente |
+| Seguros & Siniestros | — | ⚫ Pendiente |
+
+### Plan Gobernanza TI — Grupo EBI (Primary Project)
 
 **Organization:**
 - Holding: Grupo EBI (11 subsidiaries)
@@ -51,33 +67,52 @@ Claude Code operates in this vault as a **PM Senior with Senior Fullstack Engine
 
 ## 3. Repository Structure
 
-The vault is organized into four parallel work streams (lineamientos):
+The vault is the **Cosemar PM Workspace**. Each project lives under `proyectos/`.
 
 ```
-00-indice.md                              # Main index with Obsidian links
-00-contexto/                              # Project context documentation
-  CONTEXTO-PROYECTO.md                    # PRIMARY: Read this first
-  contexto-estrategico.md                 # Executive summary
-L1-portafolio-ti/                         # Portfolio of active projects
-L2-estructuracion-area/                   # IT department structuring
-  formalizacion-organizacional/
-  reduccion-dependencia/
-  habilitacion-recursos/
-L3-gobernanza-ti/                         # IT governance plan
-  infraestructura-digital/
-  catastro-aplicaciones/
-  diagnostico-normativo/
-  politicas-procedimientos/
-  cierre-evidencia/
-L4-infraestructura-ti/                    # New IT infrastructure
-  diseno-arquitectura/
-  bd-central/
-  homogenizacion-maestros/
-  artefactos-sync/
-  migracion-soluciones/
-  nuevas-aplicaciones/
+00-dashboard.md                           # Portfolio index — ALL projects (graph root)
+diario/                                   # Cross-project timesheet (Daily Notes)
+  RESUMEN-HORAS.md                        # Dataview dashboard for hours
+plans/                                    # Claude implementation plans (excluded from graph)
 docs/                                     # Additional documentation
 Excalidraw/                               # Diagrams
+
+proyectos/                                # All projects
+  plan-gobernanza-ti/                     # PRIMARY: Plan TI Grupo EBI 2026
+    00-indice.md                          # Project index
+    00-contexto/                          # Project context
+      contexto-estrategico.md
+      marco-normativo.md
+      gateways.md
+    L1-portafolio-ti/                     # Portfolio of active TI projects
+    L2-estructuracion-area/               # IT department structuring
+      formalizacion-organizacional/
+      reduccion-dependencia/
+      habilitacion-recursos/
+    L3-gobernanza-ti/                     # IT governance plan
+      infraestructura-digital/
+      catastro-aplicaciones/
+      diagnostico-normativo/
+      politicas-procedimientos/
+      cierre-evidencia/
+    L4-infraestructura-ti/                # New IT infrastructure
+      diseno-arquitectura/
+      bd-central/
+      homogenizacion-maestros/
+      artefactos-sync/
+      migracion-soluciones/
+      nuevas-aplicaciones/
+    L5-integraciones/                     # IT integrations
+  cash-flow/
+    00-indice.md                          # stub — pendiente
+  sitrack/
+    00-indice.md                          # stub — pendiente
+  activo-fijo/
+    00-indice.md                          # stub — pendiente
+  gestion-documentos/
+    00-indice.md                          # stub — pendiente
+  seguros-siniestros/
+    00-indice.md                          # stub — pendiente
 ```
 
 ---
@@ -87,7 +122,7 @@ Excalidraw/                               # Diagrams
 ### Wikilink Rules (Critical)
 
 1. **Format:** `[[ruta/archivo|display-text]]` — NEVER link to folders
-   - ✅ `[[L3-gobernanza-ti/politicas-procedimientos/L3-politicas|Políticas]]`
+   - ✅ `[[proyectos/plan-gobernanza-ti/L3-gobernanza-ti/politicas-procedimientos/L3-politicas|Políticas]]`
    - ❌ `[[L3-gobernanza-ti/politicas-procedimientos/|folder link]]`
 
 2. **Spaces:** Remove spaces around pipes
@@ -190,7 +225,7 @@ Thirteen specialized skills for vault management:
 When opening the vault, Claude Code always:
 
 1. Read `CLAUDE.md` (this file) — understand context
-2. Read `00-contexto/CONTEXTO-PROYECTO.md` — capture current state
+2. Read `proyectos/plan-gobernanza-ti/00-contexto/contexto-estrategico.md` — capture current state of primary project
 3. Check git status and recent commits — understand what changed
 4. Only then respond to the user
 

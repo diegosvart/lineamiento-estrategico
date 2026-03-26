@@ -16,18 +16,18 @@ tags:
 
 ## Documentos de contexto
 
-- [[00-contexto/contexto-estrategico|Contexto estratégico]]
-- [[00-contexto/marco-normativo|Marco normativo transversal]] — Ley 19.628 + Ley 21.663
+- [[proyectos/plan-gobernanza-ti/00-contexto/contexto-estrategico|Contexto estratégico]]
+- [[proyectos/plan-gobernanza-ti/00-contexto/marco-normativo|Marco normativo transversal]] — Ley 19.628 + Ley 21.663
 
 ---
 
 ## Lineamientos
 
-- **[[L1-portafolio-ti/L1-portafolio-ti|L1 — Portafolio TI]]** — Proyectos en ejecucion bajo responsabilidad del PM · Activo
-- **[[L2-estructuracion-area/L2-estructuracion-area-ti|L2 — Estructuracion del Area TI]]** — Formalizacion organizacional y reduccion de dependencia externa · Activo
-- **[[L3-gobernanza-ti/L3-gobernanza-ti|L3 — Plan de Gobernanza TI]]** — Catastro, normativa, politicas y cierre · Activo
-- **[[L4-infraestructura-ti/L4-infraestructura-ti|L4 — Nueva Infraestructura TI]]** — Arquitectura, BD central, migraciones · Pendiente
-- **[[L5-integraciones/L5-integraciones|L5 — Integraciones TI]]** — Catalogo, estandares y procedimientos de integraciones tecnologicas · Pendiente
+- **[[proyectos/plan-gobernanza-ti/L1-portafolio-ti/L1-portafolio-ti|L1 — Portafolio TI]]** — Proyectos en ejecucion bajo responsabilidad del PM · Activo
+- **[[proyectos/plan-gobernanza-ti/L2-estructuracion-area/L2-estructuracion-area-ti|L2 — Estructuracion del Area TI]]** — Formalizacion organizacional y reduccion de dependencia externa · Activo
+- **[[proyectos/plan-gobernanza-ti/L3-gobernanza-ti/L3-gobernanza-ti|L3 — Plan de Gobernanza TI]]** — Catastro, normativa, politicas y cierre · Activo
+- **[[proyectos/plan-gobernanza-ti/L4-infraestructura-ti/L4-infraestructura-ti|L4 — Nueva Infraestructura TI]]** — Arquitectura, BD central, migraciones · Pendiente
+- **[[proyectos/plan-gobernanza-ti/L5-integraciones/L5-integraciones|L5 — Integraciones TI]]** — Catalogo, estandares y procedimientos de integraciones tecnologicas · Pendiente
 
 ---
 
@@ -53,4 +53,4 @@ tags:
 | G4      | Avance normativo validado con Sponsor                              | ~25 Sep 2026     |
 | G5      | Cierre Plan Gobernanza TI 2026 + Roadmap 2027                      | ~11 Dic 2026     |
 
-→ [[00-contexto/gateways|Ver detalle de gateways]]
+→ [[proyectos/plan-gobernanza-ti/00-contexto/gateways|Ver detalle de gateways]]

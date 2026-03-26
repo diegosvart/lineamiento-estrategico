@@ -1,46 +1,49 @@
-# Skill: vault-timesheet
-
-Gestiona el registro de horas del Plan Gobernanza TI 2026 en Daily Notes markdown.
-Reemplaza `00-contexto/Planilla_Imputacion_Horas_GestionTI.xlsx` con un sistema integrado al vault.
-
+---
+name: vault-timesheet
+description: Gestionar registro de horas en Daily Notes — agregar entradas, ver resumen semanal, generar reportes
+type: prompt
 ---
 
-## Catálogo de referencia (extraído del xlsx histórico)
+# /vault-timesheet — Registro de Horas
 
-### Proyectos válidos
+Gestiona el sistema de registro de horas en `diario/` (Daily Notes + Dataview).
+
+## Catálogo canónico (fuente: Planilla_Imputacion_Horas_GestionTI.xlsx)
+
+### Proyectos
 - Plan Gobernanza TI
-- L1 - Portafolio TI
-- L2 - Estructuración Área TI
-- L3 - Gobernanza TI
-- L4 - Infraestructura TI
-- Soporte Operativo
-- Administración General TI
+- Cash Flow
+- Sitrack
+- Activo Fijo
+- Gestión de documentos
+- Seguros & Siniestros
 
-### Tipos de tarea válidos
-- Elaboracion de Documentos
-- Reunion / Coordinacion
-- Levantamiento de Información
-- Revision y Validacion
-- Configuracion / Implementacion
-- Capacitacion
-- Gestion de Proveedores
-- Planificacion
+### Tipos de tarea
+- Planificación
+- Gestión de Proyecto
+- Reunión Interna
+- Reunión con Proveedor / Externo
+- Elaboración de Documentos
+- Revisión / Validación
 
-### Roles válidos
+### Roles
 - Project Manager (PM)
-- Jefe TI (JTI)
-- Analista de Red e Infraestructura (ARI)
-- Soporte TI (SPT)
-- Consultor ERP (CE)
+- Consultor de Gobernanza TI
+- Administrador de Bases de Datos
+- Arquitecto de Soluciones / Fullstack Engineer
+- Consultor de Software
+- DBA / Analista de Infraestructura
 
-### Modalidades
+### Modalidad
 - Presencial
 - Remoto
-- Hibrido
+- Híbrido
 
-### Estados de entrada
-- Completado
+### Estado de tarea
 - En curso
+- Completado
+- Bloqueado
+- Cancelado
 - Pendiente
 
 ---
@@ -49,120 +52,92 @@ Reemplaza `00-contexto/Planilla_Imputacion_Horas_GestionTI.xlsx` con un sistema 
 
 ### `/vault-timesheet add`
 
-Registra una nueva entrada de horas en la nota diaria correspondiente.
+Registrar una nueva entrada de horas. Flujo:
 
-**Procedimiento:**
-1. Preguntar al usuario (si no se proporcionan como argumento):
-   - **Fecha** (default: hoy, formato YYYY-MM-DD)
-   - **Proyecto** (mostrar lista del catálogo, validar)
-   - **Tipo de tarea** (mostrar lista del catálogo, validar)
-   - **Actividad** (descripción libre, máx. 80 chars)
-   - **Horas** (número decimal, ej: 1.5)
-   - **Estado** (default: Completado)
-   - **Observaciones** (opcional, puede quedar vacío)
+1. Determinar fecha de la entrada (preguntar si no se especifica, default = hoy)
+2. Determinar nombre de archivo: `diario/YYYY-MM-DD.md`
+3. Si el archivo no existe, crearlo con estructura YAML:
 
-2. Calcular semana ISO del año para la fecha dada.
-
-3. Verificar si existe `diario/YYYY-MM-DD.md`:
-   - **Si existe:** Agregar la nueva entrada al array `entradas` en el frontmatter YAML y recalcular `horas-total`. Actualizar también la tabla en el cuerpo del documento.
-   - **Si no existe:** Crear el archivo con la estructura completa (ver Estructura YAML abajo).
-
-4. Confirmar al usuario: "Entrada registrada en `diario/YYYY-MM-DD.md`. Total del día: X horas."
-
-**Estructura YAML completa para nota nueva:**
 ```yaml
 ---
-aliases:
-  - Diario DD-MM-YYYY
-tags:
-  - diario
 fecha: YYYY-MM-DD
-semana: [número semana ISO]
-entradas:
-  - proyecto: [proyecto]
-    tipo: [tipo]
-    rol: [rol]
-    actividad: [actividad]
-    modalidad: [modalidad]
-    estado: [estado]
-    horas: [número]
-    observaciones: "[texto o vacío]"
-horas-total: [suma de horas]
+semana: WW
+entradas: []
+horas-total: 0
 ---
-
-# Diario DD-MM-YYYY
-
-> Registro de actividades y horas del día. Generado via `/vault-timesheet`.
-
-## Entradas del día
-
-| Proyecto | Tipo | Actividad | Horas | Estado |
-|---|---|---|---|---|
-| [proyecto] | [tipo] | [actividad] | [horas] | [estado] |
-
-**Total horas:** [suma]
 ```
 
----
+4. Solicitar/confirmar los campos de la entrada:
+   - `proyecto`: uno de los proyectos del catálogo
+   - `tipo`: uno de los tipos de tarea del catálogo
+   - `rol`: uno de los roles del catálogo
+   - `modalidad`: Presencial | Remoto | Híbrido
+   - `horas`: número (0.5, 1, 1.5, 2... hasta 12)
+   - `descripcion`: texto libre (qué se hizo)
+   - `estado`: uno de los estados del catálogo (default: Completado)
+
+5. Agregar la entrada al array `entradas` del YAML
+6. Recalcular y actualizar `horas-total`
+7. Confirmar con resumen de la entrada agregada
 
 ### `/vault-timesheet show-week`
 
-Muestra un resumen de las entradas de la semana actual (lunes a hoy).
+Mostrar entradas de la semana actual (o una semana específica si se indica).
 
-**Procedimiento:**
-1. Calcular el rango de fechas de la semana actual (ISO: lunes → domingo).
-2. Leer todos los archivos `diario/YYYY-MM-DD.md` que caigan en ese rango.
-3. Agregar todas las entradas y mostrar tabla:
-
-```
-Semana [N] — [fecha lunes] al [fecha domingo]
-═══════════════════════════════════════════════
-Fecha       Proyecto              Actividad                      Horas
-─────────────────────────────────────────────────────────────────────
-2026-03-26  Plan Gobernanza TI   Generar planilla imputacion…   3.0
-─────────────────────────────────────────────────────────────────────
-                                 TOTAL SEMANA                   3.0 h
-```
-
-4. Si no hay entradas: "No hay registros para esta semana. Usa `/vault-timesheet add` para agregar."
-
----
+1. Leer archivos de `diario/` de los últimos 7 días (o semana indicada)
+2. Mostrar tabla: fecha | proyecto | tipo | horas | descripción
+3. Total de horas por proyecto y total general
 
 ### `/vault-timesheet show-summary`
 
-Muestra totales agrupados por proyecto (todas las notas diarias disponibles).
+Resumen del mes actual o rango indicado.
 
-**Procedimiento:**
-1. Leer TODOS los archivos en `diario/` que tengan el tag `diario` y campo `entradas`.
-2. Agregar horas por proyecto y por tipo de tarea.
-3. Mostrar dos tablas:
-
-```
-RESUMEN TOTAL — Plan Gobernanza TI 2026
-Período: [fecha más antigua] → [fecha más reciente]
-══════════════════════════════════════════════
-Por Proyecto:
-  Plan Gobernanza TI          ████████████  12.5 h
-  L3 - Gobernanza TI          ████           4.0 h
-  ...
-
-Por Tipo de Tarea:
-  Elaboracion de Documentos   ██████████    10.0 h
-  Reunion / Coordinacion      ████           4.0 h
-  ...
-
-Total general: XX.X horas en N días registrados
-```
-
-4. Indicar: "Para ver dashboard interactivo: abre `diario/RESUMEN-HORAS.md` en Obsidian."
+1. Leer todos los archivos de `diario/` en el rango
+2. Agrupar por: proyecto, tipo de tarea, semana
+3. Mostrar tabla consolidada con totales
+4. Indicar link a `diario/RESUMEN-HORAS.md` para vista Dataview completa
 
 ---
 
-## Reglas de la skill
+## Estructura de archivo diario
 
-1. **Nunca modificar el xlsx.** Es referencia histórica en `00-contexto/`.
-2. **Validar proyectos y tipos** contra el catálogo. Si el usuario escribe algo no reconocido, mostrar opciones y pedir confirmación o corrección.
-3. **Calcular horas-total** siempre como suma de todas las entradas del día (no confiar en lo que diga el usuario).
-4. **Semana ISO:** semana 1 = semana que contiene el primer jueves de enero. Usar cálculo estándar ISO 8601.
-5. **Formato de fecha:** siempre YYYY-MM-DD en YAML, DD-MM-YYYY en aliases y texto visible.
-6. **Si falta Dataview:** al ejecutar `show-summary`, advertir que el dashboard en `RESUMEN-HORAS.md` requiere el plugin Dataview activo. Ofrecer ejecutar `/vault-dataview-setup`.
+```yaml
+---
+fecha: 2026-03-26
+semana: 13
+entradas:
+  - proyecto: Plan Gobernanza TI
+    tipo: Reunión Interna
+    rol: Project Manager (PM)
+    modalidad: Remoto
+    horas: 2
+    descripcion: Kickoff con equipo TI — presentación del plan de gobernanza
+    estado: Completado
+  - proyecto: Cash Flow
+    tipo: Elaboración de Documentos
+    rol: Project Manager (PM)
+    modalidad: Remoto
+    horas: 1.5
+    descripcion: Revisión de requerimientos iniciales
+    estado: Completado
+horas-total: 3.5
+---
+```
+
+---
+
+## Validaciones
+
+- `proyecto` debe ser exactamente uno de los valores del catálogo (case-sensitive)
+- `horas` debe ser múltiplo de 0.5, entre 0.5 y 12
+- `fecha` en formato ISO YYYY-MM-DD
+- Si el archivo ya existe, agregar entrada al array existente (NO sobreescribir)
+- Siempre recalcular `horas-total` como suma de todas las entradas del día
+
+---
+
+## Notas
+
+- El archivo `diario/RESUMEN-HORAS.md` contiene queries Dataview para reportes dinámicos
+- Si Dataview no está instalado, ejecutar `/vault-dataview-setup` primero
+- El xlsx `proyectos/plan-gobernanza-ti/00-contexto/Planilla_Imputacion_Horas_GestionTI.xlsx` queda como referencia histórica
