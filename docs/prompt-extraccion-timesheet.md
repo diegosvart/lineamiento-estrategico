@@ -30,8 +30,8 @@ Antes de cualquier extracción, busca señales de fecha en el contenido:
 
 Si encuentras una fecha → úsala como `fecha` en el YAML de salida.
 Si NO encuentras fecha → usa exactamente el valor que declaré en "Fecha de la sesión" arriba.
-Si no declaré fecha y no hay señales → usa el primer día del mes en curso (YYYY-MM-01)
-y agrega una nota al inicio del YAML: `# ⚠️ Fecha no detectada — asignada al 01 del mes. Reorganizar manualmente.`
+Si no declaré fecha y no hay señales → agrega la entrada a `diario/PENDIENTES.md`
+y emite: `⚠️ Fecha no detectada — entrada agregada a diario/PENDIENTES.md. Reorganizar manualmente.`
 
 ---
 
@@ -54,14 +54,37 @@ Para cada bloque, determina en orden:
 - Gestión de Documentos
 - Seguros & Siniestros
 
-Regla de clasificación:
-- Si el trabajo está relacionado con Cash Flow, Sitrack, Activo Fijo, Gestión de Documentos
-  o Seguros & Siniestros → usar ese proyecto.
-- Si no corresponde claramente a ninguno de los anteriores → clasificar como **Plan Gobernanza TI**.
-  Esto incluye: gobernanza TI, infraestructura, automatización, integraciones, catastro de aplicaciones,
-  auditorías, ciberseguridad, Microsoft 365, gestión del área TI y cualquier trabajo transversal al holding.
+Regla de clasificación por palabras clave:
 
-**2. Rol** — usar exactamente uno de:
+| Proyecto | Señales en el texto |
+|---|---|
+| Cash Flow | flujo de caja, tesorería, conciliación, caja, pagos |
+| Sitrack | Sitrack, GPS, flota, vehículos, tracking |
+| Activo Fijo | activo fijo, bienes, depreciación, inventario físico |
+| Gestión de Documentos | gestión documental, archivo, expediente, ECM |
+| Seguros & Siniestros | seguro, siniestro, póliza, cobertura |
+| Plan Gobernanza TI | todo lo demás → gobernanza TI, infraestructura, automatización, integraciones, catastro de aplicaciones, auditorías, ciberseguridad, Microsoft 365, gestión del área TI, trabajo transversal al holding |
+
+**2. Iniciativa** — obligatorio si proyecto = Plan Gobernanza TI:
+
+Segunda ronda de keywords para determinar `iniciativa`:
+
+| Iniciativa | Señales en el texto |
+|---|---|
+| Automatización Entorno Digital | M365, Teams, Planner, Graph API, script Python, aprovisionamiento, GUID, Azure AD, entorno digital |
+| Catastro de Aplicaciones | catastro, inventario de aplicaciones, sistemas, levantamiento apps |
+| Auditoría Deloitte | Deloitte, hallazgo, finding, auditoría, evidencia |
+| HUB de Integración | HUB, integración, ERP, conector, flujo SIA, automatización entre sistemas, BD, bases de datos |
+| Políticas y Procedimientos | política, procedimiento, normativa, reglamento |
+| Diagnóstico Normativo | Ley 19.628, Ley 21.663, OIV, diagnóstico normativo, cumplimiento |
+| Gestión del Plan | gateway, G1-G5, reporte, planilla de horas, ficha de proyecto, sponsor, reunión, coordinación, GANTT, seguimiento |
+| Diseño de Arquitectura | arquitectura, diagrama, Excalidraw, topología |
+
+Si no hay señales claras → usar `Gestión del Plan`.
+
+Para otros proyectos (Cash Flow, Sitrack, etc.) → omitir campo `iniciativa`.
+
+**3. Rol** — usar exactamente uno de:
 - Project Manager
 - Consultor de Gobernanza TI
 - Arquitecto / Desarrollador de Software
@@ -72,7 +95,16 @@ Regla de clasificación:
 Criterio: usa el rol que mejor describe *cómo* se realizó el trabajo,
 no el cargo formal. Un PM puede hacer trabajo de Arquitecto en una sesión técnica.
 
-**3. Actividad** — usar exactamente una de las permitidas para el rol elegido:
+**4. Tipo de trabajo** — auto-mapear desde la actividad usando esta tabla:
+
+| tipo-trabajo | Actividades que se mapean |
+|---|---|
+| Gestión | Seguimiento y control · Comunicación ejecutiva · Gestión de gateways · Presentaciones a Gerencia |
+| Planificación y Diseño | Levantamiento de información · Diagnóstico del estado actual · Definición de marcos normativos · Diseño de estructuras organizacionales · Elaboración de propuestas ejecutivas · Identificación de riesgos regulatorios · Diseño de flujos de gobernanza · Diseño de soluciones técnicas · Levantamiento de instancias y sistemas · Diseño de instrumentos de recolección · Definición de estándares y políticas · Mapeo del paisaje de datos |
+| Ingeniería y Desarrollo | Desarrollo y prueba de scripts · Integración con APIs · Validación de ambientes · Análisis de configuraciones · Identificación de riesgos técnicos |
+| Ejecución Operativa | Documentación técnica · Documentación de fichas y procesos · Documentación del estado actual · Documentación regulatoria · Revisión de hallazgos de auditoría · Análisis de controles · Identificación de brechas · Documentación de evidencias |
+
+**5. Actividad** — usar exactamente una de las permitidas para el rol elegido:
 
 | Rol | Actividades permitidas |
 |-----|----------------------|
@@ -83,12 +115,12 @@ no el cargo formal. Un PM puede hacer trabajo de Arquitecto en una sesión técn
 | Data Governance Manager | Diseño de instrumentos de recolección · Definición de estándares y políticas · Mapeo del paisaje de datos · Documentación regulatoria |
 | Analista de Seguridad | Revisión de hallazgos de auditoría · Análisis de controles · Identificación de brechas · Documentación de evidencias |
 
-**4. Descripcion** — texto libre, máx. 100 caracteres.
+**6. Descripcion** — texto libre, máx. 100 caracteres.
 Qué específicamente se produjo, decidió o avanzó en este bloque.
 Usar lenguaje ejecutivo: acción + objeto + contexto.
 Ejemplo: "Diseño del flujo de aprobación de cambios para gateway G2"
 
-**5. Estado**
+**7. Estado**
 - `Completado` — el entregable quedó listo en la sesión
 - `En curso` — quedó trabajo pendiente para continuar
 
@@ -109,7 +141,9 @@ fecha: YYYY-MM-DD
 semana: [número de semana ISO de la fecha]
 entradas:
   - proyecto: [valor]
+    iniciativa: [valor — solo si proyecto = Plan Gobernanza TI]
     rol: [valor]
+    tipo-trabajo: [Gestión / Planificación y Diseño / Ingeniería y Desarrollo / Ejecución Operativa]
     actividad: [valor]
     modalidad: [Remoto / Presencial / Híbrido]
     horas: [número múltiplo de 0.5]
@@ -122,9 +156,9 @@ horas-total: [suma de todas las horas]
 
 Luego, una tabla resumen para revisión rápida:
 
-| # | Proyecto | Rol | Actividad | Horas | Estado |
-|---|---|---|---|---|---|
-| 1 | ... | ... | ... | ... | ... |
+| # | Proyecto | Iniciativa | Rol | Tipo Trabajo | Actividad | Horas | Estado |
+|---|---|---|---|---|---|---|---|
+| 1 | ... | ... | ... | ... | ... | ... | ... |
 
 **Total horas:** X
 
@@ -144,6 +178,7 @@ DEPENDENCIAS / SEGUIMIENTO:
 
 ---
 
-*Prompt versión 2 — schema actualizado 26 Mar 2026*
+*Prompt versión 3 — schema actualizado 26 Mar 2026*
 *Campos eliminados: Tipo de Tarea, Observaciones*
-*Campos nuevos: rol (por bloque), actividad (vocabulario controlado por rol)*
+*Campos nuevos: iniciativa (obligatorio para Plan Gobernanza TI), tipo-trabajo (auto-mapeado desde actividad)*
+*Fallback sin fecha: → diario/PENDIENTES.md (antes: YYYY-MM-01)*
