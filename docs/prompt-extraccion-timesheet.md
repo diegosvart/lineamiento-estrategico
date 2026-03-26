@@ -21,6 +21,19 @@ para registrarlas en mi planilla de imputación de horas.
 
 ---
 
+### PASO 0 — DETECTAR FECHA
+
+Antes de cualquier extracción, busca señales de fecha en el contenido:
+- Timestamps explícitos (ej: "martes 4 de marzo", "2026-03-04", "04/03")
+- Marcas de tiempo en mensajes (ej: "ayer", "esta mañana", referencias a días)
+- Metadatos del canal o conversación
+
+Si encuentras una fecha → úsala como `fecha` en el YAML de salida.
+Si NO encuentras fecha → usa exactamente el valor que declaré en "Fecha de la sesión" arriba.
+Si no declaré fecha y no hay señales → indica claramente: ⚠️ FECHA NO DETECTADA — completar manualmente.
+
+---
+
 ### PASO 1 — IDENTIFICAR BLOQUES DE TRABAJO
 
 Un bloque = un cambio de proyecto, entregable distinto, o interlocutor diferente.
