@@ -24,18 +24,7 @@ const TIPO_LABELS: Record<AlertaVault['tipo'], string> = {
 
 export function AlertasPanel({ alertas }: Props) {
   if (alertas.length === 0) {
-    return (
-      <SectionCard
-        badge="Riesgos"
-        title="Alertas del vault"
-        description="Aquí irán las señales automáticas definidas en CLAUDE.md §6.4 (estructura, deadlines, decisiones huérfanas, etc.). En esta build la lista aún no está cableada al análisis del vault: verás tarjetas cuando exista un motor de reglas."
-      >
-        <div className="dash-notice dash-notice--ok">
-          <strong>Sin alertas activas en UI.</strong> El panel está preparado para prioridad alta/media/baja y ocho
-          tipos de hallazgo; cuando se conecte el analizador, no tendrás que cambiar el layout.
-        </div>
-      </SectionCard>
-    )
+    return null
   }
 
   const sorted = [...alertas].sort((a, b) => {

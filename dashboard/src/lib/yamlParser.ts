@@ -2,12 +2,20 @@
 
 import yaml from 'js-yaml'
 
+/** Normaliza inicio del archivo: quita BOM UTF-8 si existe. */
+function stripBom(content: string): string {
+  return content.charCodeAt(0) === 0xfeff ? content.slice(1) : content
+}
+
 /**
  * Extrae el bloque frontmatter YAML de un archivo Markdown.
+ * Acepta fin de línea LF o CRLF (Windows / core.autocrlf).
  * Retorna el objeto parseado o null si no hay frontmatter o el YAML es inválido.
  */
 export function parseFrontmatter(content: string): Record<string, unknown> | null {
-  const match = content.match(/^---\n([\s\S]*?)\n---/)
+  const text = stripBom(content)
+  // --- seguido de CRLF o LF; cierre --- en línea propia
+  const match = text.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/)
   if (!match) return null
 
   try {
@@ -23,5 +31,6 @@ export function parseFrontmatter(content: string): Record<string, unknown> | nul
  * Extrae el cuerpo del markdown (sin frontmatter).
  */
 export function extractBody(content: string): string {
-  return content.replace(/^---\n[\s\S]*?\n---\n?/, '')
+  const text = stripBom(content)
+  return text.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '')
 }

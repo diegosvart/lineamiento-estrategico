@@ -75,25 +75,18 @@ function App() {
             <p className="dash-kpi__hint">Notas bajo plan gobernanza TI</p>
           </div>
         </div>
+
+        <p className="dash-session-meta" role="status">
+          Carga de esta sesión: {notes.length} días de diario con timesheet, {iniciativas.length} iniciativas indexadas.
+          Si editas Markdown en disco, recarga el navegador para ver los cambios.
+        </p>
+        <p className="dash-session-meta dash-session-meta--muted">
+          Alertas automáticas (estructura, deadlines, decisiones, etc.): pendiente de integración con un motor de
+          reglas; cuando exista, aparecerán aquí sin cambiar el layout general.
+        </p>
       </header>
 
-      <div className="dash-top-grid">
-        <div>
-          <MS365SyncStatusPanel status={syncStatus} />
-        </div>
-        <div className="dash-card" style={{ marginBottom: 0 }}>
-          <div className="dash-section-head" style={{ marginBottom: 0 }}>
-            <span className="dash-badge">Snapshot</span>
-            <h2 className="dash-section-head__title" style={{ fontSize: '1.1rem' }}>
-              Estado del vault en esta sesión
-            </h2>
-            <p className="dash-section-head__desc">
-              Última composición al cargar la app: {notes.length} días de diario, {iniciativas.length} iniciativas. Si
-              editas Markdown en disco, recarga el navegador (Vite hot-reload) para ver cambios.
-            </p>
-          </div>
-        </div>
-      </div>
+      <MS365SyncStatusPanel status={syncStatus} />
 
       <AlertasPanel alertas={alertas} />
 

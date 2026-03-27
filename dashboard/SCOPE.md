@@ -140,6 +140,10 @@ const ms365Output = import.meta.glob('../../../ms365-sync/output/*.yaml', { as: 
 
 **No modificar archivos fuera de `dashboard/`.**
 
+**Frontmatter:** el parser (`yamlParser.ts`) acepta fin de línea **LF o CRLF** y **BOM UTF-8** opcional al inicio del archivo, para que los daily notes editados en Windows no queden con frontmatter “invisible” al regex.
+
+**Dev server:** en `vite.config.ts`, `server.fs.allow` incluye la **raíz del repo** (carpeta padre de `dashboard/`). Así el servidor de desarrollo puede resolver los globs hacia `diario/`, `proyectos/` y `ms365-sync/` aunque la detección automática de workspace falle (por ejemplo, copia del proyecto sin `.git`).
+
 ---
 
 ## Setup Inicial
