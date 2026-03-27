@@ -1,0 +1,24 @@
+{
+  "userIgnoreFilters": [
+    "docs/",
+    "Excalidraw/",
+    "plans/",
+    "Bienvenido.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "CLAUDE-2.md",
+    "MEMORY.md",
+    "SCOPE.md",
+    "WORKSPACE.md",
+    "CONFIGURACION-GRAFO.md",
+    "GUIA-OBSIDIAN-VAULT.md",
+    "00-mapa-vault.canvas",
+    "diario/",
+    "ms365-sync/",
+    "dashboard/",
+    "planificacion/",
+    "proyectos/plan-gobernanza-ti/00-contexto/definicion-estados.md",
+    "proyectos/plan-gobernanza-ti/00-contexto/JUGGL-SETUP.md"
+  ],
+  "alwaysUpdateLinks": true
+}
