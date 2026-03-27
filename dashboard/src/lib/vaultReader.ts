@@ -1,14 +1,22 @@
 // vaultReader.ts — Lee archivos del vault via import.meta.glob
 // Solo accede a: diario/, proyectos/, ms365-sync/output/
 
+import { getISOWeekAndYear } from './dateUtils'
+import { normalizeEntradas } from './normalizeTimesheet'
 import { parseFrontmatter } from './yamlParser'
-import type { DailyNote, TimesheetEntry, Iniciativa, MS365SyncStatus } from '../types/vault'
+import type { DailyNote, Iniciativa, MS365SyncStatus } from '../types/vault'
 
 // Glob imports — Vite resuelve en build time
 // Rutas relativas desde dashboard/src/lib/ → vault root = ../../../
 const diarioGlob = import.meta.glob('../../../diario/[0-9]*.md', { as: 'raw', eager: false })
 const proyectosGlob = import.meta.glob('../../../proyectos/**/*.md', { as: 'raw', eager: false })
 const ms365Glob = import.meta.glob('../../../ms365-sync/output/*.yaml', { as: 'raw', eager: false })
+
+function numOrUndef(v: unknown): number | undefined {
+  if (v === null || v === undefined) return undefined
+  const n = typeof v === 'number' ? v : Number(v)
+  return Number.isNaN(n) ? undefined : n
+}
 
 /**
  * Carga y parsea todas las daily notes con entradas de timesheet.
@@ -22,12 +30,25 @@ export async function loadDailyNotes(): Promise<DailyNote[]> {
       const fm = parseFrontmatter(content)
       if (!fm) continue
 
-      const fecha = fm['fecha'] as string
-      const semanaIso = fm['semana_iso'] as number
-      const entradas = fm['entradas'] as TimesheetEntry[] | undefined
+      const fecha = String(fm['fecha'] ?? '')
+      const semanaRaw = fm['semana_iso'] ?? fm['semana']
+      const computed = getISOWeekAndYear(fecha)
+      const semanaIso =
+        typeof semanaRaw === 'number' && !Number.isNaN(semanaRaw)
+          ? semanaRaw
+          : computed.week
 
-      if (fecha && Array.isArray(entradas)) {
-        notes.push({ fecha, semana_iso: semanaIso ?? 0, entradas })
+      const entradas = normalizeEntradas(fm['entradas'])
+      const horasTotalRaw = fm['horas-total'] ?? fm['horas_total']
+      const horas_total_yaml = numOrUndef(horasTotalRaw)
+
+      if (fecha) {
+        notes.push({
+          fecha,
+          semana_iso: semanaIso,
+          entradas,
+          ...(horas_total_yaml !== undefined ? { horas_total_yaml } : {}),
+        })
       }
     } catch {
       console.warn(`Error leyendo ${path}`)

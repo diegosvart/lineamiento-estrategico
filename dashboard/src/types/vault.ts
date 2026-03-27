@@ -18,12 +18,17 @@ export interface TimesheetEntry {
   rol: string
   tipo_trabajo: string
   estado: string
+  /** Opcional — schema YAML del vault */
+  actividad?: string
+  modalidad?: string
 }
 
 export interface DailyNote {
   fecha: string       // YYYY-MM-DD
-  semana_iso: number  // 1-53
+  semana_iso: number  // 1-53 (desde YAML `semana` o `semana_iso`)
   entradas: TimesheetEntry[]
+  /** Suma del día en YAML (`horas-total`), si existe */
+  horas_total_yaml?: number
 }
 
 export interface Iniciativa {

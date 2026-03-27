@@ -1,5 +1,6 @@
 // dataTransforms.ts — Agrega y transforma datos vault para gráficos
 
+import { getISOWeekAndYear, monthBounds } from './dateUtils'
 import type { DailyNote, TimesheetEntry } from '../types/vault'
 
 export interface HorasPorSemana {
@@ -18,6 +19,104 @@ export interface HorasPorIniciativa {
   horas: number
 }
 
+/** Fila plana para export CSV / detalle */
+export interface FilaHorasDetalle {
+  fecha: string
+  proyecto: string
+  iniciativa: string
+  horas: number
+  rol: string
+  tipo_trabajo: string
+  estado: string
+  actividad?: string
+  modalidad?: string
+  descripcion: string
+}
+
+export type ModoPeriodo = 'dia' | 'semana' | 'mes'
+
+/**
+ * Filtra notas cuyo `fecha` está en [start, end] inclusive (strings YYYY-MM-DD).
+ */
+export function notasEnRango(notes: DailyNote[], start: string, end: string): DailyNote[] {
+  return notes.filter(n => n.fecha >= start && n.fecha <= end)
+}
+
+export function notasDelDia(notes: DailyNote[], ymd: string): DailyNote[] {
+  return notes.filter(n => n.fecha === ymd)
+}
+
+/** Semana ISO: `isoYear` es el año de la semana ISO (p. ej. puede ser 2026 para un 31-dic-2025). */
+export function notasDeSemanaISO(notes: DailyNote[], isoYear: number, week: number): DailyNote[] {
+  return notes.filter(n => {
+    const { week: w, year: y } = getISOWeekAndYear(n.fecha)
+    return w === week && y === isoYear
+  })
+}
+
+export function notasDelMesCalendario(
+  notes: DailyNote[],
+  year: number,
+  month1to12: number
+): DailyNote[] {
+  const { start, end } = monthBounds(year, month1to12)
+  return notasEnRango(notes, start, end)
+}
+
+/**
+ * `semana` del YAML no coincide con el cálculo desde `fecha` (revisar el diario).
+ */
+export function notaSemanaInconsistente(note: DailyNote): boolean {
+  const { week } = getISOWeekAndYear(note.fecha)
+  return week !== note.semana_iso
+}
+
+/**
+ * Horas por proyecto en el conjunto de notas ya filtrado por período.
+ */
+export function horasPorProyectoEnNotas(notes: DailyNote[]): HorasPorProyecto[] {
+  return horasTotalesPorProyecto(notes)
+}
+
+/**
+ * Horas por proyecto e iniciativa (desglose).
+ */
+export function horasPorProyectoEIniciativa(notes: DailyNote[]): HorasPorIniciativa[] {
+  return horasPorIniciativa(notes)
+}
+
+export function sumaHorasTotales(notes: DailyNote[]): number {
+  let t = 0
+  for (const n of notes) {
+    for (const e of n.entradas) {
+      t += e.horas ?? 0
+    }
+  }
+  return t
+}
+
+/** Expande entradas a filas con fecha para CSV. */
+export function filasDetalleExport(notes: DailyNote[]): FilaHorasDetalle[] {
+  const rows: FilaHorasDetalle[] = []
+  for (const n of notes) {
+    for (const e of n.entradas) {
+      rows.push({
+        fecha: n.fecha,
+        proyecto: e.proyecto,
+        iniciativa: e.iniciativa,
+        horas: e.horas ?? 0,
+        rol: e.rol,
+        tipo_trabajo: e.tipo_trabajo,
+        estado: e.estado,
+        actividad: e.actividad,
+        modalidad: e.modalidad,
+        descripcion: e.descripcion,
+      })
+    }
+  }
+  return rows.sort((a, b) => a.fecha.localeCompare(b.fecha) || a.proyecto.localeCompare(b.proyecto))
+}
+
 /**
  * Agrega horas por semana y proyecto (para BarChart apilado).
  */
@@ -25,7 +124,8 @@ export function horasPorSemana(notes: DailyNote[]): HorasPorSemana[] {
   const map = new Map<string, HorasPorSemana>()
 
   for (const note of notes) {
-    const semanaKey = `S${note.semana_iso} ${note.fecha.slice(0, 4)}`
+    const { week, year } = getISOWeekAndYear(note.fecha)
+    const semanaKey = `S${week} ${year}`
     if (!map.has(semanaKey)) {
       map.set(semanaKey, { semana: semanaKey })
     }

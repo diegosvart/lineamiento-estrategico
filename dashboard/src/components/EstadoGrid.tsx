@@ -1,12 +1,13 @@
 import type { Iniciativa } from '../types/vault'
 import { ESTADO_COLORS } from '../types/vault'
+import { SectionCard } from './SectionCard'
 
 interface Props {
   iniciativas: Iniciativa[]
   filtroLineamiento?: string
 }
 
-const LINEAMIENTOS = ['L2', 'L3', 'L4', 'L5']
+const LINEAMIENTOS = ['L2', 'L3', 'L4', 'L5'] as const
 
 export function EstadoGrid({ iniciativas, filtroLineamiento }: Props) {
   const filtered = filtroLineamiento
@@ -14,7 +15,15 @@ export function EstadoGrid({ iniciativas, filtroLineamiento }: Props) {
     : iniciativas
 
   if (filtered.length === 0) {
-    return <div style={{ padding: 24, color: '#9e9e9e' }}>Sin iniciativas encontradas.</div>
+    return (
+      <SectionCard
+        badge="Portafolio"
+        title="Estado de iniciativas"
+        description="Tags YAML de cada nota (completado, activo, en-definición, pendiente, backlog), alineados con el grafo Juggl."
+      >
+        <div className="dash-empty">No se encontraron iniciativas con el filtro actual.</div>
+      </SectionCard>
+    )
   }
 
   const grouped = LINEAMIENTOS.reduce<Record<string, Iniciativa[]>>((acc, l) => {
@@ -23,31 +32,26 @@ export function EstadoGrid({ iniciativas, filtroLineamiento }: Props) {
   }, {})
 
   return (
-    <div>
-      <h2 style={{ marginBottom: 16 }}>Estado de Iniciativas</h2>
+    <SectionCard
+      badge="Portafolio"
+      title="Estado de iniciativas"
+      description="Color = estado del documento (misma paleta que Juggl). Agrupado por lineamiento L2–L5. Pasa el cursor para ver ruta del archivo."
+    >
       {LINEAMIENTOS.map(lineamiento => {
         const items = grouped[lineamiento]
         if (items.length === 0) return null
         return (
-          <div key={lineamiento} style={{ marginBottom: 24 }}>
-            <h3 style={{ color: '#555', marginBottom: 8 }}>{lineamiento}</h3>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+          <div key={lineamiento} className="dash-lineamiento">
+            <h3>{lineamiento}</h3>
+            <div className="dash-chip-grid">
               {items.map(iniciativa => {
                 const estado = iniciativa.tags[0] ?? 'pendiente'
                 const color = ESTADO_COLORS[estado] ?? '#9e9e9e'
                 return (
                   <div
                     key={iniciativa.path}
-                    style={{
-                      background: color,
-                      color: '#fff',
-                      borderRadius: 6,
-                      padding: '6px 12px',
-                      fontSize: 13,
-                      fontWeight: 500,
-                      maxWidth: 220,
-                      wordBreak: 'break-word',
-                    }}
+                    className="dash-chip"
+                    style={{ background: color }}
                     title={`${estado} — ${iniciativa.path}`}
                   >
                     {iniciativa.alias}
@@ -58,9 +62,7 @@ export function EstadoGrid({ iniciativas, filtroLineamiento }: Props) {
           </div>
         )
       })}
-      <div style={{ marginTop: 8, fontSize: 12, color: '#9e9e9e' }}>
-        Total: {filtered.length} iniciativas
-      </div>
-    </div>
+      <p className="dash-meta-footer">Total visibles: {filtered.length} iniciativas</p>
+    </SectionCard>
   )
 }
