@@ -7,6 +7,19 @@
 
 ---
 
+## Inicio de Sesión
+
+1. **Git**: `git checkout workspace/planning && git merge desarrollo`
+   → Sincroniza cambios integrados (planes completados, actualizaciones de estado)
+2. **Abrir**: Codex apuntando a la raíz del repo
+   → Leer este SCOPE.md para cargar contexto del ámbito
+3. **Leer**: `planificacion/backlog.md` + estado actual de `proyectos/`
+   → ¿Qué iniciativas están pendientes de planificar? ¿Hay planes en borrador?
+4. **Primer acto**: crear o continuar plan usando `planificacion/templates/plan-iniciativa.md`
+   → Próxima iniciativa prioritaria según backlog
+
+---
+
 ## Capacidades
 
 - Crear planes de trabajo por iniciativa en formato estructurado

@@ -224,10 +224,13 @@ Thirteen specialized skills for vault management:
 
 When opening the vault, Claude Code always:
 
-1. Read `CLAUDE.md` (this file) — understand context
-2. Read `proyectos/plan-gobernanza-ti/00-contexto/contexto-estrategico.md` — capture current state of primary project
-3. Check git status and recent commits — understand what changed
-4. Only then respond to the user
+1. **Git sync**: `git checkout workspace/vault && git merge desarrollo`
+   → Incorporar cambios integrados desde otros ámbitos antes de cualquier trabajo
+2. **Read context**: `CLAUDE.md` (this file) + `SCOPE.md` (raíz) — understand workspace and scope
+3. **Read project state**: `proyectos/plan-gobernanza-ti/00-contexto/contexto-estrategico.md`
+4. **Check git**: `git status` + recent commits — understand what changed
+5. **Check plans**: `planificacion/backlog.md` — ¿hay planes `listo-para-ejecutar`?
+6. Only then respond to the user
 
 If any critical context file is missing, create it with `pendiente` status.
 

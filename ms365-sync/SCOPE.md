@@ -7,6 +7,19 @@
 
 ---
 
+## Inicio de Sesión
+
+1. **Git**: `git checkout workspace/ms365 && git merge desarrollo`
+   → Sincroniza cambios integrados desde otros ámbitos
+2. **Abrir**: VS Code con `.vscode/pm-workspace.code-workspace`
+   → Ambos repos visibles: Vault (Obsidian) + MS365 Integration
+3. **Verificar**: `ms365-sync/config.json` tiene GUIDs correctos y `ms365_repo_path` apunta al repo local
+   → Si los GUIDs cambiaron en Planner, actualizar antes de continuar
+4. **Primer acto**: `python ms365-sync/sync_planner_to_vault.py --dry-run`
+   → Validar output antes de escribir a `ms365-sync/output/`
+
+---
+
 ## Capacidades
 
 - Leer tareas de Planner via `planner_import.py --mode tasks` y convertirlas a YAML de timesheet

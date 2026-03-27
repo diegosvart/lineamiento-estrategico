@@ -8,6 +8,18 @@
 
 ---
 
+## Inicio de Sesión
+
+1. **Git**: `git checkout workspace/dashboard && git merge desarrollo`
+   → Sincroniza cambios integrados (nuevos datos del vault o schemas actualizados)
+2. **Abrir**: Cursor apuntando a `dashboard/`
+   → `.cursor/rules` carga el contexto del stack y las rutas permitidas automáticamente
+3. **Setup** (primera vez o tras cambios en deps): `cd dashboard && npm install`
+4. **Primer acto**: `npm run dev` → http://localhost:5173
+   → Verificar que HorasChart y EstadoGrid renderizan datos reales del vault
+
+---
+
 ## Capacidades
 
 - Leer archivos YAML/Markdown del vault via filesystem (local, sin servidor de datos)

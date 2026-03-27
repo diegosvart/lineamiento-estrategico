@@ -7,6 +7,19 @@
 
 ---
 
+## Inicio de Sesión
+
+1. **Git**: `git checkout workspace/vault && git merge desarrollo`
+   → Sincroniza cambios integrados desde otros ámbitos
+2. **Abrir**: `claude` en la raíz del repo
+   → Claude Code carga `CLAUDE.md` automáticamente
+3. **Leer**: `CLAUDE.md §6.4` (alertas activas) + `planificacion/backlog.md`
+   → Identificar si hay planes con estado `listo-para-ejecutar`
+4. **Primer acto**: verificar si hay `planificacion/*.md` con estado `listo-para-ejecutar`
+   → Si hay: ejecutar el plan. Si no: reportar estado del vault.
+
+---
+
 ## Capacidades
 
 - Leer planes de `workspace/planning` y ejecutar las tareas listadas
