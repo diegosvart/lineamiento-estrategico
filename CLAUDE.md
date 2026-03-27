@@ -409,25 +409,44 @@ These principles guide Claude's behavior in this vault:
 ### Branch Structure
 
 ```
-master       ← Stable (releases of completed gateways/hitos approved by Diego)
-  └── desarrollo  ← Integration (default for Claude PRs)
-        └── feature/[nombre]  ← Individual features
+master       ← Releases (solo el PM — al completar gateways)
+  └── desarrollo  ← Integration (PRs de todos los workspaces)
+        ├── workspace/planning   ← Codex: planificacion/
+        ├── workspace/vault      ← Claude Code: todo el vault
+        ├── workspace/ms365      ← VS Code: ms365-sync/
+        ├── workspace/dashboard  ← Cursor: dashboard/
+        └── feature/[nombre]     ← Desde workspace/vault, PRs a desarrollo
 ```
+
+### Workspace Branches (Long-lived)
+
+| Rama | IDE | Área | SCOPE |
+|------|-----|------|-------|
+| `workspace/vault` | Claude Code | Todo el vault | `SCOPE.md` (raíz) |
+| `workspace/planning` | Codex | `planificacion/` | `planificacion/SCOPE.md` |
+| `workspace/ms365` | VS Code | `ms365-sync/` | `ms365-sync/SCOPE.md` |
+| `workspace/dashboard` | Cursor | `dashboard/` | `dashboard/SCOPE.md` |
+
+**Reglas de sincronización:**
+- Ramas `workspace/*` son long-lived (nunca se eliminan)
+- Para integrar trabajo terminado: PR de `workspace/[ambito]` → `desarrollo`
+- Para recibir cambios integrados: merge de `desarrollo` → `workspace/[ambito]`
+- `workspace/vault` también puede generar `feature/*` para trabajo puntual
 
 ### Critical Rules
 
-- **Always create features from `desarrollo`**, never from `master`
+- **Always create features from `workspace/vault`** (o `desarrollo`), never from `master`
 - **PRs always target `desarrollo`**, never directly to `master`
 - **Only Diego makes releases** (PR `desarrollo` → `master`) at gateway completion
-- **Naming:** `feature/[descripcion-kebab-case]`
+- **Naming features:** `feature/[descripcion-kebab-case]`
 
-### Claude Workflow
+### Claude Workflow (workspace/vault)
 
-1. `git checkout desarrollo && git pull origin desarrollo`
-2. `git checkout -b feature/[nombre]`
+1. `git checkout workspace/vault && git merge desarrollo` (sync cambios integrados)
+2. Para trabajo puntual: `git checkout -b feature/[nombre]`
 3. [make changes]
 4. `git commit -m "tipo: descripción"`
-5. `git push origin feature/[nombre]`
+5. `git push origin feature/[nombre]` (o `workspace/vault`)
 6. Report PR URL: `https://github.com/diegosvart/lineamiento-estrategico/compare/desarrollo...feature/[nombre]`
 
 ---

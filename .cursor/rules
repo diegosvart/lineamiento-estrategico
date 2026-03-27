@@ -1,0 +1,41 @@
+# Cursor Rules — workspace/dashboard
+# Contexto para el agente Cursor al trabajar en este ámbito
+
+## Stack
+- React 18 + Vite 5 + TypeScript (strict)
+- Recharts para gráficos
+- js-yaml para parseo YAML (si se necesita parseo complejo)
+- Sin CSS-in-JS frameworks — usar estilos inline o CSS modules
+
+## Estructura
+- El vault está en la carpeta padre (../)
+- Solo leer desde: diario/, proyectos/, ms365-sync/output/
+- NUNCA modificar archivos fuera de dashboard/
+- Todos los archivos de código en dashboard/src/
+
+## Tipos de datos
+- Schema completo en dashboard/src/types/vault.ts
+- Siempre usar los tipos definidos, no `any`
+
+## Paleta de colores del sistema
+- completado: #4caf50
+- activo: #2196f3
+- en-definicion: #ff9800
+- pendiente: #9e9e9e
+- backlog: #9c27b0
+- (importar ESTADO_COLORS desde src/types/vault.ts)
+
+## Acceso a archivos del vault
+- Usar import.meta.glob() — no fetch ni fs
+- Rutas relativas desde src/lib/ (3 niveles arriba = vault root)
+- Patrón: import.meta.glob('../../../diario/*.md', { as: 'raw' })
+
+## Convenciones
+- Componentes en PascalCase en src/components/
+- Utilidades en camelCase en src/lib/
+- Tipos en src/types/vault.ts (archivo único)
+- Props interface sobre el componente que la usa
+- No usar default exports en lib/ (solo named exports)
+
+## SCOPE completo
+Ver dashboard/SCOPE.md para capacidades, tipos de datos y protocolo de coordinación.

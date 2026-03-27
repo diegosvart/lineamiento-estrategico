@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "name": "Vault (Obsidian)",
+      "path": ".."
+    },
+    {
+      "name": "MS365 Integration",
+      "path": "COMPLETAR: ruta absoluta al repo MS365 local"
+    }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "${workspaceFolder:MS365 Integration}/.venv/Scripts/python.exe",
+    "files.exclude": {
+      "**/.git": true,
+      "**/node_modules": true,
+      "**/__pycache__": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.pylint",
+      "redhat.vscode-yaml",
+      "ms-vscode.vscode-json"
+    ]
+  }
+}

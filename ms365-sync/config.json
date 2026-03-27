@@ -1,0 +1,33 @@
+{
+  "_comment": "Configuración para workspace/ms365. Completar con datos reales antes de usar.",
+
+  "ms365_repo_path": "COMPLETAR: ruta absoluta al repo MS365 local (ej: C:/Users/dmorales/repos/ms365-automation)",
+
+  "default_project": "plan-gobernanza-ti",
+
+  "planner_plan_ids": [
+    "COMPLETAR: GUID del plan Planner de Plan Gobernanza TI"
+  ],
+
+  "bucket_map": {
+    "COMPLETAR bucket Planner": "nombre-iniciativa-vault",
+    "L2 - Estructuración": "formalizacion-organizacional",
+    "L3 - Gobernanza": "catastro-aplicaciones",
+    "L3 - Normativa": "diagnostico-normativo",
+    "L4 - Infraestructura": "diseno-arquitectura"
+  },
+
+  "assignee_roles": {
+    "COMPLETAR: GUID de Diego Morales en Azure AD": "PM",
+    "COMPLETAR: GUID de JTI en Azure AD": "JTI",
+    "COMPLETAR: GUID de ARI en Azure AD": "ARI",
+    "COMPLETAR: GUID de SPT en Azure AD": "SPT"
+  },
+
+  "vault_paths": {
+    "root": "../",
+    "diario": "../diario/",
+    "proyectos": "../proyectos/",
+    "output": "./output/"
+  }
+}
