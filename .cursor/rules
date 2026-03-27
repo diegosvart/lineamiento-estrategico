@@ -1,6 +1,17 @@
 # Cursor Rules — workspace/dashboard
 # Contexto para el agente Cursor al trabajar en este ámbito
 
+## Session Protocol
+Branch: workspace/dashboard
+On open:
+1. git checkout workspace/dashboard && git merge desarrollo
+2. cd dashboard && npm run dev (if not running)
+3. Read dashboard/SCOPE.md for pending work and current state
+4. Verify HorasChart and EstadoGrid render real vault data (not mock)
+Never modify files outside dashboard/
+
+---
+
 ## Stack
 - React 18 + Vite 5 + TypeScript (strict)
 - Recharts para gráficos
