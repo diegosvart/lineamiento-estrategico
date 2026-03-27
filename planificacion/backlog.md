@@ -10,7 +10,6 @@ Tareas pendientes de planificar. Cada ítem requiere un plan formal en `planific
 |------------|-------------|-----------|-------|
 | Completar catálogo aplicaciones Nivel A | L3 | Alta | Prerequisito G2 (~22 May 2026) |
 | Diagnóstico normativo Ley 19.628 | L3 | Alta | Prerequisito G2 |
-| Formalización organizacional área TI | L2 | Alta | Prerequisito G1 (30 Mar 2026) |
 | Reducción dependencia sistemas legacy | L2 | Media | Post G1 |
 | Habilitación recursos TI | L2 | Media | Post G1 |
 | Políticas y procedimientos (5 requeridas) | L3 | Alta | Prerequisito G3 (~26 Jun 2026) |
@@ -31,7 +30,10 @@ Tareas pendientes de planificar. Cada ítem requiere un plan formal en `planific
 
 > Planes con estado `listo-para-ejecutar` — disponibles para workspace/vault.
 
-*(vacío — mover desde "En Planificación" cuando esté completo)*
+| Iniciativa | Lineamiento | Archivo de plan | Notas |
+|------------|-------------|-----------------|-------|
+| Formalización organizacional área TI | L2 | `planificacion/2026-03-26-formalizacion-organizacional-area-ti-plan.md` | Prerequisito G1 (30 Mar 2026) |
+| Carga de tareas y dashboard de horas consumidas | L1 | `planificacion/2026-03-26-carga-tareas-y-dashboard-horas-plan.md` | Handoff cross-rama para ms365, vault y dashboard |
 
 ---
 
