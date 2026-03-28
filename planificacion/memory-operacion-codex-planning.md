@@ -47,3 +47,4 @@ Todo plan debe dejar tareas atómicas con:
 
 - Toda rama `workspace/planning/feature/*` o `workspace/planning/fix/*` hace PR hacia `workspace/planning`
 - Solo después del merge a `workspace/planning` se distribuye el trabajo a `desarrollo` y al resto de ramas
+- Un `push` a `workspace/planning` no publica el cambio al resto de agentes por sí solo; la publicación efectiva ocurre cuando el cambio queda integrado en `desarrollo`
