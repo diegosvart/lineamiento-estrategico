@@ -1,0 +1,79 @@
+{
+  "nodes": [
+    {
+      "id": "workspace",
+      "type": "file",
+      "file": "gestion-trabajo/planes-activos/carga-tareas-y-dashboard-horas-workspace.md",
+      "x": -180,
+      "y": -80,
+      "width": 430,
+      "height": 250
+    },
+    {
+      "id": "objective",
+      "type": "text",
+      "text": "Objetivo\nConectar staging MS365, consolidacion en vault y visualizacion de HH consumidas.",
+      "x": 400,
+      "y": -260,
+      "width": 340,
+      "height": 150,
+      "color": "2"
+    },
+    {
+      "id": "tasks",
+      "type": "text",
+      "text": "Tareas\n- contrato comun\n- profundidad del vault\n- staging confiable\n- dashboard con KPI\n- memoria por rama",
+      "x": 400,
+      "y": -60,
+      "width": 340,
+      "height": 180,
+      "color": "4"
+    },
+    {
+      "id": "deps",
+      "type": "text",
+      "text": "Dependencias\nms365-sync/output como staging\ndiario/*.md como fuente consolidada",
+      "x": 400,
+      "y": 160,
+      "width": 340,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "id": "next",
+      "type": "text",
+      "text": "Siguiente accion\nEjecutar handoffs por rama y mantener la visualizacion sincronizada.",
+      "x": -180,
+      "y": 230,
+      "width": 430,
+      "height": 130,
+      "color": "5"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "workspace",
+      "toNode": "objective",
+      "toSide": "left"
+    },
+    {
+      "id": "e2",
+      "fromNode": "workspace",
+      "toNode": "tasks",
+      "toSide": "left"
+    },
+    {
+      "id": "e3",
+      "fromNode": "workspace",
+      "toNode": "deps",
+      "toSide": "left"
+    },
+    {
+      "id": "e4",
+      "fromNode": "workspace",
+      "toNode": "next",
+      "toSide": "top"
+    }
+  ]
+}

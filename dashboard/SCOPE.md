@@ -10,13 +10,17 @@
 
 ## Inicio de Sesión
 
-1. **Git**: `git checkout workspace/dashboard && git merge desarrollo`
+1. **Git**: verificar rama actual y situarse explícitamente en `workspace/dashboard`
+   → Si no estás en `workspace/dashboard`, cambiar a esa rama antes de leer o ejecutar nada
+2. **Git sync**: `git checkout workspace/dashboard && git merge desarrollo`
    → Sincroniza cambios integrados (nuevos datos del vault o schemas actualizados)
-2. **Abrir**: Cursor apuntando a `dashboard/`
+3. **Abrir**: Cursor apuntando a `dashboard/`
    → `.cursor/rules` carga el contexto del stack y las rutas permitidas automáticamente
-3. **Setup** (primera vez o tras cambios en deps): `cd dashboard && npm install`
-4. **Primer acto**: `npm run dev` → http://localhost:5173
+4. **Setup** (primera vez o tras cambios en deps): `cd dashboard && npm install`
+5. **Primer acto**: `npm run dev` → http://localhost:5173
    → Verificar que HorasChart y EstadoGrid renderizan datos reales del vault
+
+**Regla de seguridad:** si la rama actual no coincide con este `SCOPE`, detener el trabajo y corregir la rama antes de continuar.
 
 ---
 
@@ -148,4 +152,4 @@ npm run build   # → dashboard/dist/
 
 ---
 
-*Rama: `workspace/dashboard` — Cursor — Última actualización: 2026-03-26*
+*Rama: `workspace/dashboard` — Cursor — Última actualización: 2026-03-28*

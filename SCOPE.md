@@ -9,14 +9,18 @@
 
 ## Inicio de Sesión
 
-1. **Git**: `git checkout workspace/vault && git merge desarrollo`
+1. **Git**: verificar rama actual y situarse explícitamente en `workspace/vault`
+   → Si no estás en `workspace/vault`, cambiar a esa rama antes de leer o editar nada
+2. **Git sync**: `git checkout workspace/vault && git merge desarrollo`
    → Sincroniza cambios integrados desde otros ámbitos
-2. **Abrir**: `claude` en la raíz del repo
+3. **Abrir**: `claude` en la raíz del repo
    → Claude Code carga `CLAUDE.md` automáticamente
-3. **Leer**: `CLAUDE.md §6.4` (alertas activas) + `planificacion/backlog.md`
+4. **Leer**: `CLAUDE.md §6.4` (alertas activas) + `planificacion/backlog.md`
    → Identificar si hay planes con estado `listo-para-ejecutar`
-4. **Primer acto**: verificar si hay `planificacion/*.md` con estado `listo-para-ejecutar`
+5. **Primer acto**: verificar si hay `planificacion/*.md` con estado `listo-para-ejecutar`
    → Si hay: ejecutar el plan. Si no: reportar estado del vault.
+
+**Regla de seguridad:** si la rama actual no coincide con este `SCOPE`, detener el trabajo y corregir la rama antes de continuar.
 
 ---
 
@@ -105,4 +109,4 @@ git merge desarrollo
 
 ---
 
-*Rama: `workspace/vault` — Claude Code — Última actualización: 2026-03-26*
+*Rama: `workspace/vault` — Claude Code — Última actualización: 2026-03-28*

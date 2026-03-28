@@ -30,6 +30,7 @@ tags:
 
 - **Timesheet / Registro de horas:** `diario/` → [[diario/RESUMEN-HORAS|Resumen de horas]]
 - **Plan Gobernanza TI (principal):** [[proyectos/plan-gobernanza-ti/00-indice|Índice completo]]
+- **Gestión del trabajo:** [[gestion-trabajo/00-indice-gestion-trabajo|Índice visual]] · [[gestion-trabajo/tablero-maestro|Tablero maestro]]
 - **Configuración del vault:** [[CONFIGURACION-GRAFO|Configuración del grafo]] · [[GUIA-OBSIDIAN-VAULT|Guía Obsidian]]
 
 ---

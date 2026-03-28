@@ -74,6 +74,13 @@ ejecutor: workspace/vault
 
 > Requiere reutilizar la estructura ya definida en `ms365-sync/SCOPE.md`, `dashboard/SCOPE.md` y `SCOPE.md` raíz. No requiere cambios previos en `proyectos/` para que el handoff de ramas quede listo.
 
+## Workspace Visual
+
+> Nota visible: `gestion-trabajo/planes-activos/carga-tareas-y-dashboard-horas-workspace.md`
+> Canvas: `gestion-trabajo/planes-activos/carga-tareas-y-dashboard-horas-workspace.canvas`
+> Estado visible: `listo-para-ejecutar`
+> Siguiente acción: ejecutar handoffs por rama y mantener la visualización sincronizada.
+
 ## Notas para workspace/vault
 
 > Este plan no pide implementar aún; pide dejar el marco de ejecución y la memoria operativa para las otras ramas.

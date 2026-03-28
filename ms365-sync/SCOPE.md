@@ -9,14 +9,18 @@
 
 ## Inicio de Sesión
 
-1. **Git**: `git checkout workspace/ms365 && git merge desarrollo`
+1. **Git**: verificar rama actual y situarse explícitamente en `workspace/ms365`
+   → Si no estás en `workspace/ms365`, cambiar a esa rama antes de leer o ejecutar nada
+2. **Git sync**: `git checkout workspace/ms365 && git merge desarrollo`
    → Sincroniza cambios integrados desde otros ámbitos
-2. **Abrir**: VS Code con `.vscode/pm-workspace.code-workspace`
+3. **Abrir**: VS Code con `.vscode/pm-workspace.code-workspace`
    → Ambos repos visibles: Vault (Obsidian) + MS365 Integration
-3. **Verificar**: `ms365-sync/config.json` tiene GUIDs correctos y `ms365_repo_path` apunta al repo local
+4. **Verificar**: `ms365-sync/config.json` tiene GUIDs correctos y `ms365_repo_path` apunta al repo local
    → Si los GUIDs cambiaron en Planner, actualizar antes de continuar
-4. **Primer acto**: `python ms365-sync/sync_planner_to_vault.py --dry-run`
+5. **Primer acto**: `python ms365-sync/sync_planner_to_vault.py --dry-run`
    → Validar output antes de escribir a `ms365-sync/output/`
+
+**Regla de seguridad:** si la rama actual no coincide con este `SCOPE`, detener el trabajo y corregir la rama antes de continuar.
 
 ---
 
@@ -125,4 +129,4 @@ python ms365-sync/sync_email_to_pending.py --dry-run
 
 ---
 
-*Rama: `workspace/ms365` — VS Code — Última actualización: 2026-03-26*
+*Rama: `workspace/ms365` — VS Code — Última actualización: 2026-03-28*

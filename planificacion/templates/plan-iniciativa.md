@@ -6,6 +6,17 @@ estado: borrador
 ejecutor: workspace/vault
 ---
 
+<!-- Campos opcionales para planes archivados o iterados:
+archivado_el: YYYY-MM-DD
+archivado_por: workspace/planning
+motivo_archivo: "solo si estado = archivado"
+iteracion_de: "ruta o identificador del plan previo si aplica"
+reemplaza_plan: "ruta del plan reemplazado si aplica"
+workspace_visual: "gestion-trabajo/planes-activos/[slug].md"
+estado_visible: "definido|listo-para-ejecutar|en-ejecucion|bloqueado|handoff-pendiente|completado|archivado"
+siguiente_accion: "acción humana o de agente visible en tablero"
+-->
+
 ## Objetivo
 
 > Descripción concisa (1-2 oraciones) de qué se quiere lograr con este plan.
@@ -40,6 +51,16 @@ ejecutor: workspace/vault
 
 > Planes o tareas que deben completarse antes de ejecutar este plan.
 > Dejar vacío si no hay dependencias.
+
+## Historial
+
+> Usar esta sección cuando el plan se archive o itere.
+> Registrar fecha, motivo y referencia al plan previo o siguiente según corresponda.
+
+## Workspace Visual
+
+> Registrar la ruta de la nota visible y del `.canvas` asociado en `gestion-trabajo/`.
+> Indicar también el estado visible y la siguiente acción sugerida.
 
 ## Notas para workspace/vault
 
