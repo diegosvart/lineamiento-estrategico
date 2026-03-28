@@ -30,7 +30,7 @@ Proyecto transversal que formaliza el sistema de trabajo de Diego Morales como P
 | ----- | ----- |
 | Estado | en-definicion |
 | Horizonte | 2026 |
-| Progreso estimado | 20% |
+| Progreso estimado | 85% (Fase 1 completa) |
 
 ---
 
@@ -47,6 +47,8 @@ Proyecto transversal que formaliza el sistema de trabajo de Diego Morales como P
 ---
 
 ## Capa visual
+
+> ⚠️ PENDIENTE: `gestion-trabajo/` debe crearse en `workspace/vault`. Los links siguientes quedan como referencia futura.
 
 - [[gestion-trabajo/tablero-maestro|Tablero maestro]]
 - [[gestion-trabajo/planes-activos/workspace-pm-proyecto-y-base-documental-workspace|Plan activo]]
