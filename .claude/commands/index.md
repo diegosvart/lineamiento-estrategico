@@ -1,12 +1,12 @@
 ---
 name: Obsidian Vault Management Skills
-description: Registro de 13 skills especializados para gestionar el vault Plan Gobernanza TI 2026
+description: Registro de comandos y skills para gestionar el vault Plan Gobernanza TI 2026
 type: index
 ---
 
 # Claude Code Skills para Obsidian Vault
 
-**Total: 14 skills** disponibles para automatizar gestión del Plan Gobernanza TI 2026
+**Total: 19 comandos/skills** disponibles para automatizar gestión del Plan Gobernanza TI 2026
 
 ---
 
@@ -26,6 +26,21 @@ type: index
 - **Archivo:** `vault-status.md`
 - **Propósito:** Gestionar y visualizar sistema de 5 estados (completado, activo, en-definicion, pendiente, backlog)
 - **Cuándo usar:** Ver progreso, actualizar estados, validar tags
+
+### 3.5. `/vault-task` ✨ NUEVO
+- **Archivo:** `vault-task.md`
+- **Propósito:** Alta guiada de tareas hacia `diario/` mediante entrevista basada en catálogos
+- **Cuándo usar:** Registrar una nueva tarea manual sin editar YAML directamente
+
+### 3.6. `/vault-session-start`
+- **Archivo:** `vault-session-start.md`
+- **Propósito:** Iniciar sesión leyendo memoria técnica y foco visible del tablero
+- **Cuándo usar:** Al comienzo de cada sesión en `workspace/vault`
+
+### 3.7. `/vault-session-end`
+- **Archivo:** `vault-session-end.md`
+- **Propósito:** Cerrar sesión con handoff técnico y estado visible del flujo
+- **Cuándo usar:** Al terminar una sesión en `workspace/vault`
 
 ---
 
@@ -101,6 +116,9 @@ type: index
 |-------------|-----------|------|
 | Encontrar problemas | `/vault-audit` | Sin parámetros |
 | Crear nota nueva | `/vault-new-note` | Con --nombre, --carpeta, --estado |
+| Agregar tarea al diario | `/vault-task` | `add` |
+| Iniciar sesión del vault | `/vault-session-start` | Sin parámetros |
+| Cerrar sesión del vault | `/vault-session-end` | Sin parámetros |
 | Ver progreso del plan | `/vault-status` | `view` o `folder [carpeta]` |
 | Mejorar archivo existente | `/vault-markdown-syntax` | `--validar` o `--agregar-[elemento]` |
 | Crear mapa visual | `/vault-canvas` | `--crear --nombre "..." --template [tipo]` |
@@ -182,7 +200,7 @@ Para máxima funcionalidad, instala estos plugins en Obsidian:
 
 ## Integración con Kepano Obsidian Skills
 
-Este conjunto de 13 skills está diseñado para ser **complementario** con [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills):
+Este conjunto de comandos y skills está diseñado para ser **complementario** con [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills):
 
 - **Nuestros skills:** Gestión de proyecto, auditoría, automatización estructural
 - **Kepano skills:** Sintaxis Markdown, Canvas files, operaciones CLI técnicas
@@ -212,6 +230,6 @@ Este conjunto de 13 skills está diseñado para ser **complementario** con [kepa
 
 ---
 
-**Índice actualizado:** 25 Marzo 2026
-**Total de skills:** 13 (Tier 1: 3, Tier 2: 5, Tier 3: 5)
+**Índice actualizado:** 28 Marzo 2026
+**Total de comandos/skills documentados:** 19
 **Basado en:** Obsidian Flavored Markdown + JSON Canvas + CLI patterns + Kepano obsidian-skills

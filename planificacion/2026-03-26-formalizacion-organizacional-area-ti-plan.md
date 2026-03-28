@@ -46,6 +46,13 @@ ejecutor: workspace/vault
 
 > Ninguna. Esta iniciativa es punto de arranque de L2 y prerequisito para `Reducción de dependencia externa` y para la ejecución operativa de L3.
 
+## Workspace Visual
+
+> Nota visible: `gestion-trabajo/planes-activos/formalizacion-organizacional-workspace.md`
+> Canvas: `gestion-trabajo/planes-activos/formalizacion-organizacional-workspace.canvas`
+> Estado visible: `listo-para-ejecutar`
+> Siguiente acción: preparar paquete documental y validación con JTI antes de G1.
+
 ## Notas para workspace/vault
 
 > Mantener nomenclatura en español, minúsculas, sin tildes en nombres de archivo. Usar YAML frontmatter con un único tag de estado válido.
