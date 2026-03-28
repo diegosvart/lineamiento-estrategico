@@ -41,13 +41,16 @@
 ## Corrección operativa de Codex (2026-03-28)
 
 - Codex planning trabaja solo en `workspace/planning`.
-- El entorno válido para Codex planning es el worktree dedicado:
-  `C:\repos\plan-lineamiento-estrategico-2026\plan-lineamiento-estrategico-2026\.worktrees\planning-fix`
+- El modelo oficial de trabajo de Codex es:
+  - base estable: `workspace/planning`
+  - cambios nuevos: `workspace/planning/feature/[slug]`
+  - correcciones: `workspace/planning/fix/[slug]`
 - Si una sesión de Codex muestra otra rama activa, esa sesión no se usa para planning.
 - Se eliminó la rama accidental `codex/preserve-vault-local-state-20260328`; no debe repetirse el patrón de crear ramas `codex/...` en este repo.
 - `workspace/planning` local fue alineada con `origin/desarrollo` mediante fast-forward a `93c63ab` antes de continuar con cambios de planning.
 - El desfase con `origin/workspace/planning` ya no se interpreta como “commits extra de planning pendientes de push” sin análisis; primero se compara contra `origin/desarrollo`.
 - `/vault-task add` ya existe como contrato documental y debe tratarse como capacidad construida, no como tarea pendiente de definición.
+- La distribución del trabajo a las otras ramas ocurre después del merge a `workspace/planning`, no directamente desde ramas temporales de Codex.
 
 ## Leer también
 
