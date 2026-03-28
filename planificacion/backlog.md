@@ -15,6 +15,7 @@ Tareas pendientes de planificar. Cada ítem requiere un plan formal en `planific
 | Políticas y procedimientos (5 requeridas) | L3 | Alta | Prerequisito G3 (~26 Jun 2026) |
 | Diseño arquitectura BD central | L4 | Media | Post G2 |
 | Dashboard Cosemar (otros proyectos) | — | Baja | Pendiente activación |
+| Entrevistas guiadas para tareas del vault y ciclo de vida de planes | Cross-rama | Alta | Formalizar `/vault-task add` y `/plan add|update|archive|iterate` |
 
 ---
 
@@ -32,7 +33,7 @@ Tareas pendientes de planificar. Cada ítem requiere un plan formal en `planific
 
 | Iniciativa | Lineamiento | Archivo de plan | Notas |
 |------------|-------------|-----------------|-------|
-| Formalización organizacional área TI | L2 | `planificacion/2026-03-26-formalizacion-organizacional-area-ti-plan.md` | Prerequisito G1 (30 Mar 2026) |
+| Formalización organizacional área TI | L2 | `planificacion/2026-03-26-formalizacion-organizacional-area-ti-plan.md` | Responsabilidad JTI — PM solicita documentos antes del **31 Mar 2026** |
 | Carga de tareas y dashboard de horas consumidas | L1 | `planificacion/2026-03-26-carga-tareas-y-dashboard-horas-plan.md` | Handoff cross-rama para ms365, vault y dashboard |
 
 ---
@@ -45,4 +46,12 @@ Tareas pendientes de planificar. Cada ítem requiere un plan formal en `planific
 
 ---
 
-*Última actualización: 2026-03-26*
+## Historial Archivados
+
+> Planes archivados o reemplazados. No se eliminan físicamente.
+
+*(vacío — agregar cuando `/plan archive` o `/plan iterate` deje una versión fuera de circulación)*
+
+---
+
+*Última actualización: 2026-03-27*

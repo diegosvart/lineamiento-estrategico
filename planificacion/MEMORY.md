@@ -24,3 +24,17 @@
 ## Próximo objetivo
 
 - Ejecutar handoff por rama para habilitar carga de tareas y visualización de HH consumidas de extremo a extremo.
+
+## ⚠️ Errores y lecciones aprendidas
+
+### Git workflow — NO hacer push directo a `desarrollo` (2026-03-27)
+
+El flujo correcto para Antigravity (y cualquier agente) es:
+1. `git checkout desarrollo && git pull`
+2. `git checkout -b feature/[nombre-kebab-case]`
+3. Commit en la feature branch
+4. `git push origin feature/[nombre-kebab-case]`
+5. Informar URL del PR para que el PM decida el merge
+
+**Error cometido:** Se hizo `git push origin desarrollo` directamente, saltándose el PR.  
+**Regla:** Los PRs siempre apuntan a `desarrollo`. Nunca commitear directo en `desarrollo` ni en `master`.
