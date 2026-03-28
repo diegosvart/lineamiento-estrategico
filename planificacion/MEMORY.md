@@ -7,12 +7,20 @@
 - `planificacion/backlog.md`
 - `planificacion/2026-03-26-carga-tareas-y-dashboard-horas-plan.md`
 - `planificacion/memory-contrato-tareas-y-horas.md`
+- `planificacion/memory-ciclo-vida-planes.md`
+- `planificacion/memory-asignacion-flujos-por-rama.md`
+- `planificacion/memory-capa-visual-obsidian.md`
+- `planificacion/memory-procedimiento-sesiones.md`
+- `planificacion/memory-interfaces-visuales.md`
 
 ## Leer según rama
 
 - `workspace/ms365` → `planificacion/memory-handoff-ms365.md`
 - `workspace/vault` → `planificacion/memory-handoff-vault.md`
+- `workspace/vault` → `planificacion/memory-flujo-intake-tareas-vault.md`
 - `workspace/dashboard` → `planificacion/memory-handoff-dashboard.md`
+- `workspace/planning` → `planificacion/memory-ciclo-vida-planes.md`
+- todas las ramas → `gestion-trabajo/tablero-maestro.md`
 
 ## Decisiones activas
 
@@ -20,10 +28,17 @@
 - `diario/*.md` es la fuente consolidada para HH consumidas.
 - El frontend no debe reimplementar reglas de negocio de normalización.
 - Toda modificación del contrato debe registrarse primero en la memoria temática correspondiente.
+- `/vault-task add` es la entrevista oficial para alta manual de tareas hacia `diario/`.
+- `/plan add`, `/plan update`, `/plan archive` y `/plan iterate` son las operaciones oficiales del ciclo de vida de planes.
+- “Eliminar plan” se resuelve como archivado, no como borrado físico.
+- `gestion-trabajo/` es la capa visual visible en Obsidian para backlog, foco y planes activos.
+- Toda sesión debe leer memoria técnica y luego tablero visible antes de actuar.
 
 ## Próximo objetivo
 
 - Ejecutar handoff por rama para habilitar carga de tareas y visualización de HH consumidas de extremo a extremo.
+- Implementar o refinar automatizaciones que materialicen los contratos documentados para tareas y planes.
+- Consolidar la capa visual de planificación para navegación humana en Obsidian.
 
 ## ⚠️ Errores y lecciones aprendidas
 
