@@ -35,7 +35,7 @@ Tareas pendientes de planificar. Cada ítem requiere un plan formal en `planific
 
 | Iniciativa | Lineamiento | Archivo de plan | Notas |
 |------------|-------------|-----------------|-------|
-| Formalización organizacional área TI | L2 | `planificacion/2026-03-26-formalizacion-organizacional-area-ti-plan.md` | Prerequisito G1 (30 Mar 2026) |
+| Formalización organizacional área TI | L2 | `planificacion/2026-03-26-formalizacion-organizacional-area-ti-plan.md` | Responsabilidad JTI — PM solicita documentos antes del **31 Mar 2026** |
 | Carga de tareas y dashboard de horas consumidas | L1 | `planificacion/2026-03-26-carga-tareas-y-dashboard-horas-plan.md` | Handoff cross-rama para ms365, vault y dashboard |
 | Workspace PM — proyecto y base documental | — | `planificacion/2026-03-28-workspace-pm-proyecto-y-base-documental-plan.md` | Formaliza el PM Workspace como proyecto transversal y ordena lo ya construido |
 
