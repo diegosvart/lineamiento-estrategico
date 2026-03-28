@@ -13,16 +13,17 @@
    → Si no estás en `workspace/planning`, cambiar a esa rama antes de leer o editar nada
 2. **Git sync**: `git checkout workspace/planning && git merge desarrollo`
    → Sincroniza cambios integrados (planes completados, actualizaciones de estado)
-3. **Abrir**: Codex apuntando a la raíz del repo
-   → Leer este SCOPE.md para cargar contexto del ámbito
-4. **Leer**: `planificacion/backlog.md` + estado actual de `proyectos/`
+3. **Branch de trabajo**: si vas a cambiar archivos, crear una rama hija desde `workspace/planning`
+   → `workspace/planning/feature/[nombre-kebab-case]` o `workspace/planning/fix/[nombre-kebab-case]`
+4. **Validar sesión**: si la rama actual no es `workspace/planning` ni una rama hija `workspace/planning/*`, declarar la sesión inválida para planning y detenerse
+5. **Leer**: `planificacion/backlog.md` + estado actual de `proyectos/`
    → ¿Qué iniciativas están pendientes de planificar? ¿Hay planes en borrador?
-5. **Leer**: `gestion-trabajo/tablero-maestro.md`
+6. **Leer**: `gestion-trabajo/tablero-maestro.md`
    → validar foco visible, handoffs pendientes y próximos pasos humanos
-6. **Primer acto**: crear o continuar plan usando `planificacion/templates/plan-iniciativa.md`
+7. **Primer acto**: crear o continuar plan usando `planificacion/templates/plan-iniciativa.md`
    → Próxima iniciativa prioritaria según backlog
 
-**Regla de seguridad:** si la rama actual no coincide con este `SCOPE`, detener el trabajo y corregir la rama antes de continuar.
+**Regla de seguridad:** si la rama actual no coincide con este `SCOPE` ni con una rama hija válida del ámbito planning, detener el trabajo antes de continuar.
 
 ---
 
@@ -109,6 +110,8 @@ Todo plan activo o listo para ejecutar debe tener representación visible en
 - Para leer estado del vault, usar solo lectura (no escribir en `proyectos/`)
 - Los cambios de contrato deben registrarse en las memorias temáticas antes de ampliar automatizaciones
 - La planificación visible en `gestion-trabajo/` debe mantenerse consistente con `planificacion/`
+- No volver a planificar como pendiente capacidades que ya existen como contrato, incluyendo `/vault-task add`, memorias de intake y la capa visible `gestion-trabajo/`
+- Todo cambio de planning debe cerrar en PR hacia `workspace/planning` antes de distribuirse a `desarrollo`
 
 ---
 
