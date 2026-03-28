@@ -73,6 +73,8 @@ The vault is the **Cosemar PM Workspace**. Each project lives under `proyectos/`
 00-dashboard.md                           # Portfolio index — ALL projects (graph root)
 diario/                                   # Cross-project timesheet (Daily Notes)
   RESUMEN-HORAS.md                        # Dataview dashboard for hours
+  PENDIENTES.md                           # Entries without date
+  YYYY/MM/YYYY-MM-DD.md                   # Daily notes organized by year/month
 plans/                                    # Claude implementation plans (excluded from graph)
 docs/                                     # Additional documentation
 Excalidraw/                               # Diagrams
