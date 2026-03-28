@@ -37,6 +37,21 @@
 ## Próximo objetivo
 
 - Ejecutar handoff por rama para habilitar carga de tareas y visualización de HH consumidas de extremo a extremo.
+
+## Corrección operativa de Codex (2026-03-28)
+
+- Codex planning trabaja solo en `workspace/planning`.
+- El entorno válido para Codex planning es el worktree dedicado:
+  `C:\repos\plan-lineamiento-estrategico-2026\plan-lineamiento-estrategico-2026\.worktrees\planning-fix`
+- Si una sesión de Codex muestra otra rama activa, esa sesión no se usa para planning.
+- Se eliminó la rama accidental `codex/preserve-vault-local-state-20260328`; no debe repetirse el patrón de crear ramas `codex/...` en este repo.
+- `workspace/planning` local fue alineada con `origin/desarrollo` mediante fast-forward a `93c63ab` antes de continuar con cambios de planning.
+- El desfase con `origin/workspace/planning` ya no se interpreta como “commits extra de planning pendientes de push” sin análisis; primero se compara contra `origin/desarrollo`.
+- `/vault-task add` ya existe como contrato documental y debe tratarse como capacidad construida, no como tarea pendiente de definición.
+
+## Leer también
+
+- `planificacion/memory-operacion-codex-planning.md`
 - Implementar o refinar automatizaciones que materialicen los contratos documentados para tareas y planes.
 - Consolidar la capa visual de planificación para navegación humana en Obsidian.
 
