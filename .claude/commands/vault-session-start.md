@@ -4,7 +4,12 @@ description: Protocolo de inicio de sesión — sincroniza git, lee contexto y r
 
 Ejecuta el protocolo de inicio de sesión del vault:
 
-1. **Git sync**: Verifica la rama actual con `git branch --show-current`. Si no es `workspace/vault`, detener el arranque operativo, indicar que primero se debe cambiar a `workspace/vault` y no proponer trabajo hasta estar en la rama correcta. Ejecuta `git status` para ver cambios pendientes y revisa los últimos 3 commits con `git log --oneline -3`.
+1. **Git sync**: Ejecuta los siguientes pasos en orden:
+   1. `git branch --show-current` — verificar rama. Si no es `workspace/vault`, cambiar con `git checkout workspace/vault` antes de continuar.
+   2. `git fetch origin` — traer cambios remotos sin modificar el working tree.
+   3. `git merge origin/desarrollo` — incorporar cambios integrados por otros IDEs desde origin. Si hay conflictos, reportarlos como bloqueante antes de continuar.
+   4. `git status` — verificar cambios pendientes en el working tree.
+   5. `git log --oneline -3` — revisar últimos commits para entender qué cambió.
 
 2. **Contexto estratégico**: Lee `proyectos/plan-gobernanza-ti/00-contexto/contexto-estrategico.md` para entender el estado actual del proyecto primario.
 
