@@ -112,6 +112,7 @@ Todo plan activo o listo para ejecutar debe tener representación visible en
 - La planificación visible en `gestion-trabajo/` debe mantenerse consistente con `planificacion/`
 - No volver a planificar como pendiente capacidades que ya existen como contrato, incluyendo `/vault-task add`, memorias de intake y la capa visible `gestion-trabajo/`
 - Todo cambio de planning debe cerrar en PR hacia `workspace/planning` antes de distribuirse a `desarrollo`
+- Toda tarea terminada y pusheada en planning solo se considera publicada para las demás ramas cuando queda integrada en `desarrollo`
 
 ---
 

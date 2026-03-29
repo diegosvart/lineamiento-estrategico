@@ -51,6 +51,7 @@
 - El desfase con `origin/workspace/planning` ya no se interpreta como “commits extra de planning pendientes de push” sin análisis; primero se compara contra `origin/desarrollo`.
 - `/vault-task add` ya existe como contrato documental y debe tratarse como capacidad construida, no como tarea pendiente de definición.
 - La distribución del trabajo a las otras ramas ocurre después del merge a `workspace/planning`, no directamente desde ramas temporales de Codex.
+- Toda tarea terminada y con push en su rama de ámbito debe terminar integrada en `desarrollo` para quedar visible al resto de agentes.
 
 ## Leer también
 
