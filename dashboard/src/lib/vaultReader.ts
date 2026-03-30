@@ -8,7 +8,9 @@ import type { DailyNote, Iniciativa, MS365SyncStatus } from '../types/vault'
 
 // Glob imports — Vite resuelve en build time
 // Rutas relativas desde dashboard/src/lib/ → vault root = ../../../
-const diarioGlob = import.meta.glob('../../../diario/[0-9]*.md', { as: 'raw', eager: false })
+// Daily notes: diario/YYYY-MM-DD.md (legado) o diario/YYYY/MM/YYYY-MM-DD.md
+const diarioGlob = import.meta.glob('../../../diario/**/*.md', { as: 'raw', eager: false })
+const dailyNoteFileRe = /\/\d{4}-\d{2}-\d{2}\.md$/
 const proyectosGlob = import.meta.glob('../../../proyectos/**/*.md', { as: 'raw', eager: false })
 const ms365Glob = import.meta.glob('../../../ms365-sync/output/*.yaml', { as: 'raw', eager: false })
 
@@ -25,6 +27,7 @@ export async function loadDailyNotes(): Promise<DailyNote[]> {
   const notes: DailyNote[] = []
 
   for (const [path, loader] of Object.entries(diarioGlob)) {
+    if (!dailyNoteFileRe.test(path)) continue
     try {
       const content = await (loader as () => Promise<string>)()
       const fm = parseFrontmatter(content)
