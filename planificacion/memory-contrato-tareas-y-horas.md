@@ -45,7 +45,12 @@ Definir un flujo estable de datos entre ramas para evitar duplicación de lógic
 - `entradas[].horas`
 - `entradas[].descripcion`
 - `entradas[].estado`
-- `horas-total`
+
+> `horas-total` fue eliminado (2026-03-30). El total se calcula en runtime por DataviewJS desde `entradas[].horas`. No existe como campo YAML.
+
+## Regla del body de Daily Notes
+
+El body de cada `diario/YYYY/MM/YYYY-MM-DD.md` contiene un bloque DataviewJS que renderiza la tabla de entradas y el total automáticamente desde el YAML frontmatter. El único punto de edición es `entradas[]` en YAML — el body nunca se edita manualmente.
 
 ## Reglas de calidad
 

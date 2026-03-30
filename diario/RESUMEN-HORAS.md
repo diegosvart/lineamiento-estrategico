@@ -47,7 +47,7 @@ for (let i = 0; i < 5; i++) {
     .first();
 
   if (page) {
-    const reg = page["horas-total"] ?? 0;
+    const reg = [].concat(page?.entradas || []).reduce((s, e) => s + (e?.horas ?? 0), 0);
     const estado = reg >= expected ? "✅" : reg > 0 ? "⚠️ Parcial" : "❌";
     rows.push([page.file.link, reg, expected, estado]);
   } else {
@@ -105,7 +105,7 @@ while (cursor <= lastDay) {
       const dayNum = d.day;
       const expected = (wd >= 4) ? 8 : 9;
       if (p) {
-        const reg = p["horas-total"] ?? 0;
+        const reg = [].concat(p?.entradas || []).reduce((s, e) => s + (e?.horas ?? 0), 0);
         const icon = reg >= expected ? "✅" : reg > 0 ? "⚠️" : "❌";
         row += ` [[diario/${key}\\|${dayNum}${icon}]] |`;
       } else {
@@ -257,7 +257,7 @@ const bar = (hh) => {
 const rows = pages.map(p => {
   const wd = p.fecha.weekday;
   const expected = (wd >= 4) ? 8 : 9;
-  const reg = p["horas-total"] ?? 0;
+  const reg = [].concat(p?.entradas || []).reduce((s, e) => s + (e?.horas ?? 0), 0);
   const estado = reg >= expected ? "✅" : reg > 0 ? "⚠️" : "❌";
   return [p.file.link, p.semana, reg, expected, estado, bar(reg)];
 });
@@ -369,13 +369,15 @@ const bar = (hh, max) => {
   return "█".repeat(filled) + "░".repeat(10 - filled);
 };
 
+const hhTotal = (p) => [].concat(p?.entradas || []).reduce((s, e) => s + (e?.horas ?? 0), 0);
+
 const semanas = Object.keys(bySemana).sort((a, b) => b - a).slice(0, 12);
-const allTotals = semanas.map(s => bySemana[s].reduce((acc, p) => acc + (p["horas-total"] ?? 0), 0));
+const allTotals = semanas.map(s => bySemana[s].reduce((acc, p) => acc + hhTotal(p), 0));
 const maxHH = Math.max(...allTotals, 1);
 
 const rows = semanas.map((sem, i) => {
   const ps = bySemana[sem];
-  const dias = ps.filter(p => p["horas-total"] > 0).length;
+  const dias = ps.filter(p => hhTotal(p) > 0).length;
   const total = allTotals[i];
   const esperado = dias * 8.6; // promedio ponderado ~43h / 5 días
   const delta = total - esperado;

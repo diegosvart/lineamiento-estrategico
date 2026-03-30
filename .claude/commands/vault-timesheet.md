@@ -146,7 +146,7 @@ Registrar una nueva entrada de horas. Flujo:
 2. Determinar ruta del archivo: `diario/YYYY/MM/YYYY-MM-DD.md` (crear subdirectorios si no existen)
 3. Si el archivo no existe, crearlo con la estructura completa:
 
-```yaml
+````
 ---
 aliases:
   - Diario DD-MM-YYYY
@@ -155,7 +155,6 @@ tags:
 fecha: YYYY-MM-DD
 semana: WW
 entradas: []
-horas-total: 0
 ---
 
 # Diario DD-MM-YYYY
@@ -164,13 +163,28 @@ horas-total: 0
 
 ## Entradas del día
 
-| Proyecto | Iniciativa | Rol | Tipo Trabajo | Actividad | Horas | Estado |
-|---|---|---|---|---|---|---|
-
-**Total horas:** 0
+```dataviewjs
+const entradas = dv.current().file.frontmatter.entradas || [];
+if (entradas.length === 0) {
+  dv.paragraph("> Sin entradas registradas.");
+} else {
+  const rows = [].concat(entradas).map(e => [
+    e?.proyecto ?? "—",
+    e?.iniciativa ?? "—",
+    e?.rol ?? "—",
+    e?.["tipo-trabajo"] ?? "—",
+    e?.actividad ?? "—",
+    e?.horas ?? 0,
+    e?.estado ?? "—"
+  ]);
+  dv.table(["Proyecto", "Iniciativa", "Rol", "Tipo Trabajo", "Actividad", "Horas", "Estado"], rows);
+  const total = [].concat(entradas).reduce((s, e) => s + (e?.horas ?? 0), 0);
+  dv.paragraph(`**Total horas:** ${total}`);
+}
 ```
+````
 
-Al agregar entradas: actualizar la tabla markdown con una fila por entrada y recalcular `**Total horas:**`.
+Al agregar entradas: solo agregar la entrada al array `entradas` del YAML. El body (tabla y total) se auto-genera via DataviewJS — no tocar el body.
 
 4. Solicitar/confirmar los campos de la entrada:
    - `proyecto`: uno de los proyectos del catálogo
@@ -183,11 +197,22 @@ Al agregar entradas: actualizar la tabla markdown con una fila por entrada y rec
    - `descripcion`: texto libre (qué específicamente se hizo)
    - `estado`: uno de los estados del catálogo (default: Completado)
 
-5. Agregar la entrada al array `entradas` del YAML
-6. Recalcular y actualizar `horas-total`
-7. Si no se detecta fecha → agregar a `diario/PENDIENTES.md` en lugar de un archivo diario
+5. Agregar la entrada al array `entradas` del YAML — no modificar el body del archivo
+6. Si no se detecta fecha → agregar a `diario/PENDIENTES.md` en lugar de un archivo diario
    y emitir aviso: `⚠️ Fecha no detectada — entrada agregada a diario/PENDIENTES.md`
 8. Confirmar con resumen de la entrada agregada
+
+### `/vault-timesheet edit`
+
+Editar una entrada existente en una Daily Note. Flujo:
+
+1. Pedir fecha del día a editar — el usuario escribe `hoy` o una fecha YYYY-MM-DD
+2. Leer el archivo y mostrar las entradas numeradas con sus campos actuales
+3. El usuario elige el número de la entrada a editar
+4. Mostrar los campos de la entrada. El usuario indica qué campo cambiar y el nuevo valor
+5. Actualizar **solo el YAML frontmatter** con el nuevo valor
+6. El body no se modifica — la tabla se auto-actualiza via DataviewJS al reabrir en Obsidian
+7. Confirmar con resumen del cambio aplicado
 
 ### `/vault-timesheet show-week`
 
@@ -212,6 +237,10 @@ Resumen del mes actual o rango indicado.
 
 ```yaml
 ---
+aliases:
+  - Diario 26-03-2026
+tags:
+  - diario
 fecha: 2026-03-26
 semana: 13
 entradas:
@@ -232,9 +261,10 @@ entradas:
     horas: 1.5
     descripcion: Revisión de requerimientos iniciales con contabilidad
     estado: Completado
-horas-total: 3.5
 ---
 ```
+
+> El body de la nota contiene un bloque DataviewJS que renderiza la tabla y total automáticamente. No hay tabla estática ni campo `horas-total` — el único punto de edición es el array `entradas` en el YAML frontmatter.
 
 > Nota: `iniciativa` es obligatorio cuando `proyecto: Plan Gobernanza TI`. Para otros proyectos, se omite.
 
@@ -250,7 +280,8 @@ horas-total: 3.5
 - `horas` debe ser múltiplo de 0.5, entre 0.5 y 12
 - `fecha` en formato ISO YYYY-MM-DD
 - Si el archivo ya existe, agregar entrada al array existente (NO sobreescribir)
-- Siempre recalcular `horas-total` como suma de todas las entradas del día
+- No existe campo `horas-total` — el total se calcula en runtime via DataviewJS
+- No modificar el body de la nota al agregar o editar entradas
 
 ---
 

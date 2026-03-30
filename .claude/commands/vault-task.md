@@ -59,12 +59,11 @@ Solicitar o confirmar estos campos en este orden:
 
 1. Si hay `fecha`, usar `diario/YYYY/MM/YYYY-MM-DD.md` (crear subdirectorios si no existen)
 2. Si el archivo no existe, crearlo con el schema completo (mismo formato que vault-timesheet):
-   - YAML: `aliases`, `tags: [diario]`, `fecha`, `semana`, `entradas: []`, `horas-total: 0`
-   - Cuerpo markdown: heading `# Diario DD-MM-YYYY`, quote de contexto, tabla de entradas, total
+   - YAML: `aliases`, `tags: [diario]`, `fecha`, `semana`, `entradas: []`
+   - Cuerpo: heading `# Diario DD-MM-YYYY`, quote de contexto, bloque DataviewJS (ver vault-timesheet para la plantilla exacta)
 3. Agregar la tarea al array `entradas` del YAML
-4. Agregar fila correspondiente a la tabla markdown
-5. Recalcular `horas-total` y `**Total horas:**` en markdown
-6. Si no hay `fecha`, escribir en `diario/PENDIENTES.md`
+4. No modificar el body — la tabla y el total se auto-generan via DataviewJS al abrir en Obsidian
+5. Si no hay `fecha`, escribir en `diario/PENDIENTES.md`
 7. Confirmar al usuario con un resumen de lo agregado
 
 ## Validaciones

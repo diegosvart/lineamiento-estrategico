@@ -40,7 +40,7 @@ La fuente canónica inicial para estos catálogos es `.claude/commands/vault-tim
 - Si existe `fecha`, persistir en `diario/YYYY-MM-DD.md`.
 - Si no existe `fecha`, persistir en `diario/PENDIENTES.md`.
 - No crear nota separada de tarea en esta primera versión.
-- Siempre recalcular `horas-total` cuando se escriba en un diario con fecha.
+- Solo modificar el YAML frontmatter (`entradas[]`). El body de la nota contiene un bloque DataviewJS que renderiza tabla y total automáticamente — no tocar el body.
 
 ## Validaciones mínimas
 
@@ -69,6 +69,6 @@ explícito en `gestion-trabajo/tablero-maestro.md` o en el canvas del plan cuál
 
 ## No alcance
 
-- No editar tareas existentes.
+- No editar tareas existentes via `/vault-task add` — usar `/vault-timesheet edit` para editar.
 - No borrar tareas existentes.
 - No crear lógica especial para dashboard en este flujo.
