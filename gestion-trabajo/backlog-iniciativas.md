@@ -30,6 +30,7 @@ Representación humana del backlog técnico de `planificacion/backlog.md`.
 - [[gestion-trabajo/planes-activos/workspace-pm-proyecto-y-base-documental-workspace|Workspace PM — proyecto y base documental]]
 - [[gestion-trabajo/planes-activos/formalizacion-organizacional-workspace|Formalización organizacional área TI]]
 - [[gestion-trabajo/planes-activos/carga-tareas-y-dashboard-horas-workspace|Carga de tareas y dashboard de horas consumidas]]
+- [[gestion-trabajo/planes-activos/reporte-mensual-dashboard-workspace|Reporte mensual ejecutivo dashboard + convención workspace PM]]
 
 ## En ejecución
 

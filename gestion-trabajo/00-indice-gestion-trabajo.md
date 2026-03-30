@@ -17,6 +17,7 @@ Espacio visual de trabajo para navegar backlog, foco actual, handoffs y planes a
 - [[gestion-trabajo/planes-activos/workspace-pm-proyecto-y-base-documental-workspace|Workspace visual — Workspace PM]]
 - [[gestion-trabajo/planes-activos/carga-tareas-y-dashboard-horas-workspace|Workspace visual — Carga de tareas y dashboard de horas]]
 - [[gestion-trabajo/planes-activos/formalizacion-organizacional-workspace|Workspace visual — Formalización organizacional]]
+- [[gestion-trabajo/planes-activos/reporte-mensual-dashboard-workspace|Workspace visual — Reporte mensual ejecutivo dashboard]]
 - [[00-dashboard|Dashboard general del workspace]]
 
 ## Principios de uso

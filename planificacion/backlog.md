@@ -37,6 +37,7 @@ Tareas pendientes de planificar. Cada ítem requiere un plan formal en `planific
 |------------|-------------|-----------------|-------|
 | Formalización organizacional área TI | L2 | `planificacion/2026-03-26-formalizacion-organizacional-area-ti-plan.md` | Responsabilidad JTI — PM solicita documentos antes del **31 Mar 2026** |
 | Carga de tareas y dashboard de horas consumidas | L1 | `planificacion/2026-03-26-carga-tareas-y-dashboard-horas-plan.md` | Handoff cross-rama para ms365, vault y dashboard |
+| Reporte mensual ejecutivo dashboard + convención workspace PM | — | `planificacion/2026-03-30-reporte-mensual-dashboard-y-convencion-workspace-pm-plan.md` | `workspace/dashboard` implementa preview + descarga; `workspace/vault` actualiza documentación después |
 
 ---
 
@@ -58,4 +59,4 @@ Tareas pendientes de planificar. Cada ítem requiere un plan formal en `planific
 
 ---
 
-*Última actualización: 2026-03-28*
+*Última actualización: 2026-03-30*
