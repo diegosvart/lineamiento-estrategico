@@ -130,22 +130,47 @@ Campo `tipo-trabajo` — clasifica el tipo de labor realizada (auto-mapeado desd
 
 ## Comandos disponibles
 
+## Reglas de interacción (UX)
+
+- NUNCA usar "Enter para confirmar" ni "presiona Enter" — la interfaz no soporta mensajes vacíos
+- Toda pregunta debe aceptar respuesta explícita: número, texto, o keyword (`ok`, `hoy`, `si`)
+- Cuando un valor se auto-deriva (ej: tipo-trabajo desde actividad), mostrarlo y pedir `ok` o el valor correcto
+- Cuando hay default sugerido, nombrarlo explícitamente (ej: "escribe `hoy` o una fecha YYYY-MM-DD")
+- Para campos con catálogo: usar listas numeradas, el usuario responde con el número
+
 ### `/vault-timesheet add`
 
 Registrar una nueva entrada de horas. Flujo:
 
-1. Determinar fecha de la entrada (preguntar si no se especifica, default = hoy)
-2. Determinar nombre de archivo: `diario/YYYY-MM-DD.md`
-3. Si el archivo no existe, crearlo con estructura YAML:
+1. Determinar fecha de la entrada — preguntar siempre; el usuario escribe `hoy` o una fecha YYYY-MM-DD
+2. Determinar ruta del archivo: `diario/YYYY/MM/YYYY-MM-DD.md` (crear subdirectorios si no existen)
+3. Si el archivo no existe, crearlo con la estructura completa:
 
 ```yaml
 ---
+aliases:
+  - Diario DD-MM-YYYY
+tags:
+  - diario
 fecha: YYYY-MM-DD
 semana: WW
 entradas: []
 horas-total: 0
 ---
+
+# Diario DD-MM-YYYY
+
+> Registro de actividades y horas del día. Generado via `/vault-timesheet`.
+
+## Entradas del día
+
+| Proyecto | Iniciativa | Rol | Tipo Trabajo | Actividad | Horas | Estado |
+|---|---|---|---|---|---|---|
+
+**Total horas:** 0
 ```
+
+Al agregar entradas: actualizar la tabla markdown con una fila por entrada y recalcular `**Total horas:**`.
 
 4. Solicitar/confirmar los campos de la entrada:
    - `proyecto`: uno de los proyectos del catálogo
@@ -168,7 +193,7 @@ horas-total: 0
 
 Mostrar entradas de la semana actual (o una semana específica si se indica).
 
-1. Leer archivos de `diario/` de los últimos 7 días (o semana indicada)
+1. Leer archivos de `diario/YYYY/MM/` de los últimos 7 días (o semana indicada)
 2. Mostrar tabla: fecha | proyecto | iniciativa | rol | actividad | horas | descripción
 3. Total de horas por proyecto y total general
 
@@ -176,7 +201,7 @@ Mostrar entradas de la semana actual (o una semana específica si se indica).
 
 Resumen del mes actual o rango indicado.
 
-1. Leer todos los archivos de `diario/` en el rango
+1. Leer todos los archivos de `diario/YYYY/MM/` en el rango
 2. Agrupar por: proyecto, iniciativa, rol, actividad, semana
 3. Mostrar tabla consolidada con totales
 4. Indicar link a `diario/RESUMEN-HORAS.md` para vista Dataview completa

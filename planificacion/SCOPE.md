@@ -9,14 +9,21 @@
 
 ## Inicio de Sesión
 
-1. **Git**: `git checkout workspace/planning && git merge desarrollo`
+1. **Git**: verificar rama actual y situarse explícitamente en `workspace/planning`
+   → Si no estás en `workspace/planning`, cambiar a esa rama antes de leer o editar nada
+2. **Git sync**: `git checkout workspace/planning && git merge desarrollo`
    → Sincroniza cambios integrados (planes completados, actualizaciones de estado)
-2. **Abrir**: Codex apuntando a la raíz del repo
-   → Leer este SCOPE.md para cargar contexto del ámbito
-3. **Leer**: `planificacion/backlog.md` + estado actual de `proyectos/`
+3. **Branch de trabajo**: si vas a cambiar archivos, crear una rama hija desde `workspace/planning`
+   → `workspace/planning/feature/[nombre-kebab-case]` o `workspace/planning/fix/[nombre-kebab-case]`
+4. **Validar sesión**: si la rama actual no es `workspace/planning` ni una rama hija `workspace/planning/*`, declarar la sesión inválida para planning y detenerse
+5. **Leer**: `planificacion/backlog.md` + estado actual de `proyectos/`
    → ¿Qué iniciativas están pendientes de planificar? ¿Hay planes en borrador?
-4. **Primer acto**: crear o continuar plan usando `planificacion/templates/plan-iniciativa.md`
+6. **Leer**: `gestion-trabajo/tablero-maestro.md`
+   → validar foco visible, handoffs pendientes y próximos pasos humanos
+7. **Primer acto**: crear o continuar plan usando `planificacion/templates/plan-iniciativa.md`
    → Próxima iniciativa prioritaria según backlog
+
+**Regla de seguridad:** si la rama actual no coincide con este `SCOPE` ni con una rama hija válida del ámbito planning, detener el trabajo antes de continuar.
 
 ---
 
@@ -25,9 +32,12 @@
 - Crear planes de trabajo por iniciativa en formato estructurado
 - Designar tareas con entregables concretos (archivos en vault)
 - Establecer criterios de aceptación medibles por tarea
-- Marcar estado del plan: `borrador` → `listo-para-ejecutar` → `en-ejecucion` → `completado`
+- Gestionar el ciclo de vida del plan vía entrevistas guiadas: `/plan add`, `/plan update`, `/plan archive`, `/plan iterate`
+- Marcar estado del plan: `borrador` → `listo-para-ejecutar` → `en-ejecucion` → `completado` → `archivado`
 - Leer estado actual del vault (qué existe, qué está pendiente) para planificar
 - Crear y mantener el backlog de planificación en `planificacion/backlog.md`
+- Mantener el contrato cross-rama entre intake de tareas del vault y ejecución de planes
+- Mantener sincronizada la representación visible en `gestion-trabajo/` para backlog, tablero y planes activos
 
 ---
 
@@ -37,6 +47,11 @@
 planificacion/
   SCOPE.md                              ← archivo canónico del ámbito (este archivo)
   YYYY-MM-DD-[iniciativa]-plan.md       ← un plan por sesión/iniciativa
+  memory-ciclo-vida-planes.md           ← contrato de operaciones add/update/archive/iterate
+  memory-flujo-intake-tareas-vault.md   ← contrato del intake guiado de tareas hacia diario/
+  memory-asignacion-flujos-por-rama.md  ← dueños por rama de cada flujo
+  memory-capa-visual-obsidian.md        ← contrato entre la capa técnica y la capa visible
+  memory-procedimiento-sesiones.md      ← protocolo transversal de inicio/cierre de sesión
   templates/
     plan-iniciativa.md                  ← template obligatorio para nuevos planes
   backlog.md                            ← tareas pendientes de planificar
@@ -57,7 +72,7 @@ El template es el contrato de comunicación entre este ámbito (planning) y `wor
 | `fecha` | YYYY-MM-DD |
 | `iniciativa` | nombre exacto del catálogo canónico |
 | `lineamiento` | L2, L3, L4 o L5 |
-| `estado` | `borrador` \| `listo-para-ejecutar` \| `en-ejecucion` \| `completado` |
+| `estado` | `borrador` \| `listo-para-ejecutar` \| `en-ejecucion` \| `completado` \| `archivado` |
 | `ejecutor` | `workspace/vault` (siempre) |
 
 ---
@@ -65,16 +80,26 @@ El template es el contrato de comunicación entre este ámbito (planning) y `wor
 ## Ciclo de Vida de un Plan
 
 ```
-Codex crea plan (borrador)
-  → Codex completa secciones → estado: listo-para-ejecutar
-    → Claude Code lee y ejecuta → estado: en-ejecucion
-      → Claude Code completa todas las tareas → estado: completado
-        → PR workspace/planning → desarrollo
+/plan add → crea plan (borrador)
+  → /plan update completa secciones o ajusta alcance
+    → estado: listo-para-ejecutar
+      → Claude Code lee y ejecuta → estado: en-ejecucion
+        → Claude Code completa todas las tareas → estado: completado
+          → /plan archive conserva trazabilidad cuando el plan se cierra o reemplaza
 ```
 
 **Handoff a workspace/vault:**
 Cuando un plan alcanza `listo-para-ejecutar`, Codex notifica a Claude Code
 indicando la ruta del archivo: `planificacion/YYYY-MM-DD-[iniciativa]-plan.md`
+
+**Iteración controlada:**
+Cuando cambia el enfoque, alcance o estrategia de ejecución, usar `/plan iterate`
+para crear una nueva iteración enlazada al plan previo. La versión anterior debe
+quedar referenciada como reemplazada o archivada, nunca borrada.
+
+**Capa visual obligatoria:**
+Todo plan activo o listo para ejecutar debe tener representación visible en
+`gestion-trabajo/` mediante una nota operativa y, cuando aplique, un `.canvas`.
 
 ---
 
@@ -83,6 +108,11 @@ indicando la ruta del archivo: `planificacion/YYYY-MM-DD-[iniciativa]-plan.md`
 - Planes en estado `listo-para-ejecutar` son consumibles por `workspace/vault`
 - No modificar archivos fuera de `planificacion/`
 - Para leer estado del vault, usar solo lectura (no escribir en `proyectos/`)
+- Los cambios de contrato deben registrarse en las memorias temáticas antes de ampliar automatizaciones
+- La planificación visible en `gestion-trabajo/` debe mantenerse consistente con `planificacion/`
+- No volver a planificar como pendiente capacidades que ya existen como contrato, incluyendo `/vault-task add`, memorias de intake y la capa visible `gestion-trabajo/`
+- Todo cambio de planning debe cerrar en PR hacia `workspace/planning` antes de distribuirse a `desarrollo`
+- Toda tarea terminada y pusheada en planning solo se considera publicada para las demás ramas cuando queda integrada en `desarrollo`
 
 ---
 
@@ -90,10 +120,10 @@ indicando la ruta del archivo: `planificacion/YYYY-MM-DD-[iniciativa]-plan.md`
 
 | Ámbito | SCOPE | Interacción |
 |--------|-------|-------------|
-| workspace/vault | `SCOPE.md` (raíz) | Entrega planes; consume actualizaciones de estado |
+| workspace/vault | `SCOPE.md` (raíz) | Consume planes y es dueño de `/vault-task add` para intake de tareas hacia `diario/` |
 | workspace/ms365 | `ms365-sync/SCOPE.md` | Recibe datos de Planner para planificar |
-| workspace/dashboard | `dashboard/SCOPE.md` | Sin interacción directa |
+| workspace/dashboard | `dashboard/SCOPE.md` | Consume en lectura la capa visible si luego se requiere visualización web |
 
 ---
 
-*Rama: `workspace/planning` — Codex — Última actualización: 2026-03-26*
+*Rama: `workspace/planning` — Codex — Última actualización: 2026-03-28*

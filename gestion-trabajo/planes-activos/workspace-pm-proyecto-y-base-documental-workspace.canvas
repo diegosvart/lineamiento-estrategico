@@ -1,0 +1,79 @@
+{
+  "nodes": [
+    {
+      "id": "workspace",
+      "type": "file",
+      "file": "gestion-trabajo/planes-activos/workspace-pm-proyecto-y-base-documental-workspace.md",
+      "x": -180,
+      "y": -80,
+      "width": 430,
+      "height": 260
+    },
+    {
+      "id": "objective",
+      "type": "text",
+      "text": "Objetivo\nFormalizar el PM Workspace como proyecto transversal dentro del vault.",
+      "x": 420,
+      "y": -260,
+      "width": 340,
+      "height": 140,
+      "color": "2"
+    },
+    {
+      "id": "tasks",
+      "type": "text",
+      "text": "Tareas\n- crear proyecto workspace-pm\n- documentar arquitectura y fuentes de verdad\n- definir stack\n- crear roadmap y backlog\n- enlazar capa visual",
+      "x": 420,
+      "y": -60,
+      "width": 340,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "deps",
+      "type": "text",
+      "text": "Dependencias\nReutilizar planificacion, gestion-trabajo, ms365-sync y reporting existente",
+      "x": 420,
+      "y": 170,
+      "width": 340,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "id": "next",
+      "type": "text",
+      "text": "Siguiente accion\nConstruir el proyecto workspace-pm como contenedor formal del sistema de trabajo.",
+      "x": -180,
+      "y": 240,
+      "width": 430,
+      "height": 130,
+      "color": "5"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "workspace",
+      "toNode": "objective",
+      "toSide": "left"
+    },
+    {
+      "id": "e2",
+      "fromNode": "workspace",
+      "toNode": "tasks",
+      "toSide": "left"
+    },
+    {
+      "id": "e3",
+      "fromNode": "workspace",
+      "toNode": "deps",
+      "toSide": "left"
+    },
+    {
+      "id": "e4",
+      "fromNode": "workspace",
+      "toNode": "next",
+      "toSide": "top"
+    }
+  ]
+}

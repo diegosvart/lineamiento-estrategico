@@ -73,6 +73,8 @@ The vault is the **Cosemar PM Workspace**. Each project lives under `proyectos/`
 00-dashboard.md                           # Portfolio index — ALL projects (graph root)
 diario/                                   # Cross-project timesheet (Daily Notes)
   RESUMEN-HORAS.md                        # Dataview dashboard for hours
+  PENDIENTES.md                           # Entries without date
+  YYYY/MM/YYYY-MM-DD.md                   # Daily notes organized by year/month
 plans/                                    # Claude implementation plans (excluded from graph)
 docs/                                     # Additional documentation
 Excalidraw/                               # Diagrams
@@ -224,8 +226,8 @@ Thirteen specialized skills for vault management:
 
 When opening the vault, Claude Code always:
 
-1. **Git sync**: `git checkout workspace/vault && git merge desarrollo`
-   → Incorporar cambios integrados desde otros ámbitos antes de cualquier trabajo
+1. **Git sync**: `git checkout workspace/vault && git fetch origin && git merge origin/desarrollo`
+   → `fetch` trae cambios remotos; `merge origin/desarrollo` incorpora lo que otros IDEs ya integraron
 2. **Read context**: `CLAUDE.md` (this file) + `SCOPE.md` (raíz) — understand workspace and scope
 3. **Read project state**: `proyectos/plan-gobernanza-ti/00-contexto/contexto-estrategico.md`
 4. **Check git**: `git status` + recent commits — understand what changed
@@ -445,7 +447,7 @@ master       ← Releases (solo el PM — al completar gateways)
 
 ### Claude Workflow (workspace/vault)
 
-1. `git checkout workspace/vault && git merge desarrollo` (sync cambios integrados)
+1. `git checkout workspace/vault && git fetch origin && git merge origin/desarrollo` (sync desde origin)
 2. Para trabajo puntual: `git checkout -b feature/[nombre]`
 3. [make changes]
 4. `git commit -m "tipo: descripción"`

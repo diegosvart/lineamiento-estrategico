@@ -14,7 +14,7 @@ Los gateways son decisiones conscientes que validan el avance del plan entre fas
 ---
 
 ## G1 — Aprobación Gerencia General
-**Fecha proyectada:** 30 Marzo 2026
+**Fecha proyectada:** 31 Marzo 2026
 **Condición:** Aprobado — Gerencia General
 **Estado:** ✓ Completado
 
@@ -82,7 +82,7 @@ Habilitado por:
 
 | Gateway | Fecha | Condición | Estado |
 |---|---|---|---|
-| **G1** | 30 Mar | Aprobado GG | ✓ Completado |
+| **G1** | 31 Mar | Aprobado GG | ✓ Completado |
 | **G2** | ~22 May | Catastro A + diagnóstico + portfolio | Esperado S5–S6 |
 | **G3** | ~26 Jun | Catastro B+C + 5 políticas firmadas | Esperado S9–S10 |
 | **G4** | ~25 Sep | Normativa validada con Sponsor | Esperado S23 |
