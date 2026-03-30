@@ -20,6 +20,16 @@ Construir una vista local para navegar la información del vault y obtener métr
 - Diseñar la UI para que permita responder preguntas de gestión, no solo mostrar gráficos aislados.
 - Implementar un reporte mensual ejecutivo con selector `YYYY-MM`, vista previa simple y descarga en Markdown a partir de `diario/YYYY/MM/*.md`.
 
+### Entregado (rama `feature/reporte-mensual-bitacora` / dashboard)
+
+- **Reporte mensual:** panel `MonthlyReportPanel` en [dashboard/src/App.tsx](dashboard/src/App.tsx); selector `YYYY-MM`, vista previa y descarga usan el mismo string de [dashboard/src/lib/monthlyReportMarkdown.ts](dashboard/src/lib/monthlyReportMarkdown.ts).
+- **Bitácora:** tabla alineada a la sección **J) Bitácora de Actividades** de `diario/RESUMEN-HORAS.md` (columnas Día, Proyecto, Iniciativa, Actividad, Descripción, HH; orden por fecha descendente).
+- **Archivo generado:** patrón `reporte-mensual-actividades-YYYY-MM-generado-YYYY-MM-DD.md` (fecha local de generación).
+- **Transformaciones:** [dashboard/src/lib/dataTransforms.ts](dashboard/src/lib/dataTransforms.ts) — `filterNotesByCalendarMonth`, `buildMonthlyBitacora`, `buildMonthlyReportPayload`, `listMonthsFromNotesDescending`.
+- **Lectura diario:** [dashboard/src/lib/vaultReader.ts](dashboard/src/lib/vaultReader.ts) — glob `diario/**/*.md`, solo archivos `YYYY-MM-DD.md`; normalización de `fecha` si viene como `Date` desde YAML.
+
+**Follow-up `workspace/vault` (no bloquea el merge del dashboard):** actualizar [proyectos/workspace-pm/guia-uso-workspace.md](proyectos/workspace-pm/guia-uso-workspace.md) y [proyectos/workspace-pm/backlog-workspace-pm.md](proyectos/workspace-pm/backlog-workspace-pm.md) con la convención del reporte mensual una vez validado en UI (según [planificacion/2026-03-30-reporte-mensual-dashboard-y-convencion-workspace-pm-plan.md](planificacion/2026-03-30-reporte-mensual-dashboard-y-convencion-workspace-pm-plan.md)).
+
 ## No alcance
 
 - No escribir fuera de `dashboard/`.

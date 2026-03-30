@@ -80,3 +80,31 @@ export const ESTADO_COLORS: Record<EstadoTag, string> = {
   pendiente: '#9e9e9e',
   backlog: '#9c27b0',
 }
+
+/** Fila aplanada — misma semántica que sección J) Bitácora en RESUMEN-HORAS.md */
+export interface BitacoraRow {
+  fecha: string
+  proyecto: string
+  iniciativa: string
+  actividad: string
+  descripcion: string
+  horas: number | null
+}
+
+export interface ResumenProyectoMensual {
+  proyecto: string
+  horas: number
+  actividades: number
+}
+
+/** Payload único para vista previa Markdown y descarga (misma fuente de verdad). */
+export interface MonthlyReportPayload {
+  periodo_yyyymm: string
+  generado_en: string
+  hh_totales: number
+  num_actividades: number
+  proyectos_involucrados: string[]
+  iniciativas_involucradas: string[]
+  resumen_por_proyecto: ResumenProyectoMensual[]
+  bitacora: BitacoraRow[]
+}

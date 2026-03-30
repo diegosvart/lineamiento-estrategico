@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { HorasChart } from './components/HorasChart'
 import { ReporteHoras } from './components/ReporteHoras'
+import { MonthlyReportPanel } from './components/MonthlyReportPanel'
 import { EstadoGrid } from './components/EstadoGrid'
 import { AlertasPanel } from './components/AlertasPanel'
 import { MS365SyncStatusPanel } from './components/MS365SyncStatus'
@@ -93,6 +94,8 @@ function App() {
       <HorasChart data={semanaData} proyectos={proyectos} />
 
       <ReporteHoras notes={notes} />
+
+      <MonthlyReportPanel notes={notes} />
 
       <EstadoGrid iniciativas={iniciativas} />
     </div>

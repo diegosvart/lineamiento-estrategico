@@ -222,6 +222,27 @@ body {
   box-shadow: 0 0 0 3px var(--accent-dim);
 }
 
+/* Reporte mensual — preview Markdown */
+.dash-monthly-preview-wrap {
+  margin-top: 4px;
+}
+
+.dash-monthly-preview {
+  margin: 0;
+  max-height: min(480px, 55vh);
+  overflow: auto;
+  padding: 16px 18px;
+  font-size: 12px;
+  line-height: 1.45;
+  font-family: ui-monospace, 'Cascadia Code', 'Segoe UI Mono', monospace;
+  color: var(--text-secondary);
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
 .dash-btn {
   font-family: inherit;
   font-size: 13px;
@@ -241,6 +262,12 @@ body {
 
 .dash-btn:active {
   transform: scale(0.98);
+}
+
+.dash-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
 }
 
 /* Tables */

@@ -20,6 +20,19 @@ function numOrUndef(v: unknown): number | undefined {
   return Number.isNaN(n) ? undefined : n
 }
 
+/** `fecha` en YAML puede ser string YYYY-MM-DD o Date (js-yaml). */
+function normalizeFechaYMD(v: unknown): string {
+  if (v instanceof Date && !Number.isNaN(v.getTime())) {
+    const y = v.getUTCFullYear()
+    const mo = String(v.getUTCMonth() + 1).padStart(2, '0')
+    const d = String(v.getUTCDate()).padStart(2, '0')
+    return `${y}-${mo}-${d}`
+  }
+  const s = String(v ?? '').trim()
+  const m = /^(\d{4}-\d{2}-\d{2})/.exec(s)
+  return m ? m[1] : ''
+}
+
 /**
  * Carga y parsea todas las daily notes con entradas de timesheet.
  */
@@ -33,7 +46,7 @@ export async function loadDailyNotes(): Promise<DailyNote[]> {
       const fm = parseFrontmatter(content)
       if (!fm) continue
 
-      const fecha = String(fm['fecha'] ?? '')
+      const fecha = normalizeFechaYMD(fm['fecha'])
       const semanaRaw = fm['semana_iso'] ?? fm['semana']
       const computed = getISOWeekAndYear(fecha)
       const semanaIso =

@@ -66,6 +66,7 @@ dashboard/
     components/
       HorasChart.tsx          ← Horas por proyecto/semana (Recharts BarChart)
       ReporteHoras.tsx        ← Reporte por día / semana ISO / mes + CSV
+      MonthlyReportPanel.tsx  ← Reporte mensual ejecutivo: preview + descarga .md (bitácora tipo RESUMEN-HORAS J)
       EstadoGrid.tsx          ← Iniciativas con estado coloreado
       AlertasPanel.tsx        ← Alertas activas del vault
       MS365SyncStatus.tsx     ← Estado de última sync con Planner
@@ -74,7 +75,8 @@ dashboard/
       yamlParser.ts           ← Frontmatter con js-yaml
       normalizeTimesheet.ts   ← Normaliza entradas (guiones YAML → modelo TS)
       dateUtils.ts            ← Semana ISO y límites de mes desde fecha YYYY-MM-DD
-      dataTransforms.ts       ← Agrega, filtros por período, export plano
+      dataTransforms.ts       ← Agrega, filtros por período, export plano, payload mensual
+      monthlyReportMarkdown.ts ← Markdown ejecutivo del reporte mensual (sin Obsidian)
     types/
       vault.ts                ← Tipos TypeScript del schema YAML
 ```

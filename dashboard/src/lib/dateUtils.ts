@@ -36,3 +36,9 @@ export function monthBounds(year: number, month1to12: number): { start: string; 
   const end = `${year}-${pad2(month1to12)}-${pad2(lastDay)}`
   return { start, end }
 }
+
+/** Fecha local YYYY-MM-DD (nombre de archivo del reporte generado). */
+export function todayYMDLocal(): string {
+  const n = new Date()
+  return `${n.getFullYear()}-${pad2(n.getMonth() + 1)}-${pad2(n.getDate())}`
+}
