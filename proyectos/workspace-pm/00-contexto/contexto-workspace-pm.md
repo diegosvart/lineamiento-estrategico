@@ -2,7 +2,7 @@
 aliases:
   - Contexto Workspace PM
 tags:
-  - en-definicion
+  - activo
 ---
 
 **Proyecto:** [[proyectos/workspace-pm/00-indice|Workspace PM]]
@@ -53,9 +53,7 @@ Esa capacidad combinada funciona hoy como el **sistema de trabajo del PM** — p
 |-----|--------|-----------------|
 | PM / Dueño del sistema | Diego Morales | Diseño, mantenimiento y uso diario del sistema de trabajo |
 | Jefe TI (JTI) | (no nombrar) | Codecisión en el Plan Gobernanza TI; consumidor indirecto del sistema |
-| Sponsor GG | ⚠️ PENDIENTE | Aprobación de recursos para iniciativas transversales del workspace |
-
-> ⚠️ PENDIENTE: Confirmar si el Sponsor del Workspace PM es el mismo que el Sponsor GG del Plan Gobernanza TI o requiere designación separada.
+| Sponsor GG | N/A | Este proyecto es una herramienta operativa del PM — no requiere aprobación de Sponsor GG. Si en el futuro se solicita presupuesto para iniciativas del workspace, se designará Sponsor en ese momento. |
 
 ---
 

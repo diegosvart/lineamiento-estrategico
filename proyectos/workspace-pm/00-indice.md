@@ -3,7 +3,7 @@ aliases:
   - Workspace PM
   - PM Workspace
 tags:
-  - en-definicion
+  - activo
 ---
 
 <- [[00-dashboard|Dashboard Cosemar]]
@@ -19,7 +19,7 @@ Proyecto transversal que formaliza el sistema de trabajo de Diego Morales como P
 | Rol | Responsable |
 | --- | ----------- |
 | PM | Diego Morales |
-| Sponsor | ⚠️ PENDIENTE |
+| Sponsor | N/A — herramienta operativa del PM |
 | Ámbito | Transversal (todos los proyectos) |
 
 ---
@@ -28,9 +28,9 @@ Proyecto transversal que formaliza el sistema de trabajo de Diego Morales como P
 
 | Campo | Valor |
 | ----- | ----- |
-| Estado | en-definicion |
+| Estado | activo |
 | Horizonte | 2026 |
-| Progreso estimado | 85% (Fase 1 completa) |
+| Progreso estimado | Fase 1 completa — Fase 2 en definición |
 
 ---
 
@@ -43,12 +43,11 @@ Proyecto transversal que formaliza el sistema de trabajo de Diego Morales como P
 - [[proyectos/workspace-pm/roadmap-workspace-pm|Roadmap]]
 - [[proyectos/workspace-pm/backlog-workspace-pm|Backlog]]
 - [[proyectos/workspace-pm/integracion-ms365|Integración MS365]]
+- [[proyectos/workspace-pm/guia-uso-workspace|Guía de uso]]
 
 ---
 
 ## Capa visual
-
-> ⚠️ PENDIENTE: `gestion-trabajo/` debe crearse en `workspace/vault`. Los links siguientes quedan como referencia futura.
 
 - [[gestion-trabajo/tablero-maestro|Tablero maestro]]
 - [[gestion-trabajo/planes-activos/workspace-pm-proyecto-y-base-documental-workspace|Plan activo]]

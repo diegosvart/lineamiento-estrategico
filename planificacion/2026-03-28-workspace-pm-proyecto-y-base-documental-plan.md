@@ -2,7 +2,7 @@
 fecha: 2026-03-28
 iniciativa: "Workspace PM — proyecto y base documental"
 lineamiento: "—"
-estado: listo-para-ejecutar
+estado: completado
 ejecutor: workspace/vault
 ---
 
@@ -20,24 +20,24 @@ ejecutor: workspace/vault
 
 ## Tareas
 
-- [ ] Crear el proyecto `proyectos/workspace-pm/` con un `00-indice.md` que actúe como puerta de entrada del sistema de trabajo del PM → entregable: `proyectos/workspace-pm/00-indice.md`
-- [ ] Documentar el contexto estratégico del PM Workspace: por qué existe, qué problema resuelve, qué capacidades integra y quiénes son sus stakeholders → entregable: `proyectos/workspace-pm/00-contexto/contexto-workspace-pm.md`
-- [ ] Documentar la arquitectura operativa por capas, dejando explícito el rol de MS365, repo/integración, Obsidian y dashboard web → entregable: `proyectos/workspace-pm/00-contexto/arquitectura-operativa.md`
-- [ ] Documentar el modelo de fuentes de verdad y reglas operativas para evitar duplicación entre Planner, Obsidian, SharePoint y dashboard → entregable: `proyectos/workspace-pm/00-contexto/fuentes-de-verdad.md`
-- [ ] Documentar el stack recomendado de herramientas y decisiones activas, incluyendo qué usar ahora y qué posponer → entregable: `proyectos/workspace-pm/00-contexto/stack-herramientas.md`
-- [ ] Crear un roadmap del proyecto por fases (fundación, reporting, visibilidad ejecutiva, madurez) para que el avance pueda gestionarse como trabajo incremental → entregable: `proyectos/workspace-pm/roadmap-workspace-pm.md`
-- [ ] Crear un backlog propio del proyecto con líneas de trabajo, prioridades y próximos pasos, alineado con `gestion-trabajo/` y con los planes técnicos existentes → entregable: `proyectos/workspace-pm/backlog-workspace-pm.md`
-- [ ] Documentar la integración con MS365 y el rol del repositorio actual como activo ya avanzado del proyecto → entregable: `proyectos/workspace-pm/integracion-ms365.md`
-- [ ] Actualizar `00-dashboard.md` y `gestion-trabajo/00-indice-gestion-trabajo.md` para enlazar el nuevo proyecto como parte del sistema oficial de trabajo → entregable: `00-dashboard.md` y `gestion-trabajo/00-indice-gestion-trabajo.md`
+- [x] Crear el proyecto `proyectos/workspace-pm/` con un `00-indice.md` que actúe como puerta de entrada del sistema de trabajo del PM → entregable: `proyectos/workspace-pm/00-indice.md`
+- [x] Documentar el contexto estratégico del PM Workspace: por qué existe, qué problema resuelve, qué capacidades integra y quiénes son sus stakeholders → entregable: `proyectos/workspace-pm/00-contexto/contexto-workspace-pm.md`
+- [x] Documentar la arquitectura operativa por capas, dejando explícito el rol de MS365, repo/integración, Obsidian y dashboard web → entregable: `proyectos/workspace-pm/00-contexto/arquitectura-operativa.md`
+- [x] Documentar el modelo de fuentes de verdad y reglas operativas para evitar duplicación entre Planner, Obsidian, SharePoint y dashboard → entregable: `proyectos/workspace-pm/00-contexto/fuentes-de-verdad.md`
+- [x] Documentar el stack recomendado de herramientas y decisiones activas, incluyendo qué usar ahora y qué posponer → entregable: `proyectos/workspace-pm/00-contexto/stack-herramientas.md`
+- [x] Crear un roadmap del proyecto por fases (fundación, reporting, visibilidad ejecutiva, madurez) para que el avance pueda gestionarse como trabajo incremental → entregable: `proyectos/workspace-pm/roadmap-workspace-pm.md`
+- [x] Crear un backlog propio del proyecto con líneas de trabajo, prioridades y próximos pasos, alineado con `gestion-trabajo/` y con los planes técnicos existentes → entregable: `proyectos/workspace-pm/backlog-workspace-pm.md`
+- [x] Documentar la integración con MS365 y el rol del repositorio actual como activo ya avanzado del proyecto → entregable: `proyectos/workspace-pm/integracion-ms365.md`
+- [x] Actualizar `00-dashboard.md` y `gestion-trabajo/00-indice-gestion-trabajo.md` para enlazar el nuevo proyecto como parte del sistema oficial de trabajo → entregable: `00-dashboard.md` y `gestion-trabajo/00-indice-gestion-trabajo.md`
 
 ## Criterios de Aceptación
 
-- [ ] Existe un proyecto formal `proyectos/workspace-pm/` visible desde el vault, con índice y estructura mínima navegable.
-- [ ] La documentación del proyecto explica con claridad por qué existe, qué integra, qué ya está construido y cuál es su siguiente etapa.
-- [ ] Queda explícito que Planner sigue siendo la fuente de verdad de ejecución y que Obsidian complementa con conocimiento, reporting y visualización.
-- [ ] El proyecto deja priorizado el stack recomendado: Dataview/DataviewJS, Canvas, Excalidraw, Mermaid y Kanban solo para backlog humano.
-- [ ] El roadmap y backlog del proyecto permiten tratar este frente como trabajo incremental y no como una mejora difusa del repositorio.
-- [ ] `00-dashboard.md` y `gestion-trabajo/00-indice-gestion-trabajo.md` enlazan el nuevo proyecto sin romper la navegación actual.
+- [x] Existe un proyecto formal `proyectos/workspace-pm/` visible desde el vault, con índice y estructura mínima navegable.
+- [x] La documentación del proyecto explica con claridad por qué existe, qué integra, qué ya está construido y cuál es su siguiente etapa.
+- [x] Queda explícito que Planner sigue siendo la fuente de verdad de ejecución y que Obsidian complementa con conocimiento, reporting y visualización.
+- [x] El proyecto deja priorizado el stack recomendado: Dataview/DataviewJS, Canvas, Excalidraw, Mermaid y Kanban solo para backlog humano.
+- [x] El roadmap y backlog del proyecto permiten tratar este frente como trabajo incremental y no como una mejora difusa del repositorio.
+- [x] `00-dashboard.md` y `gestion-trabajo/00-indice-gestion-trabajo.md` enlazan el nuevo proyecto sin romper la navegación actual.
 
 ## Archivos a Crear/Modificar
 

@@ -2,7 +2,7 @@
 aliases:
   - Integración MS365 Workspace PM
 tags:
-  - en-definicion
+  - activo
 ---
 
 **Proyecto:** [[proyectos/workspace-pm/00-indice|Workspace PM]]
@@ -46,4 +46,18 @@ RESUMEN-HORAS.md (reporting)
 - Completar script de extracción Planner → `ms365-sync/output/*.yaml`
 - Definir proceso de normalización YAML → entradas de diario/
 - Automatizar la transferencia para reducir entrada manual de HH
-- > ⚠️ PENDIENTE: Confirmar fields mínimos del YAML de staging (tarea, proyecto, HH planificadas, HH reales, estado)
+**Campos mínimos del YAML de staging** (definidos en `planificacion/memory-contrato-tareas-y-horas.md`):
+
+```yaml
+fecha:
+fuente:
+sync_timestamp:
+tareas:
+  - descripcion:
+    iniciativa:
+    proyecto:
+    rol:
+    estado:
+    horas:
+    planner_task_id:
+```

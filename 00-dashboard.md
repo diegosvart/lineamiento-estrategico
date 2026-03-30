@@ -18,7 +18,7 @@ tags:
 | Proyecto | Estado | Índice |
 | --- | --- | --- |
 | Plan Gobernanza TI — Grupo EBI | 🔵 Activo | [[proyectos/plan-gobernanza-ti/00-indice\|Ver índice]] |
-| Workspace PM | 🟠 En definición | [[proyectos/workspace-pm/00-indice\|Ver índice]] |
+| Workspace PM | 🔵 Activo | [[proyectos/workspace-pm/00-indice\|Ver índice]] |
 | Cash Flow | ⚫ Pendiente | [[proyectos/cash-flow/00-indice\|Ver índice]] |
 | Sitrack | ⚫ Pendiente | [[proyectos/sitrack/00-indice\|Ver índice]] |
 | Activo Fijo | ⚫ Pendiente | [[proyectos/activo-fijo/00-indice\|Ver índice]] |

@@ -2,7 +2,7 @@
 aliases:
   - Roadmap Workspace PM
 tags:
-  - en-definicion
+  - activo
 ---
 
 **Proyecto:** [[proyectos/workspace-pm/00-indice|Workspace PM]]
@@ -11,23 +11,24 @@ tags:
 
 ## Fases del proyecto
 
-### Fase 1 — Fundación (activo 🔵)
+### Fase 1 — Fundación (completado ✅)
 
 **Objetivo:** formalizar el proyecto como iniciativa estructurada dentro del vault
 
 **Entregables:**
-- `00-indice.md`
-- `contexto-workspace-pm.md`
-- `arquitectura-operativa.md`
-- `fuentes-de-verdad.md`
-- `stack-herramientas.md`
-- `roadmap-workspace-pm.md`
-- `backlog-workspace-pm.md`
-- `integracion-ms365.md`
+- `00-indice.md` ✅
+- `contexto-workspace-pm.md` ✅
+- `arquitectura-operativa.md` ✅
+- `fuentes-de-verdad.md` ✅
+- `stack-herramientas.md` ✅
+- `roadmap-workspace-pm.md` ✅
+- `backlog-workspace-pm.md` ✅
+- `integracion-ms365.md` ✅
+- `guia-uso-workspace.md` ✅
 
 **Criterio de completitud:** proyecto visible y navegable desde `00-dashboard.md` con documentación mínima de contexto
 
-**Progreso estimado:** 70% (5 de 8 documentos creados)
+**Progreso:** 100% — completado 2026-03-29
 
 ---
 
@@ -80,7 +81,7 @@ tags:
 
 | Fase | Estado | Progreso | Criterio |
 |------|--------|----------|---------|
-| Fase 1 — Fundación | activo 🔵 | 70% | Proyecto visible y navegable desde `00-dashboard.md` con documentación mínima de contexto |
+| Fase 1 — Fundación | completado ✅ | 100% | Proyecto visible y navegable desde `00-dashboard.md` con documentación mínima de contexto |
 | Fase 2 — Reporting | en-definicion 🟠 | — | Ciclo Planner → staging → diario → dashboard funciona sin intervención manual |
 | Fase 3 — Visibilidad ejecutiva | pendiente ⚫ | — | Diego puede entregar un reporte de estado en < 5 minutos desde el vault |
 | Fase 4 — Madurez | pendiente ⚫ | — | Nuevo proyecto puede incorporarse al workspace siguiendo la guía sin asistencia directa |
