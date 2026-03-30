@@ -20,7 +20,7 @@ Vista rápida del trabajo en curso para abrir Obsidian y entender foco, handoffs
 | Rama | Flujo activo | Estado | Próximo paso |
 | --- | --- | --- | --- |
 | `workspace/planning` | Capa visual de planificación + ciclo de vida de planes | en-ejecucion | Mantener backlog, tablero y workspaces visuales sincronizados |
-| `workspace/vault` | Construcción documental del PM Workspace + intake manual de tareas | definido | Ejecutar el nuevo plan `workspace-pm` y reflejar avances en la capa visible |
+| `workspace/vault` | Formalización organizacional área TI (deadline 31 Mar) + intake manual de tareas | activo | Coordinar con JTI entrega de documentos antes del 31 Mar |
 | `workspace/ms365` | Staging de Planner hacia output YAML | definido | Mantener salida consistente para consolidación posterior |
 | `workspace/dashboard` | Visualización local del vault | definido | Consumir horas y estados sin duplicar lógica |
 
@@ -28,14 +28,14 @@ Vista rápida del trabajo en curso para abrir Obsidian y entender foco, handoffs
 
 | Plan | Estado visible | Rama dueña | Siguiente acción |
 | --- | --- | --- | --- |
-| [[gestion-trabajo/planes-activos/workspace-pm-proyecto-y-base-documental-workspace|Workspace PM — proyecto y base documental]] | listo-para-ejecutar | `workspace/planning` → `workspace/vault` | Construir el proyecto `proyectos/workspace-pm/` como contenedor formal del sistema de trabajo |
+| [[gestion-trabajo/planes-activos/workspace-pm-proyecto-y-base-documental-workspace|Workspace PM — proyecto y base documental]] | completado ✅ | `workspace/vault` | Cerrado 2026-03-29 — Fase 1 completa |
 | [[gestion-trabajo/planes-activos/formalizacion-organizacional-workspace|Formalización organizacional área TI]] | listo-para-ejecutar | `workspace/planning` → `workspace/vault` | Preparar documentación y validación con JTI |
 | [[gestion-trabajo/planes-activos/carga-tareas-y-dashboard-horas-workspace|Carga de tareas y dashboard de horas consumidas]] | listo-para-ejecutar | cross-rama | Ejecutar handoffs por rama y consolidar visualización |
 
 ## Alertas abiertas
 
-- G1 sigue siendo el hito más cercano del proyecto primario
-- El PM Workspace debe formalizarse como proyecto para no seguir compitiendo informalmente con el resto del trabajo
+- G1 es el hito más cercano del proyecto primario — fecha: 30 Mar 2026
+- Formalización organizacional: deadline 31 Mar 2026 — JTI debe entregar documentos
 - La capa visual necesita mantenerse sincronizada con cada cambio de estado técnico
 
 ## Handoffs pendientes
@@ -46,4 +46,4 @@ Vista rápida del trabajo en curso para abrir Obsidian y entender foco, handoffs
 
 ## Siguiente acción sugerida
 
-Ejecutar el plan `Workspace PM — proyecto y base documental` para convertir el sistema de trabajo actual en un proyecto formal y navegable dentro del vault.
+Confirmar con JTI el estado de los documentos de formalización organizacional (deadline 31 Mar 2026). Si están listos, ejecutar el plan `formalizacion-organizacional-area-ti`.

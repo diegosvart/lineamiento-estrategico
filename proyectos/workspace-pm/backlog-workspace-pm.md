@@ -2,7 +2,7 @@
 aliases:
   - Backlog Workspace PM
 tags:
-  - en-definicion
+  - activo
 ---
 
 **Proyecto:** [[proyectos/workspace-pm/00-indice|Workspace PM]]
@@ -17,7 +17,6 @@ Este backlog complementa `planificacion/backlog.md` (fuente técnica) con una vi
 
 | Iniciativa | Fase | Prioridad | Estado | Plan técnico |
 |------------|------|-----------|--------|--------------|
-| Completar base documental del proyecto | Fase 1 | Alta | En ejecución | [[planificacion/2026-03-28-workspace-pm-proyecto-y-base-documental-plan\|Plan]] |
 | Integración staging MS365 → vault | Fase 2 | Alta | Planificar | — (pendiente plan en workspace/ms365) |
 | Dashboard de horas consumidas | Fase 2 | Alta | Activo | [[planificacion/2026-03-26-carga-tareas-y-dashboard-horas-plan\|Plan]] |
 | Canvas de portafolio ejecutivo | Fase 3 | Media | Pendiente | — |
@@ -37,6 +36,7 @@ Iniciativas sin plan formal aún:
 
 ## Completados
 
+- Base documental Fase 1 — 9 documentos creados y PENDIENTEs resueltos (2026-03-29)
 - RESUMEN-HORAS.md con DataviewJS (9 bloques, commiteado 2026-03-28)
 - Estructura base multi-proyecto `proyectos/` (reestructuración 2026-03-26)
 - `gestion-trabajo/` capa visual creada (PR #11, 2026-03-28)

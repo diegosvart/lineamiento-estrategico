@@ -2,7 +2,7 @@
 aliases:
   - Fuentes de Verdad Workspace PM
 tags:
-  - en-definicion
+  - activo
 ---
 
 **Proyecto:** [[proyectos/workspace-pm/00-indice|Workspace PM]]

@@ -2,7 +2,7 @@
 aliases:
   - Stack Herramientas Workspace PM
 tags:
-  - en-definicion
+  - activo
 ---
 
 **Proyecto:** [[proyectos/workspace-pm/00-indice|Workspace PM]]
@@ -39,4 +39,4 @@ tags:
 - DataviewJS habilitado en configuración de Dataview (requerido para RESUMEN-HORAS.md)
 - Juggl para coloreado de nodos por tag de estado en el grafo
 - Git plugin para auto-backup del vault
-- > ⚠️ PENDIENTE: Confirmar si Templater está instalado y activo
+- Templater: **no instalado** (verificado 2026-03-29 — no existe `.obsidian/plugins/templater-obsidian/`). Posponer hasta que sea necesario.

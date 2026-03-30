@@ -2,7 +2,7 @@
 aliases:
   - Arquitectura Operativa Workspace PM
 tags:
-  - en-definicion
+  - activo
 ---
 
 **Proyecto:** [[proyectos/workspace-pm/00-indice|Workspace PM]]
@@ -49,6 +49,6 @@ Regla fundamental: **cada capa lee de la anterior, nunca escribe hacia atrás**.
 - **El dashboard solo lee y transforma para UI** — nunca normaliza ni calcula lógica de negocio; las métricas finales se construyen sobre HH consolidadas en `diario/*.md`, no sobre staging.
 - **Cada rama tiene dominio exclusivo** — commits fuera de scope generan conflictos de integración y deben evitarse; cualquier excepción requiere coordinación explícita entre ámbitos.
 
-> ⚠️ PENDIENTE: Definir qué ocurre cuando un staging YAML tiene errores de validación — ¿quién notifica, quién corrige, cuál es el mecanismo de reintento?
+**Manejo de errores en staging YAML:** Si un archivo `ms365-sync/output/*.yaml` contiene errores de validación, `workspace/ms365` es responsable de corregirlo y re-exportar. `workspace/vault` no consume YAMLs inválidos — el ciclo se detiene en staging hasta que el archivo es válido. El error se reporta como issue en el repo.
 
-> ⚠️ PENDIENTE: Confirmar si `gestion-trabajo/` pertenece al ámbito de `workspace/planning` o `workspace/vault` una vez que esa carpeta sea creada formalmente.
+**Ámbito de `gestion-trabajo/`:** Pertenece a `workspace/planning` (Codex), que es responsable de mantener `planificacion/` y la capa visual `gestion-trabajo/` sincronizadas. `workspace/vault` puede leer y enlazar desde `gestion-trabajo/`, pero no escribe en esa carpeta.
