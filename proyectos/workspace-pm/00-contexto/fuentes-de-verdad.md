@@ -14,7 +14,7 @@ tags:
 | Dominio | Fuente de verdad | Sistema | Regla |
 |---------|-----------------|---------|-------|
 | Tareas operativas | Microsoft Planner | MS365 | Lo que no está en Planner no existe como tarea asignada |
-| Horas consumidas | `diario/*.md` (frontmatter YAML) | Obsidian | El campo `horas-total` y la lista `entradas` son la fuente — la tabla markdown es solo visualización |
+| Horas consumidas | `diario/*.md` (frontmatter YAML) | Obsidian | El array `entradas[].horas` es la única fuente — tabla y total se auto-calculan via DataviewJS. No existe campo `horas-total`. |
 | Documentación de proyectos | `proyectos/[nombre]/` | Obsidian | Las notas en vault son la fuente de conocimiento activo |
 | Documentos formales aprobados | SharePoint | MS365 | Solo migra a SharePoint cuando un documento llega a estado `completado` |
 | Visualización y KPIs | `diario/RESUMEN-HORAS.md` + dashboard | Obsidian + React | El dashboard lee el vault — nunca al revés |
