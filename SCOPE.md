@@ -1,5 +1,11 @@
 # SCOPE — workspace/vault
 
+> Este SCOPE aplica solo a `workspace/vault`.
+> Si la rama activa es otro frente, usar su SCOPE canónico:
+> - `workspace/planning` → `planificacion/SCOPE.md`
+> - `workspace/ms365` → `ms365-sync/SCOPE.md`
+> - `workspace/dashboard` → `dashboard/SCOPE.md`
+
 **Rol:** Ejecutar el trabajo planificado dentro del vault Obsidian.
 **IDE:** Claude Code
 **Rama:** `workspace/vault` (long-lived)
@@ -11,7 +17,7 @@
 
 1. **Git**: verificar rama actual y situarse explícitamente en `workspace/vault`
    → Si no estás en `workspace/vault`, cambiar a esa rama antes de leer o editar nada
-2. **Git sync**: `git checkout workspace/vault && git merge desarrollo`
+2. **Git sync**: `git checkout workspace/vault && git fetch origin && git merge origin/desarrollo`
    → Sincroniza cambios integrados desde otros ámbitos
 3. **Abrir**: `claude` en la raíz del repo
    → Claude Code carga `CLAUDE.md` automáticamente

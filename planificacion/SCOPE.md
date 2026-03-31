@@ -11,7 +11,7 @@
 
 1. **Git**: verificar rama actual y situarse explícitamente en `workspace/planning`
    → Si no estás en `workspace/planning`, cambiar a esa rama antes de leer o editar nada
-2. **Git sync**: `git checkout workspace/planning && git merge desarrollo`
+2. **Git sync**: `git checkout workspace/planning && git fetch origin && git merge origin/desarrollo`
    → Sincroniza cambios integrados (planes completados, actualizaciones de estado)
 3. **Validar carpeta**: confirmar que la carpeta abierta corresponde al frente planning y no es una carpeta compartida con otro frente activo
 4. **Branch de trabajo**: si vas a cambiar archivos, crear una rama hija desde `workspace/planning`

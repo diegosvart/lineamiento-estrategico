@@ -7,6 +7,7 @@
 - `planificacion/guia-admin.md`
 - `planificacion/backlog.md`
 - `planificacion/2026-03-26-carga-tareas-y-dashboard-horas-plan.md`
+- `planificacion/2026-03-30-reporte-mensual-dashboard-y-convencion-workspace-pm-plan.md`
 - `planificacion/memory-contrato-tareas-y-horas.md`
 - `planificacion/memory-ciclo-vida-planes.md`
 - `planificacion/memory-asignacion-flujos-por-rama.md`
@@ -23,6 +24,11 @@
 - `workspace/dashboard` → `planificacion/memory-handoff-dashboard.md`
 - `workspace/planning` → `planificacion/memory-ciclo-vida-planes.md`
 - todas las ramas → `gestion-trabajo/tablero-maestro.md`
+
+## Validación rápida de arranque
+
+- Ejecutar: `pwsh -File planificacion/session-start-check.ps1`
+- Objetivo: validar rama, scope esperado y archivos mínimos de contexto antes de actuar.
 
 ## Decisiones activas
 

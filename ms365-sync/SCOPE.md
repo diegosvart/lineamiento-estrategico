@@ -11,7 +11,7 @@
 
 1. **Git**: verificar rama actual y situarse explícitamente en `workspace/ms365`
    → Si no estás en `workspace/ms365`, cambiar a esa rama antes de leer o ejecutar nada
-2. **Git sync**: `git checkout workspace/ms365 && git merge desarrollo`
+2. **Git sync**: `git checkout workspace/ms365 && git fetch origin && git merge origin/desarrollo`
    → Sincroniza cambios integrados desde otros ámbitos
 3. **Abrir**: VS Code con `.vscode/pm-workspace.code-workspace`
    → Ambos repos visibles: Vault (Obsidian) + MS365 Integration

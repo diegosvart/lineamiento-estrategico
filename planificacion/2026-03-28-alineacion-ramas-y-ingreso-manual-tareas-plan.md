@@ -49,7 +49,7 @@ Para corregir esta situación, el primer hito funcional de este frente es valida
 ## Decisiones ya fijadas
 
 - La rama base canónica del agente de planificación es `workspace/planning`.
-- Las ramas de trabajo válidas de Codex son `workspace/planning/feature/*` y `workspace/planning/fix/*`.
+- Las ramas de trabajo válidas de Codex son `feature/planning-*` y `fix/planning-*` (actualizado al contrato vigente).
 - El problema principal es operativo, no técnico.
 - `/vault-task add` ya existe como contrato funcional/documental y no debe replantearse desde cero.
 - La distribución a otras ramas ocurre después del merge a `workspace/planning`.
