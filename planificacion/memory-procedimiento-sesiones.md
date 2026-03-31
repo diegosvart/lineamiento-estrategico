@@ -29,6 +29,23 @@ Si la carpeta, la rama o el `SCOPE` no coinciden, la sesión debe detenerse ante
 6. Señalar si quedan cambios locales sin commit.
 7. Señalar si el resto de frentes debe consumir cambios desde `desarrollo`.
 
+## Cierre obligatorio por tarea (todos los agentes)
+
+Cada vez que un agente declara una tarea como terminada, debe:
+
+1. Crear commit del trabajo realizado (si hubo cambios).
+2. Reportar estado de rama con evidencia mínima:
+   - rama actual (`git branch --show-current`)
+   - estado local (`git status --short --branch`)
+   - relación con remoto si aplica (ahead/behind)
+3. Indicar explícitamente si quedan cambios sin commit.
+
+Sin este reporte, la tarea se considera `incompleta` a nivel operativo.
+
+Template oficial:
+
+- `planificacion/template-status-rama.md`
+
 ## Rol de `workspace/planning` como admin
 
 `workspace/planning` administra el sistema y es el intake oficial de:
