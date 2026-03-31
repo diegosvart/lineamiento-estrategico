@@ -1,0 +1,78 @@
+name: PR Body Quality Gate
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  validate-pr-body:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate pull request body
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          python - <<'PY'
+          import os
+          import re
+          import sys
+
+          body = os.getenv("PR_BODY") or ""
+          body = body.strip()
+
+          def fail(msg: str):
+            print(f"ERROR: {msg}")
+            sys.exit(1)
+
+          if not body:
+            fail("El cuerpo del PR esta vacio.")
+
+          required_headers = [
+            "## Resumen del cambio",
+            "## Tipo de cambio",
+            "## Archivos modificados",
+            "## Verificacion",
+          ]
+
+          for h in required_headers:
+            if h not in body:
+              fail(f"Falta la seccion obligatoria: {h}")
+
+          # Must not keep obvious empty placeholders/table skeleton.
+          forbidden_patterns = [
+            r"\|\s*ruta/archivo\.ext\s*\|\s*Que se modifico y por que\s*\|",
+            r"\|\s*\|\s*\|",
+            r"Describe en 3-8 lineas",
+          ]
+          for pat in forbidden_patterns:
+            if re.search(pat, body, re.IGNORECASE):
+              fail("El PR mantiene placeholders sin completar.")
+
+          def section_text(title: str) -> str:
+            parts = re.split(r"\n## ", body)
+            for i, part in enumerate(parts):
+              prefix = "## " if i > 0 else ""
+              chunk = prefix + part
+              if chunk.startswith(title):
+                return chunk
+            return ""
+
+          type_section = section_text("## Tipo de cambio")
+          if not re.search(r"- \[[xX]\] ", type_section):
+            fail("Debes marcar al menos un tipo de cambio.")
+
+          verif_section = section_text("## Verificacion")
+          if len(re.findall(r"- \[[xX]\] ", verif_section)) < 2:
+            fail("Debes marcar al menos dos checks de verificacion.")
+
+          summary_section = section_text("## Resumen del cambio")
+          summary_lines = [ln.strip() for ln in summary_section.splitlines()[1:] if ln.strip()]
+          if len(summary_lines) < 3:
+            fail("El resumen del cambio es demasiado corto (minimo 3 lineas utiles).")
+
+          print("PR body validation OK.")
+          PY

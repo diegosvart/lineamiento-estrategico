@@ -36,6 +36,14 @@ Consumir el staging de tareas y ampliar el vault como fuente principal de contex
 - Asegurar que las entradas de `diario/` puedan vincularse claramente con proyecto, iniciativa y lineamiento.
 - Registrar gaps documentales detectados durante la consolidación en vez de dejar ambigüedad silenciosa.
 
+## Urgente 2026-03-31
+
+- Cerrar HH de marzo 2026 al 100% en `diario/2026/03/*.md`.
+- Usar como baseline de pendientes: `planificacion/2026-03-31-informe-hh-marzo-pendiente.md`.
+- Actualizar ese informe con estado final de cierre (faltante esperado: `0`).
+- Crear skill principal del frente vault, alineada a `SCOPE.md`, con objetivo, alcance, no alcance, entradas/salidas y checklist minimo.
+  - Entregable sugerido: `proyectos/workspace-pm/skill-principal-vault.md`
+
 ## Buenas prácticas
 
 - Preferir cambios pequeños y verificables.
@@ -46,3 +54,12 @@ Consumir el staging de tareas y ampliar el vault como fuente principal de contex
 ## Si cambias algo importante
 
 Actualizar primero `planificacion/memory-contrato-tareas-y-horas.md` o esta memoria de handoff.
+
+## Cierre obligatorio por tarea
+
+Cada tarea finalizada en `workspace/vault` debe cerrar con:
+
+- commit del trabajo (si hubo cambios),
+- reporte de rama con `git branch --show-current` y `git status --short --branch`,
+- confirmación explícita de si quedan cambios sin commit.
+- formato estándar: `planificacion/template-status-rama.md`

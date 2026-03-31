@@ -8,6 +8,7 @@
 - `planificacion/backlog.md`
 - `planificacion/2026-03-26-carga-tareas-y-dashboard-horas-plan.md`
 - `planificacion/2026-03-30-reporte-mensual-dashboard-y-convencion-workspace-pm-plan.md`
+- `planificacion/2026-03-31-cierre-hh-marzo-control-pr-y-skills-plan.md`
 - `planificacion/memory-contrato-tareas-y-horas.md`
 - `planificacion/memory-ciclo-vida-planes.md`
 - `planificacion/memory-asignacion-flujos-por-rama.md`
@@ -50,6 +51,7 @@
 - `/vault-task add` es la entrevista oficial para alta manual de tareas hacia `diario/`.
 - `/plan add`, `/plan update`, `/plan archive` y `/plan iterate` son las operaciones oficiales del ciclo de vida de planes.
 - `workspace/planning` opera como admin + planning del sistema.
+- Cada frente debe mantener una skill principal alineada a su `SCOPE`.
 - “Eliminar plan” se resuelve como archivado, no como borrado físico.
 - `gestion-trabajo/` es la capa visual visible en Obsidian para backlog, foco y planes activos.
 - Toda sesión debe leer memoria técnica y luego tablero visible antes de actuar.

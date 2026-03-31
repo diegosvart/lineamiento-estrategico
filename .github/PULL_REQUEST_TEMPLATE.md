@@ -1,31 +1,34 @@
-## Resumen del cambio
+## Resumen del cambio (obligatorio)
 
-<!-- Qué se hizo y por qué —  describe el problema que resuelve y el enfoque que tomaste -->
+Describe en 3-8 lineas:
+- problema que resuelve este PR
+- alcance real (in/out)
+- enfoque implementado
 
-## Tipo de cambio
+## Tipo de cambio (obligatorio)
 
 - [ ] Nueva feature/plan
-- [ ] Corrección de errores
-- [ ] Documentación
-- [ ] Configuración de vault
+- [ ] Correccion de errores
+- [ ] Documentacion
+- [ ] Configuracion/automatizacion
 
-## Archivos modificados
+## Archivos modificados (obligatorio)
 
 | Archivo | Cambio |
 |---------|--------|
-| | |
+| `ruta/archivo.ext` | Que se modifico y por que |
 
-## Verificación
+## Verificacion (obligatorio)
 
-- [ ] `/vault-audit` ejecutado → 0 errores
-- [ ] Links funcionan en Obsidian
-- [ ] YAML frontmatter válido
-- [ ] Plan documentado en `plans/plan-[nombre].md` (si aplica)
+- [ ] Valide localmente los cambios relevantes para este frente
+- [ ] Links/rutas referenciadas funcionan
+- [ ] No deje placeholders ni secciones vacias
+- [ ] Documente handoff o siguiente accion (si aplica)
 
-## Notas adicionales
+## Notas adicionales (opcional)
 
-<!-- Contexto adicional que Diego debería saber para revisar -->
+Contexto extra para revision del PM.
 
 ---
 
-**Branch base:** Siempre `desarrollo` (nunca `master` para features)
+**Regla:** PRs sin contenido util o con secciones vacias seran rechazadas por CI.

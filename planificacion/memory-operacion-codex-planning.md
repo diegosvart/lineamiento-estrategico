@@ -81,3 +81,14 @@ Toda actualización administrativa debe dejar:
 - Toda rama `feature/planning-*` o `fix/planning-*` hace PR hacia `workspace/planning`
 - Solo después del merge a `workspace/planning` se distribuye el trabajo a `desarrollo` y al resto de ramas
 - Un `push` a `workspace/planning` no publica el cambio al resto de agentes por sí solo; la publicación efectiva ocurre cuando el cambio queda integrado en `desarrollo`
+
+## Regla de cierre por tarea (obligatoria)
+
+Al terminar cada tarea en planning, Codex debe:
+
+- Crear commit si hubo cambios.
+- Reportar estado de rama con:
+  - `git branch --show-current`
+  - `git status --short --branch`
+- Declarar explícitamente si quedan cambios sin commit.
+- Usar el formato estándar: `planificacion/template-status-rama.md`
