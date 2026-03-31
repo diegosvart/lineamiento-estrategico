@@ -18,6 +18,7 @@ Tareas pendientes de planificar. Cada ítem requiere un plan formal en `planific
 | Diseño arquitectura BD central | L4 | Media | Post G2 |
 | Dashboard Cosemar (otros proyectos) | — | Baja | Pendiente activación |
 | Entrevistas guiadas para tareas del vault y ciclo de vida de planes | Cross-rama | Alta | Formalizar `/vault-task add` y `/plan add|update|archive|iterate` |
+| Migración a estándar admin-driven con worktrees por frente | Cross-rama | Alta | Formalizar guía admin, intake único y aislamiento por carpeta |
 
 ---
 
@@ -48,6 +49,7 @@ Tareas pendientes de planificar. Cada ítem requiere un plan formal en `planific
 | Iniciativa | Lineamiento | Archivo de plan | Fecha cierre |
 |------------|-------------|-----------------|--------------|
 | Workspace PM — proyecto y base documental | — | `planificacion/2026-03-28-workspace-pm-proyecto-y-base-documental-plan.md` | 2026-03-29 |
+| Estandar operativo admin-driven con worktrees por frente | — | Implementado en memorias y guía admin humana | 2026-03-30 |
 
 ---
 
@@ -59,4 +61,4 @@ Tareas pendientes de planificar. Cada ítem requiere un plan formal en `planific
 
 ---
 
-*Última actualización: 2026-03-30*
+*Última actualización: 2026-03-30 — estándar admin-driven y guía humana agregados*

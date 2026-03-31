@@ -7,16 +7,13 @@ interface Props {
 export function MS365SyncStatusPanel({ status }: Props) {
   if (!status) {
     return (
-      <div
-        style={{
-          padding: '10px 14px',
-          background: '#f5f5f5',
-          borderRadius: 6,
-          fontSize: 13,
-          color: '#9e9e9e',
-        }}
-      >
-        MS365 Sync: sin datos de sincronización
+      <div className="dash-sync dash-sync--missing">
+        <span className="dash-sync__brand">Microsoft 365</span>
+        <span>
+          No hay <span className="dash-code">ms365-sync/output/*.yaml</span> en el workspace, o el archivo está
+          vacío. Ejecuta el script de sync en el ámbito <span className="dash-code">workspace/ms365</span> para ver
+          tareas importadas desde Planner.
+        </span>
       </div>
     )
   }
@@ -26,30 +23,12 @@ export function MS365SyncStatusPanel({ status }: Props) {
     : status.fecha
 
   return (
-    <div
-      style={{
-        padding: '10px 14px',
-        background: '#e3f2fd',
-        borderRadius: 6,
-        fontSize: 13,
-        display: 'flex',
-        alignItems: 'center',
-        gap: 12,
-      }}
-    >
-      <span style={{ color: '#1565c0', fontWeight: 600 }}>MS365 Sync</span>
-      <span style={{ color: '#555' }}>Última sync: {timestamp}</span>
-      <span
-        style={{
-          background: '#1565c0',
-          color: '#fff',
-          borderRadius: 10,
-          padding: '1px 8px',
-          fontSize: 11,
-        }}
-      >
-        {status.total_tareas} tareas importadas
+    <div className="dash-sync dash-sync--ok">
+      <span className="dash-sync__brand">Microsoft 365</span>
+      <span style={{ color: 'var(--text-secondary)' }}>
+        Última sincronización: <strong style={{ color: 'var(--text-primary)' }}>{timestamp}</strong>
       </span>
+      <span className="dash-pill">{status.total_tareas} tareas</span>
     </div>
   )
 }

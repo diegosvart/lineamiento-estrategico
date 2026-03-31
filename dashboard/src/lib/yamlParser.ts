@@ -1,81 +1,36 @@
 // yamlParser.ts — Parsea frontmatter YAML de archivos Markdown del vault
 
+import yaml from 'js-yaml'
+
+/** Normaliza inicio del archivo: quita BOM UTF-8 si existe. */
+function stripBom(content: string): string {
+  return content.charCodeAt(0) === 0xfeff ? content.slice(1) : content
+}
+
 /**
  * Extrae el bloque frontmatter YAML de un archivo Markdown.
- * Retorna el objeto parseado o null si no hay frontmatter.
+ * Acepta fin de línea LF o CRLF (Windows / core.autocrlf).
+ * Retorna el objeto parseado o null si no hay frontmatter o el YAML es inválido.
  */
 export function parseFrontmatter(content: string): Record<string, unknown> | null {
-  const match = content.match(/^---\n([\s\S]*?)\n---/)
+  const text = stripBom(content)
+  // --- seguido de CRLF o LF; cierre --- en línea propia
+  const match = text.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/)
   if (!match) return null
 
-  const yaml = match[1]
-  return parseSimpleYaml(yaml)
-}
-
-/**
- * Parser YAML mínimo para frontmatter del vault.
- * Soporta: strings, numbers, booleans, arrays de strings, null.
- * Para YAML complejo, usar js-yaml.
- */
-function parseSimpleYaml(yaml: string): Record<string, unknown> {
-  const result: Record<string, unknown> = {}
-  const lines = yaml.split('\n')
-  let currentKey: string | null = null
-  let currentArray: string[] | null = null
-
-  for (const line of lines) {
-    // Array item
-    if (line.match(/^  - /)) {
-      const value = line.replace(/^  - /, '').trim()
-      if (currentArray !== null) {
-        currentArray.push(value)
-      }
-      continue
-    }
-
-    // Key: value
-    const kvMatch = line.match(/^(\w[\w-]*)\s*:\s*(.*)$/)
-    if (kvMatch) {
-      // Guardar array anterior
-      if (currentKey && currentArray !== null) {
-        result[currentKey] = currentArray
-      }
-
-      currentKey = kvMatch[1]
-      const rawValue = kvMatch[2].trim()
-
-      if (rawValue === '' || rawValue === null) {
-        // Posible inicio de array o valor null
-        currentArray = []
-        result[currentKey] = null
-      } else {
-        currentArray = null
-        result[currentKey] = parseScalar(rawValue)
-      }
-    }
+  try {
+    const data = yaml.load(match[1], { schema: yaml.JSON_SCHEMA }) as unknown
+    if (data === null || typeof data !== 'object' || Array.isArray(data)) return null
+    return data as Record<string, unknown>
+  } catch {
+    return null
   }
-
-  // Guardar último array si aplica
-  if (currentKey && currentArray !== null && currentArray.length > 0) {
-    result[currentKey] = currentArray
-  }
-
-  return result
-}
-
-function parseScalar(value: string): string | number | boolean | null {
-  if (value === 'null' || value === '~') return null
-  if (value === 'true') return true
-  if (value === 'false') return false
-  const num = Number(value)
-  if (!isNaN(num) && value !== '') return num
-  // Quitar comillas si las tiene
-  return value.replace(/^["'](.*)["']$/, '$1')
 }
 
 /**
  * Extrae el cuerpo del markdown (sin frontmatter).
  */
 export function extractBody(content: string): string {
-  return content.replace(/^---\n[\s\S]*?\n---\n?/, '')
+  const text = stripBom(content)
+  return text.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '')
 }

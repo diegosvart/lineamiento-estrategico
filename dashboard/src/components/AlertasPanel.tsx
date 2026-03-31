@@ -1,36 +1,30 @@
 import type { AlertaVault } from '../types/vault'
+import { SectionCard } from './SectionCard'
 
 interface Props {
   alertas: AlertaVault[]
 }
 
 const PRIORIDAD_COLORS = {
-  alta: '#f44336',
+  alta: '#ef5350',
   media: '#ff9800',
-  baja: '#2196f3',
+  baja: '#4d9fff',
 }
 
 const TIPO_LABELS: Record<AlertaVault['tipo'], string> = {
-  'estructura-incompleta': 'Estructura Incompleta',
-  'deadline-presion': 'Deadline Próximo',
-  'decision-huerfana': 'Decisión Sin Dueño',
-  'documentacion-desactualizada': 'Doc. Desactualizada',
-  'bloqueo-cascada': 'Bloqueo en Cascada',
-  'control-no-declarado': 'Control No Declarado',
-  'scope-creep': 'Scope Creep',
-  'config-drift': 'Config Drift',
+  'estructura-incompleta': 'Estructura incompleta',
+  'deadline-presion': 'Deadline próximo',
+  'decision-huerfana': 'Decisión sin dueño',
+  'documentacion-desactualizada': 'Doc. desactualizada',
+  'bloqueo-cascada': 'Bloqueo en cascada',
+  'control-no-declarado': 'Control no declarado',
+  'scope-creep': 'Scope creep',
+  'config-drift': 'Config drift',
 }
 
 export function AlertasPanel({ alertas }: Props) {
   if (alertas.length === 0) {
-    return (
-      <div>
-        <h2 style={{ marginBottom: 16 }}>Alertas del Vault</h2>
-        <div style={{ padding: 16, background: '#e8f5e9', borderRadius: 6, color: '#2e7d32' }}>
-          Sin alertas activas.
-        </div>
-      </div>
-    )
+    return null
   }
 
   const sorted = [...alertas].sort((a, b) => {
@@ -39,9 +33,12 @@ export function AlertasPanel({ alertas }: Props) {
   })
 
   return (
-    <div>
-      <h2 style={{ marginBottom: 16 }}>Alertas del Vault ({alertas.length})</h2>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+    <SectionCard
+      badge="Riesgos"
+      title={`Alertas del vault (${alertas.length})`}
+      description="Prioridad y tipo según el registro de alertas activas."
+    >
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
         {sorted.map((alerta, i) => (
           <div
             key={i}
@@ -49,37 +46,37 @@ export function AlertasPanel({ alertas }: Props) {
               display: 'flex',
               alignItems: 'flex-start',
               gap: 12,
-              padding: '10px 14px',
-              background: '#fff',
-              border: `2px solid ${PRIORIDAD_COLORS[alerta.prioridad]}`,
-              borderRadius: 6,
+              padding: '12px 14px',
+              background: 'rgba(0,0,0,0.25)',
+              border: `1px solid ${PRIORIDAD_COLORS[alerta.prioridad]}`,
+              borderRadius: 10,
             }}
           >
             <span
               style={{
                 background: PRIORIDAD_COLORS[alerta.prioridad],
-                color: '#fff',
-                borderRadius: 4,
-                padding: '2px 8px',
-                fontSize: 11,
-                fontWeight: 700,
+                color: '#0c0f14',
+                borderRadius: 6,
+                padding: '3px 8px',
+                fontSize: 10,
+                fontWeight: 800,
+                letterSpacing: '0.04em',
+                textTransform: 'uppercase',
                 whiteSpace: 'nowrap',
                 flexShrink: 0,
               }}
             >
               {TIPO_LABELS[alerta.tipo]}
             </span>
-            <div style={{ fontSize: 13 }}>
+            <div style={{ fontSize: 13, color: 'var(--text-primary)' }}>
               <div>{alerta.descripcion}</div>
-              {alerta.archivo && (
-                <div style={{ color: '#9e9e9e', fontSize: 11, marginTop: 2 }}>
-                  {alerta.archivo}
-                </div>
-              )}
+              {alerta.archivo ? (
+                <div style={{ color: 'var(--text-muted)', fontSize: 12, marginTop: 4 }}>{alerta.archivo}</div>
+              ) : null}
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </SectionCard>
   )
 }
