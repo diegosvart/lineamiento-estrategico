@@ -27,9 +27,20 @@
 
 ## Validación rápida de arranque
 
-- Ejecutar: `pwsh -File planificacion/session-start-check.ps1`
+- Ejecutar: `powershell -ExecutionPolicy Bypass -File .\planificacion\session-start-check.ps1 -TargetWorkspace <planning|vault|ms365|dashboard>`
 - Objetivo: validar rama, scope esperado y archivos mínimos de contexto antes de actuar.
 
+
+## Punto Cero Operativo (2026-03-31)
+
+- Estado mínimo requerido para operar sin ambigüedad:
+  - `workspace/planning` limpio y sincronizado con `origin/workspace/planning`
+  - PR de corrección de arranque mergeado a `workspace/planning`
+  - `desarrollo` actualizado con ese merge
+  - worktrees `workspace/vault`, `workspace/dashboard` y `workspace/ms365` sincronizados desde `desarrollo`
+- Regla de operación:
+  - si el preflight falla, no se ejecutan tareas
+  - si el preflight pasa, se habilita ejecución del plan del frente
 ## Decisiones activas
 
 - `ms365-sync/output/*.yaml` es staging, no fuente final.
@@ -90,3 +101,5 @@ El flujo correcto para Antigravity (y cualquier agente) es:
 
 **Error cometido:** Se hizo `git push origin desarrollo` directamente, saltándose el PR.  
 **Regla:** Los PRs siempre apuntan a `desarrollo`. Nunca commitear directo en `desarrollo` ni en `master`.
+
+

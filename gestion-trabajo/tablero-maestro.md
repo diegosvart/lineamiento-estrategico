@@ -10,7 +10,7 @@ tags:
 
 Vista rápida del trabajo en curso para abrir Obsidian y entender foco, handoffs y cola de ejecución.
 
-**Última actualización:** 2026-03-30
+**Última actualización:** 2026-03-31
 **Proyecto principal:** [[proyectos/plan-gobernanza-ti/00-indice|Plan Gobernanza TI]]
 **Backlog humano:** [[gestion-trabajo/backlog-iniciativas|Ver backlog]]
 **Canvas maestro:** [[gestion-trabajo/00-tablero-trabajo.canvas|Abrir canvas]]
@@ -50,3 +50,18 @@ Vista rápida del trabajo en curso para abrir Obsidian y entender foco, handoffs
 ## Siguiente acción sugerida
 
 Sincronizar ramas base desde `desarrollo`, crear worktrees por frente y ejecutar el follow-up documental de `workspace/vault` para `workspace-pm`.
+
+## Punto Cero Operativo
+
+**Fecha de corte:** 2026-03-31
+**Comando de preflight:** `powershell -ExecutionPolicy Bypass -File .\planificacion\session-start-check.ps1 -TargetWorkspace <planning|vault|ms365|dashboard>`
+
+**Estado requerido para declarar Punto Cero validado:**
+- `workspace/planning` limpio y sincronizado con `origin/workspace/planning`
+- PR de corrección de arranque mergeado a `workspace/planning`
+- `desarrollo` actualizado con ese merge
+- `workspace/vault`, `workspace/dashboard` y `workspace/ms365` sincronizados desde `desarrollo`
+
+**Regla de operación:**
+- Si preflight falla, no se ejecutan tareas
+- Si preflight pasa, se habilita ejecución del plan del frente
