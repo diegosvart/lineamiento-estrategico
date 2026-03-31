@@ -32,6 +32,7 @@ Vista rápida del trabajo en curso para abrir Obsidian y entender foco, handoffs
 | [[gestion-trabajo/planes-activos/formalizacion-organizacional-workspace|Formalización organizacional área TI]] | listo-para-ejecutar | `workspace/planning` → `workspace/vault` | Preparar documentación y validación con JTI |
 | [[gestion-trabajo/planes-activos/carga-tareas-y-dashboard-horas-workspace|Carga de tareas y dashboard de horas consumidas]] | listo-para-ejecutar | cross-rama | Ejecutar handoffs por rama y consolidar visualización |
 | [[gestion-trabajo/planes-activos/reporte-mensual-dashboard-workspace|Reporte mensual ejecutivo dashboard + convención workspace PM]] | completado ✅ | `workspace/dashboard` → `workspace/vault` | PR #18 mergeado 2026-03-30 — pendiente follow-up documental en vault |
+| [[gestion-trabajo/planes-activos/cierre-hh-marzo-control-pr-y-skills-workspace|Cierre HH marzo + control PR + skill principal por agente]] | listo-para-ejecutar | cross-rama | `workspace/vault` cierra HH marzo; `workspace/planning` activa gate PR; cada frente crea skill principal |
 
 ## Alertas abiertas
 
@@ -46,10 +47,12 @@ Vista rápida del trabajo en curso para abrir Obsidian y entender foco, handoffs
 - `workspace/vault` debe reflejar tareas relevantes en el tablero o canvas del plan correspondiente
 - `workspace/vault` debe actualizar la convención documental de `workspace-pm` una vez validado el reporte mensual en dashboard
 - `workspace/planning` debe liderar la migración a carpetas físicas separadas por frente
+- `workspace/vault` debe ejecutar el cierre de HH marzo 2026 y actualizar `planificacion/2026-03-31-informe-hh-marzo-pendiente.md` con faltante final en cero
+- `workspace/dashboard` y `workspace/ms365` deben crear su skill principal alineada a su `SCOPE`
 
 ## Siguiente acción sugerida
 
-Sincronizar ramas base desde `desarrollo`, crear worktrees por frente y ejecutar el follow-up documental de `workspace/vault` para `workspace-pm`.
+Priorizar plan urgente de cierre HH marzo y control PR; luego continuar con migracion a worktrees por frente.
 
 ## Punto Cero Operativo
 

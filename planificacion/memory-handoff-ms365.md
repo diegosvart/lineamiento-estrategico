@@ -17,6 +17,8 @@ Dejar un flujo confiable de carga de tareas desde Planner hacia `ms365-sync/outp
 - Verificar que cada tarea importada tenga suficiente información para vincularse a proyecto e iniciativa.
 - Documentar excepciones de mapeo cuando Planner no entregue contexto suficiente.
 - Mantener identificadores estables para evitar duplicaciones o pérdida de trazabilidad entre corridas.
+- Crear skill principal del frente ms365, alineada a `ms365-sync/SCOPE.md`, con objetivo, alcance, no alcance, entradas/salidas y checklist minimo.
+  - Entregable sugerido: `ms365-sync/skill-principal-ms365.md`
 
 ## No alcance
 
@@ -40,3 +42,11 @@ Dejar un flujo confiable de carga de tareas desde Planner hacia `ms365-sync/outp
 ## Si cambias algo importante
 
 Actualizar primero `planificacion/memory-contrato-tareas-y-horas.md`.
+
+## Cierre obligatorio por tarea
+
+Cada tarea finalizada en `workspace/ms365` debe cerrar con:
+
+- commit del trabajo (si hubo cambios),
+- reporte de rama con `git branch --show-current` y `git status --short --branch`,
+- confirmación explícita de si quedan cambios sin commit.

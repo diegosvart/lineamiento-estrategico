@@ -19,6 +19,8 @@ Construir una vista local para navegar la información del vault y obtener métr
 - Exponer KPI de seguimiento: distribución de horas, concentración por proyecto, variación temporal básica y cobertura de carga.
 - Diseñar la UI para que permita responder preguntas de gestión, no solo mostrar gráficos aislados.
 - Implementar un reporte mensual ejecutivo con selector `YYYY-MM`, vista previa simple y descarga en Markdown a partir de `diario/YYYY/MM/*.md`.
+- Crear skill principal del frente dashboard, alineada a `dashboard/SCOPE.md`, con objetivo, alcance, no alcance, entradas/salidas y checklist minimo.
+  - Entregable sugerido: `dashboard/skill-principal-dashboard.md`
 
 ### Entregado (rama `feature/reporte-mensual-bitacora` / dashboard)
 
@@ -58,3 +60,11 @@ Construir una vista local para navegar la información del vault y obtener métr
 ## Si cambias algo importante
 
 Actualizar primero `planificacion/memory-contrato-tareas-y-horas.md` o esta memoria de handoff.
+
+## Cierre obligatorio por tarea
+
+Cada tarea finalizada en `workspace/dashboard` debe cerrar con:
+
+- commit del trabajo (si hubo cambios),
+- reporte de rama con `git branch --show-current` y `git status --short --branch`,
+- confirmación explícita de si quedan cambios sin commit.
