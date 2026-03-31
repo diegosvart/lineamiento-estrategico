@@ -51,7 +51,7 @@ for (let i = 0; i < 5; i++) {
     const estado = reg >= expected ? "✅" : reg > 0 ? "⚠️ Parcial" : "❌";
     rows.push([page.file.link, reg, expected, estado]);
   } else {
-    rows.push([`[[diario/${dateStr}|📝 ${dateStr}]]`, "—", expected, "❌ Sin nota"]);
+    rows.push([`[[diario/${day.toFormat("yyyy")}/${day.toFormat("MM")}/${dateStr}|📝 ${dateStr}]]`, "—", expected, "❌ Sin nota"]);
   }
 }
 
@@ -107,7 +107,7 @@ while (cursor <= lastDay) {
       if (p) {
         const reg = [].concat(p?.entradas || []).reduce((s, e) => s + (e?.horas ?? 0), 0);
         const icon = reg >= expected ? "✅" : reg > 0 ? "⚠️" : "❌";
-        row += ` [[diario/${key}\\|${dayNum}${icon}]] |`;
+        row += ` [[diario/${d.toFormat("yyyy")}/${d.toFormat("MM")}/${key}\\|${dayNum}${icon}]] |`;
       } else {
         const isPast = d < today;
         row += isPast ? ` ~~${dayNum}~~ |` : ` ${dayNum} |`;
@@ -245,24 +245,26 @@ const pages = dv.pages('"diario"')
   .limit(30)
   .array();
 
-if (pages.length === 0) { dv.paragraph("> Sin datos registrados."); return; }
+if (pages.length === 0) {
+  dv.paragraph("> Sin datos registrados.");
+} else {
+  const maxH = 9;
+  const bar = (hh) => {
+    if (!hh || hh === 0) return "░".repeat(14);
+    const filled = Math.min(Math.round((hh / maxH) * 14), 14);
+    return "█".repeat(filled) + "░".repeat(14 - filled);
+  };
 
-const maxH = 9;
-const bar = (hh) => {
-  if (!hh || hh === 0) return "░".repeat(14);
-  const filled = Math.min(Math.round((hh / maxH) * 14), 14);
-  return "█".repeat(filled) + "░".repeat(14 - filled);
-};
+  const rows = pages.map(p => {
+    const wd = p.fecha.weekday;
+    const expected = (wd >= 4) ? 8 : 9;
+    const reg = [].concat(p?.entradas || []).reduce((s, e) => s + (e?.horas ?? 0), 0);
+    const estado = reg >= expected ? "✅" : reg > 0 ? "⚠️" : "❌";
+    return [p.file.link, p.semana, reg, expected, estado, bar(reg)];
+  });
 
-const rows = pages.map(p => {
-  const wd = p.fecha.weekday;
-  const expected = (wd >= 4) ? 8 : 9;
-  const reg = [].concat(p?.entradas || []).reduce((s, e) => s + (e?.horas ?? 0), 0);
-  const estado = reg >= expected ? "✅" : reg > 0 ? "⚠️" : "❌";
-  return [p.file.link, p.semana, reg, expected, estado, bar(reg)];
-});
-
-dv.table(["Fecha", "Sem", "HH Reg", "HH Esp", "Estado", "Proporción (escala 9h)"], rows);
+  dv.table(["Fecha", "Sem", "HH Reg", "HH Esp", "Estado", "Proporción (escala 9h)"], rows);
+}
 ```
 
 ---
@@ -284,18 +286,20 @@ for (const p of pages) {
   }
 }
 
-if (grand === 0) { dv.paragraph("> Sin datos registrados."); return; }
+if (grand === 0) {
+  dv.paragraph("> Sin datos registrados.");
+} else {
+  const bar = (hh) => {
+    const filled = Math.round((hh / grand) * 14);
+    return "█".repeat(filled) + "░".repeat(14 - filled);
+  };
 
-const bar = (hh) => {
-  const filled = Math.round((hh / grand) * 14);
-  return "█".repeat(filled) + "░".repeat(14 - filled);
-};
+  const rows = Object.entries(totals)
+    .sort((a, b) => b[1] - a[1])
+    .map(([key, hh]) => [key, hh, `${Math.round(hh / grand * 100)}%`, bar(hh)]);
 
-const rows = Object.entries(totals)
-  .sort((a, b) => b[1] - a[1])
-  .map(([key, hh]) => [key, hh, `${Math.round(hh / grand * 100)}%`, bar(hh)]);
-
-dv.table(["Actividad", "HH", "%", "Proporción"], rows);
+  dv.table(["Actividad", "HH", "%", "Proporción"], rows);
+}
 ```
 
 ---
@@ -317,31 +321,33 @@ for (const p of pages) {
   }
 }
 
-if (grand === 0) { dv.paragraph("> Sin datos registrados."); return; }
+if (grand === 0) {
+  dv.paragraph("> Sin datos registrados.");
+} else {
+  const bar = (hh) => {
+    const filled = Math.round((hh / grand) * 14);
+    return "█".repeat(filled) + "░".repeat(14 - filled);
+  };
 
-const bar = (hh) => {
-  const filled = Math.round((hh / grand) * 14);
-  return "█".repeat(filled) + "░".repeat(14 - filled);
-};
+  const rows = Object.entries(totals)
+    .sort((a, b) => b[1] - a[1])
+    .map(([key, hh]) => [key, hh, `${Math.round(hh / grand * 100)}%`, bar(hh)]);
 
-const rows = Object.entries(totals)
-  .sort((a, b) => b[1] - a[1])
-  .map(([key, hh]) => [key, hh, `${Math.round(hh / grand * 100)}%`, bar(hh)]);
+  dv.table(["Rol", "HH", "%", "Proporción"], rows);
 
-dv.table(["Rol", "HH", "%", "Proporción"], rows);
-
-// Nota al pie: % PM vs técnico
-const pmRoles = ["PM", "Project Manager", "Gerencia", "Coordinación"];
-const techRoles = ["Técnico", "Desarrollo", "Arquitectura", "Infraestructura", "Ingeniería"];
-let pmH = 0, techH = 0;
-for (const [rol, hh] of Object.entries(totals)) {
-  if (pmRoles.some(r => rol.toLowerCase().includes(r.toLowerCase()))) pmH += hh;
-  else if (techRoles.some(r => rol.toLowerCase().includes(r.toLowerCase()))) techH += hh;
-}
-if (pmH > 0 || techH > 0) {
-  const pmPct = Math.round(pmH / grand * 100);
-  const techPct = Math.round(techH / grand * 100);
-  dv.paragraph(`> **Mix PM/Técnico:** PM ${pmPct}% (${pmH}h) · Técnico ${techPct}% (${techH}h) · Otro ${100 - pmPct - techPct}%`);
+  // Nota al pie: % PM vs técnico
+  const pmRoles = ["PM", "Project Manager", "Gerencia", "Coordinación"];
+  const techRoles = ["Técnico", "Desarrollo", "Arquitectura", "Infraestructura", "Ingeniería"];
+  let pmH = 0, techH = 0;
+  for (const [rol, hh] of Object.entries(totals)) {
+    if (pmRoles.some(r => rol.toLowerCase().includes(r.toLowerCase()))) pmH += hh;
+    else if (techRoles.some(r => rol.toLowerCase().includes(r.toLowerCase()))) techH += hh;
+  }
+  if (pmH > 0 || techH > 0) {
+    const pmPct = Math.round(pmH / grand * 100);
+    const techPct = Math.round(techH / grand * 100);
+    dv.paragraph(`> **Mix PM/Técnico:** PM ${pmPct}% (${pmH}h) · Técnico ${techPct}% (${techH}h) · Otro ${100 - pmPct - techPct}%`);
+  }
 }
 ```
 
@@ -354,38 +360,40 @@ const pages = dv.pages('"diario"')
   .where(p => p.semana && p.fecha && !p.file.name.startsWith("_") && typeof p.semana === 'number')
   .array();
 
-if (pages.length === 0) { dv.paragraph("> Sin datos registrados."); return; }
+if (pages.length === 0) {
+  dv.paragraph("> Sin datos registrados.");
+} else {
+  const bySemana = {};
+  for (const p of pages) {
+    const sem = p.semana;
+    if (!bySemana[sem]) bySemana[sem] = [];
+    bySemana[sem].push(p);
+  }
 
-const bySemana = {};
-for (const p of pages) {
-  const sem = p.semana;
-  if (!bySemana[sem]) bySemana[sem] = [];
-  bySemana[sem].push(p);
+  const bar = (hh, max) => {
+    if (!hh || hh === 0) return "░".repeat(10);
+    const filled = Math.min(Math.round((hh / max) * 10), 10);
+    return "█".repeat(filled) + "░".repeat(10 - filled);
+  };
+
+  const hhTotal = (p) => [].concat(p?.entradas || []).reduce((s, e) => s + (e?.horas ?? 0), 0);
+
+  const semanas = Object.keys(bySemana).sort((a, b) => b - a).slice(0, 12);
+  const allTotals = semanas.map(s => bySemana[s].reduce((acc, p) => acc + hhTotal(p), 0));
+  const maxHH = Math.max(...allTotals, 1);
+
+  const rows = semanas.map((sem, i) => {
+    const ps = bySemana[sem];
+    const dias = ps.filter(p => hhTotal(p) > 0).length;
+    const total = allTotals[i];
+    const esperado = dias * 8.6; // promedio ponderado ~43h / 5 días
+    const delta = total - esperado;
+    const deltaStr = delta >= 0 ? `+${delta.toFixed(1)}h ✅` : `${delta.toFixed(1)}h ⚠️`;
+    return [`Sem ${sem}`, total, dias, `${(total / Math.max(dias, 1)).toFixed(1)}h`, deltaStr, bar(total, maxHH)];
+  });
+
+  dv.table(["Semana", "HH Total", "Días", "Prom/día", "Δ vs Objetivo", "Proporción"], rows);
 }
-
-const bar = (hh, max) => {
-  if (!hh || hh === 0) return "░".repeat(10);
-  const filled = Math.min(Math.round((hh / max) * 10), 10);
-  return "█".repeat(filled) + "░".repeat(10 - filled);
-};
-
-const hhTotal = (p) => [].concat(p?.entradas || []).reduce((s, e) => s + (e?.horas ?? 0), 0);
-
-const semanas = Object.keys(bySemana).sort((a, b) => b - a).slice(0, 12);
-const allTotals = semanas.map(s => bySemana[s].reduce((acc, p) => acc + hhTotal(p), 0));
-const maxHH = Math.max(...allTotals, 1);
-
-const rows = semanas.map((sem, i) => {
-  const ps = bySemana[sem];
-  const dias = ps.filter(p => hhTotal(p) > 0).length;
-  const total = allTotals[i];
-  const esperado = dias * 8.6; // promedio ponderado ~43h / 5 días
-  const delta = total - esperado;
-  const deltaStr = delta >= 0 ? `+${delta.toFixed(1)}h ✅` : `${delta.toFixed(1)}h ⚠️`;
-  return [`Sem ${sem}`, total, dias, `${(total / Math.max(dias, 1)).toFixed(1)}h`, deltaStr, bar(total, maxHH)];
-});
-
-dv.table(["Semana", "HH Total", "Días", "Prom/día", "Δ vs Objetivo", "Proporción"], rows);
 ```
 
 ---
