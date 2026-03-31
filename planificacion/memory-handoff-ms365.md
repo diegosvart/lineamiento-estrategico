@@ -50,3 +50,4 @@ Cada tarea finalizada en `workspace/ms365` debe cerrar con:
 - commit del trabajo (si hubo cambios),
 - reporte de rama con `git branch --show-current` y `git status --short --branch`,
 - confirmación explícita de si quedan cambios sin commit.
+- formato estándar: `planificacion/template-status-rama.md`

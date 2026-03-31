@@ -91,3 +91,4 @@ Al terminar cada tarea en planning, Codex debe:
   - `git branch --show-current`
   - `git status --short --branch`
 - Declarar explícitamente si quedan cambios sin commit.
+- Usar el formato estándar: `planificacion/template-status-rama.md`

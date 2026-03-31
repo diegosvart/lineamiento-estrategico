@@ -42,6 +42,10 @@ Cada vez que un agente declara una tarea como terminada, debe:
 
 Sin este reporte, la tarea se considera `incompleta` a nivel operativo.
 
+Template oficial:
+
+- `planificacion/template-status-rama.md`
+
 ## Rol de `workspace/planning` como admin
 
 `workspace/planning` administra el sistema y es el intake oficial de:
