@@ -12,7 +12,7 @@
 
 1. **Git**: verificar rama actual y situarse explícitamente en `workspace/dashboard`
    → Si no estás en `workspace/dashboard`, cambiar a esa rama antes de leer o ejecutar nada
-2. **Git sync**: `git checkout workspace/dashboard && git merge desarrollo`
+2. **Git sync**: `git checkout workspace/dashboard && git fetch origin && git merge origin/desarrollo`
    → Sincroniza cambios integrados (nuevos datos del vault o schemas actualizados)
 3. **Abrir**: Cursor apuntando a `dashboard/`
    → `.cursor/rules` carga el contexto del stack y las rutas permitidas automáticamente

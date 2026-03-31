@@ -11,16 +11,18 @@
 
 1. **Git**: verificar rama actual y situarse explícitamente en `workspace/planning`
    → Si no estás en `workspace/planning`, cambiar a esa rama antes de leer o editar nada
-2. **Git sync**: `git checkout workspace/planning && git merge desarrollo`
+2. **Git sync**: `git checkout workspace/planning && git fetch origin && git merge origin/desarrollo`
    → Sincroniza cambios integrados (planes completados, actualizaciones de estado)
-3. **Validar carpeta**: confirmar que la carpeta abierta corresponde al frente planning y no es una carpeta compartida con otro frente activo
-4. **Branch de trabajo**: si vas a cambiar archivos, crear una rama hija desde `workspace/planning`
+3. **Preflight**: `powershell -ExecutionPolicy Bypass -File .\planificacion\session-start-check.ps1 -TargetWorkspace planning`
+   → Si falla, detener sesión y cambiar al workspace/rama correcta antes de operar
+4. **Validar carpeta**: confirmar que la carpeta abierta corresponde al frente planning y no es una carpeta compartida con otro frente activo
+5. **Branch de trabajo**: si vas a cambiar archivos, crear una rama hija desde `workspace/planning`
    → `feature/planning-[nombre-kebab-case]` o `fix/planning-[nombre-kebab-case]`
-5. **Validar sesión**: si la rama actual no es `workspace/planning`, `feature/planning-*` o `fix/planning-*`, declarar la sesión inválida para planning y detenerse
-6. **Leer**: `planificacion/MEMORY.md` + `gestion-trabajo/tablero-maestro.md`
-7. **Leer**: `planificacion/backlog.md` + estado actual de `proyectos/`
+6. **Validar sesión**: si la rama actual no es `workspace/planning`, `feature/planning-*` o `fix/planning-*`, declarar la sesión inválida para planning y detenerse
+7. **Leer**: `planificacion/MEMORY.md` + `gestion-trabajo/tablero-maestro.md`
+8. **Leer**: `planificacion/backlog.md` + estado actual de `proyectos/`
    → ¿Qué iniciativas están pendientes de planificar? ¿Hay planes en borrador?
-8. **Primer acto**: clasificar intake nuevo, crear o continuar plan usando `planificacion/templates/plan-iniciativa.md`
+9. **Primer acto**: clasificar intake nuevo, crear o continuar plan usando `planificacion/templates/plan-iniciativa.md`
    → Próxima iniciativa prioritaria según backlog
 
 **Regla de seguridad:** si la carpeta o la rama actual no coincide con este `SCOPE`, detener el trabajo antes de continuar.
@@ -130,3 +132,4 @@ Todo plan activo o listo para ejecutar debe tener representación visible en
 ---
 
 *Rama: `workspace/planning` — Codex — Última actualización: 2026-03-28*
+

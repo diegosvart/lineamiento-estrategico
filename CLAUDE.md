@@ -228,7 +228,7 @@ When opening the vault, Claude Code always:
 
 1. **Git sync**: `git checkout workspace/vault && git fetch origin && git merge origin/desarrollo`
    → `fetch` trae cambios remotos; `merge origin/desarrollo` incorpora lo que otros IDEs ya integraron
-2. **Read context**: `CLAUDE.md` (this file) + `SCOPE.md` (raíz) — understand workspace and scope
+2. **Read context**: `CLAUDE.md` (this file) + `SCOPE` del ámbito activo (`SCOPE.md`, `planificacion/SCOPE.md`, `ms365-sync/SCOPE.md` o `dashboard/SCOPE.md`)
 3. **Read project state**: `proyectos/plan-gobernanza-ti/00-contexto/contexto-estrategico.md`
 4. **Check git**: `git status` + recent commits — understand what changed
 5. **Check plans**: `planificacion/backlog.md` — ¿hay planes `listo-para-ejecutar`?
@@ -440,7 +440,7 @@ master       ← Releases (solo el PM — al completar gateways)
 
 ### Critical Rules
 
-- **Always create features from `workspace/vault`** (o `desarrollo`), never from `master`
+- **Always create features from `workspace/[ambito]`**, never from `master`
 - **PRs always target `desarrollo`**, never directly to `master`
 - **Only Diego makes releases** (PR `desarrollo` → `master`) at gateway completion
 - **Naming features:** `feature/[descripcion-kebab-case]`
