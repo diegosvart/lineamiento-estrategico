@@ -50,17 +50,21 @@
 - Toda modificación del contrato debe registrarse primero en la memoria temática correspondiente.
 - `/vault-task add` es la entrevista oficial para alta manual de tareas hacia `diario/`.
 - `/plan add`, `/plan update`, `/plan archive` y `/plan iterate` son las operaciones oficiales del ciclo de vida de planes.
+- `gestion-trabajo/tablero-maestro.md` es la fuente unica de control operativo por tarea (task_id, rama, PR, evidencia).
 - `workspace/planning` opera como admin + planning del sistema.
+- Regla global: una rama temporal por tarea; al cerrar una tarea, esa rama no se reutiliza.
 - Cada frente debe mantener una skill principal alineada a su `SCOPE`.
 - “Eliminar plan” se resuelve como archivado, no como borrado físico.
 - `gestion-trabajo/` es la capa visual visible en Obsidian para backlog, foco y planes activos.
 - Toda sesión debe leer memoria técnica y luego tablero visible antes de actuar.
 - Toda necesidad nueva entra primero por planning/admin.
-- El estándar preferido de aislamiento por frente es `git worktree`.
+- El estándar obligatorio de aislamiento por frente es `git worktree`.
+
 
 ## Próximo objetivo
 
-- Migrar la operación a un modelo admin-driven con un worktree por frente y una guía humana de administración.
+- Completar la migración al modelo admin-driven con worktrees físicos por frente (en ejecución).
+
 
 ## Corrección operativa de Codex (2026-03-28)
 

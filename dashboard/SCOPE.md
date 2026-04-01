@@ -14,6 +14,7 @@
    → Si no estás en `workspace/dashboard`, cambiar a esa rama antes de leer o ejecutar nada
 2. **Git sync**: `git checkout workspace/dashboard && git fetch origin && git merge origin/desarrollo`
    → Sincroniza cambios integrados (nuevos datos del vault o schemas actualizados)
+   → Regla: una rama temporal por tarea; al cerrar tarea no reutilizar la rama
 3. **Abrir**: Cursor apuntando a `dashboard/`
    → `.cursor/rules` carga el contexto del stack y las rutas permitidas automáticamente
 4. **Setup** (primera vez o tras cambios en deps): `cd dashboard && npm install`
@@ -169,7 +170,21 @@ npm run build   # → dashboard/dist/
 |--------|-------|-------------|
 | workspace/vault | `SCOPE.md` (raíz) | Lee datos del vault (solo lectura) |
 | workspace/ms365 | `ms365-sync/SCOPE.md` | Lee output/ para indicador de sync |
-| workspace/planning | `planificacion/SCOPE.md` | Sin interacción directa |
+| workspace/planning | `planificacion/SCOPE.md` | Reporta cierre de tareas para consolidación de estado en tablero maestro |
+
+## Cierre obligatorio por tarea
+
+Cada tarea finalizada en `workspace/dashboard` debe cerrar con:
+
+- commit del trabajo (si hubo cambios),
+- reporte de rama con `git branch --show-current` y `git status --short --branch`,
+- reporte de PR asociado y estado de merge,
+- confirmación de integración en `desarrollo`,
+- confirmación explícita de cambios sin commit.
+
+Formato estándar:
+
+- `planificacion/template-status-rama.md`
 
 ---
 

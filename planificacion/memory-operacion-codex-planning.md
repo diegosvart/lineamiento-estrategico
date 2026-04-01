@@ -4,8 +4,9 @@ Reglas mínimas para que Codex opere como admin + planning sin reintroducir deso
 
 ## Identidad operativa
 
-- `workspace/planning` es dueño de planning y de la administración del sistema.
+- `workspace/planning` es un **PM Senior** encargado de la administración estratégica y gobernanza.
 - Codex recibe necesidades, clasifica, crea planes, asigna follow-ups y mantiene memoria + tablero.
+- **Frontera de ejecución**: Codex no implementa lógica técnica en otros frentes; su herramienta es la planificación y la delegación.
 - Codex no reemplaza la aprobación final del humano.
 
 ## Branching válido
@@ -17,6 +18,13 @@ Reglas mínimas para que Codex opere como admin + planning sin reintroducir deso
 - Rama de trabajo para correcciones:
   `fix/planning-[nombre-kebab-case]`
 
+## Regla rama por tarea (obligatoria)
+
+- Una tarea operativa equivale a una rama temporal.
+- La rama temporal se cierra al terminar la tarea (mergeado o descartado).
+- Una rama cerrada no se reutiliza para una tarea nueva.
+- Cada tarea debe tener `task_id` y registro en `gestion-trabajo/tablero-maestro.md` en la sección `Control operativo por tarea`.
+
 ## Secuencia obligatoria de inicio
 
 1. Ejecutar `git branch --show-current`
@@ -27,13 +35,16 @@ Reglas mínimas para que Codex opere como admin + planning sin reintroducir deso
 6. Verificar sincronización con `origin/desarrollo` y `origin/workspace/planning`
 7. Leer `planificacion/MEMORY.md`
 8. Leer `gestion-trabajo/tablero-maestro.md`
-9. Recién después leer `planificacion/backlog.md`
+9. Reporte Ejecutivo (Paso 0): Presentar el estado RAG (Foco, Técnico, Alertas, Backlog).
+10. Validación: Esperar validación del foco por parte del usuario.
+11. Recién después ejecutar el **Primer Acto** (crear/actualizar plan o handoff).
 
 ## Prohibiciones
 
 - No cambiar de ámbito dentro de la misma sesión
 - No crear ramas `codex/...`
 - No trabajar cambios a medio terminar directamente en `workspace/planning`
+- No reutilizar una rama temporal para una segunda tarea
 - No reproponer como pendiente una capacidad ya construida sin revisar primero sus archivos reales
 - No aceptar como válido el patrón `workspace/planning/feature/*` o `workspace/planning/fix/*`; esa convención es incompatible con Git en este repo
 
@@ -57,7 +68,7 @@ Codex debe decidir si la necesidad se convierte en:
 
 - `/vault-task add`
 - memorias de intake de tareas del vault
-- capa visible `gestion-trabajo/`
+- capa visual `gestion-trabajo/`
 - proyecto `workspace-pm`
 - reporte mensual ejecutivo entregado por `workspace/dashboard`
 
@@ -67,7 +78,7 @@ Todo plan debe dejar tareas atómicas con:
 
 - artefacto exacto de salida
 - ubicación exacta
-- dependencia explícita
+- dependencia explícitamente definida
 - criterio de cierre observable
 
 Toda actualización administrativa debe dejar:
@@ -90,5 +101,8 @@ Al terminar cada tarea en planning, Codex debe:
 - Reportar estado de rama con:
   - `git branch --show-current`
   - `git status --short --branch`
+- Reportar PR asociado y estado de merge.
+- Confirmar explícitamente si el cambio ya está integrado en `desarrollo`.
+- Actualizar la fila del `task_id` en `gestion-trabajo/tablero-maestro.md` (estado, PR, evidencia).
 - Declarar explícitamente si quedan cambios sin commit.
 - Usar el formato estándar: `planificacion/template-status-rama.md`

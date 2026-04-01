@@ -14,6 +14,7 @@ Dejar explícito qué rama es responsable de cada operación y cómo interactúa
 | `/plan iterate` | `workspace/planning` | nuevo plan + archivo previo referenciado/archivado + `planificacion/backlog.md` |
 | `/plan workspace` | `workspace/planning` | nota operativa + `.canvas` en `gestion-trabajo/planes-activos/` |
 | `/workflow-board refresh` | `workspace/planning` | `gestion-trabajo/tablero-maestro.md` + `gestion-trabajo/00-tablero-trabajo.canvas` |
+| `Control operativo por tarea` | `workspace/planning` | actualización de `task_id`, estado, rama, PR y evidencia en `gestion-trabajo/tablero-maestro.md` |
 | Recepción de entregas de ejecutores | `workspace/planning` | decisión operativa + follow-up + actualización visible |
 | `/session-start` | rama activa | resumen de foco técnico + visible |
 | `/session-end` | rama activa | handoff técnico + actualización de estado visible |
@@ -27,6 +28,7 @@ Cada rama escribe solo en su área dueña. Si un flujo necesita ampliar el contr
 - Toda necesidad nueva entra por `workspace/planning`.
 - Si una rama necesita algo de otra, lo registra primero en planning/admin.
 - `workspace/planning` decide si la necesidad se resuelve como plan, backlog o handoff.
+- Los ejecutores pueden proponer tareas autodetectadas, pero `workspace/planning` consolida el cierre oficial en el tablero maestro.
 
 ## Límites
 
