@@ -102,3 +102,6 @@ No necesitas traducirla al formato técnico. El admin hace esa conversión.
 - cada frente trabaja en su propia carpeta física
 - el estándar preferido de aislamiento es `git worktree`
 - el humano conserva la decisión final visible
+- `gestion-trabajo/tablero-maestro.md` es la fuente única de control operativo por tarea
+- cada tarea usa una rama temporal propia y no se reutiliza al cierre
+- una tarea solo se considera cerrada si su PR fue mergeado y quedó integrado en `desarrollo`

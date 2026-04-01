@@ -41,6 +41,7 @@
 - Detectar y alertar sobre las 8 señales de riesgo del vault (ver CLAUDE.md §6.4)
 - Generar reportes de estado por iniciativa o lineamiento
 - Crear `feature/*` branches para trabajo puntual, siempre desde esta rama
+- Aplicar regla obligatoria: una rama temporal por tarea y no reutilizar ramas cerradas
 - Hacer PR a `desarrollo` cuando el trabajo esté listo
 
 ---
@@ -97,6 +98,7 @@ git checkout -b feature/[nombre]
 git commit -m "tipo: descripción"
 git push origin feature/[nombre]
 # PR: feature/[nombre] → desarrollo
+# Cierre: no reutilizar la rama para una tarea nueva
 
 # Recibir cambios integrados:
 git checkout workspace/vault

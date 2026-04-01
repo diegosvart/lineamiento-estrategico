@@ -38,6 +38,8 @@ Dejar un flujo confiable de carga de tareas desde Planner hacia `ms365-sync/outp
 - Reutilizar la lógica existente; no reimplementar Graph innecesariamente.
 - Usar `--dry-run` antes de cualquier escritura real.
 - Documentar cualquier excepción de mapeo en esta memoria antes de cambiar contrato.
+- Usar una rama temporal por tarea y no reutilizarla al cerrar.
+- Si surge una tarea autodetectada durante ejecución, puede resolverse, pero debe reportarse al cierre para consolidación en planning.
 
 ## Si cambias algo importante
 
@@ -49,5 +51,7 @@ Cada tarea finalizada en `workspace/ms365` debe cerrar con:
 
 - commit del trabajo (si hubo cambios),
 - reporte de rama con `git branch --show-current` y `git status --short --branch`,
+- reporte de PR asociado y estado de merge,
+- confirmación de integración en `desarrollo`,
 - confirmación explícita de si quedan cambios sin commit.
 - formato estándar: `planificacion/template-status-rama.md`

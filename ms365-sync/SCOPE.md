@@ -13,6 +13,7 @@
    → Si no estás en `workspace/ms365`, cambiar a esa rama antes de leer o ejecutar nada
 2. **Git sync**: `git checkout workspace/ms365 && git fetch origin && git merge origin/desarrollo`
    → Sincroniza cambios integrados desde otros ámbitos
+   → Regla: una rama temporal por tarea; al cerrar tarea no reutilizar la rama
 3. **Abrir**: VS Code con `.vscode/pm-workspace.code-workspace`
    → Ambos repos visibles: Vault (Obsidian) + MS365 Integration
 4. **Verificar**: `ms365-sync/config.json` tiene GUIDs correctos y `ms365_repo_path` apunta al repo local
@@ -124,8 +125,22 @@ python ms365-sync/sync_email_to_pending.py --dry-run
 | Ámbito | SCOPE | Interacción |
 |--------|-------|-------------|
 | workspace/vault | `SCOPE.md` (raíz) | Produce output YAML; vault consume |
-| workspace/planning | `planificacion/SCOPE.md` | Sin interacción directa |
+| workspace/planning | `planificacion/SCOPE.md` | Reporta cierre de tareas para consolidación de estado en tablero maestro |
 | workspace/dashboard | `dashboard/SCOPE.md` | Dashboard lee `output/` para status sync |
+
+## Cierre obligatorio por tarea
+
+Cada tarea finalizada en `workspace/ms365` debe cerrar con:
+
+- commit del trabajo (si hubo cambios),
+- reporte de rama con `git branch --show-current` y `git status --short --branch`,
+- reporte de PR asociado y estado de merge,
+- confirmación de integración en `desarrollo`,
+- confirmación explícita de cambios sin commit.
+
+Formato estándar:
+
+- `planificacion/template-status-rama.md`
 
 ---
 

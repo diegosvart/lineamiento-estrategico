@@ -38,9 +38,19 @@ Cada vez que un agente declara una tarea como terminada, debe:
    - rama actual (`git branch --show-current`)
    - estado local (`git status --short --branch`)
    - relación con remoto si aplica (ahead/behind)
-3. Indicar explícitamente si quedan cambios sin commit.
+3. Reportar PR asociado y estado de merge.
+4. Confirmar explícitamente si el cambio quedó integrado en `desarrollo`.
+5. Indicar explícitamente si quedan cambios sin commit.
 
 Sin este reporte, la tarea se considera `incompleta` a nivel operativo.
+Sin merge a `desarrollo`, la tarea se considera `reportada` pero no `cerrada`.
+
+## Regla rama por tarea (todos los agentes)
+
+- Una tarea operativa usa una sola rama temporal.
+- La rama temporal no se reutiliza para tareas nuevas.
+- Toda tarea debe tener `task_id` en `gestion-trabajo/tablero-maestro.md` dentro de `Control operativo por tarea`.
+- El dueño del tablero es `workspace/planning`; los otros frentes reportan evidencia para actualización.
 
 Template oficial:
 

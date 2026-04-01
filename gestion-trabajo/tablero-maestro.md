@@ -10,7 +10,7 @@ tags:
 
 Vista rápida del trabajo en curso para abrir Obsidian y entender foco, handoffs y cola de ejecución.
 
-**Última actualización:** 2026-03-31
+**Última actualización:** 2026-04-01
 **Proyecto principal:** [[proyectos/plan-gobernanza-ti/00-indice|Plan Gobernanza TI]]
 **Backlog humano:** [[gestion-trabajo/backlog-iniciativas|Ver backlog]]
 **Canvas maestro:** [[gestion-trabajo/00-tablero-trabajo.canvas|Abrir canvas]]
@@ -49,6 +49,24 @@ Vista rápida del trabajo en curso para abrir Obsidian y entender foco, handoffs
 - `workspace/planning` debe liderar la migración a carpetas físicas separadas por frente
 - `workspace/vault` debe ejecutar el cierre de HH marzo 2026 y actualizar `planificacion/2026-03-31-informe-hh-marzo-pendiente.md` con faltante final en cero
 - `workspace/dashboard` y `workspace/ms365` deben crear su skill principal alineada a su `SCOPE`
+
+## Control operativo por tarea (fuente unica)
+
+Registro transversal del estado operativo de tareas delegadas entre frentes.
+`workspace/planning` mantiene esta tabla con base en los reportes de cierre de cada agente.
+
+**Regla dura:** una tarea usa una sola rama temporal. La rama no se reutiliza para otra tarea.
+
+| task_id | Plan o ruta de trabajo | Frente ejecutor | Responsable | Rama por tarea | Estado | PR | En desarrollo | Evidencia |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `T-2026-04-01-001` | `planificacion/2026-03-31-cierre-hh-marzo-control-pr-y-skills-plan.md` | `workspace/vault` | Claude Code | `feature/vault-cierre-hh-marzo-2026` | `delegada` | `pendiente` | `no` | Baseline: `planificacion/2026-03-31-informe-hh-marzo-pendiente.md` |
+
+Estados operativos validos: `nueva`, `delegada`, `en-ejecucion`, `reportada`, `bloqueada`, `cerrada`.
+
+Una tarea solo pasa a `cerrada` cuando:
+- existe PR mergeado,
+- el cambio esta integrado en `desarrollo`,
+- el reporte de cierre usa `planificacion/template-status-rama.md`.
 
 ## Siguiente acción sugerida
 
