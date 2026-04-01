@@ -99,9 +99,18 @@ No necesitas traducirla al formato técnico. El admin hace esa conversión.
 - `workspace/planning` es admin + planning
 - `workspace/vault`, `workspace/dashboard` y `workspace/ms365` son ejecutores especializados
 - toda necesidad nueva entra primero por admin
-- cada frente trabaja en su propia carpeta física
-- el estándar preferido de aislamiento es `git worktree`
+- **cada frente trabaja en su propia carpeta física aislada**
+- el estándar obligatorio de aislamiento es `git worktree`
 - el humano conserva la decisión final visible
 - `gestion-trabajo/tablero-maestro.md` es la fuente única de control operativo por tarea
 - cada tarea usa una rama temporal propia y no se reutiliza al cierre
 - una tarea solo se considera cerrada si su PR fue mergeado y quedó integrado en `desarrollo`
+
+## Gestión de Frentes (Worktrees)
+
+Para mantener la higiene del workspace y evitar ruido entre agentes:
+
+1. **Setup**: Usa `.\planificacion\scripts\setup-worktrees.ps1` para crear las carpetas físicas.
+2. **Ubicación**: Se recomienda crear los frentes como carpetas hermanas del repo original.
+3. **Acceso**: Cada instancia de IDE (Cursor, VS Code, Claude Code) debe abrir **solo** la carpeta del frente correspondiente.
+4. **Sincronización**: Los cambios se comparten vía `git push` a su rama de ámbito y posterior integración en `desarrollo`. Cada frente debe hacer `git merge desarrollo` al inicio de su sesión.

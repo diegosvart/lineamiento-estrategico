@@ -19,8 +19,9 @@ Vista rápida del trabajo en curso para abrir Obsidian y entender foco, handoffs
 
 | Rama | Flujo activo | Estado | Próximo paso |
 | --- | --- | --- | --- |
-| `workspace/planning` | Admin del sistema + planificación + intake único | activo | Formalizar worktrees por frente y mantener memoria/tablero sincronizados |
-| `workspace/vault` | Ejecución documental del vault | activo | Consumir cambios publicados desde `desarrollo` y actualizar documentación de `workspace-pm` |
+| `workspace/planning` | Admin del sistema + planificación + intake único | activo | Ejecutar migración a worktrees por frente y actualizar estándares |
+| `workspace/vault` | Ejecución documental del vault | activo | Cerrar HH marzo y crear skill principal bajo el nuevo esquema físico |
+
 | `workspace/ms365` | Staging de Planner hacia output YAML | definido | Mantener salida consistente para consolidación posterior |
 | `workspace/dashboard` | Visualización local del vault + reporte mensual ejecutivo | completado | Publicado vía PR #18 — próximo paso: aislar entorno con worktree e ignore del frontend |
 
@@ -60,6 +61,8 @@ Registro transversal del estado operativo de tareas delegadas entre frentes.
 | task_id | Plan o ruta de trabajo | Frente ejecutor | Responsable | Rama por tarea | Estado | PR | En desarrollo | Evidencia |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `T-2026-04-01-001` | `planificacion/2026-03-31-cierre-hh-marzo-control-pr-y-skills-plan.md` | `workspace/vault` | Claude Code | `feature/vault-cierre-hh-marzo-2026` | `delegada` | `pendiente` | `no` | Baseline: `planificacion/2026-03-31-informe-hh-marzo-pendiente.md` |
+| `T-2026-04-01-002` | `planificacion/2026-04-01-migracion-worktrees-frentes-plan.md` | `workspace/planning` | Codex | `feature/planning-flujo-operativo-rama-por-tarea` | `reportada` | `pendiente` | `no` | Plan formal y script de setup creados |
+| `T-2026-04-01-003` | Estandarización de Rol PM Senior (Gobernanza) | `workspace/planning` | Codex | `feature/planning-flujo-operativo-rama-por-tarea` | `reportada` | `pendiente` | `no` | Protocolo de reporte ejecutivo formalizado |
 
 Estados operativos validos: `nueva`, `delegada`, `en-ejecucion`, `reportada`, `bloqueada`, `cerrada`.
 
