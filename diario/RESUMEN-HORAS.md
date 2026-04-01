@@ -69,36 +69,39 @@ const today = dv.date("today");
 const year = today.year;
 const month = today.month;
 
-// Obtener todas las notas del mes
 const pages = dv.pages('"diario"')
   .where(p => p.fecha && p.fecha.year === year && p.fecha.month === month)
   .array();
 
-// Indexar por fecha YYYY-MM-DD
 const byDate = {};
 for (const p of pages) {
   const key = p.fecha.toFormat("yyyy-MM-dd");
   byDate[key] = p;
 }
 
-// Calcular primer y último día del mes
 const firstDay = today.startOf("month");
 const lastDay = today.endOf("month");
-
-// Construir grilla de semanas
 const monthName = today.toFormat("MMMM yyyy");
-let table = `| **${monthName}** | Lun | Mar | Mié | Jue | Vie |\n|:---|:---:|:---:|:---:|:---:|:---:|\n`;
 
-// Encontrar el lunes de la semana del primer día
+const table = dv.container.createEl("table", { cls: "dataview" });
+const thead = table.createEl("thead");
+const hr = thead.createEl("tr");
+hr.createEl("th", { text: monthName, attr: { style: "text-align:left" } });
+["Lun", "Mar", "Mié", "Jue", "Vie"].forEach(h =>
+  hr.createEl("th", { text: h, attr: { style: "text-align:center" } })
+);
+
+const tbody = table.createEl("tbody");
 let cursor = firstDay.startOf("week");
-let weekNum = cursor.weekNumber;
 
 while (cursor <= lastDay) {
-  let row = `| Sem ${cursor.weekNumber} |`;
+  const tr = tbody.createEl("tr");
+  tr.createEl("td", { text: `Sem ${cursor.weekNumber}` });
   for (let wd = 1; wd <= 5; wd++) {
     const d = cursor.plus({ days: wd - 1 });
+    const td = tr.createEl("td", { attr: { style: "text-align:center" } });
     if (d.month !== month) {
-      row += " — |";
+      td.textContent = "—";
     } else {
       const key = d.toFormat("yyyy-MM-dd");
       const p = byDate[key];
@@ -107,19 +110,22 @@ while (cursor <= lastDay) {
       if (p) {
         const reg = [].concat(p?.entradas || []).reduce((s, e) => s + (e?.horas ?? 0), 0);
         const icon = reg >= expected ? "✅" : reg > 0 ? "⚠️" : "❌";
-        row += ` [[diario/${d.toFormat("yyyy")}/${d.toFormat("MM")}/${key}\\|${dayNum}${icon}]] |`;
+        const path = `diario/${d.toFormat("yyyy")}/${d.toFormat("MM")}/${key}`;
+        td.createEl("a", {
+          cls: "internal-link",
+          text: `${dayNum}${icon}`,
+          attr: { href: path, "data-href": path, "data-type": "file" }
+        });
+      } else if (d < today) {
+        td.createEl("s", { text: String(dayNum) });
       } else {
-        const isPast = d < today;
-        row += isPast ? ` ~~${dayNum}~~ |` : ` ${dayNum} |`;
+        td.textContent = String(dayNum);
       }
     }
   }
-  table += row + "\n";
   cursor = cursor.plus({ weeks: 1 });
   if (cursor > lastDay) break;
 }
-
-dv.paragraph(table);
 ```
 
 ---
