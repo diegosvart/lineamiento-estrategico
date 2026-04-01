@@ -16,8 +16,9 @@ Operar `workspace/planning` como admin del sistema: intake unico, ciclo de vida 
 
 ## No alcance
 
-- No ejecutar trabajo operativo de otros frentes.
+- No ejecutar trabajo operativo de otros frentes (vault, ms365, dashboard).
 - No cargar HH en `diario/` desde planning.
+- No implementar lógica de negocio, frontend o componentes técnicos.
 - No reimplementar procesos que ya existen como contrato.
 
 ## Entradas

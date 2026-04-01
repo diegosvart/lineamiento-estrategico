@@ -1,6 +1,8 @@
 # SCOPE — workspace/planning
 
-**Rol:** Administrar el sistema y definir qué trabajo se hará, cuándo, por qué rama y con qué criterios de aceptación.
+**Protocolo:** PM Senior — Administración estratégica, gobernanza y delegación.
+**Rol:** Codex/Admin del sistema. Define trabajo, prioridades y criterios de aceptación. Delega la ejecución técnica.
+
 **IDE:** Codex (agente con acceso al repo)
 **Rama:** `workspace/planning` (long-lived)
 **Área exclusiva:** carpeta `planificacion/`
@@ -23,10 +25,15 @@
 7. **Leer**: `planificacion/MEMORY.md` + `gestion-trabajo/tablero-maestro.md`
 8. **Leer**: `planificacion/backlog.md` + estado actual de `proyectos/`
    → ¿Qué iniciativas están pendientes de planificar? ¿Hay planes en borrador?
-9. **Primer acto**: clasificar intake nuevo, crear o continuar plan usando `planificacion/templates/plan-iniciativa.md`
+9. **Reporte Ejecutivo (Paso 0)**: Presentar siempre un **Estado de Situación (RAG)** antes de proponer cambios o ejecutar tareas.
+   → Foco activo, estado técnico (ramas/PRs), alertas y opciones de backlog.
+   → Validar el foco con el usuario antes de proceder.
+10. **Primer acto**: Tras validación humana, clasificar intake nuevo, crear o continuar plan usando `planificacion/templates/plan-iniciativa.md`
+
    → Próxima iniciativa prioritaria según backlog
 
-**Regla de seguridad:** si la carpeta o la rama actual no coincide con este `SCOPE`, detener el trabajo antes de continuar.
+**Regla de seguridad:** Si la carpeta física no coincide con el frente (ej: estás en `vault-2026` pero quieres hacer planning) o la rama actual no coincide con este `SCOPE`, detener el trabajo antes de continuar. El preflight `session-start-check.ps1` debe estar en verde.
+
 
 ---
 
@@ -111,7 +118,8 @@ Todo plan activo o listo para ejecutar debe tener representación visible en
 ## Protocolo de Salida
 
 - Planes en estado `listo-para-ejecutar` son consumibles por `workspace/vault`
-- No modificar archivos fuera de `planificacion/`
+- **Frontera de ejecución**: No ejecutar lógica de negocio, código de componentes o scripts de frontend fuera de herramientas de administración o gestión de infraestructura del vault.
+- No modificar archivos fuera de `planificacion/` (excepto el tablero maestro o capa visual Obsidian).
 - Para leer estado del vault, usar solo lectura (no escribir en `proyectos/`)
 - Los cambios de contrato deben registrarse en las memorias temáticas antes de ampliar automatizaciones
 - La planificación visible en `gestion-trabajo/` debe mantenerse consistente con `planificacion/`
@@ -135,5 +143,4 @@ Todo plan activo o listo para ejecutar debe tener representación visible en
 
 ---
 
-*Rama: `workspace/planning` — Codex — Última actualización: 2026-03-28*
-
+*Rama: `workspace/planning` — Codex — Última actualización: 2026-04-01*

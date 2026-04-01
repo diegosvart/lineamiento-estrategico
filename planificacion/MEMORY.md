@@ -58,11 +58,13 @@
 - `gestion-trabajo/` es la capa visual visible en Obsidian para backlog, foco y planes activos.
 - Toda sesión debe leer memoria técnica y luego tablero visible antes de actuar.
 - Toda necesidad nueva entra primero por planning/admin.
-- El estándar preferido de aislamiento por frente es `git worktree`.
+- El estándar obligatorio de aislamiento por frente es `git worktree`.
+
 
 ## Próximo objetivo
 
-- Migrar la operación a un modelo admin-driven con un worktree por frente y una guía humana de administración.
+- Completar la migración al modelo admin-driven con worktrees físicos por frente (en ejecución).
+
 
 ## Corrección operativa de Codex (2026-03-28)
 

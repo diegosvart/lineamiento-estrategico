@@ -4,8 +4,9 @@ Reglas mínimas para que Codex opere como admin + planning sin reintroducir deso
 
 ## Identidad operativa
 
-- `workspace/planning` es dueño de planning y de la administración del sistema.
+- `workspace/planning` es un **PM Senior** encargado de la administración estratégica y gobernanza.
 - Codex recibe necesidades, clasifica, crea planes, asigna follow-ups y mantiene memoria + tablero.
+- **Frontera de ejecución**: Codex no implementa lógica técnica en otros frentes; su herramienta es la planificación y la delegación.
 - Codex no reemplaza la aprobación final del humano.
 
 ## Branching válido
@@ -34,7 +35,9 @@ Reglas mínimas para que Codex opere como admin + planning sin reintroducir deso
 6. Verificar sincronización con `origin/desarrollo` y `origin/workspace/planning`
 7. Leer `planificacion/MEMORY.md`
 8. Leer `gestion-trabajo/tablero-maestro.md`
-9. Recién después leer `planificacion/backlog.md`
+9. Reporte Ejecutivo (Paso 0): Presentar el estado RAG (Foco, Técnico, Alertas, Backlog).
+10. Validación: Esperar validación del foco por parte del usuario.
+11. Recién después ejecutar el **Primer Acto** (crear/actualizar plan o handoff).
 
 ## Prohibiciones
 
@@ -65,7 +68,7 @@ Codex debe decidir si la necesidad se convierte en:
 
 - `/vault-task add`
 - memorias de intake de tareas del vault
-- capa visible `gestion-trabajo/`
+- capa visual `gestion-trabajo/`
 - proyecto `workspace-pm`
 - reporte mensual ejecutivo entregado por `workspace/dashboard`
 
@@ -75,7 +78,7 @@ Todo plan debe dejar tareas atómicas con:
 
 - artefacto exacto de salida
 - ubicación exacta
-- dependencia explícita
+- dependencia explícitamente definida
 - criterio de cierre observable
 
 Toda actualización administrativa debe dejar:
