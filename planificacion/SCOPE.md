@@ -18,6 +18,7 @@
 4. **Validar carpeta**: confirmar que la carpeta abierta corresponde al frente planning y no es una carpeta compartida con otro frente activo
 5. **Branch de trabajo**: si vas a cambiar archivos, crear una rama hija desde `workspace/planning`
    → `feature/planning-[nombre-kebab-case]` o `fix/planning-[nombre-kebab-case]`
+   → Regla: una rama temporal por tarea; no reutilizar la misma rama para otra tarea
 6. **Validar sesión**: si la rama actual no es `workspace/planning`, `feature/planning-*` o `fix/planning-*`, declarar la sesión inválida para planning y detenerse
 7. **Leer**: `planificacion/MEMORY.md` + `gestion-trabajo/tablero-maestro.md`
 8. **Leer**: `planificacion/backlog.md` + estado actual de `proyectos/`
@@ -41,6 +42,7 @@
 - Crear y mantener el backlog de planificación en `planificacion/backlog.md`
 - Mantener el contrato cross-rama entre intake de tareas del vault y ejecución de planes
 - Mantener sincronizada la representación visible en `gestion-trabajo/` para backlog, tablero y planes activos
+- Mantener el control operativo por `task_id` en `gestion-trabajo/tablero-maestro.md`
 
 ---
 
@@ -118,6 +120,8 @@ Todo plan activo o listo para ejecutar debe tener representación visible en
 - Todo cambio de planning debe cerrar en PR hacia `workspace/planning` antes de distribuirse a `desarrollo`
 - Toda tarea terminada y pusheada en planning solo se considera publicada para las demás ramas cuando queda integrada en `desarrollo`
 - Toda necesidad cross-rama entra primero por planning/admin
+- Toda tarea debe registrar `task_id` y estado operativo en `gestion-trabajo/tablero-maestro.md`
+- Una tarea solo se declara cerrada cuando su PR está mergeado y el cambio está integrado en `desarrollo`
 
 ---
 

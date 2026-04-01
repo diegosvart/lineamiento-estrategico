@@ -17,6 +17,13 @@ Reglas mínimas para que Codex opere como admin + planning sin reintroducir deso
 - Rama de trabajo para correcciones:
   `fix/planning-[nombre-kebab-case]`
 
+## Regla rama por tarea (obligatoria)
+
+- Una tarea operativa equivale a una rama temporal.
+- La rama temporal se cierra al terminar la tarea (mergeado o descartado).
+- Una rama cerrada no se reutiliza para una tarea nueva.
+- Cada tarea debe tener `task_id` y registro en `gestion-trabajo/tablero-maestro.md` en la sección `Control operativo por tarea`.
+
 ## Secuencia obligatoria de inicio
 
 1. Ejecutar `git branch --show-current`
@@ -34,6 +41,7 @@ Reglas mínimas para que Codex opere como admin + planning sin reintroducir deso
 - No cambiar de ámbito dentro de la misma sesión
 - No crear ramas `codex/...`
 - No trabajar cambios a medio terminar directamente en `workspace/planning`
+- No reutilizar una rama temporal para una segunda tarea
 - No reproponer como pendiente una capacidad ya construida sin revisar primero sus archivos reales
 - No aceptar como válido el patrón `workspace/planning/feature/*` o `workspace/planning/fix/*`; esa convención es incompatible con Git en este repo
 
@@ -90,5 +98,8 @@ Al terminar cada tarea en planning, Codex debe:
 - Reportar estado de rama con:
   - `git branch --show-current`
   - `git status --short --branch`
+- Reportar PR asociado y estado de merge.
+- Confirmar explícitamente si el cambio ya está integrado en `desarrollo`.
+- Actualizar la fila del `task_id` en `gestion-trabajo/tablero-maestro.md` (estado, PR, evidencia).
 - Declarar explícitamente si quedan cambios sin commit.
 - Usar el formato estándar: `planificacion/template-status-rama.md`
