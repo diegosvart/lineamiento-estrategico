@@ -1,0 +1,39 @@
+# =============================================================================
+# .gitattributes — Cosemar PM Workspace
+# =============================================================================
+# Propósito: Merge drivers y normalización de líneas para el modelo
+# multi-workspace (vault / planning / ms365 / dashboard).
+# Ver: SCOPE.md §Ownership de archivos compartidos
+# =============================================================================
+
+# Normalización CRLF (entorno Windows, repositorio LF)
+* text=auto eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.ps1 text eol=lf
+*.py text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+
+# Binarios — no tocar líneas
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+*.excalidraw binary
+
+# -----------------------------------------------------------------------------
+# Merge drivers
+# -----------------------------------------------------------------------------
+
+# Diario: cada workspace puede agregar entradas; union conserva ambos lados
+diario/**/*.md merge=union
+diario/RESUMEN-HORAS.md merge=union
+
+# YAML de staging ms365 (solo ms365 escribe, pero union evita conflictos accidentales)
+ms365-sync/output/*.yaml merge=union
