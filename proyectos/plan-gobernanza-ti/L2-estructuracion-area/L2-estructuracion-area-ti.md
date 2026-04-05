@@ -24,11 +24,11 @@ Formalizacion de la estructura del area TI, definicion de roles con responsabili
 
 ## Categorias
 
-| Categoria | Carpeta | Estado |
-|---|---|---|
-| Formalizacion organizacional | [[formalizacion-organizacional/L2-formalizacion-organizacional]] | Pendiente |
-| Reduccion de dependencia externa | [[reduccion-dependencia/L2-reduccion-dependencia]] | Pendiente |
-| Habilitacion de recursos | [[habilitacion-recursos/L2-habilitacion-recursos]] | Pendiente |
+| Categoria                        | Carpeta                                                          | Estado    |
+| -------------------------------- | ---------------------------------------------------------------- | --------- |
+| Formalizacion organizacional     | [[formalizacion-organizacional/L2-formalizacion-organizacional]] | Pendiente |
+| Reduccion de dependencia externa | [[reduccion-dependencia/L2-reduccion-dependencia]]               | Pendiente |
+| Habilitacion de recursos         | [[habilitacion-recursos/L2-habilitacion-recursos]]               | Pendiente |
 
 ---
 

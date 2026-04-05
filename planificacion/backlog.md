@@ -19,6 +19,7 @@ Tareas pendientes de planificar. Cada ítem requiere un plan formal en `planific
 | Dashboard Cosemar (otros proyectos) | — | Baja | Pendiente activación |
 | Entrevistas guiadas para tareas del vault y ciclo de vida de planes | Cross-rama | Alta | Formalizar `/vault-task add` y `/plan add|update|archive|iterate` |
 | Migración a estándar admin-driven con worktrees por frente | Cross-rama | Alta | Formalizar guía admin, intake único y aislamiento por carpeta |
+| Integración Miro MCP — configuración cross-rama | Cross-rama | Media | Configurar Miro MCP en Claude Code + Cursor + VS Code + Codex; ver spec en `planificacion/intake-miro-mcp.md` |
 
 ---
 
@@ -62,4 +63,4 @@ Tareas pendientes de planificar. Cada ítem requiere un plan formal en `planific
 
 ---
 
-*Última actualización: 2026-03-31 — agregado plan urgente de cierre HH marzo, gate PR y skills por frente*
+*Última actualización: 2026-04-01 — agregado intake Miro MCP cross-rama*
