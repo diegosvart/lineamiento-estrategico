@@ -67,7 +67,7 @@ dv.table(headers, rows);
 ```dataviewjs
 const today = dv.date("today");
 const year = today.year;
-const month = today.month;
+const month = 3;
 
 const pages = dv.pages('"diario"')
   .where(p => p.fecha && p.fecha.year === year && p.fecha.month === month)

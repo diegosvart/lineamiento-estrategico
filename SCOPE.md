@@ -117,4 +117,26 @@ git merge desarrollo
 
 ---
 
-*Rama: `workspace/vault` — Claude Code — Última actualización: 2026-03-28*
+## Ownership de Archivos Compartidos
+
+Archivos que más de una rama podría querer editar. **Solo el dueño modifica estructuralmente.** Los demás pueden hacer append (si tiene `merge=union` en `.gitattributes`) o solicitar cambio vía planning intake.
+
+| Archivo | Dueño | Otros pueden | Merge driver |
+|---------|-------|-------------|--------------|
+| `CLAUDE.md` | `workspace/vault` | Solo lectura | Manual |
+| `SCOPE.md` (este archivo) | `workspace/vault` | Solo lectura | Manual |
+| `00-dashboard.md` | `workspace/vault` | Solo lectura | Manual |
+| `planificacion/backlog.md` | `workspace/planning` | Solo lectura | Manual |
+| `gestion-trabajo/tablero-maestro.md` | `workspace/planning` | Solo lectura | Manual |
+| `diario/**/*.md` | `workspace/vault` (estructura) | Append de timesheet entries | `merge=union` |
+| `diario/RESUMEN-HORAS.md` | `workspace/vault` | — | `merge=union` |
+| `ms365-sync/output/*.yaml` | `workspace/ms365` | Solo lectura | `merge=union` |
+| `planificacion/SCOPE.md` | `workspace/planning` | Solo lectura | Manual |
+| `ms365-sync/SCOPE.md` | `workspace/ms365` | Solo lectura | Manual |
+| `dashboard/SCOPE.md` | `workspace/dashboard` | Solo lectura | Manual |
+
+**Regla:** Si necesitas modificar un archivo que no te pertenece, crea un intake en `planificacion/backlog.md` para que `workspace/planning` lo delegue al dueño.
+
+---
+
+*Rama: `workspace/vault` — Claude Code — Última actualización: 2026-04-04*
