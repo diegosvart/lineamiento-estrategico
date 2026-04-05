@@ -24,14 +24,14 @@ de consultor externo.
 
 ## Tareas
 
-| ID | Tarea | Responsable | hh | Estado |
-|---|---|---|---|---|
-| 1.07 | Sesiones de extracción de conocimiento con Alexi — decisiones técnicas, configuraciones críticas, accesos | PM | 4 | Pendiente |
-| 1.08 | Documentación de inventario técnico — sistemas, integraciones, dependencias, puntos de fallo | PM | 6 | Pendiente |
-| 1.09 | Redacción plan formal de transferencia de conocimiento — sesiones, agenda, responsables, validaciones | PM | 2.5 | Pendiente |
-| 1.10 | Sesión de transferencia técnica ronda 1 — JTI y ARI reciben conocimiento de Alexi | JTI + CE | 3 | Pendiente |
-| 1.11 | Sesión de transferencia técnica ronda 2 — validación interna de JTI sin presencia de CE | JTI | 2 | Pendiente |
-| 1.12 | Validación de autonomía técnica del área — certifica que JTI y ARI pueden operar sin Alexi → Input G2 | PM + JTI | 1 | Pendiente |
+| ID   | Tarea                                                                                                     | Responsable | hh  | Estado    |
+| ---- | --------------------------------------------------------------------------------------------------------- | ----------- | --- | --------- |
+| 1.07 | Sesiones de extracción de conocimiento con Alexi — decisiones técnicas, configuraciones críticas, accesos | PM          | 4   | Pendiente |
+| 1.08 | Documentación de inventario técnico — sistemas, integraciones, dependencias, puntos de fallo              | PM          | 6   | Pendiente |
+| 1.09 | Redacción plan formal de transferencia de conocimiento — sesiones, agenda, responsables, validaciones     | PM          | 2.5 | Pendiente |
+| 1.10 | Sesión de transferencia técnica ronda 1 — JTI y ARI reciben conocimiento de Alexi                         | JTI + CE    | 3   | Pendiente |
+| 1.11 | Sesión de transferencia técnica ronda 2 — validación interna de JTI sin presencia de CE                   | JTI         | 2   | Pendiente |
+| 1.12 | Validación de autonomía técnica del área — certifica que JTI y ARI pueden operar sin Alexi → Input G2     | PM + JTI    | 1   | Pendiente |
 
 **Total:** 18.5 hh
 

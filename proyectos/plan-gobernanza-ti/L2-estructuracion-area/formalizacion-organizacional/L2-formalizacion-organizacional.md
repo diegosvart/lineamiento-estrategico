@@ -21,12 +21,12 @@ líneas de reporte y el nuevo rol de Data Governance Manager que lidera L3 y L4.
 
 ## Tareas
 
-| ID   | Tarea                                                                                           | Responsable | hh  | Estado    |
-| ---- | ----------------------------------------------------------------------------------------------- | ----------- | --- | --------- |
-| 1.01 | Redacción propuesta organigrama TI con roles, responsabilidades y líneas de mando               | PM          | 4   | Pendiente |
-| 1.02 | Validación organigrama con Jefe TI — ajustes y consenso de dominios                             | PM + JTI    | 1.5 | Pendiente |
-| 1.03 | Definición formal del rol Data Governance Manager (DGM) — responsabilidades, reporte, autonomía | PM          | 3   | Pendiente |
-| 1.04 | Validación rol DGM con Jefe TI — cierre de definición                                           | PM + JTI    | 1   | Pendiente |
+| ID   | Tarea                                                                                           | Responsable | hh  | Estado     |
+| ---- | ----------------------------------------------------------------------------------------------- | ----------- | --- | ---------- |
+| 1.01 | Redacción propuesta organigrama TI con roles, responsabilidades y líneas de mando               | PM          | 4   | Completado |
+| 1.02 | Validación organigrama con Jefe TI — ajustes y consenso de dominios                             | PM + JTI    | 1.5 | Completado |
+| 1.03 | Definición formal del rol Data Governance Manager (DGM) — responsabilidades, reporte, autonomía | PM          | 3   | Pendiente  |
+| 1.04 | Validación rol DGM con Jefe TI — cierre de definición                                           | PM + JTI    | 1   | Pendiente  |
 
 **Total:** 9.5 hh
 
