@@ -42,6 +42,11 @@ type: index
 - **Propósito:** Cerrar sesión con handoff técnico y estado visible del flujo
 - **Cuándo usar:** Al terminar una sesión en `workspace/vault`
 
+### 3.8. `/vault-sync-planning` ✨ NUEVO
+- **Archivo:** `vault-sync-planning.md`
+- **Propósito:** Sincronizar desde `desarrollo`, detectar planes `listo-para-ejecutar` de planning y reportar tareas concretas para vault
+- **Cuándo usar:** Antes de iniciar trabajo — verificar si planning delegó nuevas tareas
+
 ---
 
 ## Tier 2: Specialized Operations
@@ -119,6 +124,7 @@ type: index
 | Agregar tarea al diario | `/vault-task` | `add` |
 | Iniciar sesión del vault | `/vault-session-start` | Sin parámetros |
 | Cerrar sesión del vault | `/vault-session-end` | Sin parámetros |
+| Ver tareas nuevas de planning | `/vault-sync-planning` | Sin parámetros |
 | Ver progreso del plan | `/vault-status` | `view` o `folder [carpeta]` |
 | Mejorar archivo existente | `/vault-markdown-syntax` | `--validar` o `--agregar-[elemento]` |
 | Crear mapa visual | `/vault-canvas` | `--crear --nombre "..." --template [tipo]` |
