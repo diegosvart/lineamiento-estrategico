@@ -30,6 +30,16 @@ Cada rama escribe solo en su área dueña. Si un flujo necesita ampliar el contr
 - `workspace/planning` decide si la necesidad se resuelve como plan, backlog o handoff.
 - Los ejecutores pueden proponer tareas autodetectadas, pero `workspace/planning` consolida el cierre oficial en el tablero maestro.
 
+## Handoff de regreso (ejecutor → planning)
+
+Cuando un ejecutor (`workspace/vault`, `workspace/dashboard`, `workspace/ms365`) termina una tarea:
+
+1. Ejecutor crea PR → `desarrollo` y lo reporta con `template-status-rama.md`
+2. Ejecutor actualiza la fila correspondiente en `gestion-trabajo/tablero-maestro.md` con estado `reportada` y URL del PR como evidencia
+3. `workspace/planning` lee `tablero-maestro.md` en su próxima sesión y consolida el cierre oficial (pasa a `cerrada` tras validar merge)
+
+**Regla:** Si una tarea lleva más de 3 días en estado `reportada` sin cierre por planning, el ejecutor o el usuario deben escalar. Planning no tiene visibilidad pasiva — necesita iniciar sesión para enterarse.
+
 ## Límites
 
 - `workspace/vault` no administra el ciclo de vida documental de planes.

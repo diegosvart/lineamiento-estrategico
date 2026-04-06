@@ -41,9 +41,14 @@ Cada vez que un agente declara una tarea como terminada, debe:
 3. Reportar PR asociado y estado de merge.
 4. Confirmar explícitamente si el cambio quedó integrado en `desarrollo`.
 5. Indicar explícitamente si quedan cambios sin commit.
+6. **Volver a la rama workspace base del frente** (`workspace/vault`, `workspace/planning`, etc.) — nunca quedarse en una feature branch cerrada.
+7. **Borrar la feature branch** local y remota tras confirmar merge:
+   - `git branch -d feature/[nombre]`
+   - `git push origin --delete feature/[nombre]`
 
 Sin este reporte, la tarea se considera `incompleta` a nivel operativo.
 Sin merge a `desarrollo`, la tarea se considera `reportada` pero no `cerrada`.
+Sin volver a la rama workspace base, la siguiente tarea arranca desde una rama obsoleta.
 
 ## Regla rama por tarea (todos los agentes)
 
@@ -98,12 +103,26 @@ Si una rama necesita algo de otra:
 
 No se usa el pedido directo a otra rama como mecanismo principal del sistema.
 
+## Sincronización de frentes inactivos
+
+Las ramas de frentes que no inician sesión regularmente se desactualizan respecto a `desarrollo`. El admin (`workspace/planning`) o el usuario deben sincronizarlas periódicamente:
+
+```bash
+git -C <ruta-worktree> fetch origin && git -C <ruta-worktree> merge origin/desarrollo
+```
+
+Si un frente acumula más de 20 commits de atraso, se considera desincronizado y debe resolverse antes de iniciar cualquier tarea.
+
 ## Estándar de carpetas y worktrees
 
 - Un frente activo no trabaja sobre la misma carpeta física que otro frente activo.
 - El estándar preferido es `git worktree`.
 - El clon separado se acepta solo como excepción documentada.
 - Cada IDE debe abrir solo la carpeta del frente que le corresponde.
+
+## Rol del repo principal
+
+El checkout principal (`C:/repos/plan-lineamiento-estrategico-2026/plan-lineamiento-estrategico-2026`) se mantiene en la rama `desarrollo` y sirve como base para los worktrees. **No se trabaja directamente ahí.** Si Obsidian o algún IDE lo abre, los cambios locales deben descartarse o commitearse como cleanup antes de que contaminen los worktrees.
 
 ## Interfaces documentales
 

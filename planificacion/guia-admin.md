@@ -114,3 +114,24 @@ Para mantener la higiene del workspace y evitar ruido entre agentes:
 2. **Ubicación**: Se recomienda crear los frentes como carpetas hermanas del repo original.
 3. **Acceso**: Cada instancia de IDE (Cursor, VS Code, Claude Code) debe abrir **solo** la carpeta del frente correspondiente.
 4. **Sincronización**: Los cambios se comparten vía `git push` a su rama de ámbito y posterior integración en `desarrollo`. Cada frente debe hacer `git merge desarrollo` al inicio de su sesión.
+
+### Rol del repo principal
+
+El checkout original (`plan-lineamiento-estrategico-2026/plan-lineamiento-estrategico-2026`) se mantiene en `desarrollo` y sirve como base para los worktrees. **No se trabaja directamente ahí.** Si Obsidian o algún IDE lo abre accidentalmente, los cambios deben descartarse (`git restore .`) o commitearse como cleanup antes de que contaminen los worktrees.
+
+### Worktrees actuales
+
+| Carpeta | Rama | IDE |
+|---------|------|-----|
+| `plan-lineamiento-estrategico-2026-vault` | `workspace/vault` | Claude Code |
+| `plan-lineamiento-estrategico-2026-planning` | `workspace/planning` | Codex |
+| `plan-lineamiento-estrategico-2026-dashboard` | `workspace/dashboard` | Cursor |
+| `plan-lineamiento-estrategico-2026-ms365` | `workspace/ms365` | VS Code |
+
+### Sincronización de frentes inactivos
+
+Las ramas de frentes sin sesiones activas se desactualizan. Revisar periódicamente:
+
+```bash
+git -C <ruta-worktree> fetch origin && git -C <ruta-worktree> merge origin/desarrollo
+```
