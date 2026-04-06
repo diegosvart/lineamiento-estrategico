@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Construir una vista local para navegar la información del vault y obtener métricas y KPI de HH consumidas, sin depender de reinterpretar manualmente el modelo documental.
+Construir y operar un mantenedor de tareas desde dashboard para crear, editar y cancelar logicamente entradas del vault, manteniendo además la visualización y KPI de HH consumidas.
 
 ## Alcance
 
@@ -11,6 +11,8 @@ Construir una vista local para navegar la información del vault y obtener métr
 - Mostrar estado de última sync de `ms365-sync/output/`.
 - Reutilizar el stack React + Vite + TypeScript + Recharts ya definido.
 - Separar lectura, transformación y presentación en módulos distintos.
+- Implementar una API local Node para mutar solo frontmatter YAML de `diario/`.
+- Exponer UI de formulario y listado para `create`, `edit` y `cancel` (eliminación lógica).
 
 ## Tareas prioritarias
 
@@ -18,6 +20,9 @@ Construir una vista local para navegar la información del vault y obtener métr
 - Exponer métricas base: HH totales, HH por proyecto, HH por rol, HH por iniciativa.
 - Exponer KPI de seguimiento: distribución de horas, concentración por proyecto, variación temporal básica y cobertura de carga.
 - Diseñar la UI para que permita responder preguntas de gestión, no solo mostrar gráficos aislados.
+- Implementar etapa 1: API local con endpoints mínimos para crear, editar y cancelar por `task_id`.
+- Implementar etapa 2: mantenedor con formulario rápido y feedback de validaciones canónicas.
+- Respetar campos canónicos: `proyecto`, `iniciativa`, `rol`, `tipo-trabajo`, `actividad`, `modalidad`, `horas`, `descripcion`, `estado`, `fecha`.
 - Implementar un reporte mensual ejecutivo con selector `YYYY-MM`, vista previa simple y descarga en Markdown a partir de `diario/YYYY/MM/*.md`.
 - Crear skill principal del frente dashboard, alineada a `dashboard/SCOPE.md`, con objetivo, alcance, no alcance, entradas/salidas y checklist minimo.
   - Entregable sugerido: `dashboard/skill-principal-dashboard.md`
@@ -34,10 +39,11 @@ Construir una vista local para navegar la información del vault y obtener métr
 
 ## No alcance
 
-- No escribir fuera de `dashboard/`.
+- No escribir fuera de `dashboard/` excepto mutaciones controladas en `diario/` via API local de este frente.
 - No asumir que staging equivale a HH consumidas.
 - No duplicar la normalización que corresponde a `workspace/vault`.
 - No exportar contenido dependiente de Obsidian; el reporte descargado debe ser Markdown legible fuera del vault.
+- No ejecutar borrado físico de tareas desde dashboard en esta etapa.
 
 ## Definición de terminado
 
@@ -48,6 +54,10 @@ Construir una vista local para navegar la información del vault y obtener métr
 - Existe al menos una navegación útil para revisar contexto y no solo una vista estática.
 - Los KPI visibles permiten interpretar consumo de horas y avance operativo con mínimo esfuerzo.
 - El reporte mensual puede previsualizarse en dashboard y descargarse como `.md` con nombre fechable sin escribir archivos en el repo.
+- El mantenedor permite crear tarea y persistirla en la nota diaria o en `diario/PENDIENTES.md`.
+- El mantenedor permite editar tarea por `task_id`.
+- Eliminar desde UI aplica cancelación lógica (`estado: Cancelado`) sin borrar la entrada.
+- Ninguna operación de CRUD modifica el body Dataview de las daily notes.
 
 ## Buenas prácticas
 

@@ -10,7 +10,7 @@ tags:
 
 Vista rápida del trabajo en curso para abrir Obsidian y entender foco, handoffs y cola de ejecución.
 
-**Última actualización:** 2026-04-01
+**Última actualización:** 2026-04-06
 **Proyecto principal:** [[proyectos/plan-gobernanza-ti/00-indice|Plan Gobernanza TI]]
 **Backlog humano:** [[gestion-trabajo/backlog-iniciativas|Ver backlog]]
 **Canvas maestro:** [[gestion-trabajo/00-tablero-trabajo.canvas|Abrir canvas]]
@@ -19,11 +19,10 @@ Vista rápida del trabajo en curso para abrir Obsidian y entender foco, handoffs
 
 | Rama | Flujo activo | Estado | Próximo paso |
 | --- | --- | --- | --- |
-| `workspace/planning` | Admin del sistema + planificación + intake único | activo | Ejecutar migración a worktrees por frente y actualizar estándares |
-| `workspace/vault` | Ejecución documental del vault | activo | Cerrar HH marzo y crear skill principal bajo el nuevo esquema físico |
-
+| `workspace/planning` | Admin del sistema + planificación + intake único | activo | Publicar plan por etapas dashboard-vault CRUD y distribuir handoffs |
+| `workspace/vault` | Ejecución documental del vault | activo | Cerrar HH marzo y crear skill principal bajo el nuevo esquema físico |
 | `workspace/ms365` | Staging de Planner hacia output YAML | definido | Mantener salida consistente para consolidación posterior |
-| `workspace/dashboard` | Visualización local del vault + reporte mensual ejecutivo | completado | Publicado vía PR #18 — próximo paso: aislar entorno con worktree e ignore del frontend |
+| `workspace/dashboard` | Visualización local + mantenedor de tareas para vault | activo | Ejecutar etapa 1-2: API local Node + formulario create/edit/cancel |
 
 ## Planes activos y listos para ejecutar
 
@@ -34,6 +33,7 @@ Vista rápida del trabajo en curso para abrir Obsidian y entender foco, handoffs
 | [[gestion-trabajo/planes-activos/carga-tareas-y-dashboard-horas-workspace|Carga de tareas y dashboard de horas consumidas]] | listo-para-ejecutar | cross-rama | Ejecutar handoffs por rama y consolidar visualización |
 | [[gestion-trabajo/planes-activos/reporte-mensual-dashboard-workspace|Reporte mensual ejecutivo dashboard + convención workspace PM]] | completado ✅ | `workspace/dashboard` → `workspace/vault` | PR #18 mergeado 2026-03-30 — pendiente follow-up documental en vault |
 | [[gestion-trabajo/planes-activos/cierre-hh-marzo-control-pr-y-skills-workspace|Cierre HH marzo + control PR + skill principal por agente]] | listo-para-ejecutar | cross-rama | `workspace/vault` cierra HH marzo; `workspace/planning` activa gate PR; cada frente crea skill principal |
+| [[gestion-trabajo/planes-activos/dashboard-vault-crud-etapas-workspace|Dashboard-Vault CRUD de tareas por etapas]] | listo-para-ejecutar | cross-rama | Ejecutar etapa 1-2 en dashboard y etapa de contrato en vault |
 
 ## Alertas abiertas
 
@@ -50,6 +50,9 @@ Vista rápida del trabajo en curso para abrir Obsidian y entender foco, handoffs
 - `workspace/planning` debe liderar la migración a carpetas físicas separadas por frente
 - `workspace/vault` debe ejecutar el cierre de HH marzo 2026 y actualizar `planificacion/2026-03-31-informe-hh-marzo-pendiente.md` con faltante final en cero
 - `workspace/dashboard` y `workspace/ms365` deben crear su skill principal alineada a su `SCOPE`
+- `workspace/dashboard` debe implementar etapa 1-2 del mantenedor CRUD con API local y validaciones canónicas
+- `workspace/vault` debe definir id estable de tarea y reglas de cancelacion lógica sin borrado físico
+- `workspace/ms365` debe integrar adaptador liviano a `C:\repos\Planner_Import` en paralelo al MVP
 
 ## Control operativo por tarea (fuente unica)
 
@@ -63,6 +66,10 @@ Registro transversal del estado operativo de tareas delegadas entre frentes.
 | `T-2026-04-01-001` | `planificacion/2026-03-31-cierre-hh-marzo-control-pr-y-skills-plan.md` | `workspace/vault` | Claude Code | `feature/vault-cierre-hh-marzo-2026` | `delegada` | `pendiente` | `no` | Baseline: `planificacion/2026-03-31-informe-hh-marzo-pendiente.md` |
 | `T-2026-04-01-002` | `planificacion/2026-04-01-migracion-worktrees-frentes-plan.md` | `workspace/planning` | Codex | `feature/planning-flujo-operativo-rama-por-tarea` | `reportada` | `pendiente` | `no` | Plan formal y script de setup creados |
 | `T-2026-04-01-003` | Estandarización de Rol PM Senior (Gobernanza) | `workspace/planning` | Codex | `feature/planning-flujo-operativo-rama-por-tarea` | `reportada` | `pendiente` | `no` | Protocolo de reporte ejecutivo formalizado |
+| `T-2026-04-05-101` | `planificacion/2026-04-06-dashboard-vault-crud-etapas-plan.md` | `workspace/planning` | Codex | `feature/planning-plan-dashboard-vault-crud-etapas` | `en-ejecucion` | `pendiente` | `no` | Plan por etapas + handoffs y contrato en actualizacion |
+| `T-2026-04-05-201` | `planificacion/2026-04-06-dashboard-vault-crud-etapas-plan.md` | `workspace/dashboard` | Agente dashboard | `feature/dashboard-task-maintainer-v1` | `delegada` | `pendiente` | `no` | Handoff: API local + formulario create/edit/cancel |
+| `T-2026-04-05-301` | `planificacion/2026-04-06-dashboard-vault-crud-etapas-plan.md` | `workspace/vault` | Agente vault | `feature/vault-contrato-crud-dashboard` | `delegada` | `pendiente` | `no` | Handoff: id estable + cancelacion logica + compatibilidad retroactiva |
+| `T-2026-04-05-401` | `planificacion/2026-04-06-dashboard-vault-crud-etapas-plan.md` | `workspace/ms365` | Agente ms365 | `feature/ms365-adapter-planner-import` | `delegada` | `pendiente` | `no` | Handoff: adaptador liviano hacia `C:\\repos\\Planner_Import` |
 
 Estados operativos validos: `nueva`, `delegada`, `en-ejecucion`, `reportada`, `bloqueada`, `cerrada`.
 
@@ -73,7 +80,7 @@ Una tarea solo pasa a `cerrada` cuando:
 
 ## Siguiente acción sugerida
 
-Priorizar plan urgente de cierre HH marzo y control PR; luego continuar con migracion a worktrees por frente.
+Ejecutar etapa 1-2 del plan dashboard-vault CRUD y mantener en paralelo la integracion ms365 con `Planner_Import`.
 
 ## Punto Cero Operativo
 

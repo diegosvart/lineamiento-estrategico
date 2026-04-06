@@ -8,14 +8,15 @@ Definir un flujo estable de datos entre ramas para evitar duplicación de lógic
 
 1. `workspace/ms365` extrae tareas desde Planner y escribe staging en `ms365-sync/output/*.yaml`.
 2. `workspace/vault` consume ese staging y consolida la información útil en `diario/*.md` y, si aplica, en notas de soporte del vault.
-3. `workspace/dashboard` lee el vault y el estado de sync solo en modo lectura para visualización local.
+3. `workspace/dashboard` visualiza y puede iniciar altas/ediciones/cancelaciones via API local, aplicando mutaciones solo sobre frontmatter YAML del vault.
 
 ## Fuente de verdad por capa
 
 - Tareas operativas importadas: `ms365-sync/output/*.yaml` como staging temporal.
 - Horas consumidas consolidadas: `diario/*.md`.
 - Catálogo documental y contexto: `proyectos/`.
-- Visualización: `dashboard/` sin persistencia fuera de su carpeta.
+- Escritura iniciada por dashboard: API local que muta `diario/` bajo reglas canónicas del vault.
+- Visualización: `dashboard/` mantiene lectura de métricas y estado de sync.
 
 ## Campos mínimos esperados
 
@@ -46,6 +47,12 @@ Definir un flujo estable de datos entre ramas para evitar duplicación de lógic
 - `entradas[].descripcion`
 - `entradas[].estado`
 
+### Campos de trazabilidad para CRUD dashboard-vault
+
+- `entradas[].task_id` (id estable para edición/cancelación sin ambigüedad)
+- `entradas[].origen` (valor sugerido: `dashboard-manual` cuando aplique)
+- `entradas[].actualizado_en` (timestamp ISO de la última mutación)
+
 > `horas-total` fue eliminado (2026-03-30). El total se calcula en runtime por DataviewJS desde `entradas[].horas`. No existe como campo YAML.
 
 ## Regla del body de Daily Notes
@@ -58,6 +65,8 @@ El body de cada `diario/YYYY/MM/YYYY-MM-DD.md` contiene un bloque DataviewJS que
 - No calcular horas ficticias en el import.
 - No duplicar una misma tarea importada sin una regla explícita de deduplicación.
 - No mover lógica de normalización al frontend.
+- No permitir borrado físico desde dashboard en esta etapa; solo cancelación lógica (`estado: Cancelado`).
+- No editar el body Dataview de las daily notes desde ningún flujo de CRUD.
 - Toda expansión del schema debe documentarse antes de implementarse.
 
 ## Validaciones mínimas
@@ -65,3 +74,13 @@ El body de cada `diario/YYYY/MM/YYYY-MM-DD.md` contiene un bloque DataviewJS que
 - El YAML de staging debe ser legible y consistente entre corridas.
 - La consolidación al diario debe respetar catálogos canónicos del vault.
 - El dashboard debe tolerar `horas: null` en staging y usar solo HH consolidadas para métricas finales.
+- El CRUD iniciado desde dashboard debe:
+  - validar catálogo canónico (`proyecto`, `iniciativa`, `rol`, `actividad`, `tipo-trabajo`, `modalidad`, `estado`)
+  - persistir en `diario/YYYY/MM/YYYY-MM-DD.md` o `diario/PENDIENTES.md`
+  - permitir edición por `task_id` y cancelación lógica sin borrado físico
+
+## Integración ms365 paralela
+
+- El frente `workspace/ms365` integra un adaptador liviano con repo externo configurable (`C:\repos\Planner_Import`).
+- `ms365-sync` mantiene ownership de orquestación y salida en `ms365-sync/output/`.
+- Esta integración no bloquea el MVP dashboard-vault.
