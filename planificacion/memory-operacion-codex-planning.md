@@ -93,6 +93,18 @@ Toda actualización administrativa debe dejar:
 - Solo después del merge a `workspace/planning` se distribuye el trabajo a `desarrollo` y al resto de ramas
 - Un `push` a `workspace/planning` no publica el cambio al resto de agentes por sí solo; la publicación efectiva ocurre cuando el cambio queda integrado en `desarrollo`
 
+## Regla de PR Body Quality Gate
+
+- Todo PR de planning debe usar el template exigido por CI en `.github/PULL_REQUEST_TEMPLATE.md`.
+- Los títulos obligatorios deben coincidir exactamente:
+  - `## Resumen del cambio`
+  - `## Tipo de cambio`
+  - `## Archivos modificados`
+  - `## Verificacion`
+- En `## Tipo de cambio` debe haber al menos un checkbox marcado.
+- En `## Verificacion` deben existir al menos dos checks marcados.
+- Antes de cerrar la tarea, validar checks del PR con `gh pr checks <numero_pr>` y corregir body si falla `validate-pr-body`.
+
 ## Regla de cierre por tarea (obligatoria)
 
 Al terminar cada tarea en planning, Codex debe:
