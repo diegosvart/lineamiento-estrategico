@@ -9,6 +9,7 @@ Consumir el staging de tareas y ampliar el vault como fuente principal de contex
 - Leer `ms365-sync/output/*.yaml`.
 - Integrar tareas a `diario/*.md` cuando corresponda.
 - Mantener consistencia con proyectos, iniciativas, roles y estados válidos.
+- Definir identificador estable `task_id` en `entradas[]` para soportar edición/cancelación desde dashboard.
 - Dejar rastro documental cuando una importación revele un gap del catálogo.
 - Profundizar el detalle de lineamientos `L*` cuando falte contexto útil para interpretar tareas y horas.
 - Agregar o completar contexto de proyectos cuando la información actual no permita navegar o analizar el trabajo con claridad.
@@ -19,6 +20,7 @@ Consumir el staging de tareas y ampliar el vault como fuente principal de contex
 - No cambiar el contrato de staging sin registrarlo.
 - No cargar lógica de frontend en el vault.
 - No sobreescribir datos manuales sin una regla explícita.
+- No eliminar físicamente entradas en esta etapa de CRUD; aplicar cancelación lógica.
 - No priorizar mejoras secundarias que no aporten a contexto, lineamientos o consolidación de datos.
 
 ## Definición de terminado
@@ -28,6 +30,8 @@ Consumir el staging de tareas y ampliar el vault como fuente principal de contex
 - Los catálogos no quedan ambiguos después de la consolidación.
 - Los lineamientos relevantes tienen contexto suficiente para relacionar trabajo ejecutado con objetivo y estado.
 - Los proyectos relevantes tienen contexto mínimo útil para navegación posterior desde dashboard o revisión ejecutiva.
+- El contrato deja explícito cómo editar/cancelar tareas por `task_id` sin romper compatibilidad retroactiva.
+- Se garantiza explícitamente que el body Dataview no se toca durante operaciones CRUD.
 
 ## Tareas prioritarias
 
@@ -35,6 +39,8 @@ Consumir el staging de tareas y ampliar el vault como fuente principal de contex
 - Agregar contexto de proyecto cuando falten objetivo, alcance, riesgos, dependencias o relación con tareas importadas.
 - Asegurar que las entradas de `diario/` puedan vincularse claramente con proyecto, iniciativa y lineamiento.
 - Registrar gaps documentales detectados durante la consolidación en vez de dejar ambigüedad silenciosa.
+- Implementar y documentar la regla de cancelación lógica (`estado: Cancelado`) para solicitudes de eliminación.
+- Definir estrategia de migración para entradas antiguas sin `task_id`.
 
 ## Urgente 2026-03-31
 

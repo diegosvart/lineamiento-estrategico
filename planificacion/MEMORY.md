@@ -9,6 +9,7 @@
 - `planificacion/2026-03-26-carga-tareas-y-dashboard-horas-plan.md`
 - `planificacion/2026-03-30-reporte-mensual-dashboard-y-convencion-workspace-pm-plan.md`
 - `planificacion/2026-03-31-cierre-hh-marzo-control-pr-y-skills-plan.md`
+- `planificacion/2026-04-06-dashboard-vault-crud-etapas-plan.md`
 - `planificacion/memory-contrato-tareas-y-horas.md`
 - `planificacion/memory-ciclo-vida-planes.md`
 - `planificacion/memory-asignacion-flujos-por-rama.md`
