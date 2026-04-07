@@ -2,12 +2,14 @@
 aliases:
   - L5-procedimientos-operativos
   - Procedimientos Operativos
+tags:
+  - pendiente
+---
 
 # Procedimientos Operativos de Integraciones
 
 **Lineamiento:** [[../L5-integraciones|L5 - Integraciones TI]]
 **Horizonte:** S16–S22
-**Esfuerzo estimado:** ~28 hh (diseño operativo + documentación)
 **Responsable:** ARI (operación), SPT (soporte), PM (escalamiento)
 **Precondición:** [[../definicion-estandares/L5-definicion-estandares|Definición de Estándares]] + primeras integraciones en prueba
 

@@ -10,7 +10,6 @@ tags:
 # L3 — Plan de Gobernanza TI
 
 **Horizonte:** S4–S9 (Fases 1+2) · S10–S12 (Fase 3)  
-**Esfuerzo estimado:** 82 hh  
 **Cierre Fases 1+2:** ~29 Mayo 2026  
 **Cierre Fase 3:** ~19 Junio 2026  
 **Precondicion:** Catastro Level A requiere instrumento validado

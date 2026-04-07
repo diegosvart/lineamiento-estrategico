@@ -1,11 +1,14 @@
 ---
 aliases:
   - Artefactos de Sincronización
+tags:
+  - pendiente
+---
+
 # Artefactos de Sincronización
 
 **Lineamiento:** [[../L4-infraestructura-ti|L4 - Nueva Infraestructura TI]]
 **Horizonte:** S10–S25 (diseño, construcción, validación)
-**Esfuerzo estimado:** ~150 hh
 **Responsable:** PM (diseño), ARI (construcción)
 **Precondición:** [[../homogenizacion-maestros/L4-homogenizacion-maestros|Maestros homogenizados]]
 

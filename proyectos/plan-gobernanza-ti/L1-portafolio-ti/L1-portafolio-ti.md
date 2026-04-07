@@ -10,10 +10,6 @@ tags:
 # L1 — Portafolio TI en Ejecución
 
 **Horizonte:** Permanente — Mar a Dic 2026
-**Esfuerzo estimado:** 144 hh total
-  - 72 hh: seguimiento operativo semanal (2 hh/semana × 36 semanas)
-  - 18 hh: reporte RAG mensual (2 hh/mes × 9 meses)
-  - 54 hh: gestión de proyectos, gateways, cierres formales
 **Responsable principal:** PM
 
 ---
@@ -31,37 +27,33 @@ con los demás lineamientos desde el día 1, sin dependencia de ellos. Coordina:
 
 ## Categorías
 
-### Gestión operativa (72 hh)
+### Gestión operativa
 
-| ID | Tarea | Responsable | hh | Frecuencia |
-|---|---|---|---|---|
-| 4.07 | Ejecutar seguimiento semanal del portafolio — reuniones, estado tareas, riesgos | PM | 2 | 36 semanas |
-| 4.08 | Preparar y publicar reporte mensual RAG al Sponsor | PM | 2 | 9 meses |
-
-**Total operación continua:** 90 hh
+| ID | Tarea | Responsable | Frecuencia |
+|---|---|---|---|
+| 4.07 | Ejecutar seguimiento semanal del portafolio — reuniones, estado tareas, riesgos | PM | 36 semanas |
+| 4.08 | Preparar y publicar reporte mensual RAG al Sponsor | PM | 9 meses |
 
 **Bucle semanal:**
 - Lunes: sincronización de estado con JTI y responsables
 - Miércoles: actualización en Planner de avances
 - Viernes: reporte de desviaciones/riesgos
 
-### Gobierno del portafolio (54 hh)
+### Gobierno del portafolio
 
-| ID   | Tarea                                                                                 | Responsable | hh                     | Estado    |           |
-| ---- | ------------------------------------------------------------------------------------- | ----------- | ---------------------- | --------- | --------- |
-| 4.01 | Completar Fichas de Proyecto para 3 normativos prioritarios                           | PM + JTI    | 6                      | Pendiente |           |
-| 4.02 | Gestionar aprobación Sponsors para 3 proyectos normativos                             | PM + JTI    | 2                      | Pendiente |           |
-| 4.03 | Crear entornos digitales de 3 proyectos normativos (Teams + Planner + SharePoint)     | PM          | 3                      | Pendiente |           |
-| 4.04 | Completar Fichas de Proyecto para proyectos estratégicos de la Matriz (6 proyectos)   | PM + JTI    | 10                     | Pendiente |           |
-| 4.05 | Gestionar aprobación presupuesto proyectos estratégicos con GG                        | JTI         | 3                      | Pendiente |           |
-| 4.06 | Crear entornos digitales proyectos estratégicos                                       | PM          | 4                      | Pendiente |           |
-| 4.09 | Activar Gateway de Desvío D-30 ante vencimiento crítico                               | PM          | 3 × 2 activaciones = 6 | Pendiente |           |
-| 4.10 | Mapear dependencias entre hallazgos Deloitte y políticas L3                           | PM          | 2                      | Pendiente |           |
-| 4.11 | Ejecutar cierre formal de proyectos normativos con evidencia auditada (× 3)           | PM + JTI    | 3 × 3 = 9              | Pendiente |           |
-| 4.12 | Incorporar proyectos estratégicos al seguimiento semanal                              | PM          | 1                      | Pendiente |           |
-| 4.13 | Reporte ejecutivo final de cierre Plan Gobernanza 2026 → [[../../00-contexto/gateways|G5]] | PM + JTI | 8 | Pendiente |
-
-**Total gobierno portafolio:** 54 hh
+| ID   | Tarea                                                                                 | Responsable | Estado    |           |
+| ---- | ------------------------------------------------------------------------------------- | ----------- | --------- | --------- |
+| 4.01 | Completar Fichas de Proyecto para 3 normativos prioritarios                           | PM + JTI    | Pendiente |           |
+| 4.02 | Gestionar aprobación Sponsors para 3 proyectos normativos                             | PM + JTI    | Pendiente |           |
+| 4.03 | Crear entornos digitales de 3 proyectos normativos (Teams + Planner + SharePoint)     | PM          | Pendiente |           |
+| 4.04 | Completar Fichas de Proyecto para proyectos estratégicos de la Matriz (6 proyectos)   | PM + JTI    | Pendiente |           |
+| 4.05 | Gestionar aprobación presupuesto proyectos estratégicos con GG                        | JTI         | Pendiente |           |
+| 4.06 | Crear entornos digitales proyectos estratégicos                                       | PM          | Pendiente |           |
+| 4.09 | Activar Gateway de Desvío D-30 ante vencimiento crítico                               | PM          | Pendiente |           |
+| 4.10 | Mapear dependencias entre hallazgos Deloitte y políticas L3                           | PM          | Pendiente |           |
+| 4.11 | Ejecutar cierre formal de proyectos normativos con evidencia auditada (× 3)           | PM + JTI    | Pendiente |           |
+| 4.12 | Incorporar proyectos estratégicos al seguimiento semanal                              | PM          | Pendiente |           |
+| 4.13 | Reporte ejecutivo final de cierre Plan Gobernanza 2026 → [[../../00-contexto/gateways|G5]] | PM + JTI | Pendiente |
 
 ---
 
@@ -118,7 +110,7 @@ Todos los gateways se coordina desde L1:
 
 ## Notas operacionales
 
-- **Bucle semanal:** 2 hh fijas — no fluctúan
+- **Bucle semanal:** Fijo — no fluctúa
 - **Reporte RAG:** Rojo = riesgo crítico, Ámbar = retraso ≥ 1 semana, Verde = on track
 - **Gateway D-30:** Si proyecto vence en 30 días y está en riesgo, escala a GG para decisión de ajuste
 - **Documentación:** Todas las fichas, actas y reportes se guardan en [[../../L3-gobernanza-ti/infraestructura-digital/L3-infraestructura-digital|SharePoint L1]] para auditoría

@@ -1,3 +1,10 @@
+---
+aliases:
+  - Análisis de Lineamientos 2026
+tags:
+  - activo
+---
+
 # Análisis de Lineamientos — Plan TI Grupo EBI 2026
 
 ## Glosario

@@ -1,11 +1,14 @@
 ---
 aliases:
   - Infraestructura Digital del Área TI
+tags:
+  - pendiente
+---
+
 # Infraestructura Digital del Área TI
 
 **Lineamiento:** [[../L3-gobernanza-ti|L3 - Plan de Gobernanza TI]]
 **Horizonte:** S1–S3 (Fase 1 inicial)
-**Esfuerzo estimado:** 6.5 hh
 **Responsable:** PM
 
 
@@ -17,22 +20,18 @@ donde ocurren decisiones (Teams), se planifica ejecución (Planner) y se almacen
 
 **Precondición:** Ninguna — paralela con L2
 **Habilita:** [[../catastro-aplicaciones/L3-catastro-aplicaciones|Catastro de aplicaciones]]
-**Related:** [[../../00-contexto/CONTEXTO-PROYECTO|Ecosistema tecnológico en CONTEXTO-PROYECTO]]
 
 
 ## Tareas (WS-2: 2.01–2.04)
 
-| ID | Tarea | Responsable | hh | Estado |
-|---|---|---|---|---|
-| 2.01 | Crear canal oficial del área TI en Teams — configuración, permisos, descripción | PM | 1.5 | Pendiente |
-| 2.02 | Crear estructura Planner del área — planes por lineamiento, categorías, campos personalizados | PM | 2 | Pendiente |
-| 2.03 | Crear estructura SharePoint del área — librerías, accesos, taxonomía de carpetas | PM + SPT | 3 | Pendiente |
-
-**Total fase 1:** 6.5 hh
+| ID | Tarea | Responsable | Estado |
+|---|---|---|---|
+| 2.01 | Crear canal oficial del área TI en Teams — configuración, permisos, descripción | PM | Pendiente |
+| 2.02 | Crear estructura Planner del área — planes por lineamiento, categorías, campos personalizados | PM | Pendiente |
+| 2.03 | Crear estructura SharePoint del área — librerías, accesos, taxonomía de carpetas | PM + SPT | Pendiente |
 
 ### Tarea 2.04 (siguiente iteración)
 - Configurar plantilla de proyecto en Planner usando Graph API + Python — automatización de creación de entornos por proyecto
-- Estimado: 3 hh (S2, cuando se conocen patrones de proyecto)
 
 
 ## Flujo de uso

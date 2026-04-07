@@ -10,7 +10,6 @@ tags:
 # L2 — Estructuracion del Area TI
 
 **Horizonte:** S1–S3 — 30 Mar al 17 Abr 2026  
-**Esfuerzo estimado:** 28 hh  
 **Cierre proyectado:** ~17 Abril 2026  
 **Precondicion:** Ninguna — es el punto de arranque del plan
 

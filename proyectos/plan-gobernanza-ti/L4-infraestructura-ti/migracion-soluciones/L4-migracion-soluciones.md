@@ -1,11 +1,14 @@
 ---
 aliases:
   - Migración de Soluciones ERP
+tags:
+  - pendiente
+---
+
 # Migración de Soluciones
 
 **Lineamiento:** [[../L4-infraestructura-ti|L4 - Nueva Infraestructura TI]]
 **Horizonte:** S20–S38 (migraciones progresivas)
-**Esfuerzo estimado:** ~200 hh (por dimensionar según catastro)
 **Responsable:** PM (planificación), ARI (ejecución)
 **Precondición:** [[../../L3-gobernanza-ti/catastro-aplicaciones/L3-catastro-aplicaciones|Catastro Level C]] + [[../diseno-arquitectura/L4-diseno-arquitectura|Arquitectura]]
 

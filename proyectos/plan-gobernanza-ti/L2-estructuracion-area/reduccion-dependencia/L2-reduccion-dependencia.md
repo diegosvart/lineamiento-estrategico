@@ -19,21 +19,18 @@ hacia el área TI. El objetivo es que JTI y ARI logren autonomía técnica para 
 de consultor externo.
 
 **Precondición:** [[../formalizacion-organizacional/L2-formalizacion-organizacional|Formalización organizacional]] completada
-**Horas estimadas:** 18.5 hh
 **Riesgo alto:** Resistencia pasiva del CE a transferencia
 
 ## Tareas
 
-| ID   | Tarea                                                                                                     | Responsable | hh  | Estado    |
-| ---- | --------------------------------------------------------------------------------------------------------- | ----------- | --- | --------- |
-| 1.07 | Sesiones de extracción de conocimiento con Alexi — decisiones técnicas, configuraciones críticas, accesos | PM          | 4   | Pendiente |
-| 1.08 | Documentación de inventario técnico — sistemas, integraciones, dependencias, puntos de fallo              | PM          | 6   | Pendiente |
-| 1.09 | Redacción plan formal de transferencia de conocimiento — sesiones, agenda, responsables, validaciones     | PM          | 2.5 | Pendiente |
-| 1.10 | Sesión de transferencia técnica ronda 1 — JTI y ARI reciben conocimiento de Alexi                         | JTI + CE    | 3   | Pendiente |
-| 1.11 | Sesión de transferencia técnica ronda 2 — validación interna de JTI sin presencia de CE                   | JTI         | 2   | Pendiente |
-| 1.12 | Validación de autonomía técnica del área — certifica que JTI y ARI pueden operar sin Alexi → Input G2     | PM + JTI    | 1   | Pendiente |
-
-**Total:** 18.5 hh
+| ID   | Tarea                                                                                                     | Responsable | Estado    |
+| ---- | --------------------------------------------------------------------------------------------------------- | ----------- | --------- |
+| 1.07 | Sesiones de extracción de conocimiento con Alexi — decisiones técnicas, configuraciones críticas, accesos | PM          | Pendiente |
+| 1.08 | Documentación de inventario técnico — sistemas, integraciones, dependencias, puntos de fallo              | PM          | Pendiente |
+| 1.09 | Redacción plan formal de transferencia de conocimiento — sesiones, agenda, responsables, validaciones     | PM          | Pendiente |
+| 1.10 | Sesión de transferencia técnica ronda 1 — JTI y ARI reciben conocimiento de Alexi                         | JTI + CE    | Pendiente |
+| 1.11 | Sesión de transferencia técnica ronda 2 — validación interna de JTI sin presencia de CE                   | JTI         | Pendiente |
+| 1.12 | Validación de autonomía técnica del área — certifica que JTI y ARI pueden operar sin Alexi → Input G2     | PM + JTI    | Pendiente |
 
 ## Gestión de riesgos
 
