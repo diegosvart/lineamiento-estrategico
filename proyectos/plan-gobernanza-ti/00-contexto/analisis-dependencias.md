@@ -1,3 +1,10 @@
+---
+aliases:
+  - Análisis de Dependencias
+tags:
+  - activo
+---
+
 # Análisis de Dependencias — Plan TI Grupo EBI 2026
 
 ## Matriz de Dependencias entre Tareas
@@ -205,26 +212,19 @@ Tareas de infraestructura e integraciones que dependen de catastro completo.
 ## Análisis de Ruta Crítica
 
 ```
-SECUENCIA CRÍTICA (62 días estimados):
+SECUENCIA CRÍTICA:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 L2.01 → L2.02 → L2.03 → L2.04 → L2.05 → L2.06 → L2.07 → L2.08 → L2.09 → G2
-   4h      1.5h     3h       4h       6h      2.5h     3h       2h       1h
                                                                              ↓
 L3.01 → L3.02 → L3.03 → L3.04 → L3.05 → L3.06 → L3.07 → L3.08 → L3.09 → G2
-  1.5h     2h       3h       8h      1.5h     3h       5h       6h       3h
                                                                              ↓
 L3.15 → L3.16 → L3.17 → L3.18 → G2 → L3.19 → L3.20 → L3.21 → L3.22 → L3.23
-   5h       4h       2h       3h          5h       4h       5h       4h       5h
                                                                              ↓
 L3.24 → L3.25 → G3 → L3.26 → L3.27 → L3.28 → L3.29 → L3.30 → L3.31 → L3.32
-   3h       1h             6h       4h       2h       8h       3h      10h       3h
                                                                              ↓
 L3.33 → L3.34 → L3.35 → L3.36 → G5
-   5h       6h       9h       7h
 ```
-
-**Duración total ruta crítica:** ~113 hh (sin considerar paralelismo)
 
 ---
 

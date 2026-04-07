@@ -1,12 +1,14 @@
 ---
 aliases:
   - Definición de Estándares de Integración
+tags:
+  - pendiente
+---
 
 # Definición de Estándares de Integración
 
 **Lineamiento:** [[../L5-integraciones|L5 - Integraciones TI]]
 **Horizonte:** S12–S18
-**Esfuerzo estimado:** ~32 hh (diseño + validación)
 **Responsable:** PM (diseño), ARI (infraestructura), Vendor (soporte técnico)
 **Precondición:** [[../catalogo-integraciones/L5-catalogo-integraciones|Catálogo de Integraciones]] completado
 

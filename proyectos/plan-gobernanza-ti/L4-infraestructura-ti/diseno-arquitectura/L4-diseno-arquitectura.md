@@ -1,11 +1,14 @@
 ---
 aliases:
   - Diseño de Arquitectura TI
+tags:
+  - pendiente
+---
+
 # Diseño de Arquitectura
 
 **Lineamiento:** [[../L4-infraestructura-ti|L4 - Nueva Infraestructura TI]]
 **Horizonte:** S5–S8 (diseño), S9–S38 (implementación)
-**Esfuerzo estimado:** ~80 hh (diseño), por dimensionar (construcción)
 **Responsable:** PM (diseño), ARI (implementación)
 **Precondición:** [[../../L3-gobernanza-ti/catastro-aplicaciones/L3-catastro-aplicaciones|Catastro Level C]]
 

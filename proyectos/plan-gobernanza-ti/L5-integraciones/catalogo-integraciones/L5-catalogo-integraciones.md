@@ -1,12 +1,14 @@
 ---
 aliases:
   - Catálogo de Integraciones
+tags:
+  - pendiente
+---
 
 # Catálogo de Integraciones
 
 **Lineamiento:** [[../L5-integraciones|L5 - Integraciones TI]]
 **Horizonte:** S10–S14
-**Esfuerzo estimado:** ~24 hh (inventario + análisis)
 **Responsable:** PM (diseño), ARI (infraestructura), Equipo externo (validación ERP)
 **Precondición:** [[../../L4-infraestructura-ti/diseno-arquitectura/L4-diseno-arquitectura|Diseño de Arquitectura L4]]
 

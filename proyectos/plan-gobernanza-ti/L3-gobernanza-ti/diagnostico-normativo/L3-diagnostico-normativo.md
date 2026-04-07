@@ -1,11 +1,14 @@
 ---
 aliases:
   - Diagnóstico Normativo
+tags:
+  - pendiente
+---
+
 # Diagnóstico Normativo
 
 **Lineamiento:** [[../L3-gobernanza-ti|L3 - Plan de Gobernanza TI]]
 **Horizonte:** S4–S8 (paralelo con catastro Level B+C)
-**Esfuerzo estimado:** 14 hh
 **Responsable:** PM + JTI
 **Precondición:** [[../catastro-aplicaciones/L3-catastro-aplicaciones|Catastro Level A]] completado
 
@@ -22,14 +25,12 @@ Identificatodo aquello que **NO está cubierto** y qué acciones son necesarias 
 
 ## Tareas (WS-3: 3.01–3.04)
 
-| ID | Tarea | Responsable | hh | Estado |
-|---|---|---|---|---|
-| 3.01 | Levantar brechas Ley 19.628 por subsidiaria — análisis de dónde No se cumple por 11 empresas | PM + JTI | 5 | Pendiente |
-| 3.02 | Determinar aplicabilidad OIV Ley 21.663 y estado actual de cumplimiento NIST CSF | PM + JTI + ARI | 4 | Pendiente |
-| 3.03 | Revisar hallazgos Deloitte 2026 y priorizar por criticidad — mapear a qué categoría corresponde | PM + JTI | 2 | Pendiente |
-| 3.04 | Consolidar diagnóstico normativo completo — reporte ejecutivo de brechas por marco → Input G2 | PM | 3 | Pendiente |
-
-**Total:** 14 hh
+| ID | Tarea | Responsable | Estado |
+|---|---|---|---|
+| 3.01 | Levantar brechas Ley 19.628 por subsidiaria — análisis de dónde No se cumple por 11 empresas | PM + JTI | Pendiente |
+| 3.02 | Determinar aplicabilidad OIV Ley 21.663 y estado actual de cumplimiento NIST CSF | PM + JTI + ARI | Pendiente |
+| 3.03 | Revisar hallazgos Deloitte 2026 y priorizar por criticidad — mapear a qué categoría corresponde | PM + JTI | Pendiente |
+| 3.04 | Consolidar diagnóstico normativo completo — reporte ejecutivo de brechas por marco → Input G2 | PM | Pendiente
 
 
 ## Matriz de brechas Ley 19.628

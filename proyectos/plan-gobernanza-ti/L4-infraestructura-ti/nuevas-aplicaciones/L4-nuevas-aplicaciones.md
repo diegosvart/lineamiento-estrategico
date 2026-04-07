@@ -1,11 +1,14 @@
 ---
 aliases:
   - Nuevas Aplicaciones Transversales
+tags:
+  - pendiente
+---
+
 # Nuevas Aplicaciones Transversales
 
 **Lineamiento:** [[../L4-infraestructura-ti|L4 - Nueva Infraestructura TI]]
 **Horizonte:** S5–S38 (iniciativas en paralelo con migraciones)
-**Esfuerzo estimado:** ~180 hh (por dimensionar según roadmap 2026)
 **Responsable:** PM (arquitectura), equipos especializados (desarrollo)
 **Precondición:** [[../diseno-arquitectura/L4-diseno-arquitectura|Estándares de arquitectura]] aprobados
 

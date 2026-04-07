@@ -1,12 +1,14 @@
 ---
 aliases:
   - Nuevas Integraciones Transversales
+tags:
+  - pendiente
+---
 
 # Nuevas Integraciones Transversales
 
 **Lineamiento:** [[../L5-integraciones|L5 - Integraciones TI]]
 **Horizonte:** S14–S36 (paralelo con L4)
-**Esfuerzo estimado:** Por dimensionar (dependiente de portafolio L1)
 **Responsable:** PM (arquitectura), Equipo externo (implementación), ARI (integración infraestructura)
 **Precondición:** [[../definicion-estandares/L5-definicion-estandares|Estándares definidos]] + [[../../L4-infraestructura-ti/diseno-arquitectura/L4-diseno-arquitectura|Arquitectura L4]]
 

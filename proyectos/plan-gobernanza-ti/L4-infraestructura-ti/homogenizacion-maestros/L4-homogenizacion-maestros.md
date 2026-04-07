@@ -1,11 +1,14 @@
 ---
 aliases:
   - Homogenización de Maestros de Datos
+tags:
+  - pendiente
+---
+
 # Homogenización de Maestros de Datos
 
 **Lineamiento:** [[../L4-infraestructura-ti|L4 - Nueva Infraestructura TI]]
 **Horizonte:** S9–S20 (mapeo, validación, implementación)
-**Esfuerzo estimado:** ~100 hh
 **Responsable:** PM (diseño), ARI (implementación)
 **Precondición:** [[../bd-central/L4-bd-central|BD central]] operativa
 

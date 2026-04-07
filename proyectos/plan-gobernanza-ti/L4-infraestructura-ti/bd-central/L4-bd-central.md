@@ -1,11 +1,14 @@
 ---
 aliases:
   - BD Central — Esquema Unificado
+tags:
+  - pendiente
+---
+
 # BD Central — Esquema Unificado
 
 **Lineamiento:** [[../L4-infraestructura-ti|L4 - Nueva Infraestructura TI]]
 **Horizonte:** S5–S9 (diseño), S10–S26 (implementación)
-**Esfuerzo estimado:** ~120 hh (diseño + implementación)
 **Responsable:** PM (diseño), ARI (implementación)
 **Precondición:** [[../diseno-arquitectura/L4-diseno-arquitectura|Diseño de arquitectura]]
 
